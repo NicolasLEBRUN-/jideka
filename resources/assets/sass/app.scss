@@ -1,0 +1,35 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+//@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+	margin: 0;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	// Couleur du fond
+	background-color: #3D3D3D;
+	// Couleur du texte
+	color: #FFFFFF;
+	// Police du texte
+	font-family: Raleway;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.titre-section {
+	display: flex;
+	justify-content: center;
+	color: #FB6C3F;
+}
