@@ -36,3 +36,16 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+// Hamburgers package Settings
+// ==================================================
+$hamburger-padding-x                       : 0px !default;
+$hamburger-padding-y                       : 0px !default;
+$hamburger-layer-width                     : 40px !default;
+$hamburger-layer-height                    : 3px !default;
+$hamburger-layer-spacing                   : 5px !default;
+$hamburger-layer-color                     : #FFFFFF !default;
+$hamburger-layer-border-radius             : 4px !default;
+$hamburger-hover-opacity                   : 0.7 !default;
+$hamburger-hover-transition-duration       : 0.15s !default;
+$hamburger-hover-transition-timing-function: linear !default;

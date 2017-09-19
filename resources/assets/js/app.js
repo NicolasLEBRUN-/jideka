@@ -7,21 +7,54 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('menu-haut', require('./components/MenuHaut.vue'));
-Vue.component('accueil', require('./components/Accueil.vue'));
-Vue.component('biographie', require('./components/Biographie.vue'));
-Vue.component('galeries', require('./components/Galeries.vue'));
-Vue.component('expositions', require('./components/Expositions.vue'));
-Vue.component('contact', require('./components/Contact.vue'));
+/* Accueil */
+import AppAccueil from './AppAccueil.vue';
 
-const app = new Vue({
-    el: '#app'
+/* Galeries */
+import AppGaleries from './AppGaleries.vue';
+
+/* Expositions */
+import AppExpositions from './AppExpositions.vue';
+
+/* Administration */
+import AppAdministration from './AppAdministration.vue';
+
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
+import 'flatpickr/dist/themes/airbnb.css';
+Vue.use(flatPickr);
+
+import _ from 'lodash';
+Vue.prototype.$trans = function(string) {
+	return _.get(window.i18n, string);
+};
+
+// Vue.filter('i18n', function(value) {
+// 	return _.get(window.i18n, value);
+// });
+
+const appAccueil = new Vue({
+    el: '#app-accueil',
+	render: h => h(AppAccueil)
+});
+
+const appGaleries = new Vue({
+    el: '#app-galeries',
+	render: h => h(AppGaleries)
+});
+
+const appExpositions = new Vue({
+    el: '#app-expositions',
+	render: h => h(AppExpositions)
+});
+
+const appAdministration = new Vue({
+    el: '#app-administration',
+    render: h => h(AppAdministration)
 });

@@ -1,5 +1,5 @@
 <template>
-    <div class="biographie container">
+    <div id="accueil-presentation" class="accueil-presentation container">
         <div class="titre-section">
             <h1>
                 Bienvenue
@@ -7,7 +7,8 @@
         </div>
         <div class="contenu-section">
             <div class="description">
-                <h2>Jocelyne Deschamps-Kus</h2>
+                <h2>{{ $trans('accueil.presentation.nom') }}</h2>
+                <p>{{ $trans('accueil.presentation.accroche') }}</p>
             </div>
             <div class="image">
                 <img src="/img/pinceaux.jpg" />

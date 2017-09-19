@@ -6,26 +6,28 @@
 @import "variables";
 
 // Bootstrap
-//@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Hamburgers
+// https://jonsuh.com/hamburgers/
+@import "~hamburgers/_sass/hamburgers/hamburgers.scss";
 
 body {
 	margin: 0;
 }
 
-#app {
+#app-accueil, #app-galeries, #app-expositions, #app-administration {
 	display: flex;
 	flex-direction: column;
-	// Couleur du fond
 	background-color: #3D3D3D;
-	// Couleur du texte
 	color: #FFFFFF;
-	// Police du texte
 	font-family: Raleway;
 }
 
 .container {
 	display: flex;
 	flex-direction: column;
+	padding-top: 60px;
 }
 
 .titre-section {

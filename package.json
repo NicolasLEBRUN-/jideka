@@ -17,5 +17,13 @@
     "laravel-mix": "^1.0",
     "lodash": "^4.17.4",
     "vue": "^2.1.10"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.7",
+    "hamburgers": "^0.9.1",
+    "style-loader": "^0.18.2",
+    "vue-flatpickr-component": "^3.0.0",
+    "vue-loader": "^13.0.4",
+    "js-beautify": "1.6.14"
   }
 }

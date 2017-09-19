@@ -1,5 +1,5 @@
 <template>
-    <div class="biographie container">
+    <div id="accueil-biographie" class="accueil-biographie container">
         <div class="titre-section">
             <h1>
                 Biographie
@@ -10,9 +10,7 @@
                 <img src="/img/profil.jpg" />
             </div>
             <div class="description">
-                Dessiner le quotidien, dessiner ce que nous vivons, ce que nous ressentons, dessiner la banalité de tous les jours mais en la colorant et en y ajoutant une touche de tendresse et d’humour, c’est toute la signification des «&nbsp;Aventures de Germaine&nbsp;».
-                <br />
-                Cette interprétation, souvent sociale, est en fait une manière de représenter avec amour ce monde commun et ses travers.
+                <span style="white-space: pre-wrap;">{{ biographie.corps }}</span>
             </div>
         </div>
     </div>
@@ -20,8 +18,21 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        data: function() {
+            return {
+                biographie: {},
+            }
+        },
+        mounted() {},
+        created() {
+            let self = this;
+            axios.get('/api/biographies')
+                .then(function (response) {
+                    self.biographie = response.data[response.data.length - 1];
+                })
+                .catch(function (error) {
+                    console.log('Erreur axios (AccueilBiographie.vue) : ' + error);
+                });
         }
     }
 </script>

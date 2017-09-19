@@ -78,7 +78,20 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'fr',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Locale Configuration
+    |--------------------------------------------------------------------------
+    |
+    | The application locale determines the default locale that will be used
+    | by the translation service provider. You are free to set this value
+    | to any of the locales which will be supported by the application.
+    |
+    */
+
+    'available_locales' => ['fr' => 'Français', 'en' => 'English'],
 
     /*
     |--------------------------------------------------------------------------
@@ -172,11 +185,11 @@ return [
         /*
          * Application Service Providers...
          */
-        jideka\Providers\AppServiceProvider::class,
-        jideka\Providers\AuthServiceProvider::class,
-        // jideka\Providers\BroadcastServiceProvider::class,
-        jideka\Providers\EventServiceProvider::class,
-        jideka\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 

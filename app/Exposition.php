@@ -1,10 +1,10 @@
 <?php
 
-namespace jideka;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Exposition extends Model
 {
     //
 }

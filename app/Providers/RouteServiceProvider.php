@@ -1,9 +1,11 @@
 <?php
 
-namespace jideka\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+
+use Illuminate\Http\Request;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -14,7 +16,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'jideka\Http\Controllers';
+    protected $namespace = 'App\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -33,11 +35,11 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function map()
+    public function map(Request $request)
     {
-        $this->mapApiRoutes();
+        $this->mapApiRoutes($request);
 
-        $this->mapWebRoutes();
+        $this->mapWebRoutes($request);
 
         //
     }
@@ -49,11 +51,13 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapWebRoutes()
+    protected function mapWebRoutes(Request $request)
     {
+        // \Log::info('mapWebRoutes decodedPath : ' . $request->decodedPath());
+
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+                ->namespace($this->namespace)
+                ->group(base_path('routes/web.php'));
     }
 
     /**
@@ -63,11 +67,13 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapApiRoutes()
+    protected function mapApiRoutes(Request $request)
     {
+        // \Log::info('mapApiRoutes decodedPath : ' . $request->decodedPath());
+
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+                ->middleware('api')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/api.php'));
     }
 }
