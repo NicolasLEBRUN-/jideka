@@ -2,7 +2,7 @@
     <div id="accueil-presentation" class="accueil-presentation container">
         <div class="titre-section">
             <h1>
-                Bienvenue
+                {{ $trans('accueil.presentation.titre-section') }}
             </h1>
         </div>
         <div class="contenu-section">
@@ -19,9 +19,7 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+        mounted() {}
     }
 </script>
 

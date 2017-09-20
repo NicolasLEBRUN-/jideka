@@ -17,18 +17,18 @@ class AdministrationController extends Controller
     public function creerBiographie(Request $request)
     {
     	$this->validate($request, [
-    		'biographieCorps'	=> 'required',
+            'biographieCorpsFr' => 'required',
+    		'biographieCorpsEn'	=> 'required',
     		'biographieVersion'	=> 'required',
     	]);
 
-    	$biographie_corps = $request->input('biographieCorps');
+        $biographie_corps_fr = $request->input('biographieCorpsFr');
+    	$biographie_corps_en = $request->input('biographieCorpsEn');
     	$biographie_version = $request->input('biographieVersion');
 
-    	\Log::info('biographie_corps : ' . $biographie_corps);
-    	\Log::info('biographie_version : ' . $biographie_version);
-
     	$biographie = new Biographie;
-    	$biographie->corps = $biographie_corps;
+        $biographie->corps_fr = $biographie_corps_fr;
+    	$biographie->corps_en = $biographie_corps_en;
     	$biographie->version = $biographie_version + 1;
     	$biographie->save();
 
@@ -92,6 +92,14 @@ class AdministrationController extends Controller
 
         $id_galerie = $request->input('galerie');
 
+        // Désactivation des toutes les oeuvres de la galerie
+        $oeuvres = Galerie::find($id_galerie)->oeuvres;
+        foreach ($oeuvres as $oeuvre) {
+            $oeuvre->actif = 0;
+            $oeuvre->save();
+        }
+
+        // Désactivation de la galerie
         $galerie = Galerie::find($id_galerie);
         $galerie->actif = 0;
         $galerie->save();
@@ -128,11 +136,17 @@ class AdministrationController extends Controller
         $id_galerie = $request->input('galerie');
         $visuel = $request->input('visuel');
 
+        // Création du répertoire dans lequel seront placées les oeuvres
+        $repertoire_oeuvres = public_path('img/galeries/') . $id_galerie;
+        if (!file_exists($repertoire_oeuvres)) {
+            mkdir($repertoire_oeuvres, 0775, true);
+        }
+
         // Manipulation puis enregistrement de l'image (en base64)
         $imageData = $request->get('visuel');
-        $nextId = DB::table('oeuvres')->max('id') + 1;
+        $nextIdOeuvre = DB::table('oeuvres')->max('id') + 1;
         $fileExtension = explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
-        $fileName = $nextId . '.' . $fileExtension;
+        $fileName = $nextIdOeuvre . '.' . $fileExtension;
         $cheminVisuel = public_path('img/galeries/') . $id_galerie . '/' . $fileName;
         Image::make($request->get('visuel'))->save($cheminVisuel, 100);
 

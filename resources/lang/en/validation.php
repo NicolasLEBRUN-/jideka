@@ -100,7 +100,10 @@ return [
     */
 
     'custom' => [
-
+        'grecaptcharesponse' => [
+            'required' => "The \"I'm not a robot\" field is required.",
+            'googlerecaptcharesponsetoken' => "An error occurred during the validation of the \"I'm not a robot\" field. Please retry after having refreshed the page.",
+        ],
     ],
 
     /*
@@ -115,7 +118,7 @@ return [
     */
 
     'attributes' => [
-        'statutdisponibilite' => 'statut de disponibilité',
+        'statutdisponibilite' => 'availability',
     ],
 
 ];

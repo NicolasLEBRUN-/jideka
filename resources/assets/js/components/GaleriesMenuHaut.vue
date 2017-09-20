@@ -1,15 +1,46 @@
 <template>
     <div class="galeries-menu-haut">
         <ul class="navigation">
-            <li><a href="/">Retourner à l'Accueil</a></li>
+            <li><a href="/" v-on:click="hideMenu">{{ $trans('galeries.menuhaut.retour-accueil') }}</a></li>
+            <li class="flag" v-if="$trans('locale') != 'fr'">
+                <a href="/lang/fr" v-on:click="hideMenu"><img src="/img/fr.png" alt="Français" /></a>
+            </li>
+            <li class="flag" v-if="$trans('locale') != 'en'">
+                <a href="/lang/en" v-on:click="hideMenu"><img src="/img/en.png" alt="English" /></a>
+            </li>
+            <li class="burger">
+                <a href="javascript:void(0);" v-on:click="showMenu">
+                    <button id="hamburger" class="hamburger hamburger--squeeze" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </a>
+            </li>
         </ul>
     </div>
 </template>
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        mounted() {},
+        methods: {
+            showMenu: function(event) {
+                let navbar = document.getElementById("navbar");
+                navbar.classList.toggle("responsive");
+                let hamburger = document.getElementById("hamburger");
+                hamburger.classList.toggle("is-active");
+            },
+            hideMenu: function(event) {
+                let navbar = document.getElementById("navbar");
+                if (navbar.classList.contains("responsive")) {
+                    navbar.classList.toggle("responsive");
+                }
+                let hamburger = document.getElementById("hamburger");
+                if (hamburger.classList.contains("is-active")) {
+                    hamburger.classList.toggle("is-active");
+                }
+            }
         }
     }
 </script>
@@ -49,6 +80,14 @@
 
     .navigation li a:hover {
         background: darkblue;
+    }
+
+    .navigation li.flag {
+        line-height: 0;
+    }
+
+    .navigation li.flag img {
+        height: 19px;
     }
 
     @media all and (max-width: 600px) {

@@ -17,5 +17,6 @@ $factory->define(App\Galerie::class, function (Faker\Generator $faker) {
         'nom' => $faker->name,
         'description' => $faker->text,
         'chemin_visuel' => str_random(10),
+        'actif' => 1,
     ];
 });

@@ -7,7 +7,7 @@
         </div>
         <div class="contenu-section">
             <div>
-                Voici les oeuvres de cette galerie :
+                {{ $trans('galeries.galerie.presentation') }}
             </div>
             <div>
                 <oeuvre v-for="oeuvre in oeuvres" :key="oeuvre.id" :oeuvre-id="oeuvre.id"></oeuvre>

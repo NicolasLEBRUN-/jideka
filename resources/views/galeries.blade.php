@@ -8,7 +8,9 @@
     <body>
         <div id="app-galeries">            
         </div>
-        <script src="/js/app.js"></script>
+
+        <script src="/js/lang.js"></script>
+        <script src="/js/app-galeries.js"></script>
         <script type="text/javascript">
             // https://laravel.com/docs/5.4/csrf#csrf-x-csrf-token
             $.ajaxSetup({

@@ -28,6 +28,9 @@ Route::get('/web-expositions', function () {
 	return view('expositions');
 });
 
+/* Envoi d'un courriel vie le formulaire de contact */
+Route::post('/contact', 'ContactController@sendMessage');
+
 /* Administration
  * Requiert une authentification HTTP Basic
  */
@@ -35,15 +38,17 @@ Route::get('/web-administration', function () {
     return view('administration');
 })->middleware('auth.basic');
 
-/* Localization */
+/* Localization 
+ * Modification de la langue de l'application
+ */
 Route::get('/lang/{lang}', 'LanguageController@changerLangue');
 
 /* Localization
  * Rendu du pseudo-fichier lang.js
  */
 Route::get('/js/lang.js', function () {
-    $locale     = Session::get('applocale');
-    \Log::info('locale (lang.js) : ' . $locale);
+    // $locale     = Session::get('applocale', 'fr');
+    $locale     = App::getLocale();
     $files      = glob(resource_path('lang/' . $locale . '/*.php'));
     $strings    = ['locale' => $locale];
     foreach ($files as $file) {

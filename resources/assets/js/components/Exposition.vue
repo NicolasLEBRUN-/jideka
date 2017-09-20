@@ -5,12 +5,13 @@
         </div>
         <div class="contenu-section">
             <div>
-                Voici les informations de cette exposition :
+                {{ $trans('expositions.exposition.presentation') }}
             </div>
             <div>
-                <li>{{ exposition.description }}</li>
-                <li>{{ exposition.date_debut }}</li>
-                <li>{{ exposition.date_fin }}</li>
+                <li>{{ $trans('expositions.exposition.description') }} : {{ exposition.description }}</li>
+                <li>{{ $trans('expositions.exposition.date-debut') }} : {{ exposition.date_debut | formatDate }}</li>
+                <li>{{ $trans('expositions.exposition.date-fin') }} : {{ exposition.date_fin | formatDate }}</li>
+                <li>{{ $trans('expositions.exposition.date-vernissage') }} : {{ exposition.date_vernissage | formatDateTime }}</li>
                 <li><img :src="exposition.chemin_visuel" width="300px" /></li>
             </div>
         </div>
@@ -18,6 +19,8 @@
 </template>
 
 <script>
+    import moment from 'moment';
+
     export default {
         props: ['expositionId'],
         data() {
@@ -35,6 +38,18 @@
                 .catch(function (error) {
                     console.log('Erreur axios (Exposition.vue) : ' + error);
                 });
+        },
+        filters: {
+            formatDate: function(value) {
+                if (value) {
+                    return moment(String(value)).format('DD/MM/YYYY');
+                }
+            },
+            formatDateTime: function(value) {
+                if (value) {
+                    return moment(String(value)).format('DD/MM/YYYY hh:mm');
+                }
+            },
         }
     }
 </script>

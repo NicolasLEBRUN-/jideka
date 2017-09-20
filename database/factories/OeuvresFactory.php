@@ -28,6 +28,7 @@ $factory->define(App\Oeuvre::class, function (Faker\Generator $faker) {
         'prix' => $faker->numberBetween($min = 100, $max = 500),
         'disponibilite' => $faker->boolean($chanceOfGettingTrue = 75),
         'chemin_image' => str_random(10),
-        'galerie_id' => $faker->randomElement($galeriesIds)
+        'galerie_id' => $faker->randomElement($galeriesIds),
+        'actif' => 1,
     ];
 });

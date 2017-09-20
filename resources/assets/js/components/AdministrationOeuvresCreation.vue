@@ -67,11 +67,11 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="visuel">Visuel de l'oeuvre</label>
+                        <label for="visuel">Image de l'oeuvre</label>
                         <br />
                         <input type="file" class="form-control" name="visuel" v-on:change="processFile" />
                         <br />
-                        <img :src="visuel" alt="visuel" style="max-height: 60px">
+                        <img :src="visuel" alt="Image" style="max-height: 60px">
                     </div>
 
                     <div class="form-group danger" v-if="errors.length > 0">

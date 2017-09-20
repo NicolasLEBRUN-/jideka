@@ -5,7 +5,7 @@
             <li><a href="#administration-biographie" v-on:click="hideMenu">Biographie</a></li>
             <li><a href="#administration-galeries" v-on:click="hideMenu">Galeries</a></li>
             <li><a href="#administration-oeuvres" v-on:click="hideMenu">Oeuvres</a></li>
-            <li><a href="#administration-expositions" v-on:click="hideMenu">Expostions</a></li>
+            <li><a href="#administration-expositions" v-on:click="hideMenu">Expositions</a></li>
             <li class="burger">
                 <a href="javascript:void(0);" v-on:click="showMenu">
                     <button id="hamburger" class="hamburger hamburger--squeeze" type="button">

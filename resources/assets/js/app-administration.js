@@ -13,15 +13,6 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-/* Accueil */
-import AppAccueil from './AppAccueil.vue';
-
-/* Galeries */
-import AppGaleries from './AppGaleries.vue';
-
-/* Expositions */
-import AppExpositions from './AppExpositions.vue';
-
 /* Administration */
 import AppAdministration from './AppAdministration.vue';
 
@@ -38,21 +29,6 @@ Vue.prototype.$trans = function(string) {
 // Vue.filter('i18n', function(value) {
 // 	return _.get(window.i18n, value);
 // });
-
-const appAccueil = new Vue({
-    el: '#app-accueil',
-	render: h => h(AppAccueil)
-});
-
-const appGaleries = new Vue({
-    el: '#app-galeries',
-	render: h => h(AppGaleries)
-});
-
-const appExpositions = new Vue({
-    el: '#app-expositions',
-	render: h => h(AppExpositions)
-});
 
 const appAdministration = new Vue({
     el: '#app-administration',

@@ -24,5 +24,8 @@ mix.webpackConfig({
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.js('resources/assets/js/app-accueil.js', 'public/js')
+		.js('resources/assets/js/app-galeries.js', 'public/js')
+		.js('resources/assets/js/app-expositions.js', 'public/js')
+		.js('resources/assets/js/app-administration.js', 'public/js')
+		.sass('resources/assets/sass/app.scss', 'public/css');

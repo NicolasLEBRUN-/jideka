@@ -2,7 +2,7 @@
     <div id="accueil-biographie" class="accueil-biographie container">
         <div class="titre-section">
             <h1>
-                Biographie
+                {{ $trans('accueil.biographie.titre-section') }}
             </h1>
         </div>
         <div class="contenu-section">
@@ -10,7 +10,8 @@
                 <img src="/img/profil.jpg" />
             </div>
             <div class="description">
-                <span style="white-space: pre-wrap;">{{ biographie.corps }}</span>
+                <span style="white-space: pre-wrap;" v-if="$trans('locale') == 'fr'">{{ biographie.corps_fr }}</span>
+                <span style="white-space: pre-wrap;" v-if="$trans('locale') == 'en'">{{ biographie.corps_en }}</span>
             </div>
         </div>
     </div>

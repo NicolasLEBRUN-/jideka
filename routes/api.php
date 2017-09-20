@@ -101,9 +101,6 @@ Route::get('/statutsdisponibilite', function () {
     return $statuts_disponibilite;
 });
 
-/* Envoi d'un courriel vie le formulaire de contact */
-Route::post('/contact', 'ContactController@sendMessage');
-
 /* Administration
  * Modification de la biographie
  */

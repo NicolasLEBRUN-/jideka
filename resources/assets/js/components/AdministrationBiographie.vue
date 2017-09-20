@@ -14,11 +14,16 @@
             <div class="edition">
                 <form>
                     <div class="form-group">
-                        <label for="biographie">Biographie</label>
+                        <label for="biographieCorpsFr">Biographie française</label>
                         <br />
-                        <textarea class="form-control" name="biographieCorps" v-model="biographieCorps" rows="12" cols="100">
+                        <textarea class="form-control" name="biographieCorpsFr" v-model="biographieCorpsFr" rows="12" cols="100">
                         </textarea> 
-                        <input type="hidden" name="biographieVersion" v-model="biographieVersion" >
+                    </div>
+                    <div class="form-group">
+                        <label for="biographieCorpsEn">Biographie anglaise</label>
+                        <br />
+                        <textarea class="form-control" name="biographieCorpsEn" v-model="biographieCorpsEn" rows="12" cols="100">
+                        </textarea> 
                     </div>
                     <div class="form-group danger" v-if="errors.length > 0">
                         Erreurs : 
@@ -31,6 +36,7 @@
                             <li>{{ success }}</li>
                         </ul>
                     </div>
+                    <input type="hidden" name="biographieVersion" v-model="biographieVersion" >
                     <button v-on:click.prevent="creerBiographie" class="btn">Modifier</button>
                 </form>
             </div>
@@ -43,7 +49,8 @@
         props: [],
         data: function() {
             return {
-                biographieCorps: '',
+                biographieCorpsFr: '',
+                biographieCorpsEn: '',
                 biographieVersion: '',
                 errors: [],
                 success: ''
@@ -54,7 +61,8 @@
             let self = this;
             axios.get('/api/biographies')
                 .then(function (response) {
-                    self.biographieCorps = response.data[response.data.length - 1].corps;
+                    self.biographieCorpsFr = response.data[response.data.length - 1].corps_fr;
+                    self.biographieCorpsEn = response.data[response.data.length - 1].corps_en;
                     self.biographieVersion = response.data[response.data.length - 1].version;
                 })
                 .catch(function (error) {
@@ -65,7 +73,8 @@
             creerBiographie: function(event) {
                 let self = this;
                 axios.post('/api/create/biographies', {
-                        biographieCorps: self.biographieCorps,
+                        biographieCorpsFr: self.biographieCorpsFr,
+                        biographieCorpsEn: self.biographieCorpsEn,
                         biographieVersion: self.biographieVersion,
                     })
                     .then(function (response) {

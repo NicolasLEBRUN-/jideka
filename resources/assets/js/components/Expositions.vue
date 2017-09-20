@@ -2,12 +2,12 @@
     <div class="expositions container">
         <div class="titre-section">
             <h1>
-                Expositions
+                {{ $trans('expositions.expositions.titre-section') }}
             </h1>
         </div>
         <div class="contenu-section">
             <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum. Phasellus sed lacus sed odio consequat mattis sit amet eget sapien. Curabitur non viverra erat, eu pellentesque nunc. In eleifend nisl non leo pulvinar, nec ullamcorper lectus facilisis. Ut non egestas justo. Donec id congue eros.
+                {{ $trans('expositions.expositions.accroche') }}
             </div>
 
             <div>

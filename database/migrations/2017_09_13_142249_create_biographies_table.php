@@ -15,7 +15,8 @@ class CreateBiographiesTable extends Migration
     {
         Schema::create('biographies', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('corps');
+            $table->text('corps_fr');
+            $table->text('corps_en');
             $table->smallInteger('version');
             $table->timestamps();
         });

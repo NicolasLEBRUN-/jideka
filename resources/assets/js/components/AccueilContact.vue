@@ -2,44 +2,44 @@
     <div id="accueil-contact" class="accueil-contact container">
         <div class="titre-section">
             <h1>
-                Contact
+                {{ $trans('accueil.contact.titre-section') }}
             </h1>
         </div>
         <div class="contenu-section">
             <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum. Phasellus sed lacus sed odio consequat mattis sit amet eget sapien. Curabitur non viverra erat, eu pellentesque nunc. In eleifend nisl non leo pulvinar, nec ullamcorper lectus facilisis. Ut non egestas justo. Donec id congue eros.
+                {{ $trans('accueil.contact.accroche') }}
             </div>
-
+            <hr>
             <div>
                 <form>
                     <div class="form-group">
-                        <label for="nom">Nom</label>
+                        <label for="nom">{{ $trans('accueil.contact.form.nom') }}</label>
                         <input class="form-control" name="nom" v-model="nom" placeholder="Nom">
                     </div>
                     <div class="form-group">
-                        <label for="email">Adresse email</label>
+                        <label for="email">{{ $trans('accueil.contact.form.email') }}</label>
                         <input class="form-control" name="email" v-model="email" placeholder="Adresse email">
                     </div>
                     <div class="form-group">
                         <input type="checkbox" class="form-control" id="prereservation" name="prereservation" v-model="prereservation">
-                        <label for="prereservation">Je souhaite pré-réserver une oeuvre</label>
+                        <label for="prereservation">{{ $trans('accueil.contact.form.prereservation') }}</label>
                     </div>
                     <div class="form-group" v-if="prereservation">
-                        <label for="galerie">Nom de la galerie</label>
+                        <label for="galerie">{{ $trans('accueil.contact.form.galerie') }}</label>
                         <br />
                         <select name="galerie" v-model="galerie" v-on:change="recupererOeuvres">
                             <option v-for="galerie in galeries" :value="galerie.id">{{ galerie.nom }}</option>
                         </select>
                     </div>
                     <div class="form-group" v-if="prereservationAndGalerie">
-                        <label for="oeuvre">Nom de l'oeuvre</label>
+                        <label for="oeuvre">{{ $trans('accueil.contact.form.oeuvre') }}</label>
                         <br />
                         <select name="oeuvre" v-model="oeuvre">
                             <option v-for="oeuvre in oeuvres" :value="oeuvre.id">{{ oeuvre.nom }}</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="corps">Message</label>
+                        <label for="corps">{{ $trans('accueil.contact.form.message') }}</label>
                         <br />
                         <textarea class="form-control" name="corps" v-model="corps" rows="5" cols="50" placeholder="Message">
                         </textarea> 
@@ -58,7 +58,7 @@
                             <li>{{ success }}</li>
                         </ul>
                     </div>
-                    <button v-on:click.prevent="sendMessage" class="btn">Envoyer le message</button>
+                    <button v-on:click.prevent="sendMessage" class="btn">{{ $trans('accueil.contact.form.bouton') }}</button>
                 </form>
             </div>
         </div>
@@ -87,9 +87,7 @@
                 return this.prereservation && this.galerie;
             }
         },
-        mounted() {
-            console.log('Component Contact mounted.');
-        },
+        mounted() {},
         created() {
             let self = this;
             axios.get('/api/galeries')
@@ -102,6 +100,7 @@
         },
         methods: {
             recupererOeuvres: function(event) {
+                this.oeuvre = '';
                 let self = this;
                 axios.get('/api/galeries/' + this.galerie + '/oeuvres')
                     .then(function (response) {
@@ -115,7 +114,7 @@
                 this.errors = [];
                 this.success = '';
                 let self = this;
-                axios.post('api/contact', {
+                axios.post('/contact', {
                         nom: self.nom,
                         email: self.email,
                         prereservation: self.prereservation,
