@@ -32,7 +32,7 @@ class AdministrationController extends Controller
     	$biographie->version = $biographie_version + 1;
     	$biographie->save();
 
-		$success = 'La biographie a bien été modifiée.';
+		$success = 'Les biographies ont bien été modifiées.';
 		return $success;
     }
 
