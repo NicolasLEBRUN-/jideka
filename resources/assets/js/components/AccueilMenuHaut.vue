@@ -50,89 +50,94 @@
     }
 </script>
 
-<style type="text/css" scoped>
+<style lang="scss" scoped>
+    $main-color                             : #EB7041 !default;
+    $background-primary-color               : #353535 !default;
+    $background-secondary-color             : #3F3F3F !default;
+    $font-color                             : #FFF !default;
+
     .accueil-menu-haut {
         display: block;
         position: fixed;
         width: 100%;
-        background: deepskyblue;
-    }
+        background: rgba($background-primary-color, .5);
 
-    .navigation {
-        float: right;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
+        .navigation {
+            float: right;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            
+            li {
+                display: inline;
 
-    .navigation li {
-        display: inline;
-    }
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 18px;
+                    color: $font-color;
 
-    .navigation li a {
-        text-decoration: none;
-        display: inline-block;
-        float: left;
-        padding: 18px;
-        color: white;
-    }
+                    &:hover {
+                        background: darken(rgba($background-primary-color, .5), 5%);
+                    }
+                }
 
-    .navigation li.burger {
-        display: none;
-        line-height: 0;
-    }
+                &.burger {
+                    display: none;
+                }
 
-    .navigation li a:hover {
-        background: darkblue;
-    }
-
-    .navigation li.flag {
-        line-height: 0;
-    }
-
-    .navigation li.flag img {
-        height: 19px;
+                &.flag {
+                    img {
+                        height: 19px;
+                    }
+                }
+            }
+        }
     }
 
     @media all and (max-width: 600px) {
         .navigation {
-            float: none;
-        }
+            float: none !important;
+            background: rgba($background-primary-color, .5);
+            
+            li {
+                a {
+                    float: left;
+                }
 
-        .navigation li:not(:first-child) {
-            display: none;
-        }
+                &:not(:first-child) {
+                    display: none;
 
-        .navigation li a {
-            float: left;
-        }
 
-        .navigation li.burger {
-            display: block;
-            float: right;
-        }
+                    &.burger {
+                        display: block;
+                        float: right;
+                    }
+                }
+            }
 
-        .navigation.responsive {
-            position: relative;
-        }
+            &.responsive {
+                position: relative;
 
-        .navigation.responsive li.burger {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
+                li {
+                    float: none;
+                    display: block;
+                    text-align: left;
 
-        .navigation.responsive li {
-            float: none;
-            display: block;
-            text-align: left;
-        }
+                    a {
+                        float: none;
+                        display: block;
+                        text-align: left;
+                    }
 
-        .navigation.responsive li a {
-            float: none;
-            display: block;
-            text-align: left;
+                    &.burger {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
         }
     }
 </style>
