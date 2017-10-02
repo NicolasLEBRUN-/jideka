@@ -60,16 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 161);
-=======
-/******/ 	return __webpack_require__(__webpack_require__.s = 155);
->>>>>>> INIT
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
-/* 1 */
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {//! moment.js
@@ -78,18 +73,11 @@
 //! license : MIT
 //! momentjs.com
 
-<<<<<<< HEAD
 ;(function (global, factory) {
      true ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
     global.moment = factory()
 }(this, (function () { 'use strict';
-=======
-var bind = __webpack_require__(8);
-var isBuffer = __webpack_require__(19);
-
-/*global toString:true*/
->>>>>>> INIT
 
 var hookCallback;
 
@@ -350,14 +338,8 @@ function toInt(argumentForCoercion) {
         value = absFloor(coercedNumber);
     }
 
-<<<<<<< HEAD
     return value;
 }
-=======
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
->>>>>>> INIT
 
 // compare two arrays, return the number of differences
 function compareArrays(array1, array2, dontConvert) {
@@ -483,7 +465,6 @@ function Locale(config) {
 
 var keys;
 
-<<<<<<< HEAD
 if (Object.keys) {
     keys = Object.keys;
 } else {
@@ -497,11 +478,6 @@ if (Object.keys) {
         return res;
     };
 }
-=======
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
->>>>>>> INIT
 
 var keys$1 = keys;
 
@@ -552,15 +528,9 @@ function invalidDate () {
 var defaultOrdinal = '%d';
 var defaultDayOfMonthOrdinalParse = /\d{1,2}/;
 
-<<<<<<< HEAD
 function ordinal (number) {
     return this._ordinal.replace('%d', number);
 }
-=======
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
->>>>>>> INIT
 
 var defaultRelativeTime = {
     future : 'in %s',
@@ -808,25 +778,14 @@ var matchTimestamp = /[+-]?\d+(\.\d{1,3})?/; // 123456789 123456789.123
 // includes scottish gaelic two word and hyphenated months
 var matchWord = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i;
 
-<<<<<<< HEAD
-=======
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
->>>>>>> INIT
 
 var regexes = {};
 
-<<<<<<< HEAD
 function addRegexToken (token, regex, strictRegex) {
     regexes[token] = isFunction(regex) ? regex : function (isStrict, localeData) {
         return (isStrict && strictRegex) ? strictRegex : regex;
     };
 }
-=======
-var utils = __webpack_require__(1);
-var normalizeHeaderName = __webpack_require__(22);
->>>>>>> INIT
 
 function getParseRegexForToken (token, config) {
     if (!hasOwnProp(regexes, token)) {
@@ -836,24 +795,11 @@ function getParseRegexForToken (token, config) {
     return regexes[token](config._strict, config._locale);
 }
 
-<<<<<<< HEAD
 // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
 function unescapeFormat(s) {
     return regexEscape(s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
         return p1 || p2 || p3 || p4;
     }));
-=======
-function getDefaultAdapter() {
-  var adapter;
-  if (typeof XMLHttpRequest !== 'undefined') {
-    // For browsers use XHR adapter
-    adapter = __webpack_require__(9);
-  } else if (typeof process !== 'undefined') {
-    // For node use HTTP adapter
-    adapter = __webpack_require__(9);
-  }
-  return adapter;
->>>>>>> INIT
 }
 
 function regexEscape(s) {
@@ -939,13 +885,7 @@ addFormatToken('MMMM', 0, 0, function (format) {
 
 // ALIASES
 
-<<<<<<< HEAD
 addUnitAlias('month', 'M');
-=======
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
->>>>>>> INIT
 
 // PRIORITY
 
@@ -33962,249 +33902,10 @@ if (token) {
   }
 }.call(this));
 
-<<<<<<< HEAD
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(7)(module)))
 
 /***/ }),
 /* 130 */
-=======
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(13)(module)))
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function bind(fn, thisArg) {
-  return function wrap() {
-    var args = new Array(arguments.length);
-    for (var i = 0; i < args.length; i++) {
-      args[i] = arguments[i];
-    }
-    return fn.apply(thisArg, args);
-  };
-};
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var utils = __webpack_require__(1);
-var settle = __webpack_require__(23);
-var buildURL = __webpack_require__(25);
-var parseHeaders = __webpack_require__(26);
-var isURLSameOrigin = __webpack_require__(27);
-var createError = __webpack_require__(10);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(28);
-
-module.exports = function xhrAdapter(config) {
-  return new Promise(function dispatchXhrRequest(resolve, reject) {
-    var requestData = config.data;
-    var requestHeaders = config.headers;
-
-    if (utils.isFormData(requestData)) {
-      delete requestHeaders['Content-Type']; // Let the browser set it
-    }
-
-    var request = new XMLHttpRequest();
-    var loadEvent = 'onreadystatechange';
-    var xDomain = false;
-
-    // For IE 8/9 CORS support
-    // Only supports POST and GET calls and doesn't returns the response headers.
-    // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
-    if ("development" !== 'test' &&
-        typeof window !== 'undefined' &&
-        window.XDomainRequest && !('withCredentials' in request) &&
-        !isURLSameOrigin(config.url)) {
-      request = new window.XDomainRequest();
-      loadEvent = 'onload';
-      xDomain = true;
-      request.onprogress = function handleProgress() {};
-      request.ontimeout = function handleTimeout() {};
-    }
-
-    // HTTP basic authentication
-    if (config.auth) {
-      var username = config.auth.username || '';
-      var password = config.auth.password || '';
-      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
-    }
-
-    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
-
-    // Set the request timeout in MS
-    request.timeout = config.timeout;
-
-    // Listen for ready state
-    request[loadEvent] = function handleLoad() {
-      if (!request || (request.readyState !== 4 && !xDomain)) {
-        return;
-      }
-
-      // The request errored out and we didn't get a response, this will be
-      // handled by onerror instead
-      // With one exception: request that using file: protocol, most browsers
-      // will return status as 0 even though it's a successful request
-      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
-        return;
-      }
-
-      // Prepare the response
-      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
-      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
-      var response = {
-        data: responseData,
-        // IE sends 1223 instead of 204 (https://github.com/mzabriskie/axios/issues/201)
-        status: request.status === 1223 ? 204 : request.status,
-        statusText: request.status === 1223 ? 'No Content' : request.statusText,
-        headers: responseHeaders,
-        config: config,
-        request: request
-      };
-
-      settle(resolve, reject, response);
-
-      // Clean up request
-      request = null;
-    };
-
-    // Handle low level network errors
-    request.onerror = function handleError() {
-      // Real errors are hidden from us by the browser
-      // onerror should only fire if it's a network error
-      reject(createError('Network Error', config, null, request));
-
-      // Clean up request
-      request = null;
-    };
-
-    // Handle timeout
-    request.ontimeout = function handleTimeout() {
-      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED',
-        request));
-
-      // Clean up request
-      request = null;
-    };
-
-    // Add xsrf header
-    // This is only done if running in a standard browser environment.
-    // Specifically not if we're in a web worker, or react-native.
-    if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(29);
-
-      // Add xsrf header
-      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
-          cookies.read(config.xsrfCookieName) :
-          undefined;
-
-      if (xsrfValue) {
-        requestHeaders[config.xsrfHeaderName] = xsrfValue;
-      }
-    }
-
-    // Add headers to the request
-    if ('setRequestHeader' in request) {
-      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
-        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
-          // Remove Content-Type if data is undefined
-          delete requestHeaders[key];
-        } else {
-          // Otherwise add header to the request
-          request.setRequestHeader(key, val);
-        }
-      });
-    }
-
-    // Add withCredentials to request if needed
-    if (config.withCredentials) {
-      request.withCredentials = true;
-    }
-
-    // Add responseType to request if needed
-    if (config.responseType) {
-      try {
-        request.responseType = config.responseType;
-      } catch (e) {
-        // Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
-        // But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
-        if (config.responseType !== 'json') {
-          throw e;
-        }
-      }
-    }
-
-    // Handle progress if needed
-    if (typeof config.onDownloadProgress === 'function') {
-      request.addEventListener('progress', config.onDownloadProgress);
-    }
-
-    // Not all browsers support upload events
-    if (typeof config.onUploadProgress === 'function' && request.upload) {
-      request.upload.addEventListener('progress', config.onUploadProgress);
-    }
-
-    if (config.cancelToken) {
-      // Handle cancellation
-      config.cancelToken.promise.then(function onCanceled(cancel) {
-        if (!request) {
-          return;
-        }
-
-        request.abort();
-        reject(cancel);
-        // Clean up request
-        request = null;
-      });
-    }
-
-    if (requestData === undefined) {
-      requestData = null;
-    }
-
-    // Send the request
-    request.send(requestData);
-  });
-};
-
-
-/***/ }),
-/* 10 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -34439,7 +34140,6 @@ var map = {
 	"./zh-tw": 122,
 	"./zh-tw.js": 122
 };
-<<<<<<< HEAD
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
 };
@@ -34458,142 +34158,6 @@ webpackContext.id = 130;
 
 /***/ }),
 /* 131 */
-=======
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function isCancel(value) {
-  return !!(value && value.__CANCEL__);
-};
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * A `Cancel` is an object that is thrown when an operation is canceled.
- *
- * @class
- * @param {string=} message The message.
- */
-function Cancel(message) {
-  this.message = message;
-}
-
-Cancel.prototype.toString = function toString() {
-  return 'Cancel' + (this.message ? ': ' + this.message : '');
-};
-
-Cancel.prototype.__CANCEL__ = true;
-
-module.exports = Cancel;
-
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if(!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if(!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-window._ = __webpack_require__(6);
-
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-window.$ = window.jQuery = __webpack_require__(15);
-
-// require('bootstrap-sass');
-
-/**
- * Vue is a modern JavaScript library for building interactive web interfaces
- * using reactive data binding and reusable components. Vue's API is clean
- * and simple, leaving you to focus on building your next great project.
- */
-
-window.Vue = __webpack_require__(16);
-
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
-
-window.axios = __webpack_require__(17);
-
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
- */
-
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
-
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
-
-// import Echo from 'laravel-echo'
-
-// window.Pusher = require('pusher-js');
-
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
-// });
-
-/***/ }),
-/* 15 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -55050,7 +54614,7 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
 /* 133 */
@@ -55066,13 +54630,8 @@ module.exports = __webpack_require__(134);
 
 
 var utils = __webpack_require__(1);
-<<<<<<< HEAD
 var bind = __webpack_require__(123);
 var Axios = __webpack_require__(136);
-=======
-var bind = __webpack_require__(8);
-var Axios = __webpack_require__(20);
->>>>>>> INIT
 var defaults = __webpack_require__(5);
 
 /**
@@ -55106,15 +54665,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-<<<<<<< HEAD
 axios.Cancel = __webpack_require__(127);
 axios.CancelToken = __webpack_require__(151);
 axios.isCancel = __webpack_require__(126);
-=======
-axios.Cancel = __webpack_require__(12);
-axios.CancelToken = __webpack_require__(35);
-axios.isCancel = __webpack_require__(11);
->>>>>>> INIT
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -55164,17 +54717,10 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(5);
 var utils = __webpack_require__(1);
-<<<<<<< HEAD
 var InterceptorManager = __webpack_require__(146);
 var dispatchRequest = __webpack_require__(147);
 var isAbsoluteURL = __webpack_require__(149);
 var combineURLs = __webpack_require__(150);
-=======
-var InterceptorManager = __webpack_require__(30);
-var dispatchRequest = __webpack_require__(31);
-var isAbsoluteURL = __webpack_require__(33);
-var combineURLs = __webpack_require__(34);
->>>>>>> INIT
 
 /**
  * Create a new instance of Axios
@@ -55471,11 +55017,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-<<<<<<< HEAD
 var createError = __webpack_require__(125);
-=======
-var createError = __webpack_require__(10);
->>>>>>> INIT
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -55893,13 +55435,8 @@ module.exports = InterceptorManager;
 
 
 var utils = __webpack_require__(1);
-<<<<<<< HEAD
 var transformData = __webpack_require__(148);
 var isCancel = __webpack_require__(126);
-=======
-var transformData = __webpack_require__(32);
-var isCancel = __webpack_require__(11);
->>>>>>> INIT
 var defaults = __webpack_require__(5);
 
 /**
@@ -56430,11 +55967,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-<<<<<<< HEAD
 __webpack_require__(128);
-=======
-var utils = __webpack_require__(1);
->>>>>>> INIT
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -56545,10 +56078,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 
-<<<<<<< HEAD
-=======
-var Cancel = __webpack_require__(12);
->>>>>>> INIT
 
 
 
@@ -56575,7 +56104,7 @@ var Cancel = __webpack_require__(12);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(835)
+  __webpack_require__(166)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -56619,8 +56148,46 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 166 */,
-/* 167 */,
+/* 166 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(167);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("7ffc93f0", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331f447c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MenuHaut.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331f447c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MenuHaut.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 167 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.accueil-menu-haut[data-v-331f447c] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.5);\n}\n.accueil-menu-haut .navigation[data-v-331f447c] {\n    float: right;\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n}\n.accueil-menu-haut .navigation li[data-v-331f447c] {\n      display: inline;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: #FFF;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c]:hover {\n          background: rgba(40, 40, 40, 0.5);\n}\n.accueil-menu-haut .navigation li.burger[data-v-331f447c] {\n        display: none;\n}\n.accueil-menu-haut .navigation li.flag img[data-v-331f447c] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-331f447c] {\n    float: none !important;\n    background: rgba(53, 53, 53, 0.5);\n}\n.navigation li a[data-v-331f447c] {\n      float: left;\n}\n.navigation li[data-v-331f447c]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-331f447c] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-331f447c] {\n      position: relative;\n}\n.navigation.responsive li[data-v-331f447c] {\n        float: none;\n        display: block;\n        text-align: left;\n}\n.navigation.responsive li a[data-v-331f447c] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-331f447c] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
 /* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -56937,7 +56504,6 @@ if (false) {
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -56991,139 +56557,10 @@ module.exports = Component.exports
 /* 176 */,
 /* 177 */,
 /* 178 */
-=======
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */,
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */,
-/* 133 */,
-/* 134 */,
-/* 135 */,
-/* 136 */,
-/* 137 */,
-/* 138 */,
-/* 139 */,
-/* 140 */,
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(156);
-module.exports = __webpack_require__(190);
-
-
-/***/ }),
-/* 156 */
->>>>>>> INIT
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-<<<<<<< HEAD
 //
 //
 //
@@ -57143,30 +56580,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AppAccueil_vue__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AppAccueil_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__AppAccueil_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
-__webpack_require__(14);
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-/* Accueil */
-
-
->>>>>>> INIT
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -57189,7 +56602,6 @@ __webpack_require__(14);
 /* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -57239,12 +56651,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "image" }, [
       _c("img", { attrs: { src: "/img/profil.jpg" } })
     ])
-=======
-var appAccueil = new Vue({
-  el: '#app-accueil',
-  render: function render(h) {
-    return h(__WEBPACK_IMPORTED_MODULE_0__AppAccueil_vue___default.a);
->>>>>>> INIT
   }
 ]
 render._withStripped = true
@@ -57257,7 +56663,6 @@ if (false) {
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -57271,17 +56676,6 @@ var normalizeComponent = __webpack_require__(2)
 var __vue_script__ = __webpack_require__(183)
 /* template */
 var __vue_template__ = __webpack_require__(184)
-=======
-/* 157 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(158)
-/* template */
-var __vue_template__ = __webpack_require__(189)
->>>>>>> INIT
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
@@ -57319,7 +56713,6 @@ module.exports = Component.exports
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -57361,14 +56754,10 @@ exports.push([module.i, "\n.contenu-section[data-v-1b505c1d] {\n    //display: f
 
 /***/ }),
 /* 183 */
-=======
-/* 158 */
->>>>>>> INIT
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-<<<<<<< HEAD
 //
 //
 //
@@ -57386,20 +56775,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AccueilMenuHaut_vue__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AccueilMenuHaut_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_AccueilMenuHaut_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AccueilPresentation_vue__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AccueilPresentation_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_AccueilPresentation_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_AccueilBiographie_vue__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_AccueilBiographie_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_AccueilBiographie_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_AccueilGaleries_vue__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_AccueilGaleries_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_AccueilGaleries_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_AccueilExpositions_vue__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_AccueilExpositions_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_AccueilExpositions_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_AccueilContact_vue__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_AccueilContact_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_AccueilContact_vue__);
->>>>>>> INIT
 //
 //
 //
@@ -57433,7 +56808,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -57443,22 +56817,6 @@ var render = function() {
     {
       staticClass: "accueil-galeries container",
       attrs: { id: "accueil-galeries" }
-=======
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    name: 'app-accueil',
-    components: {
-        AccueilMenuHaut: __WEBPACK_IMPORTED_MODULE_0__components_AccueilMenuHaut_vue___default.a,
-        AccueilPresentation: __WEBPACK_IMPORTED_MODULE_1__components_AccueilPresentation_vue___default.a,
-        AccueilBiographie: __WEBPACK_IMPORTED_MODULE_2__components_AccueilBiographie_vue___default.a,
-        AccueilGaleries: __WEBPACK_IMPORTED_MODULE_3__components_AccueilGaleries_vue___default.a,
-        AccueilExpositions: __WEBPACK_IMPORTED_MODULE_4__components_AccueilExpositions_vue___default.a,
-        AccueilContact: __WEBPACK_IMPORTED_MODULE_5__components_AccueilContact_vue___default.a
->>>>>>> INIT
     },
     [
       _c("div", { staticClass: "titre-section" }, [
@@ -57525,17 +56883,12 @@ if (false) {
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 185 */
-=======
-/* 159 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-<<<<<<< HEAD
   __webpack_require__(186)
 }
 var normalizeComponent = __webpack_require__(2)
@@ -57543,15 +56896,6 @@ var normalizeComponent = __webpack_require__(2)
 var __vue_script__ = __webpack_require__(188)
 /* template */
 var __vue_template__ = __webpack_require__(189)
-=======
-  __webpack_require__(160)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(162)
-/* template */
-var __vue_template__ = __webpack_require__(163)
->>>>>>> INIT
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
@@ -57589,29 +56933,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 186 */
-=======
-/* 160 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-<<<<<<< HEAD
 var content = __webpack_require__(187);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(4)("6866ce7e", content, false);
-=======
-var content = __webpack_require__(161);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("2ccc9ee0", content, false);
->>>>>>> INIT
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -57627,11 +56959,7 @@ if(false) {
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 187 */
-=======
-/* 161 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -57645,16 +56973,11 @@ exports.push([module.i, "\ndiv.expositions-container[data-v-7d0f01fc] {\n  displ
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 188 */
-=======
-/* 162 */
->>>>>>> INIT
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue__);
 //
@@ -57670,8 +56993,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-=======
->>>>>>> INIT
 //
 //
 //
@@ -57700,12 +57021,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-<<<<<<< HEAD
-=======
-/* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {},
-    created: function created() {},
->>>>>>> INIT
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -57752,11 +57067,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-<<<<<<< HEAD
 /* 189 */
-=======
-/* 163 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -57845,26 +57156,17 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-<<<<<<< HEAD
      require("vue-hot-reload-api").rerender("data-v-7d0f01fc", module.exports)
-=======
-     require("vue-hot-reload-api").rerender("data-v-209d7b1e", module.exports)
->>>>>>> INIT
   }
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 190 */
-=======
-/* 164 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-<<<<<<< HEAD
   __webpack_require__(191)
 }
 var normalizeComponent = __webpack_require__(2)
@@ -57872,15 +57174,6 @@ var normalizeComponent = __webpack_require__(2)
 var __vue_script__ = __webpack_require__(193)
 /* template */
 var __vue_template__ = __webpack_require__(194)
-=======
-  __webpack_require__(165)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(167)
-/* template */
-var __vue_template__ = __webpack_require__(168)
->>>>>>> INIT
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
@@ -57918,29 +57211,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 191 */
-=======
-/* 165 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-<<<<<<< HEAD
 var content = __webpack_require__(192);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(4)("60c2d57c", content, false);
-=======
-var content = __webpack_require__(166);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("287d6a02", content, false);
->>>>>>> INIT
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -57956,7 +57237,6 @@ if(false) {
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -58447,55 +57727,6 @@ if (false) {
 /* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
-=======
-/* 166 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.contenu-section[data-v-33cd5898] {\n    display: flex;\n    flex-direction: row wrap;\n    justify-content: space-around;\n}\n.image[data-v-33cd5898] {\n    flex: 1;\n    display: flex;\n    justify-content: center;\n    padding: 12px;\n}\n.description[data-v-33cd5898] {\n    flex: 2;\n    padding: 12px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-33cd5898] {\n        flex-flow: column wrap;\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 167 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {}
-});
-
-/***/ }),
-/* 168 */
-/***/ (function(module, exports, __webpack_require__) {
-
->>>>>>> INIT
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -58525,26 +57756,17 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-<<<<<<< HEAD
      require("vue-hot-reload-api").rerender("data-v-41fdb87d", module.exports)
-=======
-     require("vue-hot-reload-api").rerender("data-v-33cd5898", module.exports)
->>>>>>> INIT
   }
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 196 */
-=======
-/* 169 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-<<<<<<< HEAD
   __webpack_require__(197)
 }
 var normalizeComponent = __webpack_require__(2)
@@ -58552,15 +57774,6 @@ var normalizeComponent = __webpack_require__(2)
 var __vue_script__ = __webpack_require__(199)
 /* template */
 var __vue_template__ = __webpack_require__(200)
-=======
-  __webpack_require__(170)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(172)
-/* template */
-var __vue_template__ = __webpack_require__(173)
->>>>>>> INIT
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
@@ -58598,29 +57811,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 197 */
-=======
-/* 170 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-<<<<<<< HEAD
 var content = __webpack_require__(198);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(4)("b792ac74", content, false);
-=======
-var content = __webpack_require__(171);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("12d90714", content, false);
->>>>>>> INIT
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -58636,11 +57837,7 @@ if(false) {
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 198 */
-=======
-/* 171 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -58654,16 +57851,11 @@ exports.push([module.i, "\n.action-link[data-v-1c73e975] {\n    cursor: pointer;
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 199 */
-=======
-/* 172 */
->>>>>>> INIT
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-<<<<<<< HEAD
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //
@@ -58863,8 +58055,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 //
 //
 //
-=======
->>>>>>> INIT
 //
 //
 //
@@ -58886,12 +58076,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-<<<<<<< HEAD
     /*
      * The component's data.
      */
-=======
->>>>>>> INIT
     data: function data() {
         return {
             clients: [],
@@ -59032,11 +58219,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 });
 
 /***/ }),
-<<<<<<< HEAD
 /* 200 */
-=======
-/* 173 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -59566,26 +58749,17 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-<<<<<<< HEAD
      require("vue-hot-reload-api").rerender("data-v-1c73e975", module.exports)
-=======
-     require("vue-hot-reload-api").rerender("data-v-b2cdf408", module.exports)
->>>>>>> INIT
   }
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 201 */
-=======
-/* 174 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-<<<<<<< HEAD
   __webpack_require__(202)
 }
 var normalizeComponent = __webpack_require__(2)
@@ -59593,15 +58767,6 @@ var normalizeComponent = __webpack_require__(2)
 var __vue_script__ = __webpack_require__(204)
 /* template */
 var __vue_template__ = __webpack_require__(205)
-=======
-  __webpack_require__(175)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(177)
-/* template */
-var __vue_template__ = __webpack_require__(178)
->>>>>>> INIT
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
@@ -59639,29 +58804,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 202 */
-=======
-/* 175 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-<<<<<<< HEAD
 var content = __webpack_require__(203);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(4)("335c56ce", content, false);
-=======
-var content = __webpack_require__(176);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("375139e0", content, false);
->>>>>>> INIT
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -59677,11 +58830,7 @@ if(false) {
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 203 */
-=======
-/* 176 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -59695,16 +58844,11 @@ exports.push([module.i, "\n.action-link[data-v-268c569a] {\n    cursor: pointer;
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 204 */
-=======
-/* 177 */
->>>>>>> INIT
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-<<<<<<< HEAD
 //
 //
 //
@@ -59733,8 +58877,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-=======
->>>>>>> INIT
 //
 //
 //
@@ -59765,12 +58907,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-<<<<<<< HEAD
     /*
      * The component's data.
      */
-=======
->>>>>>> INIT
     data: function data() {
         return {
             tokens: []
@@ -59829,11 +58968,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-<<<<<<< HEAD
 /* 205 */
-=======
-/* 178 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -59937,26 +59072,17 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-<<<<<<< HEAD
      require("vue-hot-reload-api").rerender("data-v-268c569a", module.exports)
-=======
-     require("vue-hot-reload-api").rerender("data-v-503b4bdc", module.exports)
->>>>>>> INIT
   }
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 206 */
-=======
-/* 179 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-<<<<<<< HEAD
   __webpack_require__(207)
 }
 var normalizeComponent = __webpack_require__(2)
@@ -59964,15 +59090,6 @@ var normalizeComponent = __webpack_require__(2)
 var __vue_script__ = __webpack_require__(209)
 /* template */
 var __vue_template__ = __webpack_require__(210)
-=======
-  __webpack_require__(180)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(182)
-/* template */
-var __vue_template__ = __webpack_require__(183)
->>>>>>> INIT
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
@@ -60010,29 +59127,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 207 */
-=======
-/* 180 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-<<<<<<< HEAD
 var content = __webpack_require__(208);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(4)("287b026e", content, false);
-=======
-var content = __webpack_require__(181);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("2c60a50b", content, false);
->>>>>>> INIT
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -60048,11 +59153,7 @@ if(false) {
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 208 */
-=======
-/* 181 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
@@ -60066,16 +59167,11 @@ exports.push([module.i, "\n.action-link[data-v-30533761] {\n    cursor: pointer;
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 209 */
-=======
-/* 182 */
->>>>>>> INIT
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-<<<<<<< HEAD
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //
@@ -60140,8 +59236,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 //
 //
 //
-=======
->>>>>>> INIT
 //
 //
 //
@@ -60173,201 +59267,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 //
 //
 //
-<<<<<<< HEAD
-=======
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            expositions: []
-        };
-    },
-    mounted: function mounted() {},
-    created: function created() {
-        var self = this;
-        axios.get('/api/expositions').then(function (response) {
-            self.expositions = response.data;
-        }).catch(function (error) {
-            console.log('Erreur axios (AccueilExpositions.vue) : ' + error);
-        });
-    }
-});
-
-/***/ }),
-/* 183 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass: "accueil-expositions container",
-      attrs: { id: "accueil-expositions" }
-    },
-    [
-      _c("div", { staticClass: "titre-section" }, [
-        _c("h1", [
-          _vm._v(
-            "\n            " +
-              _vm._s(_vm.$trans("accueil.expositions.titre-section")) +
-              "\n        "
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "contenu-section" }, [
-        _c("div", [
-          _vm._v(
-            "\n            " +
-              _vm._s(_vm.$trans("accueil.expositions.accroche")) +
-              "\n        "
-          )
-        ]),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "ul",
-            _vm._l(_vm.expositions, function(exposition) {
-              return _c("li", [_vm._v(_vm._s(exposition))])
-            })
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("a", { attrs: { href: "/web-expositions" } }, [
-            _vm._v(_vm._s(_vm.$trans("accueil.expositions.lien")))
-          ])
-        ])
-      ])
-    ]
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _vm._v("\n            ----------"),
-      _c("br"),
-      _vm._v("\n            | Module |"),
-      _c("br"),
-      _vm._v("\n            ----------"),
-      _c("br")
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-3a8e7e26", module.exports)
-  }
-}
-
-/***/ }),
-/* 184 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(185)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(187)
-/* template */
-var __vue_template__ = __webpack_require__(188)
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-09c1a314"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/AccueilContact.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] AccueilContact.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-09c1a314", Component.options)
-  } else {
-    hotAPI.reload("data-v-09c1a314", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 185 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(186);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("c6b6bf3e", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-09c1a314\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AccueilContact.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-09c1a314\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AccueilContact.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 186 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.contenu-section[data-v-09c1a314] {\n    //display: flex;\n    //flex-direction: column;\n    //justify-content: space-around;\n    //flex-wrap: wrap;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 187 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
->>>>>>> INIT
 //
 //
 //
@@ -60437,13 +59336,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-<<<<<<< HEAD
     /*
      * The component's data.
      */
-=======
-    props: ['googleRecaptchaDataSitekey'],
->>>>>>> INIT
     data: function data() {
         return {
             accessToken: null,
@@ -60598,11 +59493,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-<<<<<<< HEAD
 /* 210 */
-=======
-/* 188 */
->>>>>>> INIT
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -60969,16 +59860,11 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-<<<<<<< HEAD
      require("vue-hot-reload-api").rerender("data-v-30533761", module.exports)
-=======
-     require("vue-hot-reload-api").rerender("data-v-09c1a314", module.exports)
->>>>>>> INIT
   }
 }
 
 /***/ }),
-<<<<<<< HEAD
 /* 211 */
 /***/ (function(module, exports) {
 
@@ -61608,46 +60494,8 @@ if (false) {
 /* 832 */,
 /* 833 */,
 /* 834 */,
-/* 835 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(836);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("ae454224", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331f447c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MenuHaut.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331f447c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./MenuHaut.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 836 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.accueil-menu-haut[data-v-331f447c] {\n    display: block;\n    position: fixed;\n    width: 100%;\n    background: deepskyblue;\n    z-index: 1000;\n}\n.navigation[data-v-331f447c] {\n    float: right;\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n}\n.navigation li[data-v-331f447c] {\n    display: inline;\n}\n.navigation li a[data-v-331f447c] {\n    text-decoration: none;\n    display: inline-block;\n    float: left;\n    padding: 18px;\n    color: white;\n}\n.navigation li.burger[data-v-331f447c] {\n    display: none;\n    line-height: 0;\n}\n.navigation li a[data-v-331f447c]:hover {\n    background: darkblue;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-331f447c] {\n        float: none;\n}\n.navigation li[data-v-331f447c]:not(:first-child) {\n        display: none;\n}\n.navigation li a[data-v-331f447c] {\n        float: left;\n}\n.navigation li.burger[data-v-331f447c] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-331f447c] {\n        position: relative;\n}\n.navigation.responsive li.burger[data-v-331f447c] {\n        position: absolute;\n        right: 0;\n        top: 0;\n}\n.navigation.responsive li[data-v-331f447c] {\n        float: none;\n        display: block;\n        text-align: left;\n}\n.navigation.responsive li a[data-v-331f447c] {\n        float: none;\n        display: block;\n        text-align: left;\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 835 */,
+/* 836 */,
 /* 837 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -61725,51 +60573,6 @@ exports = module.exports = __webpack_require__(3)(undefined);
 exports.push([module.i, "\n.contenu-section[data-v-72e29d72] {\n    display: flex;\n    flex-direction: row wrap;\n    justify-content: space-around;\n}\n.image[data-v-72e29d72] {\n    flex: 1;\n    display: flex;\n    justify-content: center;\n    padding: 12px;\n}\n.description[data-v-72e29d72] {\n    flex: 2;\n    padding: 12px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-72e29d72] {\n        flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
-=======
-/* 189 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { attrs: { id: "app-accueil" } },
-    [
-      _c("accueil-menu-haut"),
-      _vm._v(" "),
-      _c("accueil-presentation"),
-      _vm._v(" "),
-      _c("accueil-biographie"),
-      _vm._v(" "),
-      _c("accueil-galeries"),
-      _vm._v(" "),
-      _c("accueil-expositions"),
-      _vm._v(" "),
-      _c("accueil-contact", {
-        attrs: {
-          googleRecaptchaDataSitekey: "6LedYy8UAAAAAIGeKivVQGyLmlsTqQfVmTNELgc8"
-        }
-      })
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-73ac1c52", module.exports)
-  }
-}
-
-/***/ }),
-/* 190 */
-/***/ (function(module, exports) {
->>>>>>> INIT
 
 
 /***/ })
