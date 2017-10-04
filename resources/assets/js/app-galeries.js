@@ -14,7 +14,7 @@ require('./bootstrap');
  */
 
 /* Galeries */
-import AppGaleries from './AppGaleries.vue';
+import AppGaleries from './components/AppGaleries.vue';
 
 import _ from 'lodash';
 Vue.prototype.$trans = function(string) {

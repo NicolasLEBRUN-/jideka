@@ -14,7 +14,7 @@ require('./bootstrap');
  */
 
 /* Expositions */
-import AppExpositions from './AppExpositions.vue';
+import AppExpositions from './components/AppExpositions.vue';
 
 import _ from 'lodash';
 

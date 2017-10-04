@@ -15,8 +15,8 @@
 </template>
 
 <script>
-    import AdministrationGaleriesCreation from '../components/AdministrationGaleriesCreation.vue';
-    import AdministrationGaleriesSuppression from '../components/AdministrationGaleriesSuppression.vue';
+    import AdministrationGaleriesCreation from '../administration/GaleriesCreation.vue';
+    import AdministrationGaleriesSuppression from '../administration/GaleriesSuppression.vue';
 
     export default {
         name: 'administration-galeries',

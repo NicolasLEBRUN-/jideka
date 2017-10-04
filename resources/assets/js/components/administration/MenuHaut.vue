@@ -1,12 +1,18 @@
 <template>
-    <div class="galeries-menu-haut">
-        <ul class="navigation">
-            <li><a href="/" v-on:click="hideMenu">{{ $trans('galeries.menuhaut.retour-accueil') }}</a></li>
-            <li class="flag" v-if="$trans('locale') != 'fr'">
-                <a href="/lang/fr" v-on:click="hideMenu"><img src="/img/fr.png" alt="Français" /></a>
-            </li>
-            <li class="flag" v-if="$trans('locale') != 'en'">
-                <a href="/lang/en" v-on:click="hideMenu"><img src="/img/en.png" alt="English" /></a>
+    <div class="administration-menu-haut">
+        <ul id="navbar" class="navigation">
+            <li><a href="/" v-on:click="hideMenu">Retour à la version publique du site</a></li>
+            <li><a href="#administration-biographie" v-on:click="hideMenu">Biographie</a></li>
+            <li><a href="#administration-galeries" v-on:click="hideMenu">Galeries</a></li>
+            <li><a href="#administration-oeuvres" v-on:click="hideMenu">Oeuvres</a></li>
+            <li><a href="#administration-expositions" v-on:click="hideMenu">Expositions</a></li>
+            <li>
+                <a href="/logout" v-on:click.prevent="deconnecter">
+                    Déconnexion
+                </a>
+                <form id="logout-form" action="/logout" method="POST" style="display: none;">
+                    <input type="hidden" name="_token" :value="csrf">
+                </form>
             </li>
             <li class="burger">
                 <a href="javascript:void(0);" v-on:click="showMenu">
@@ -23,7 +29,14 @@
 
 <script>
     export default {
-        mounted() {},
+        data: function() {
+            return {
+                csrf: '',
+            }
+        },
+        mounted() {
+            this.csrf = document.querySelector('meta[name="csrf-token"]').getAttribute('content');;
+        },
         methods: {
             showMenu: function(event) {
                 let navbar = document.getElementById("navbar");
@@ -40,13 +53,17 @@
                 if (hamburger.classList.contains("is-active")) {
                     hamburger.classList.toggle("is-active");
                 }
+            },
+            deconnecter: function(event) {
+                event.preventDefault();
+                document.getElementById('logout-form').submit();
             }
         }
     }
 </script>
 
 <style type="text/css" scoped>
-    .galeries-menu-haut {
+    .administration-menu-haut {
         display: block;
         position: fixed;
         width: 100%;
@@ -80,14 +97,6 @@
 
     .navigation li a:hover {
         background: darkblue;
-    }
-
-    .navigation li.flag {
-        line-height: 0;
-    }
-
-    .navigation li.flag img {
-        height: 19px;
     }
 
     @media all and (max-width: 600px) {
@@ -131,3 +140,4 @@
         }
     }
 </style>
+    

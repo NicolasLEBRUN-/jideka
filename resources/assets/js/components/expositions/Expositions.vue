@@ -21,7 +21,7 @@
 </template>
 
 <script>
-    import Exposition from '../components/Exposition.vue';
+    import Exposition from '../expositions/Exposition.vue';
 
     export default {
         components: {

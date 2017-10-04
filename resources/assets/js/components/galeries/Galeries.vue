@@ -11,7 +11,7 @@
             </div>
             <div>
                 <ul>
-                    <galerie v-for="galerie in galeries" :key="galerie.id" :galerie-id="galerie.id"></galerie>
+                    <galerie v-for="galerie in galeries" :key="galerie.id" :galerie-id="galerie.id" :galerie-nom="galerie.nom"></galerie>
                 </ul>
             </div>
         </div>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-    import Galerie from '../components/Galerie.vue';
+    import Galerie from '../galeries/Galerie.vue';
 
     export default {
         components: {

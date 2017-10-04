@@ -20,22 +20,17 @@
 
 <script>
     export default {
-        props: ['oeuvreId'],
+        props: ['oeuvre'],
         data() {
             return {
-                oeuvre: {}
+                //
             }
         },
-        mounted() {},
+        mounted() {
+            //
+        },
         created() {
-            let self = this;
-            axios.get('/api/oeuvres/' + this.oeuvreId)
-                .then(function (response) {
-                    self.oeuvre = response.data;
-                })
-                .catch(function (error) {
-                    console.log('Erreur axios : ' + error);
-                });
+            //
         }
     }
 </script>

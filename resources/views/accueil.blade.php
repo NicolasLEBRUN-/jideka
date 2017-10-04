@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
     <head>
-        <title>Jideka</title>
+        <title>Jocelyne Deschamps-Kus</title>
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <script src="https://www.google.com/recaptcha/api.js?hl={{ session()->get('applocale') }}"></script>
+        <meta name="google_recaptcha_data_sitekey" content="{{ env('GOOGLE_RECAPTCHA_KEY') }}">
+        <script src="https://www.google.com/recaptcha/api.js?hl={{ app()->getLocale() }}"></script>
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>

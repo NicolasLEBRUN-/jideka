@@ -67,7 +67,7 @@
 
 <script>
     export default {
-        props: ['googleRecaptchaDataSitekey'],
+        props: [],
         data: function() {
             return {
                 nom: '',
@@ -78,6 +78,7 @@
                 oeuvres: [],
                 oeuvre: '',
                 corps: '',
+                googleRecaptchaDataSitekey: '',
                 errors: [],
                 success: ''
             }
@@ -87,7 +88,9 @@
                 return this.prereservation && this.galerie;
             }
         },
-        mounted() {},
+        mounted() {
+            this.googleRecaptchaDataSitekey = document.querySelector('meta[name="google_recaptcha_data_sitekey"]').getAttribute('content');
+        },
         created() {
             let self = this;
             axios.get('/api/galeries')

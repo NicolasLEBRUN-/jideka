@@ -6,8 +6,8 @@
 </template>
 
 <script>
-    import ExpositionsMenuHaut from './components/ExpositionsMenuHaut.vue';
-    import Expositions from './components/Expositions.vue';
+    import ExpositionsMenuHaut from './expositions/MenuHaut.vue';
+    import Expositions from './expositions/Expositions.vue';
     
     export default {
         name: 'app-expositions',

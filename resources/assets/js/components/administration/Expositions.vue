@@ -15,8 +15,8 @@
 </template>
 
 <script>
-    import AdministrationExpositionsCreation from '../components/AdministrationExpositionsCreation.vue';
-    import AdministrationExpositionsSuppression from '../components/AdministrationExpositionsSuppression.vue';
+    import AdministrationExpositionsCreation from '../administration/ExpositionsCreation.vue';
+    import AdministrationExpositionsSuppression from '../administration/ExpositionsSuppression.vue';
 
     export default {
         name: 'administration-expositions',

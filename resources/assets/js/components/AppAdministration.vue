@@ -10,11 +10,11 @@
 </template>
 
 <script>
-    import AdministrationMenuHaut from './components/AdministrationMenuHaut.vue';
-    import AdministrationBiographie from './components/AdministrationBiographie.vue';
-    import AdministrationGaleries from './components/AdministrationGaleries.vue';
-    import AdministrationOeuvres from'./components/AdministrationOeuvres.vue';
-    import AdministrationExpositions from './components/AdministrationExpositions.vue';
+    import AdministrationMenuHaut from './administration/MenuHaut.vue';
+    import AdministrationBiographie from './administration/Biographie.vue';
+    import AdministrationGaleries from './administration/Galeries.vue';
+    import AdministrationOeuvres from'./administration/Oeuvres.vue';
+    import AdministrationExpositions from './administration/Expositions.vue';
     
     export default {
         name: 'app-administration',
@@ -24,6 +24,7 @@
             AdministrationGaleries,
             AdministrationOeuvres,
             AdministrationExpositions
-        }
+        },
+        props: ['token']
     };
 </script>

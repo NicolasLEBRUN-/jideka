@@ -5,17 +5,17 @@
         <accueil-biographie></accueil-biographie>
         <accueil-galeries></accueil-galeries>
         <accueil-expositions></accueil-expositions>
-        <accueil-contact googleRecaptchaDataSitekey="6LedYy8UAAAAAIGeKivVQGyLmlsTqQfVmTNELgc8"></accueil-contact>
+        <accueil-contact></accueil-contact>
     </div>
 </template>
 
 <script>
-    import AccueilMenuHaut from './components/AccueilMenuHaut.vue';
-    import AccueilPresentation from './components/AccueilPresentation.vue';
-    import AccueilBiographie from './components/AccueilBiographie.vue';
-    import AccueilGaleries from './components/AccueilGaleries.vue';
-    import AccueilExpositions from './components/AccueilExpositions.vue';
-    import AccueilContact from './components/AccueilContact.vue';
+    import AccueilMenuHaut from './accueil/MenuHaut.vue';
+    import AccueilPresentation from './accueil/Presentation.vue';
+    import AccueilBiographie from './accueil/Biographie.vue';
+    import AccueilGaleries from './accueil/Galeries.vue';
+    import AccueilExpositions from './accueil/Expositions.vue';
+    import AccueilContact from './accueil/Contact.vue';
     
     export default {
         name: 'app-accueil',

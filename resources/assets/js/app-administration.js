@@ -14,7 +14,7 @@ require('./bootstrap');
  */
 
 /* Administration */
-import AppAdministration from './AppAdministration.vue';
+import AppAdministration from './components/AppAdministration.vue';
 
 import flatPickr from 'vue-flatpickr-component';
 import 'flatpickr/dist/flatpickr.css';

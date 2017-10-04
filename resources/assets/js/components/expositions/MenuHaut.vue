@@ -1,11 +1,13 @@
 <template>
-    <div class="administration-menu-haut">
+    <div class="expositions-menu-haut">
         <ul id="navbar" class="navigation">
-            <li><a href="/" v-on:click="hideMenu">Retour à la version publique du site</a></li>
-            <li><a href="#administration-biographie" v-on:click="hideMenu">Biographie</a></li>
-            <li><a href="#administration-galeries" v-on:click="hideMenu">Galeries</a></li>
-            <li><a href="#administration-oeuvres" v-on:click="hideMenu">Oeuvres</a></li>
-            <li><a href="#administration-expositions" v-on:click="hideMenu">Expositions</a></li>
+            <li><a href="/" v-on:click="hideMenu">{{ $trans('expositions.menuhaut.retour-accueil') }}</a></li>
+            <li class="flag" v-if="$trans('locale') != 'fr'">
+                <a href="/lang/fr" v-on:click="hideMenu"><img src="/img/fr.png" alt="Français" /></a>
+            </li>
+            <li class="flag" v-if="$trans('locale') != 'en'">
+                <a href="/lang/en" v-on:click="hideMenu"><img src="/img/en.png" alt="English" /></a>
+            </li>
             <li class="burger">
                 <a href="javascript:void(0);" v-on:click="showMenu">
                     <button id="hamburger" class="hamburger hamburger--squeeze" type="button">
@@ -44,7 +46,7 @@
 </script>
 
 <style type="text/css" scoped>
-    .administration-menu-haut {
+    .expositions-menu-haut {
         display: block;
         position: fixed;
         width: 100%;
@@ -78,6 +80,14 @@
 
     .navigation li a:hover {
         background: darkblue;
+    }
+
+    .navigation li.flag {
+        line-height: 0;
+    }
+
+    .navigation li.flag img {
+        height: 19px;
     }
 
     @media all and (max-width: 600px) {
@@ -121,4 +131,3 @@
         }
     }
 </style>
-    

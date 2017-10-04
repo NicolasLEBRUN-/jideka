@@ -6,8 +6,8 @@
 </template>
 
 <script>
-    import GaleriesMenuHaut from './components/GaleriesMenuHaut.vue';
-    import Galeries from './components/Galeries.vue';
+    import GaleriesMenuHaut from './galeries/MenuHaut.vue';
+    import Galeries from './galeries/Galeries.vue';
     
     export default {
         name: 'app-galeries',

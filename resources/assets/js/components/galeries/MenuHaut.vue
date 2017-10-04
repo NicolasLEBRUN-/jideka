@@ -1,7 +1,7 @@
 <template>
-    <div class="expositions-menu-haut">
-        <ul class="navigation">
-            <li><a href="/" v-on:click="hideMenu">{{ $trans('expositions.menuhaut.retour-accueil') }}</a></li>
+    <div class="galeries-menu-haut">
+        <ul id="navbar" class="navigation">
+            <li><a href="/" v-on:click="hideMenu">{{ $trans('galeries.menuhaut.retour-accueil') }}</a></li>
             <li class="flag" v-if="$trans('locale') != 'fr'">
                 <a href="/lang/fr" v-on:click="hideMenu"><img src="/img/fr.png" alt="Français" /></a>
             </li>
@@ -46,7 +46,7 @@
 </script>
 
 <style type="text/css" scoped>
-    .expositions-menu-haut {
+    .galeries-menu-haut {
         display: block;
         position: fixed;
         width: 100%;

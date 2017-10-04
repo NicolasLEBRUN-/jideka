@@ -15,8 +15,8 @@
 </template>
 
 <script>
-    import AdministrationOeuvresCreation from '../components/AdministrationOeuvresCreation.vue';
-    import AdministrationOeuvresSuppression from '../components/AdministrationOeuvresSuppression.vue';
+    import AdministrationOeuvresCreation from '../administration/OeuvresCreation.vue';
+    import AdministrationOeuvresSuppression from '../administration/OeuvresSuppression.vue';
 
     export default {
         name: 'administration-oeuvres',
