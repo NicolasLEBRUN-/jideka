@@ -13,10 +13,24 @@
 |
 */
 
+Auth::routes();
+
+// http://jideka.dev?email=timbmfprod@gmail.com&password=aze
+Route::get('/create-token', function () {
+    if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
+        $user = Auth::user();
+        $success['token'] =  $user->createToken('jideka')->accessToken;
+        return response()->json(['success' => $success], 200);
+    }
+    else{
+        return response()->json(['error'=>'Unauthorised'], 401);
+    }
+});
+
 /* Accueil */
 Route::get('/', function () {
     return view('accueil');
-});
+})->name('home');
 
 /* Galeries */
 Route::get('/web-galeries', function () {
@@ -32,11 +46,12 @@ Route::get('/web-expositions', function () {
 Route::post('/contact', 'ContactController@sendMessage');
 
 /* Administration
- * Requiert une authentification HTTP Basic
+ * Requiert une authentification, ainsi que d'être admin
  */
 Route::get('/web-administration', function () {
     return view('administration');
-})->middleware('auth.basic');
+})->middleware(['auth', 'admin']);
+// })->middleware(['auth']);
 
 /* Localization 
  * Modification de la langue de l'application
@@ -47,7 +62,6 @@ Route::get('/lang/{lang}', 'LanguageController@changerLangue');
  * Rendu du pseudo-fichier lang.js
  */
 Route::get('/js/lang.js', function () {
-    // $locale     = Session::get('applocale', 'fr');
     $locale     = App::getLocale();
     $files      = glob(resource_path('lang/' . $locale . '/*.php'));
     $strings    = ['locale' => $locale];
@@ -59,9 +73,4 @@ Route::get('/js/lang.js', function () {
     echo('window.i18n = ' . json_encode($strings) . ';');
     exit();
 });
-
-
-
-
-
 

@@ -13,11 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware(['auth:api'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
 /* Récupération des biographies
+ * @return biographies
  */
 Route::get('/biographies', function () {
     $biographies = App\Biographie::all();
@@ -101,42 +102,43 @@ Route::get('/statutsdisponibilite', function () {
     return $statuts_disponibilite;
 });
 
-/* Administration
- * Modification de la biographie
- */
-Route::post('/create/biographies', 'AdministrationController@creerBiographie');
+/* Protection des routes de création et suppression */
+Route::middleware(['auth:api'])->group(function(){
 
-/* Administration
- * Création d'une galerie
- */
-Route::post('/create/galeries', 'AdministrationController@creerGalerie');
+    /* Administration
+     * Modification de la biographie
+     */
+    Route::post('/create/biographies', 'AdministrationController@creerBiographie');
 
-/* Administration
- * Suppression d'une galerie
- */
-Route::post('/delete/galeries', 'AdministrationController@supprimerGalerie');
+    /* Administration
+     * Création d'une galerie
+     */
+    Route::post('/create/galeries', 'AdministrationController@creerGalerie');
 
-/* Administration
- * Création d'une oeuvre
- */
-Route::post('/create/oeuvres', 'AdministrationController@creerOeuvre');
+    /* Administration
+     * Suppression d'une galerie
+     */
+    Route::post('/delete/galeries', 'AdministrationController@supprimerGalerie');
 
-/* Administration
- * Suppression d'une oeuvre
- */
-Route::post('/delete/oeuvres', 'AdministrationController@supprimerOeuvre');
+    /* Administration
+     * Création d'une oeuvre
+     */
+    Route::post('/create/oeuvres', 'AdministrationController@creerOeuvre');
 
-/* Administration
- * Création d'une exposition
- */
-Route::post('/create/expositions', 'AdministrationController@creerExposition');
+    /* Administration
+     * Suppression d'une oeuvre
+     */
+    Route::post('/delete/oeuvres', 'AdministrationController@supprimerOeuvre');
 
-/* Administration
- * Suppression d'une exposition
- */
-Route::post('/delete/expositions', 'AdministrationController@supprimerExposition');
+    /* Administration
+     * Création d'une exposition
+     */
+    Route::post('/create/expositions', 'AdministrationController@creerExposition');
 
+    /* Administration
+     * Suppression d'une exposition
+     */
+    Route::post('/delete/expositions', 'AdministrationController@supprimerExposition');
 
-
-
+});
 
