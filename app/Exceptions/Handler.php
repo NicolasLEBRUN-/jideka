@@ -44,6 +44,15 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        // Pour toutes les routes qui ne sont pas définies dans web.php ou api.php
+        if($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                || $exception instanceof \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException
+            )
+        {
+            \Log::warning("La route ('/" . $request->path() . "') a été redirigée vers '/' (/deschampskus/app/Exceptions/Handler.php).");
+            return redirect('/');
+        }
+        
         return parent::render($request, $exception);
     }
 
