@@ -31,6 +31,8 @@ class MessageSent extends Mailable
     public function build()
     {
         return $this->view('emails.messagesent')
+                    ->text('emails.messagesent_plain')
+                    ->from($this->messageData['email'], $this->messageData['nom'])
                     ->with([
                         'nom' => $this->messageData['nom'],
                         'email' => $this->messageData['email'],

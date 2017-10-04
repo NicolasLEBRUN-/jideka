@@ -25,11 +25,20 @@ class ContactController extends Controller
     	$nom = $request->input('nom');
         $email = $request->input('email');
         $prereservation = $request->input('prereservation');
-        $galerie = Galerie::find($request->input('galerie'));
-    	$oeuvre = Oeuvre::find($request->input('oeuvre'));
-    	$corps = $request->input('corps');
+        $galerie_id = $request->input('galerie');
+        $oeuvre_id = $request->input('oeuvre');
+        $corps = $request->input('corps');
 
-	 	Mail::to('timcrespy@hotmail.com')
+        $galerie = '';
+        $oeuvre = '';
+        if (isset($galerie_id)) {
+            $galerie = Galerie::find($galerie_id);
+        }
+        if (isset($oeuvre_id)) {
+            $oeuvre = Oeuvre::find($oeuvre_id);
+        }
+
+	 	Mail::to(env('MAIL_TO_ADDRESS', 'timcrespy@hotmail.com'))
 		    // ->cc($moreUsers)
 		    // ->bcc($evenMoreUsers)
 	 		// ->replyTo($address, $name)

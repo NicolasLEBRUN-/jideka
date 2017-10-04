@@ -55,10 +55,10 @@ return [
     |
     */
 
-    'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
-    ],
+    // 'from' => [
+    //     'address' => env('MAIL_FROM_ADDRESS', 'jideka21@free.fr'),
+    //     'name' => env('MAIL_FROM_NAME', 'Jocelyne Deschamps-Kus'),
+    // ],
 
     /*
     |--------------------------------------------------------------------------
@@ -72,8 +72,8 @@ return [
     */
 
     'to' => [
-        'address' => 'jideka@yopmail.com',
-        'name' => 'Jideka'
+        'address' => env('MAIL_TO_ADDRESS', 'timcrespy@hotmail.com'),
+        'name' => env('MAIL_TO_NAME', 'Timothé Crespy'),
     ],
 
     /*
