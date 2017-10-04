@@ -6,22 +6,52 @@
             </h1>
         </div>
         <div class="contenu-section">
-            <div>
+            <div class="accroche">
                 {{ $trans('accueil.expositions.accroche') }}
             </div>
-            
-            <div>
-                ----------<br />
-                | Module |<br />
-                ----------<br />
+
+            <div class="expositions-container">
+                <div class="item">
+                    <div id="timeline">
+                        <div>
+
+                            <template v-for="annee in anneesExpositions">
+                                <section class="year">
+                                    <h3>{{ annee }}</h3>
+                                    <template v-for="exposition in orderedExpositions">
+                                        <section v-if="estExpositionDeAnnee(annee, exposition)">
+                                            <ul>
+                                                <li class="nom-exposition">
+                                                    {{ exposition.nom }}
+                                                    <span v-show="estEnCours(exposition)" class="en-cours">
+                                                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i> 
+                                                        En cours
+                                                    </span>
+                                                </li>
+                                                <li class="dates-exposition">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i> 
+                                                    Du {{ exposition.date_debut | formatDate }} au {{ exposition.date_fin | formatDate }}
+                                                </li>
+                                                <li class="visuel-exposition">
+                                                    <img :src="exposition.chemin_visuel" style="height: 180px;"/>
+                                                </li>
+                                                <li class="details-exposition">
+                                                    {{ exposition.description }}
+                                                </li>
+                                                <li class="lieu-exposition">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{ exposition.lieu }}
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </template>
+                                </section>
+                            </template>
+
+                       </div>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <ul>
-                    <li v-for="exposition in expositions">{{ exposition }}</li>
-                </ul>
-            </div>
-            
             <div>
                 <a href="/web-expositions">{{ $trans('accueil.expositions.lien') }}</a>
             </div>
@@ -36,6 +66,22 @@
                 expositions: []
             }
         },
+        computed: {
+            orderedExpositions: function () {
+                return _.orderBy(this.expositions, 'date_debut').reverse();
+            },
+            anneesExpositions: function () {
+                function getYear(date) {
+                    return moment(date).year();
+                }
+                let anneesExpositions = [];
+                anneesExpositions = _.map(this.orderedExpositions, 'date_debut')
+                anneesExpositions = _.map(anneesExpositions, getYear);
+                anneesExpositions = _.uniq(anneesExpositions);                
+                anneesExpositions = _.orderBy(anneesExpositions).reverse();
+                return anneesExpositions;
+            }
+        },
         mounted() {},
         created() {
             let self = this;
@@ -46,16 +92,167 @@
                 .catch(function (error) {
                     console.log('Erreur axios (AccueilExpositions.vue) : ' + error);
                 });
+        },
+        methods: {
+            estEnCours: function(exposition) {
+                return moment() > moment(exposition.date_debut) && moment() < moment(exposition.date_fin);
+            },
+            estExpositionDeAnnee: function(annee, exposition) {
+                //alert('année : ' + annee + '\r\n' + 'exposition : ' + exposition.date_debut);
+                return annee == moment(exposition.date_debut).year();
+            }
+        },
+        filters: {
+            formatDate: function(value) {
+                if (value) {
+                    return moment(String(value)).format('DD/MM/YYYY');
+                }
+            },
+            formatDateTime: function(value) {
+                if (value) {
+                    return moment(String(value)).format('DD/MM/YYYY hh:mm');
+                }
+            }
         }
     }
 </script>
 
-<style type="text/css" scoped>
-    .contenu-section {
-        //display: flex;
-        //flex-direction: column;
-        //justify-content: space-around;
-        //flex-wrap: wrap;
+<style type ="text/scss" lang="scss" scoped>
+
+    @mixin border-radius($radius) {
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+        border-radius: $radius;
     }
+
+    div.expositions-container {
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+        max-height: 100%;
+    }
+
+    div.accroche {
+        height: auto;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -5rem;
+            left: 0rem;
+            height: 5.1rem;
+            display: block;
+            width: 100%;
+            z-index: 3; //TCY
+            background: -moz-linear-gradient(top,rgba(61,61,61,1) 20%,rgba(61,61,61,0) 100%);
+            background: -webkit-linear-gradient(top,rgba(61,61,61,1) 20%,rgba(61,61,61,0) 100%);
+            background: linear-gradient(to bottom,rgba(61,61,61,1) 20%,rgba(61,61,61,0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(
+                    startColorstr='#ffffff',endColorstr='#00ffffff',GradientType=0
+                );
+        }
+    }
+
+    div.item {
+        display: flex;
+        flex: auto;
+        overflow-y: auto;
+        padding: 0rem 1rem 0rem 1rem;
+        height: 500px; //TCY;
+    }
+
+    #timeline {
+        position: relative;
+        display: table;
+        height: 100%; //For Firefox
+        margin: {
+            left: auto;
+            right: auto;
+            top: 5rem;
+        }
+        div {
+            &:after {
+                content: '';
+                width: 2px;
+                position: absolute;
+                top: .5rem;
+                bottom: 0rem;
+                left: 60px;
+                z-index: 1;
+                background: #C5C5C5;
+            }
+        }
+        h3 {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 5rem;
+            color: #888;
+            margin: 0;
+            font: {
+                size: 1em;
+                weight: 400;
+            }
+            @media (min-width:62em) {
+                font-size: 1.1em;
+            }
+        }
+        section.year {
+            position: relative;
+            &:first-child section {
+                margin-top: -1.3em;
+                padding-bottom: 0px;
+            }
+            section {
+                position: relative;
+                padding-bottom: 1.25em;
+                margin-bottom: 2.2em;
+                &:last-child {
+                    padding-bottom: 0.5em;
+                    margin-bottom: 1.1em;
+                }
+                ul {
+                    list-style-type: none;
+                    padding: 0 0 0 75px;
+                    margin: -1.35rem 0 1em;
+                    //max-width: 32rem;
+                    font-size: 1em;
+                    @media (min-width:62em) {
+                        font-size: 1.1em;
+                        padding: 0 0 0 75px;
+                    }
+                    &:last-child {
+                        margin: {
+                            bottom: 0;
+                        }
+                    }
+                    &:first-of-type:after {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        background: #C5C5C5;
+                        border: 2px solid #3D3D3D;
+                        @include border-radius(50%);
+                        position: absolute;
+                        left: 54px;
+                        top: 3px;
+                        z-index: 2;
+                    }
+                    li {
+                        margin-left: 6px;
+                        &:not(:first-child) {
+                            margin-top: .4rem;
+                        }
+                        span.en-cours {
+                            font-size: 0.8em;
+                            font-style:italic;
+                            color:#FB6C3F;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 </style>
     

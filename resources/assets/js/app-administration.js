@@ -21,7 +21,6 @@ import 'flatpickr/dist/flatpickr.css';
 import 'flatpickr/dist/themes/airbnb.css';
 Vue.use(flatPickr);
 
-import _ from 'lodash';
 Vue.prototype.$trans = function(string) {
 	return _.get(window.i18n, string);
 };

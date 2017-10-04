@@ -192,9 +192,9 @@ class AdministrationController extends Controller
             'nom'               => 'required',
             'description'       => 'required',
             'lieu'              => 'required',
-            'dateDebut'         => 'required',
-            'dateFin'           => 'required',
-            'dateVernissage'    => 'sometimes|required',
+            'dateDebut'         => 'required|date',
+            'dateFin'           => 'required|date',
+            'dateVernissage'    => 'nullable|date',
             'visuel'            => 'required|image64:jpeg,jpg,png'
         ]);
 

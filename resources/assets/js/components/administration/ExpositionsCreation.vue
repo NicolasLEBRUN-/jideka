@@ -123,7 +123,6 @@
                     defaultDate: Today,
                     enableTime: true,
                     time_24hr: true,
-                    minDate: Today.setDate(Today.getDate()-1),
                     altInput: true,
                     altFormat: 'd/m/Y H:i:ss',
                     dateFormat: "Y-m-d H:i:ss",

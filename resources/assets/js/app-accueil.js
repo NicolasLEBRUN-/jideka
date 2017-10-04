@@ -31,7 +31,8 @@ Vue.component(
     require('./components/passport/PersonalAccessTokens.vue')
 );
 
-import _ from 'lodash';
+Vue.prototype.moment = moment;
+
 Vue.prototype.$trans = function(string) {
 	return _.get(window.i18n, string);
 };
