@@ -7,10 +7,10 @@
             <li><a href="#accueil-expositions" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.expositions') }}</a></li>
             <li><a href="#accueil-contact" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.contact') }}</a></li>
             <li class="flag" v-if="$trans('locale') != 'fr'">
-                <a href="/lang/fr" v-on:click="hideMenu"><img src="/img/fr.png" alt="Français" /></a>
+                <a href="/lang/fr" v-on:click="hideMenu"><span class="flag-icon flag-icon-fr"></span></a>
             </li>
             <li class="flag" v-if="$trans('locale') != 'en'">
-                <a href="/lang/en" v-on:click="hideMenu"><img src="/img/en.png" alt="English" /></a>
+                <a href="/lang/en" v-on:click="hideMenu"><span class="flag-icon flag-icon-gb"></span></a>
             </li>
             <li class="burger">
                 <a href="javascript:void(0);" v-on:click="showMenu">
@@ -56,6 +56,7 @@
         position: fixed;
         width: 100%;
         background: deepskyblue;
+        z-index: 1000;
     }
 
     .navigation {
@@ -85,14 +86,6 @@
 
     .navigation li a:hover {
         background: darkblue;
-    }
-
-    .navigation li.flag {
-        line-height: 0;
-    }
-
-    .navigation li.flag img {
-        height: 19px;
     }
 
     @media all and (max-width: 600px) {
