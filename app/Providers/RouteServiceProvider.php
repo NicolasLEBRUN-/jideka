@@ -53,8 +53,6 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes(Request $request)
     {
-        // \Log::info('mapWebRoutes decodedPath : ' . $request->decodedPath());
-
         Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
@@ -69,8 +67,6 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes(Request $request)
     {
-        // \Log::info('mapApiRoutes decodedPath : ' . $request->decodedPath());
-
         Route::prefix('api')
                 ->middleware('api')
                 ->namespace($this->namespace)
