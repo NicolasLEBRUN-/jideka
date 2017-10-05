@@ -51,6 +51,7 @@
         position: fixed;
         width: 100%;
         background: deepskyblue;
+        z-index: 1000;
     }
 
     .navigation {

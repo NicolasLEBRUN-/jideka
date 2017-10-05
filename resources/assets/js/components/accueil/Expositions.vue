@@ -20,28 +20,7 @@
                                     <h3>{{ annee }}</h3>
                                     <template v-for="exposition in orderedExpositions">
                                         <section v-if="estExpositionDeAnnee(annee, exposition)">
-                                            <ul>
-                                                <li class="nom-exposition">
-                                                    {{ exposition.nom }}
-                                                    <span v-show="estEnCours(exposition)" class="en-cours">
-                                                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i> 
-                                                        En cours
-                                                    </span>
-                                                </li>
-                                                <li class="dates-exposition">
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i> 
-                                                    Du {{ exposition.date_debut | formatDate }} au {{ exposition.date_fin | formatDate }}
-                                                </li>
-                                                <li class="visuel-exposition">
-                                                    <img :src="exposition.chemin_visuel" style="height: 180px;"/>
-                                                </li>
-                                                <li class="details-exposition">
-                                                    {{ exposition.description }}
-                                                </li>
-                                                <li class="lieu-exposition">
-                                                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{ exposition.lieu }}
-                                                </li>
-                                            </ul>
+                                            <exposition :exposition="exposition"></exposition>
                                         </section>
                                     </template>
                                 </section>
@@ -60,7 +39,12 @@
 </template>
 
 <script>
+    import Exposition from '../expositions/Exposition.vue';
+
     export default {
+        components: {
+            Exposition
+        },
         data: function() {
             return {
                 expositions: []
@@ -94,26 +78,11 @@
                 });
         },
         methods: {
-            estEnCours: function(exposition) {
-                return moment() > moment(exposition.date_debut) && moment() < moment(exposition.date_fin);
-            },
             estExpositionDeAnnee: function(annee, exposition) {
-                //alert('année : ' + annee + '\r\n' + 'exposition : ' + exposition.date_debut);
                 return annee == moment(exposition.date_debut).year();
             }
         },
-        filters: {
-            formatDate: function(value) {
-                if (value) {
-                    return moment(String(value)).format('DD/MM/YYYY');
-                }
-            },
-            formatDateTime: function(value) {
-                if (value) {
-                    return moment(String(value)).format('DD/MM/YYYY hh:mm');
-                }
-            }
-        }
+        filters: {}
     }
 </script>
 
@@ -164,8 +133,8 @@
 
     #timeline {
         position: relative;
-        display: table;
-        height: 100%; //For Firefox
+        display: table;//For Firefox
+        height: 100%;
         margin: {
             left: auto;
             right: auto;
