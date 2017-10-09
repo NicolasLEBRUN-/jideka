@@ -93,9 +93,15 @@
     }
 </script>
 
-<style type="text/css" scoped>
+<style lang="scss" scoped>
+    $main-color                             : #EB7041 !default;
+    $background-primary-color               : #353535 !default;
+    $background-secondary-color             : #3F3F3F !default;
+    $font-color                             : #FFF !default;
+
     .contenu-section {
         display: flex;
+        background: $background-secondary-color;
         flex-direction: row wrap;
         justify-content: space-around;
         padding: 12px;
