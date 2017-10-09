@@ -7,10 +7,16 @@
             <li><a href="#accueil-expositions" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.expositions') }}</a></li>
             <li><a href="#accueil-contact" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.contact') }}</a></li>
             <li class="flag" v-if="$trans('locale') != 'fr'">
-                <a href="/lang/fr" v-on:click="hideMenu"><span class="flag-icon flag-icon-fr"></span></a>
+                <a href="/lang/fr" v-on:click="hideMenu">
+                    EN
+                    <!-- <img src="/img/fr.png" alt="Français" /> -->
+                </a>
             </li>
             <li class="flag" v-if="$trans('locale') != 'en'">
-                <a href="/lang/en" v-on:click="hideMenu"><span class="flag-icon flag-icon-gb"></span></a>
+                <a href="/lang/en" v-on:click="hideMenu">
+                    FR
+                    <!-- <img src="/img/en.png" alt="English" /> -->
+                </a>
             </li>
             <li class="burger">
                 <a href="javascript:void(0);" v-on:click="showMenu">
@@ -50,82 +56,108 @@
     }
 </script>
 
-<style type="text/css" scoped>
+<style lang="scss" scoped>
+    $main-color                             : #EB7041 !default;
+    $background-primary-color               : #353535 !default;
+    $background-secondary-color             : #3F3F3F !default;
+    $font-color                             : #FFF !default;
+    
+    $menu-haut-height                       : 60px !default;
+
     .accueil-menu-haut {
         display: block;
         position: fixed;
         width: 100%;
-        background: deepskyblue;
-        z-index: 1000;
-    }
+        background: rgba($background-primary-color, .7);
+        font-weight: lighter;
+        height: $menu-haut-height;
 
-    .navigation {
-        float: right;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
+        .navigation {
+            float: right;
+            list-style: none;
+            margin: 0 50px 0 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            
+            li {
+                display: inline;
 
-    .navigation li {
-        display: inline;
-    }
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 18px;
+                    color: rgba($font-color, .7);
+                    transition: all .3s ease;
+                    height: 100%;
 
-    .navigation li a {
-        text-decoration: none;
-        display: inline-block;
-        float: left;
-        padding: 18px;
-        color: white;
-    }
+                    &:hover {
+                        background: darken(rgba($background-primary-color, .7), 5%);
+                        color: $font-color;
+                    }
+                }
 
-    .navigation li.burger {
-        display: none;
-        line-height: 0;
-    }
+                &.burger {
+                    display: none;
+                }
 
-    .navigation li a:hover {
-        background: darkblue;
+                &.flag {
+                    img {
+                        height: 19px;
+                    }
+                }
+            }
+        }
     }
-
+    
     @media all and (max-width: 600px) {
         .navigation {
-            float: none;
-        }
+            float: none !important;
+            background: $background-primary-color;
+            
+            li {
+                a {
+                    float: left;
+                }
 
-        .navigation li:not(:first-child) {
-            display: none;
-        }
+                &:not(:first-child) {
+                    display: none;
 
-        .navigation li a {
-            float: left;
-        }
 
-        .navigation li.burger {
-            display: block;
-            float: right;
-        }
+                    &.burger {
+                        display: block;
+                        float: right;
+                    }
+                }
+            }
 
-        .navigation.responsive {
-            position: relative;
-        }
+            &.responsive {
+                position: relative;
 
-        .navigation.responsive li.burger {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
+                li {
+                    float: none;
+                    display: block;
+                    text-align: left;
 
-        .navigation.responsive li {
-            float: none;
-            display: block;
-            text-align: left;
-        }
+                    a {
+                        float: none;
+                        display: block;
+                        text-align: left;
+                    }
 
-        .navigation.responsive li a {
-            float: none;
-            display: block;
-            text-align: left;
+                    &.burger {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 700px) {
+        .navigation {
+            margin: 0 !important;
         }
     }
 </style>

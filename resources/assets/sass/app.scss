@@ -18,26 +18,23 @@ $fa-font-path: "../../../node_modules/font-awesome/fonts" !default;
 // https://jonsuh.com/hamburgers/
 @import "~hamburgers/_sass/hamburgers/hamburgers.scss";
 
-body {
+body, h1, h2 {
 	margin: 0;
+	font-family: "Open sans";
+	font-weight: lighter;
 }
 
 #app-accueil, #app-galeries, #app-expositions, #app-administration {
 	display: flex;
 	flex-direction: column;
-	background-color: #3D3D3D;
+	background-color: #353535;
 	color: #FFFFFF;
-	font-family: Raleway;
 }
 
-.container {
-	display: flex;
-	flex-direction: column;
-	padding-top: 60px;
-}
-
-.titre-section {
-	display: flex;
-	justify-content: center;
+.titre-section > h1 {
 	color: #FB6C3F;
+}
+
+button:focus {
+	outline: none;
 }

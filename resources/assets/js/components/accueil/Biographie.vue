@@ -1,17 +1,16 @@
 <template>
-    <div id="accueil-biographie" class="accueil-biographie container">
-        <div class="titre-section">
-            <h1>
-                {{ $trans('accueil.biographie.titre-section') }}
-            </h1>
-        </div>
+    <div id="accueil-biographie" class="accueil-biographie">
         <div class="contenu-section">
-            <div class="image">
-                <img src="/img/profil.jpg" />
+            <div class="image-container">
             </div>
             <div class="description">
-                <span style="white-space: pre-wrap;" v-if="$trans('locale') == 'fr'">{{ biographie.corps_fr }}</span>
-                <span style="white-space: pre-wrap;" v-if="$trans('locale') == 'en'">{{ biographie.corps_en }}</span>
+                <div class="titre-section">
+                    <h1>{{ $trans('accueil.biographie.titre-section') }}</h1>
+                </div>
+                <div class="text">
+                    <span style="white-space: pre-wrap;" v-if="$trans('locale') == 'fr'">{{ biographie.corps_fr }}</span>
+                    <span style="white-space: pre-wrap;" v-if="$trans('locale') == 'en'">{{ biographie.corps_en }}</span>
+                </div>
             </div>
         </div>
     </div>
@@ -38,22 +37,44 @@
     }
 </script>
 
-<style type="text/css" scoped>
-    .contenu-section {
-        display: flex;
-        flex-direction: row wrap;
-        justify-content: space-around;
-    }
-    .image {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        padding: 12px;
-    }
+<style lang="scss" scoped>
+    $main-color                             : #EB7041 !default;
+    $background-primary-color               : #353535 !default;
+    $background-secondary-color             : #3F3F3F !default;
+    $font-color                             : #FFF !default;
 
-    .description {
-        flex: 2;
-        padding: 12px;
+    .accueil-biographie {
+        padding: 50px 100px;
+        background: $background-secondary-color;
+        
+        .contenu-section {
+            display: flex;
+            flex-direction: row wrap;
+            justify-content: space-around;
+            
+            .image-container {
+                display: flex;
+                justify-content: center;
+                background: url('/img/profil.jpg') center;
+                background-size: cover;
+                height: 250px;
+                width: 250px;
+                border: 8px solid $background-primary-color;
+            }
+            
+            .description {
+                flex: 1;
+                padding-left: 50px;
+
+                .titre-section {
+                    margin-bottom: 20px;
+                }
+
+                .text {
+                    text-align: justify;
+                }
+            }
+        }
     }
 
     @media all and (max-width: 600px) {

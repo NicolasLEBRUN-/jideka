@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 use Validator;
 use App\Http\Controllers\Validation\GoogleRecaptchaResponseTokenValidator as GoogleRecaptchaResponseTokenValidator;
@@ -16,6 +17,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
+
         Validator::resolver(function($translator, $data, $rules, $messages)
         {
             return new GoogleRecaptchaResponseTokenValidator($translator, $data, $rules, $messages);
