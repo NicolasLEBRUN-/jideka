@@ -1,6 +1,11 @@
 /node_modules
 /public/hot
 /public/storage
+/public/app-accueil.js
+/public/app-galeries.js
+/public/app-expositions.js
+/public/app-administration.js
+/public/app.css
 /storage/*.key
 /vendor
 /.idea
