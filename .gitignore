@@ -1,10 +1,10 @@
 /node_modules
 /public/hot
 /public/storage
-/public/app-accueil.js
-/public/app-galeries.js
-/public/app-expositions.js
-/public/app-administration.js
+/public/js/app-accueil.js
+/public/js/app-galeries.js
+/public/js/app-expositions.js
+/public/js/app-administration.js
 /public/app.css
 /storage/*.key
 /vendor

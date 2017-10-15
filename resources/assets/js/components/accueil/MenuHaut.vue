@@ -7,10 +7,16 @@
             <li><a href="#accueil-expositions" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.expositions') }}</a></li>
             <li><a href="#accueil-contact" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.contact') }}</a></li>
             <li class="flag" v-if="$trans('locale') != 'fr'">
-                <a href="/lang/fr" v-on:click="hideMenu"><span class="flag-icon flag-icon-fr"></span></a>
+                <a href="/lang/fr" v-on:click="hideMenu">
+                    EN
+                    <!-- <img src="/img/fr.png" alt="Français" /> -->
+                </a>
             </li>
             <li class="flag" v-if="$trans('locale') != 'en'">
-                <a href="/lang/en" v-on:click="hideMenu"><span class="flag-icon flag-icon-gb"></span></a>
+                <a href="/lang/en" v-on:click="hideMenu">
+                    FR
+                    <!-- <img src="/img/en.png" alt="English" /> -->
+                </a>
             </li>
             <li class="burger">
                 <a href="javascript:void(0);" v-on:click="showMenu">
@@ -55,19 +61,23 @@
     $background-primary-color               : #353535 !default;
     $background-secondary-color             : #3F3F3F !default;
     $font-color                             : #FFF !default;
+    $menu-haut-height                       : 60px !default;
 
     .accueil-menu-haut {
         display: block;
         position: fixed;
         width: 100%;
-        background: rgba($background-primary-color, .5);
+        background: rgba($background-primary-color, .7);
+        font-weight: lighter;
+        height: $menu-haut-height;
 
         .navigation {
             float: right;
             list-style: none;
-            margin: 0;
+            margin: 0 50px 0 0;
             padding: 0;
             overflow: hidden;
+            height: 100%;
             
             li {
                 display: inline;
@@ -76,10 +86,13 @@
                     text-decoration: none;
                     display: inline-block;
                     padding: 18px;
-                    color: $font-color;
+                    color: rgba($font-color, .7);
+                    transition: all .3s ease;
+                    height: 100%;
 
                     &:hover {
-                        background: darken(rgba($background-primary-color, .5), 5%);
+                        background: darken(rgba($background-primary-color, .7), 5%);
+                        color: $font-color;
                     }
                 }
 
@@ -138,6 +151,12 @@
                     }
                 }
             }
+        }
+    }
+
+    @media all and (max-width: 700px) {
+        .navigation {
+            margin: 0 !important;
         }
     }
 </style>
