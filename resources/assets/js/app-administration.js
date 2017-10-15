@@ -14,14 +14,13 @@ require('./bootstrap');
  */
 
 /* Administration */
-import AppAdministration from './AppAdministration.vue';
+import AppAdministration from './components/AppAdministration.vue';
 
 import flatPickr from 'vue-flatpickr-component';
 import 'flatpickr/dist/flatpickr.css';
 import 'flatpickr/dist/themes/airbnb.css';
 Vue.use(flatPickr);
 
-import _ from 'lodash';
 Vue.prototype.$trans = function(string) {
 	return _.get(window.i18n, string);
 };

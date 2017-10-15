@@ -14,9 +14,7 @@ require('./bootstrap');
  */
 
 /* Expositions */
-import AppExpositions from './AppExpositions.vue';
-
-import _ from 'lodash';
+import AppExpositions from './components/AppExpositions.vue';
 
 Vue.prototype.$trans = function(string) {
 	return _.get(window.i18n, string);

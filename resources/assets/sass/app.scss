@@ -2,6 +2,12 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
+$fa-font-path: "../../../node_modules/font-awesome/fonts" !default;
+@import 'node_modules/font-awesome/scss/font-awesome.scss';
+
+//$fa-font-path: "../../../node_modules/font-awesome/fonts" !default;
+@import 'node_modules/flag-icon-css/sass/_flag-icon.scss';
+
 // Variables
 @import "variables";
 

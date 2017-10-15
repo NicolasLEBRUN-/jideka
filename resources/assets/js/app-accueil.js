@@ -14,9 +14,25 @@ require('./bootstrap');
  */
 
 /* Accueil */
-import AppAccueil from './AppAccueil.vue';
+import AppAccueil from './components/AppAccueil.vue';
 
-import _ from 'lodash';
+Vue.component(
+    'passport-clients',
+    require('./components/passport/Clients.vue')
+);
+
+Vue.component(
+    'passport-authorized-clients',
+    require('./components/passport/AuthorizedClients.vue')
+);
+
+Vue.component(
+    'passport-personal-access-tokens',
+    require('./components/passport/PersonalAccessTokens.vue')
+);
+
+Vue.prototype.moment = moment;
+
 Vue.prototype.$trans = function(string) {
 	return _.get(window.i18n, string);
 };

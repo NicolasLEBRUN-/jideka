@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="{{ app()->getLocale() }}"><html>
     <head>
-        <title>Jideka</title>
+        <title>Jocelyne Deschamps-Kus - Galeries</title>
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="stylesheet" href="/css/app.css">
     </head>

@@ -21,7 +21,7 @@ return [
     'presentation' => [
         'titre-section' => 'Bienvenue',
         'nom'           => 'Jocelyne Deschamps-Kus',
-        'accroche'      => 'Bienvenue sur le site officiel de l\'artiste peintre',
+        'accroche'      => 'La vie en couleurs',
     ],
 
     /* Biographie */
