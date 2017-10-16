@@ -84,12 +84,10 @@
     }
 </script>
 
-<style type="text/css" scoped>
-    .contenu-section {
-        display: flex;
-        flex-direction: row wrap;
-        justify-content: space-around;
-        padding: 12px;
-    }
+<style lang="scss" scoped>
+
+    /* Variables */
+    @import "../../../sass/variables";
+
 </style>
     

@@ -1,5 +1,5 @@
 <template>
-    <div class="galeries container">
+    <div id="galeries">
         <div class="titre-section">
             <h1>
                 {{ $trans('galeries.galeries.titre-section') }}
@@ -44,12 +44,14 @@
     }
 </script>
 
-<style type="text/css" scoped>
-    .contenu-section {
-        //display: flex;
-        //flex-direction: column;
-        //justify-content: space-around;
-        //flex-wrap: wrap;
+<style lang="scss" scoped>
+
+    /* Variables */
+    @import "../../../sass/variables";
+
+    #galeries {
+        margin-top: $menu-haut-height;
     }
+
 </style>
     

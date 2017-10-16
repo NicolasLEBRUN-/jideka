@@ -16,7 +16,7 @@
                         <div>
 
                             <template v-for="annee in anneesExpositions">
-                                <section class="year">
+                                <section class="year" :key="annee">
                                     <h3>{{ annee }}</h3>
                                     <template v-for="exposition in orderedExpositions">
                                         <section v-if="estExpositionDeAnnee(annee, exposition)">
@@ -86,7 +86,10 @@
     }
 </script>
 
-<style type ="text/scss" lang="scss" scoped>
+<style lang="scss" scoped>
+
+    /* Variables */
+    @import "../../../sass/variables";
 
     @mixin border-radius($radius) {
         -webkit-border-radius: $radius;
@@ -114,9 +117,9 @@
             display: block;
             width: 100%;
             z-index: 3; //TCY
-            background: -moz-linear-gradient(top,rgba(61,61,61,1) 20%,rgba(61,61,61,0) 100%);
-            background: -webkit-linear-gradient(top,rgba(61,61,61,1) 20%,rgba(61,61,61,0) 100%);
-            background: linear-gradient(to bottom,rgba(61,61,61,1) 20%,rgba(61,61,61,0) 100%);
+            background: -moz-linear-gradient(top,rgba(53, 53, 53, 1) 20%,rgba(53, 53, 53, 0) 100%);
+            background: -webkit-linear-gradient(top,rgba(53, 53, 53, 1) 20%,rgba(53, 53, 53, 0) 100%);
+            background: linear-gradient(to bottom,rgba(53, 53, 53, 1) 20%,rgba(53, 53, 53, 0) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient(
                     startColorstr='#ffffff',endColorstr='#00ffffff',GradientType=0
                 );

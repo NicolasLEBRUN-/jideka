@@ -8,14 +8,12 @@
             <li><a href="#accueil-contact" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.contact') }}</a></li>
             <li class="flag" v-if="$trans('locale') != 'fr'">
                 <a href="/lang/fr" v-on:click="hideMenu">
-                    EN
-                    <!-- <img src="/img/fr.png" alt="Français" /> -->
+                    <span class="flag-icon flag-icon-fr"></span>
                 </a>
             </li>
             <li class="flag" v-if="$trans('locale') != 'en'">
                 <a href="/lang/en" v-on:click="hideMenu">
-                    FR
-                    <!-- <img src="/img/en.png" alt="English" /> -->
+                    <span class="flag-icon flag-icon-gb"></span>
                 </a>
             </li>
             <li class="burger">
@@ -57,12 +55,9 @@
 </script>
 
 <style lang="scss" scoped>
-    $main-color                             : #EB7041 !default;
-    $background-primary-color               : #353535 !default;
-    $background-secondary-color             : #3F3F3F !default;
-    $font-color                             : #FFF !default;
-    
-    $menu-haut-height                       : 60px !default;
+
+    /* Variables */
+    @import "../../../sass/variables";
 
     .accueil-menu-haut {
         display: block;
@@ -71,6 +66,7 @@
         background: rgba($background-primary-color, .7);
         font-weight: lighter;
         height: $menu-haut-height;
+        z-index: 999;
 
         .navigation {
             float: right;

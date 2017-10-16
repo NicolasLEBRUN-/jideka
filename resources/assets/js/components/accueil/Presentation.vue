@@ -18,15 +18,12 @@
 </script>
 
 <style lang="scss" scoped>
-    $main-color                             : #EB7041 !default;
-    $background-primary-color               : #353535 !default;
-    $background-secondary-color             : #3F3F3F !default;
-    $font-color                             : #FFF !default;
 
-    $menu-haut-height                       : 60px !default;
+    /* Variables */
+    @import "../../../sass/variables";
 
     #accueil-presentation {
-        margin-top: 60px;
+        margin-top: $menu-haut-height;
         background: url(/img/pinceaux.png) right no-repeat;
         background-size: contain;
         height: calc(100vh - #{$menu-haut-height});
