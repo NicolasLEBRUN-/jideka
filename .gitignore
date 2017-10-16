@@ -1,11 +1,9 @@
 /node_modules
 /public/hot
 /public/storage
-/public/js/app-accueil.js
-/public/js/app-galeries.js
-/public/js/app-expositions.js
-/public/js/app-administration.js
-/public/app.css
+/public/js
+/public/css
+/public/mix-manifest.json
 /storage/*.key
 /vendor
 /.idea

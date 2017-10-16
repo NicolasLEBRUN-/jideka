@@ -1,5 +1,5 @@
 <template>
-    <div class="expositions container">
+    <div id="expositions">
         <div class="titre-section">
             <h1>
                 {{ $trans('expositions.expositions.titre-section') }}
@@ -83,8 +83,16 @@
     }
 </script>
 
-<style type ="text/scss" lang="scss" scoped>
+<style lang="scss" scoped>
 
+    /* Variables */
+    @import "../../../sass/variables";
+
+    #expositions {
+        margin-top: $menu-haut-height;
+        height: calc(100vh - #{$menu-haut-height});
+    }
+    
     div.expositions-container {
         display: flex;
         flex: auto;
@@ -104,9 +112,9 @@
             display: block;
             width: 100%;
             z-index: 3; //TCY
-            background: -moz-linear-gradient(top,rgba(61,61,61,1) 20%,rgba(61,61,61,0) 100%);
-            background: -webkit-linear-gradient(top,rgba(61,61,61,1) 20%,rgba(61,61,61,0) 100%);
-            background: linear-gradient(to bottom,rgba(61,61,61,1) 20%,rgba(61,61,61,0) 100%);
+            background: -moz-linear-gradient(top,rgba(53, 53, 53, 1) 20%,rgba(53, 53, 53, 0) 100%);
+            background: -webkit-linear-gradient(top,rgba(53, 53, 53, 1) 20%,rgba(53, 53, 53, 0) 100%);
+            background: linear-gradient(to bottom,rgba(53, 53, 53, 1) 20%,rgba(53, 53, 53, 0) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient(
                     startColorstr='#ffffff',endColorstr='#00ffffff',GradientType=0
                 );
@@ -118,7 +126,7 @@
         flex: auto;
         overflow-y: auto;
         padding: 0rem 1rem 0rem 1rem;
-        //height: 300px; //TCY;
+        height: calc(100vh - #{$menu-haut-height} - 43px - 44px);
     }
 
     #timeline {

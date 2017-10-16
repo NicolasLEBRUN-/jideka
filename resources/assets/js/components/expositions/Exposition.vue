@@ -53,8 +53,11 @@
     }
 </script>
 
-<style type ="text/scss" lang="scss" scoped>
-    
+<style lang="scss" scoped>
+
+    /* Variables */
+    @import "../../../sass/variables";
+
     @mixin border-radius($radius) {
         -webkit-border-radius: $radius;
         -moz-border-radius: $radius;
@@ -72,11 +75,13 @@
             font-size: 1.1em;
             padding: 0 0 0 75px;
         }
+
         &:last-child {
             margin: {
                 bottom: 0;
             }
         }
+        
         &:first-of-type:after {
             content: '';
             width: 10px;
@@ -89,13 +94,14 @@
             top: 3px;
             z-index: 2;
         }
+
         li {
             margin-left: 6px;
             &:not(:first-child) {
                 margin-top: .4rem;
             }
             span.en-cours {
-                font-size: 0.8em;
+                font-size: 0.85em;
                 font-style:italic;
                 color:#FB6C3F;
             }

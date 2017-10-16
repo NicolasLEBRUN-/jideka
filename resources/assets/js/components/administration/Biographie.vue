@@ -94,10 +94,13 @@
 </script>
 
 <style lang="scss" scoped>
-    $main-color                             : #EB7041 !default;
-    $background-primary-color               : #353535 !default;
-    $background-secondary-color             : #3F3F3F !default;
-    $font-color                             : #FFF !default;
+
+    /* Variables */
+    @import "../../../sass/variables";
+
+    #administration-biographie {
+        margin-top: $menu-haut-height;
+    }
 
     .contenu-section {
         display: flex;
