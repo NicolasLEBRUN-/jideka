@@ -6,17 +6,18 @@
             <a href="/web-galeries">{{ $trans('accueil.galeries.lien') }}</a>
         </div>
         <div class="contenu">
-            <div>
-                <ul>
-                    <li v-for="galerie in galeries">{{ galerie }}</li>
-                </ul>
-            </div>
+            <galerie-polaroid/>
         </div>
     </div>
 </template>
 
 <script>
+    import GaleriePolaroid from './galerie-polaroid/GaleriePolaroid.vue';
+
     export default {
+        components: {
+            GaleriePolaroid
+        },
         data: function() {
             return {
                 galeries: []
