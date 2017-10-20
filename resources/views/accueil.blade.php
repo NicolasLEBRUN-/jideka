@@ -12,7 +12,12 @@
         </div>
         
         <script src="/js/lang.js"></script>
+        <script src="/js/vendor/modernizr.min.js"></script>
+        <script src="/js/vendor/classie.js"></script>
+        <script src="/js/vendor/photostack.js"></script>
+
         <script src="/js/app-accueil.js"></script>
+
         <script type="text/javascript">
             // https://laravel.com/docs/5.4/csrf#csrf-x-csrf-token
             $.ajaxSetup({
@@ -21,8 +26,5 @@
                 }
             });
         </script>
-        <script src="/js/vendor/modernizr.min.js"></script>
-        <script src="/js/vendor/classie.js"></script>
-        <script src="/js/vendor/photostack.js"></script>
     </body>
 </html>

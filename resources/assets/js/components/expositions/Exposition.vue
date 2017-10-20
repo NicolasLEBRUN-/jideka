@@ -11,6 +11,10 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 
             Du {{ exposition.date_debut | formatDate }} au {{ exposition.date_fin | formatDate }}
         </li>
+        <li v-show="exposition.date_vernissage" class="vernissage-exposition">
+            <i class="fa fa-glass" aria-hidden="true"></i> 
+            Vernissage le {{ exposition.date_vernissage | formatDateTime }}
+        </li>
         <li class="visuel-exposition">
             <img :src="exposition.chemin_visuel" style="height: 180px;"/>
         </li>
@@ -46,7 +50,7 @@
             },
             formatDateTime: function(value) {
                 if (value) {
-                    return moment(String(value)).format('DD/MM/YYYY hh:mm');
+                    return moment(String(value)).format('DD/MM/YYYY à HH:mm');
                 }
             },
         }
