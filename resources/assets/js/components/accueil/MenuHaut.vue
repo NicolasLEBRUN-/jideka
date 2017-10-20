@@ -109,7 +109,7 @@
     @media all and (max-width: 600px) {
         .navigation {
             float: none !important;
-            background: $background-primary-color;
+            background: rgba($background-primary-color, .5);
             
             li {
                 a {

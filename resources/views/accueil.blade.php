@@ -21,5 +21,8 @@
                 }
             });
         </script>
+        <script src="/js/vendor/modernizr.min.js"></script>
+        <script src="/js/vendor/classie.js"></script>
+        <script src="/js/vendor/photostack.js"></script>
     </body>
 </html>
