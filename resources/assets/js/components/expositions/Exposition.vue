@@ -1,26 +1,28 @@
 <template>
-    <ul>
-        <li class="nom-exposition">
-            {{ exposition.nom }}
-            <span v-show="estEnCours(exposition)" class="en-cours">
-                <i class="fa fa-dot-circle-o" aria-hidden="true"></i> 
-                En cours
-            </span>
-        </li>
-        <li class="dates-exposition">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 
-            Du {{ exposition.date_debut | formatDate }} au {{ exposition.date_fin | formatDate }}
-        </li>
-        <li class="visuel-exposition">
+    <div class="details-exposition">
+        <ul>
+            <li class="nom-exposition">
+                {{ exposition.nom }}
+                <span v-show="estEnCours(exposition)" class="en-cours">
+                    <i class="fa fa-dot-circle-o" aria-hidden="true"></i> 
+                    En cours
+                </span>
+            </li>
+            <li class="dates-exposition">
+                <i class="fa fa-calendar" aria-hidden="true"></i> 
+                Du {{ exposition.date_debut | formatDate }} au {{ exposition.date_fin | formatDate }}
+            </li>
+            <li class="details-exposition">
+                {{ exposition.description }}
+            </li>
+            <li class="lieu-exposition">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> {{ exposition.lieu }}
+            </li>
+        </ul>
+        <div class="visuel-exposition">
             <img :src="exposition.chemin_visuel" style="height: 180px;"/>
-        </li>
-        <li class="details-exposition">
-            {{ exposition.description }}
-        </li>
-        <li class="lieu-exposition">
-            <i class="fa fa-map-marker" aria-hidden="true"></i> {{ exposition.lieu }}
-        </li>
-    </ul>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -65,6 +67,10 @@
         border-radius: $radius;
     }
 
+    .details-exposition {
+        display: flex;
+    }
+
     ul {
         list-style-type: none;
         padding: 0 0 0 75px;
@@ -96,9 +102,10 @@
         }
 
         li {
-            margin-left: 6px;
+            margin: 0;
+            // margin-left: 6px;
             &:not(:first-child) {
-                margin-top: .4rem;
+                // margin-top: .4rem;
             }
             span.en-cours {
                 font-size: 0.85em;

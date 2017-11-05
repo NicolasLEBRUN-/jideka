@@ -55799,7 +55799,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\nul[data-v-06683d7e] {\n  list-style-type: none;\n  padding: 0 0 0 75px;\n  margin: -1.35rem 0 1em;\n  font-size: 1em;\n}\n@media (min-width: 62em) {\nul[data-v-06683d7e] {\n      font-size: 1.1em;\n      padding: 0 0 0 75px;\n}\n}\nul[data-v-06683d7e]:last-child {\n    margin-bottom: 0;\n}\nul[data-v-06683d7e]:first-of-type:after {\n    content: '';\n    width: 10px;\n    height: 10px;\n    background: #C5C5C5;\n    border: 2px solid #3D3D3D;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%;\n    -ms-border-radius: 50%;\n    border-radius: 50%;\n    position: absolute;\n    left: 54px;\n    top: 3px;\n    z-index: 2;\n}\nul li[data-v-06683d7e] {\n    margin-left: 6px;\n}\nul li[data-v-06683d7e]:not(:first-child) {\n      margin-top: .4rem;\n}\nul li span.en-cours[data-v-06683d7e] {\n      font-size: 0.85em;\n      font-style: italic;\n      color: #FB6C3F;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.details-exposition[data-v-06683d7e] {\n  display: flex;\n}\nul[data-v-06683d7e] {\n  list-style-type: none;\n  padding: 0 0 0 75px;\n  margin: -1.35rem 0 1em;\n  font-size: 1em;\n}\n@media (min-width: 62em) {\nul[data-v-06683d7e] {\n      font-size: 1.1em;\n      padding: 0 0 0 75px;\n}\n}\nul[data-v-06683d7e]:last-child {\n    margin-bottom: 0;\n}\nul[data-v-06683d7e]:first-of-type:after {\n    content: '';\n    width: 10px;\n    height: 10px;\n    background: #C5C5C5;\n    border: 2px solid #3D3D3D;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%;\n    -ms-border-radius: 50%;\n    border-radius: 50%;\n    position: absolute;\n    left: 54px;\n    top: 3px;\n    z-index: 2;\n}\nul li[data-v-06683d7e] {\n    margin: 0;\n}\nul li span.en-cours[data-v-06683d7e] {\n      font-size: 0.85em;\n      font-style: italic;\n      color: #FB6C3F;\n}\n", ""]);
 
 // exports
 
@@ -55810,6 +55810,8 @@ exports.push([module.i, "/* Variables */\nul[data-v-06683d7e] {\n  list-style-ty
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -55873,63 +55875,69 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("ul", [
-    _c("li", { staticClass: "nom-exposition" }, [
-      _vm._v("\n        " + _vm._s(_vm.exposition.nom) + "\n        "),
-      _c(
-        "span",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.estEnCours(_vm.exposition),
-              expression: "estEnCours(exposition)"
-            }
-          ],
-          staticClass: "en-cours"
-        },
-        [
-          _c("i", {
-            staticClass: "fa fa-dot-circle-o",
-            attrs: { "aria-hidden": "true" }
-          }),
-          _vm._v(" \n            En cours\n        ")
-        ]
-      )
+  return _c("div", { staticClass: "details-exposition" }, [
+    _c("ul", [
+      _c("li", { staticClass: "nom-exposition" }, [
+        _vm._v(
+          "\n            " + _vm._s(_vm.exposition.nom) + "\n            "
+        ),
+        _c(
+          "span",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.estEnCours(_vm.exposition),
+                expression: "estEnCours(exposition)"
+              }
+            ],
+            staticClass: "en-cours"
+          },
+          [
+            _c("i", {
+              staticClass: "fa fa-dot-circle-o",
+              attrs: { "aria-hidden": "true" }
+            }),
+            _vm._v(" \n                En cours\n            ")
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "dates-exposition" }, [
+        _c("i", {
+          staticClass: "fa fa-calendar",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(
+          " \n            Du " +
+            _vm._s(_vm._f("formatDate")(_vm.exposition.date_debut)) +
+            " au " +
+            _vm._s(_vm._f("formatDate")(_vm.exposition.date_fin)) +
+            "\n        "
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "details-exposition" }, [
+        _vm._v(
+          "\n            " + _vm._s(_vm.exposition.description) + "\n        "
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "lieu-exposition" }, [
+        _c("i", {
+          staticClass: "fa fa-map-marker",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" " + _vm._s(_vm.exposition.lieu) + "\n        ")
+      ])
     ]),
     _vm._v(" "),
-    _c("li", { staticClass: "dates-exposition" }, [
-      _c("i", {
-        staticClass: "fa fa-calendar",
-        attrs: { "aria-hidden": "true" }
-      }),
-      _vm._v(
-        " \n        Du " +
-          _vm._s(_vm._f("formatDate")(_vm.exposition.date_debut)) +
-          " au " +
-          _vm._s(_vm._f("formatDate")(_vm.exposition.date_fin)) +
-          "\n    "
-      )
-    ]),
-    _vm._v(" "),
-    _c("li", { staticClass: "visuel-exposition" }, [
+    _c("div", { staticClass: "visuel-exposition" }, [
       _c("img", {
         staticStyle: { height: "180px" },
         attrs: { src: _vm.exposition.chemin_visuel }
       })
-    ]),
-    _vm._v(" "),
-    _c("li", { staticClass: "details-exposition" }, [
-      _vm._v("\n        " + _vm._s(_vm.exposition.description) + "\n    ")
-    ]),
-    _vm._v(" "),
-    _c("li", { staticClass: "lieu-exposition" }, [
-      _c("i", {
-        staticClass: "fa fa-map-marker",
-        attrs: { "aria-hidden": "true" }
-      }),
-      _vm._v(" " + _vm._s(_vm.exposition.lieu) + "\n    ")
     ])
   ])
 }
