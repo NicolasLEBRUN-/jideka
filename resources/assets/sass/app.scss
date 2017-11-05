@@ -48,6 +48,9 @@ $fa-font-path: '../../../node_modules/font-awesome/fonts' !default;
 /* https://jonsuh.com/hamburgers/ */
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
+/* Photostack */
+@import "./photostack.scss";
+
 body, h1, h2 {
 	margin: 0;
 	font-family: "Open sans";
