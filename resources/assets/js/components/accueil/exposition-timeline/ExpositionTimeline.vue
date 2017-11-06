@@ -90,10 +90,8 @@
 
     div.item {
         display: flex;
-        flex: auto;
         overflow-y: auto;
         padding: 0rem 1rem 0rem 1rem;
-        height: 500px; //TCY;
     }
 
     #timeline {
@@ -144,45 +142,6 @@
                 &:last-child {
                     padding-bottom: 0.5em;
                     margin-bottom: 1.1em;
-                }
-                ul {
-                    list-style-type: none;
-                    padding: 0 0 0 75px;
-                    margin: -1.35rem 0 1em;
-                    //max-width: 32rem;
-                    font-size: 1em;
-                    @media (min-width:62em) {
-                        font-size: 1.1em;
-                        padding: 0 0 0 75px;
-                    }
-                    &:last-child {
-                        margin: {
-                            bottom: 0;
-                        }
-                    }
-                    &:first-of-type:after {
-                        content: '';
-                        width: 10px;
-                        height: 10px;
-                        background: #C5C5C5;
-                        border: 2px solid #3D3D3D;
-                        @include border-radius(50%);
-                        position: absolute;
-                        left: 54px;
-                        top: 3px;
-                        z-index: 2;
-                    }
-                    li {
-                        margin-left: 6px;
-                        &:not(:first-child) {
-                            margin-top: .4rem;
-                        }
-                        span.en-cours {
-                            font-size: 0.8em;
-                            font-style:italic;
-                            color:#FB6C3F;
-                        }
-                    }
                 }
             }
         }
