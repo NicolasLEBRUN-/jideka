@@ -55799,7 +55799,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.details-exposition[data-v-06683d7e] {\n  display: flex;\n}\nul[data-v-06683d7e] {\n  list-style-type: none;\n  padding: 0 0 0 75px;\n  margin: -1.35rem 0 1em;\n  font-size: 1em;\n}\n@media (min-width: 62em) {\nul[data-v-06683d7e] {\n      font-size: 1.1em;\n      padding: 0 0 0 75px;\n}\n}\nul[data-v-06683d7e]:last-child {\n    margin-bottom: 0;\n}\nul[data-v-06683d7e]:first-of-type:after {\n    content: '';\n    width: 10px;\n    height: 10px;\n    background: #C5C5C5;\n    border: 2px solid #3D3D3D;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%;\n    -ms-border-radius: 50%;\n    border-radius: 50%;\n    position: absolute;\n    left: 54px;\n    top: 3px;\n    z-index: 2;\n}\nul li[data-v-06683d7e] {\n    margin: 0;\n}\nul li span.en-cours[data-v-06683d7e] {\n      font-size: 0.85em;\n      font-style: italic;\n      color: #FB6C3F;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.exposition .dates-exposition[data-v-06683d7e], .exposition .vernissage-exposition[data-v-06683d7e], .exposition .lieu-exposition[data-v-06683d7e] {\n  opacity: .5;\n}\n.exposition .nom-exposition[data-v-06683d7e] {\n  font-size: 1.5rem;\n}\n.exposition .dates-exposition[data-v-06683d7e] {\n  margin-top: 0;\n}\n.exposition .details-exposition[data-v-06683d7e] {\n  padding: 5px 0 5px 10px;\n  border-left: 1px solid white;\n  margin: 10px 0 10px 6px;\n}\n.exposition .visuel-exposition[data-v-06683d7e] {\n  height: 120px;\n  width: 120px;\n  border: 2px solid white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n  padding: 4px;\n}\n.exposition .visuel-exposition img[data-v-06683d7e] {\n    border: 4px solid #3F3F3F;\n    height: 114px;\n    width: 114px;\n}\nul[data-v-06683d7e] {\n  list-style-type: none;\n  padding: 0 0 0 75px;\n  margin: -1.35rem 0 1em;\n  max-width: 32rem;\n  font-size: 1em;\n}\n@media (min-width: 62em) {\nul[data-v-06683d7e] {\n      font-size: 1.1em;\n      padding: 0 0 0 75px;\n}\n}\nul[data-v-06683d7e]:last-child {\n    margin-bottom: 0;\n}\nul[data-v-06683d7e]:first-of-type:after {\n    content: '';\n    width: 16px;\n    height: 16px;\n    background: #C5C5C5;\n    border: 3px solid #353535;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%;\n    -ms-border-radius: 50%;\n    border-radius: 50%;\n    position: absolute;\n    left: 53px;\n    top: 3px;\n    z-index: 2;\n}\nul li[data-v-06683d7e] {\n    margin: 0;\n    margin-left: 6px;\n}\nul li[data-v-06683d7e]:not(:first-child) {\n      margin-top: .4rem;\n}\nul li span.en-cours[data-v-06683d7e] {\n      font-size: 0.85em;\n      font-style: italic;\n      color: #FB6C3F;\n}\n", ""]);
 
 // exports
 
@@ -55810,6 +55810,10 @@ exports.push([module.i, "/* Variables */\n.details-exposition[data-v-06683d7e] {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -55861,7 +55865,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         formatDateTime: function formatDateTime(value) {
             if (value) {
-                return moment(String(value)).format('DD/MM/YYYY hh:mm');
+                return moment(String(value)).format('DD/MM/YYYY à HH:mm');
             }
         }
     }
@@ -55875,7 +55879,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "details-exposition" }, [
+  return _c("div", { staticClass: "exposition" }, [
     _c("ul", [
       _c("li", { staticClass: "nom-exposition" }, [
         _vm._v(
@@ -55918,6 +55922,32 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
+      _c(
+        "li",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.exposition.date_vernissage,
+              expression: "exposition.date_vernissage"
+            }
+          ],
+          staticClass: "vernissage-exposition"
+        },
+        [
+          _c("i", {
+            staticClass: "fa fa-glass",
+            attrs: { "aria-hidden": "true" }
+          }),
+          _vm._v(
+            " \n            Vernissage le " +
+              _vm._s(_vm._f("formatDateTime")(_vm.exposition.date_vernissage)) +
+              "\n        "
+          )
+        ]
+      ),
+      _vm._v(" "),
       _c("li", { staticClass: "details-exposition" }, [
         _vm._v(
           "\n            " + _vm._s(_vm.exposition.description) + "\n        "
@@ -55930,14 +55960,11 @@ var render = function() {
           attrs: { "aria-hidden": "true" }
         }),
         _vm._v(" " + _vm._s(_vm.exposition.lieu) + "\n        ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "visuel-exposition" }, [
+        _c("img", { attrs: { src: _vm.exposition.chemin_visuel } })
       ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "visuel-exposition" }, [
-      _c("img", {
-        staticStyle: { height: "180px" },
-        attrs: { src: _vm.exposition.chemin_visuel }
-      })
     ])
   ])
 }
@@ -56833,19 +56860,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         GaleriePolaroid: __WEBPACK_IMPORTED_MODULE_0__galerie_polaroid_GaleriePolaroid_vue___default.a
     },
     data: function data() {
-        return {
-            galeries: []
-        };
+        return {};
     },
-    mounted: function mounted() {},
-    created: function created() {
-        var self = this;
-        axios.get('/api/galeries').then(function (response) {
-            self.galeries = response.data;
-        }).catch(function (error) {
-            console.log('Erreur axios : ' + error);
-        });
-    }
+    created: function created() {},
+    mounted: function mounted() {}
 });
 
 /***/ }),
@@ -56855,17 +56873,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(185)
+  __webpack_require__(850)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
 var __vue_script__ = __webpack_require__(187)
 /* template */
-var __vue_template__ = __webpack_require__(193)
+var __vue_template__ = __webpack_require__(852)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-e24076ca"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -56899,46 +56917,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 185 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(186);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("43313b67", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e24076ca\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./GaleriePolaroid.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e24076ca\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./GaleriePolaroid.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 186 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(undefined);
-// imports
-exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Give+You+Glory);", ""]);
-
-// module
-exports.push([module.i, "/* Variables */\n/* Photostack */\n@font-face {\n  font-weight: normal;\n  font-style: normal;\n  font-family: 'codropsicons';\n  src: url(\"/fonts/codropsicons/codropsicons.eot\");\n  src: url(\"/fonts/codropsicons/codropsicons.eot?#iefix\") format(\"embedded-opentype\"), url(\"/fonts/codropsicons/codropsicons.woff\") format(\"woff\"), url(\"/fonts/codropsicons/codropsicons.ttf\") format(\"truetype\"), url(\"/fonts/codropsicons/codropsicons.svg#codropsicons\") format(\"svg\");\n}\n*[data-v-e24076ca], *[data-v-e24076ca]:after, *[data-v-e24076ca]:before {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\ngallery-wrapper[data-v-e24076ca] {\n  background: #fff;\n  color: #a7a0a2;\n  font-weight: 400;\n  font-size: 1em;\n  font-family: 'Lato', Arial, sans-serif;\n}\n@font-face {\n  font-family: 'icons';\n  src: url(\"/fonts/icons/icons.eot\");\n  src: url(\"/fonts/icons/icons.eot?#iefix\") format(\"embedded-opentype\"), url(\"/fonts/icons/icons.woff\") format(\"woff\"), url(\"/fonts/icons/icons.ttf\") format(\"truetype\"), url(\"/fonts/icons/icons.svg#icons\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal;\n}\n.photostack[data-v-e24076ca] {\n  position: relative;\n  text-align: center;\n  overflow: hidden;\n  border-top: 10px solid rgba(255, 255, 255, 0.93);\n  border-bottom: 10px solid rgba(255, 255, 255, 0.93);\n  background: #3F3F3F;\n}\n.js .photostack[data-v-e24076ca] {\n  height: 580px;\n}\n.photostack-start[data-v-e24076ca] {\n  cursor: pointer;\n}\n\n/* Wrapper and figures */\n/* The size of this wrapper can be smaller if the items should not be scattered across the whole container */\n.photostack > div[data-v-e24076ca] {\n  width: 100%;\n  height: 100%;\n  margin: 0 auto;\n}\n.photostack figure[data-v-e24076ca] {\n  width: 320px;\n  height: 360px;\n  position: relative;\n  display: inline-block;\n  background: #fff;\n  padding: 40px;\n  text-align: center;\n  margin: 5px;\n}\n.js .photostack figure[data-v-e24076ca] {\n  position: absolute;\n  display: block;\n  margin: 0;\n}\n.photostack figcaption h2[data-v-e24076ca] {\n  margin: 20px 0 0 0;\n  color: #a7a0a2;\n  font-size: 16px;\n}\n.photostack-img[data-v-e24076ca] {\n  outline: none;\n  display: block;\n  width: 240px;\n  height: 240px;\n  background: #f9f9f9;\n}\n.photostack-back[data-v-e24076ca] {\n  display: none;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  background: #fff;\n  font-family: \"Give You Glory\", cursive;\n  color: #a7a0a2;\n  padding: 50px 40px;\n  text-align: left;\n  font-size: 22px;\n  line-height: 1.25;\n  z-index: 1;\n}\n.photostack-back p[data-v-e24076ca] {\n  margin: 0;\n}\n.photostack-back p span[data-v-e24076ca] {\n  text-decoration: line-through;\n}\n\n/* Navigation dots */\n.photostack nav[data-v-e24076ca] {\n  position: absolute;\n  width: 100%;\n  bottom: 30px;\n  z-index: 90;\n  text-align: center;\n  left: 0;\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n}\n.photostack-start nav[data-v-e24076ca] {\n  opacity: 0;\n}\n.photostack nav span[data-v-e24076ca] {\n  position: relative;\n  display: inline-block;\n  margin: 0 5px;\n  width: 30px;\n  height: 30px;\n  cursor: pointer;\n  background: #aaa;\n  border-radius: 50%;\n  text-align: center;\n  -webkit-transition: -webkit-transform 0.6s ease-in-out, background 0.3s;\n  transition: transform 0.6s ease-in-out, background 0.3s;\n  -webkit-transform: scale(0.48);\n  transform: scale(0.48);\n}\n.photostack nav span[data-v-e24076ca]:last-child {\n  margin-right: 0;\n}\n.photostack nav span[data-v-e24076ca]::after {\n  content: \"\\E600\";\n  font-family: 'icons';\n  font-size: 80%;\n  speak: none;\n  display: inline-block;\n  vertical-align: top;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 30px;\n  color: #fff;\n  opacity: 0;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n}\n.photostack nav span.current[data-v-e24076ca] {\n  background: #888;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n.photostack nav span.current.flip[data-v-e24076ca] {\n  -webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);\n  transform: scale(1) rotateY(-180deg) translateZ(-1px);\n  background: #555;\n}\n.photostack nav span.flippable[data-v-e24076ca]::after {\n  opacity: 1;\n  -webkit-transition-delay: 0.4s;\n  transition-delay: 0.4s;\n}\n\n/* Overlays */\n/* Initial overlay on photostack container */\n.js .photostack[data-v-e24076ca]::before {\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.5);\n  top: 0;\n  left: 0;\n  z-index: 100;\n  -webkit-transition: opacity 0.3s, visibility 0s 0.3s;\n  transition: opacity 0.3s, visibility 0s 0.3s;\n}\n.js .photostack-start[data-v-e24076ca]::before {\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n}\n\n/* Button on photostack container */\n.js .photostack[data-v-e24076ca]::after {\n  content: 'View Gallery';\n  font-weight: 400;\n  position: absolute;\n  border: 3px solid #fff;\n  text-align: center;\n  white-space: nowrap;\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translateY(-50%) translateX(-50%);\n  transform: translateY(-50%) translateX(-50%);\n  padding: 10px 20px;\n  color: #fff;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  cursor: pointer;\n  z-index: 101;\n}\n.js .photostack[data-v-e24076ca]::before,\n.js .photostack[data-v-e24076ca]::after {\n  opacity: 0;\n  visibility: hidden;\n}\n.js .photostack-start[data-v-e24076ca]::before,\n.js .photostack-start[data-v-e24076ca]:hover::after,\n.touch .photostack-start[data-v-e24076ca]::after {\n  opacity: 1;\n  visibility: visible;\n}\n\n/* Overlay on figure */\n.photostack figure[data-v-e24076ca]::after {\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  visibility: visible;\n  opacity: 1;\n  background: rgba(0, 0, 0, 0.05);\n  -webkit-transition: opacity 0.6s;\n  transition: opacity 0.6s;\n}\n\n/* Hide figure overlay when it becomes current */\nfigure.photostack-current[data-v-e24076ca]::after {\n  -webkit-transition: opacity 0.6s, visibility 0s 0.6s;\n  transition: opacity 0.6s, visibility 0s 0.6s;\n  opacity: 0;\n  visibility: hidden;\n}\n\n/* Special classes for transitions and perspective */\n.photostack-transition figure[data-v-e24076ca] {\n  -webkit-transition: -webkit-transform 0.6s ease-in-out;\n  transition: transform 0.6s ease-in-out;\n}\n.photostack-perspective[data-v-e24076ca] {\n  -webkit-perspective: 1800px;\n  perspective: 1800px;\n}\n.photostack-perspective > div[data-v-e24076ca],\n.photostack-perspective figure[data-v-e24076ca] {\n  -webkit-transform-style: preserve-3d;\n  transform-style: preserve-3d;\n}\n.photostack-perspective figure[data-v-e24076ca],\n.photostack-perspective figure div[data-v-e24076ca] {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n}\n.photostack-perspective figure.photostack-flip[data-v-e24076ca] {\n  -webkit-transform-origin: 0% 50%;\n  transform-origin: 0% 50%;\n}\n.csstransformspreserve3d figure.photostack-flip .photostack-back[data-v-e24076ca] {\n  -webkit-transform: rotateY(180deg);\n  transform: rotateY(180deg);\n  display: block;\n}\n.no-csstransformspreserve3d figure.photostack-showback .photostack-back[data-v-e24076ca] {\n  display: block;\n}\n\n/* The no-JS fallback look does not need to be boring ;) */\n.no-js .photostack figure[data-v-e24076ca] {\n  box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.05);\n}\n.no-js .photostack figure[data-v-e24076ca]::after {\n  display: none;\n}\n.no-js .photostack figure[data-v-e24076ca]:nth-child(3n) {\n  -webkit-transform: translateX(-10%) rotate(5deg);\n  transform: translateX(-10%) rotate(5deg);\n}\n.no-js .photostack figure[data-v-e24076ca]:nth-child(3n-2) {\n  -webkit-transform: translateY(10%) rotate(-3deg);\n  transform: translateY(10%) rotate(-3deg);\n}\n\n/* Some custom styles for the demo */\n/* Since we don't have back sides for the first photo stack, we don't want the current dot to become too big */\n#photostack-1 nav span.current[data-v-e24076ca] {\n  background: #888;\n  -webkit-transform: scale(0.61);\n  transform: scale(0.61);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 185 */,
+/* 186 */,
 /* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -56970,16 +56950,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             oeuvres: []
         };
     },
-    created: function created() {
+    created: function created() {},
+    mounted: function mounted() {
         var self = this;
         axios.get('/api/oeuvres').then(function (response) {
             self.oeuvres = response.data;
-            self.createPhotostack();
+            self.$nextTick(function () {
+                self.createPhotostack();
+            });
         }).catch(function (error) {
             console.log('Erreur axios : ' + error);
         });
     },
-    mounted: function mounted() {},
 
     methods: {
         createPhotostack: function createPhotostack() {
@@ -57074,10 +57056,10 @@ if(false) {
 
 exports = module.exports = __webpack_require__(3)(undefined);
 // imports
-exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Give+You+Glory);", ""]);
+
 
 // module
-exports.push([module.i, "/* Variables */\n/* Photostack */\n@font-face {\n  font-weight: normal;\n  font-style: normal;\n  font-family: 'codropsicons';\n  src: url(\"/fonts/codropsicons/codropsicons.eot\");\n  src: url(\"/fonts/codropsicons/codropsicons.eot?#iefix\") format(\"embedded-opentype\"), url(\"/fonts/codropsicons/codropsicons.woff\") format(\"woff\"), url(\"/fonts/codropsicons/codropsicons.ttf\") format(\"truetype\"), url(\"/fonts/codropsicons/codropsicons.svg#codropsicons\") format(\"svg\");\n}\n*[data-v-56abb7a8], *[data-v-56abb7a8]:after, *[data-v-56abb7a8]:before {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\ngallery-wrapper[data-v-56abb7a8] {\n  background: #fff;\n  color: #a7a0a2;\n  font-weight: 400;\n  font-size: 1em;\n  font-family: 'Lato', Arial, sans-serif;\n}\n@font-face {\n  font-family: 'icons';\n  src: url(\"/fonts/icons/icons.eot\");\n  src: url(\"/fonts/icons/icons.eot?#iefix\") format(\"embedded-opentype\"), url(\"/fonts/icons/icons.woff\") format(\"woff\"), url(\"/fonts/icons/icons.ttf\") format(\"truetype\"), url(\"/fonts/icons/icons.svg#icons\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal;\n}\n.photostack[data-v-56abb7a8] {\n  position: relative;\n  text-align: center;\n  overflow: hidden;\n  border-top: 10px solid rgba(255, 255, 255, 0.93);\n  border-bottom: 10px solid rgba(255, 255, 255, 0.93);\n  background: #3F3F3F;\n}\n.js .photostack[data-v-56abb7a8] {\n  height: 580px;\n}\n.photostack-start[data-v-56abb7a8] {\n  cursor: pointer;\n}\n\n/* Wrapper and figures */\n/* The size of this wrapper can be smaller if the items should not be scattered across the whole container */\n.photostack > div[data-v-56abb7a8] {\n  width: 100%;\n  height: 100%;\n  margin: 0 auto;\n}\n.photostack figure[data-v-56abb7a8] {\n  width: 320px;\n  height: 360px;\n  position: relative;\n  display: inline-block;\n  background: #fff;\n  padding: 40px;\n  text-align: center;\n  margin: 5px;\n}\n.js .photostack figure[data-v-56abb7a8] {\n  position: absolute;\n  display: block;\n  margin: 0;\n}\n.photostack figcaption h2[data-v-56abb7a8] {\n  margin: 20px 0 0 0;\n  color: #a7a0a2;\n  font-size: 16px;\n}\n.photostack-img[data-v-56abb7a8] {\n  outline: none;\n  display: block;\n  width: 240px;\n  height: 240px;\n  background: #f9f9f9;\n}\n.photostack-back[data-v-56abb7a8] {\n  display: none;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  background: #fff;\n  font-family: \"Give You Glory\", cursive;\n  color: #a7a0a2;\n  padding: 50px 40px;\n  text-align: left;\n  font-size: 22px;\n  line-height: 1.25;\n  z-index: 1;\n}\n.photostack-back p[data-v-56abb7a8] {\n  margin: 0;\n}\n.photostack-back p span[data-v-56abb7a8] {\n  text-decoration: line-through;\n}\n\n/* Navigation dots */\n.photostack nav[data-v-56abb7a8] {\n  position: absolute;\n  width: 100%;\n  bottom: 30px;\n  z-index: 90;\n  text-align: center;\n  left: 0;\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n}\n.photostack-start nav[data-v-56abb7a8] {\n  opacity: 0;\n}\n.photostack nav span[data-v-56abb7a8] {\n  position: relative;\n  display: inline-block;\n  margin: 0 5px;\n  width: 30px;\n  height: 30px;\n  cursor: pointer;\n  background: #aaa;\n  border-radius: 50%;\n  text-align: center;\n  -webkit-transition: -webkit-transform 0.6s ease-in-out, background 0.3s;\n  transition: transform 0.6s ease-in-out, background 0.3s;\n  -webkit-transform: scale(0.48);\n  transform: scale(0.48);\n}\n.photostack nav span[data-v-56abb7a8]:last-child {\n  margin-right: 0;\n}\n.photostack nav span[data-v-56abb7a8]::after {\n  content: \"\\E600\";\n  font-family: 'icons';\n  font-size: 80%;\n  speak: none;\n  display: inline-block;\n  vertical-align: top;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 30px;\n  color: #fff;\n  opacity: 0;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n}\n.photostack nav span.current[data-v-56abb7a8] {\n  background: #888;\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n.photostack nav span.current.flip[data-v-56abb7a8] {\n  -webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);\n  transform: scale(1) rotateY(-180deg) translateZ(-1px);\n  background: #555;\n}\n.photostack nav span.flippable[data-v-56abb7a8]::after {\n  opacity: 1;\n  -webkit-transition-delay: 0.4s;\n  transition-delay: 0.4s;\n}\n\n/* Overlays */\n/* Initial overlay on photostack container */\n.js .photostack[data-v-56abb7a8]::before {\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.5);\n  top: 0;\n  left: 0;\n  z-index: 100;\n  -webkit-transition: opacity 0.3s, visibility 0s 0.3s;\n  transition: opacity 0.3s, visibility 0s 0.3s;\n}\n.js .photostack-start[data-v-56abb7a8]::before {\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n}\n\n/* Button on photostack container */\n.js .photostack[data-v-56abb7a8]::after {\n  content: 'View Gallery';\n  font-weight: 400;\n  position: absolute;\n  border: 3px solid #fff;\n  text-align: center;\n  white-space: nowrap;\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translateY(-50%) translateX(-50%);\n  transform: translateY(-50%) translateX(-50%);\n  padding: 10px 20px;\n  color: #fff;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  cursor: pointer;\n  z-index: 101;\n}\n.js .photostack[data-v-56abb7a8]::before,\n.js .photostack[data-v-56abb7a8]::after {\n  opacity: 0;\n  visibility: hidden;\n}\n.js .photostack-start[data-v-56abb7a8]::before,\n.js .photostack-start[data-v-56abb7a8]:hover::after,\n.touch .photostack-start[data-v-56abb7a8]::after {\n  opacity: 1;\n  visibility: visible;\n}\n\n/* Overlay on figure */\n.photostack figure[data-v-56abb7a8]::after {\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  visibility: visible;\n  opacity: 1;\n  background: rgba(0, 0, 0, 0.05);\n  -webkit-transition: opacity 0.6s;\n  transition: opacity 0.6s;\n}\n\n/* Hide figure overlay when it becomes current */\nfigure.photostack-current[data-v-56abb7a8]::after {\n  -webkit-transition: opacity 0.6s, visibility 0s 0.6s;\n  transition: opacity 0.6s, visibility 0s 0.6s;\n  opacity: 0;\n  visibility: hidden;\n}\n\n/* Special classes for transitions and perspective */\n.photostack-transition figure[data-v-56abb7a8] {\n  -webkit-transition: -webkit-transform 0.6s ease-in-out;\n  transition: transform 0.6s ease-in-out;\n}\n.photostack-perspective[data-v-56abb7a8] {\n  -webkit-perspective: 1800px;\n  perspective: 1800px;\n}\n.photostack-perspective > div[data-v-56abb7a8],\n.photostack-perspective figure[data-v-56abb7a8] {\n  -webkit-transform-style: preserve-3d;\n  transform-style: preserve-3d;\n}\n.photostack-perspective figure[data-v-56abb7a8],\n.photostack-perspective figure div[data-v-56abb7a8] {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n}\n.photostack-perspective figure.photostack-flip[data-v-56abb7a8] {\n  -webkit-transform-origin: 0% 50%;\n  transform-origin: 0% 50%;\n}\n.csstransformspreserve3d figure.photostack-flip .photostack-back[data-v-56abb7a8] {\n  -webkit-transform: rotateY(180deg);\n  transform: rotateY(180deg);\n  display: block;\n}\n.no-csstransformspreserve3d figure.photostack-showback .photostack-back[data-v-56abb7a8] {\n  display: block;\n}\n\n/* The no-JS fallback look does not need to be boring ;) */\n.no-js .photostack figure[data-v-56abb7a8] {\n  box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.05);\n}\n.no-js .photostack figure[data-v-56abb7a8]::after {\n  display: none;\n}\n.no-js .photostack figure[data-v-56abb7a8]:nth-child(3n) {\n  -webkit-transform: translateX(-10%) rotate(5deg);\n  transform: translateX(-10%) rotate(5deg);\n}\n.no-js .photostack figure[data-v-56abb7a8]:nth-child(3n-2) {\n  -webkit-transform: translateY(10%) rotate(-3deg);\n  transform: translateY(10%) rotate(-3deg);\n}\n\n/* Some custom styles for the demo */\n/* Since we don't have back sides for the first photo stack, we don't want the current dot to become too big */\n#photostack-1 nav span.current[data-v-56abb7a8] {\n  background: #888;\n  -webkit-transform: scale(0.61);\n  transform: scale(0.61);\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.photostack-img img[data-v-56abb7a8] {\n  width: 240px;\n  height: 240px;\n}\n.photostack-back[data-v-56abb7a8] {\n  font-family: \"Open Sans\";\n}\n", ""]);
 
 // exports
 
@@ -57100,15 +57082,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['oeuvre'],
     data: function data() {
         return {};
     },
-    mounted: function mounted() {},
-    created: function created() {
-        console.log('Oeuvre : ' + JSON.stringify(this.oeuvre));
+    created: function created() {},
+    mounted: function mounted() {
+        console.log('Oeuvre (Polaroid.vue) : ' + JSON.stringify(this.oeuvre));
     }
 });
 
@@ -57121,7 +57105,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("figure", [
-    _c("img", { attrs: { src: _vm.oeuvre.chemin_image, alt: "img05" } }),
+    _c("span", { staticClass: "photostack-img" }, [
+      _c("img", { attrs: { src: _vm.oeuvre.chemin_image, alt: "img" } })
+    ]),
     _vm._v(" "),
     _c("figcaption", [
       _c("h2", { staticClass: "photostack-title" }, [
@@ -57145,44 +57131,7 @@ if (false) {
 }
 
 /***/ }),
-/* 193 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "gallery-wrapper" }, [
-    _c("div", { staticClass: "container" }, [
-      _c(
-        "section",
-        { staticClass: "photostack", attrs: { id: "photostack" } },
-        [
-          _c(
-            "div",
-            _vm._l(_vm.oeuvres, function(oeuvre) {
-              return _c("polaroid", {
-                key: oeuvre.id,
-                attrs: { oeuvre: oeuvre }
-              })
-            })
-          )
-        ]
-      )
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-e24076ca", module.exports)
-  }
-}
-
-/***/ }),
+/* 193 */,
 /* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -57309,7 +57258,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-expositions[data-v-7d0f01fc] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: #3F3F3F;\n}\n.accueil-expositions h1[data-v-7d0f01fc] {\n    padding: 50px 0 0 0;\n    margin-bottom: 20px;\n}\n.accueil-expositions .accroche[data-v-7d0f01fc] {\n    padding: 0 100px;\n    margin: 0;\n}\n.expositions-container[data-v-7d0f01fc] {\n  display: flex;\n  flex-direction: column;\n}\n.expositions-container .item[data-v-7d0f01fc] {\n    display: flex;\n    flex: auto;\n    overflow-y: auto;\n    padding: 0rem 1rem 0rem 1rem;\n}\n.expositions-container .item #timeline[data-v-7d0f01fc] {\n      position: relative;\n      display: table;\n      height: 100%;\n      margin-left: auto;\n      margin-right: auto;\n      margin-top: 5rem;\n}\n.expositions-container .item #timeline div[data-v-7d0f01fc]:after {\n        content: '';\n        width: 2px;\n        position: absolute;\n        top: .5rem;\n        bottom: 0rem;\n        left: 60px;\n        z-index: 1;\n        background: #C5C5C5;\n}\n.expositions-container .item #timeline h3[data-v-7d0f01fc] {\n        position: -webkit-sticky;\n        position: sticky;\n        top: 5rem;\n        color: #888;\n        margin: 0;\n        font-size: 1em;\n        font-weight: 400;\n}\n@media (min-width: 62em) {\n.expositions-container .item #timeline h3[data-v-7d0f01fc] {\n            font-size: 1.1em;\n}\n}\n.expositions-container .item #timeline section.year[data-v-7d0f01fc] {\n        position: relative;\n}\n.expositions-container .item #timeline section.year:first-child section[data-v-7d0f01fc] {\n          margin-top: -1.3em;\n          padding-bottom: 0px;\n}\n.expositions-container .item #timeline section.year section[data-v-7d0f01fc] {\n          position: relative;\n          padding-bottom: 1.25em;\n          margin-bottom: 2.2em;\n}\n.expositions-container .item #timeline section.year section[data-v-7d0f01fc]:last-child {\n            padding-bottom: 0.5em;\n            margin-bottom: 1.1em;\n}\n.expositions-container .item #timeline section.year section ul[data-v-7d0f01fc] {\n            list-style-type: none;\n            padding: 0 0 0 75px;\n            margin: -1.35rem 0 1em;\n            font-size: 1em;\n}\n@media (min-width: 62em) {\n.expositions-container .item #timeline section.year section ul[data-v-7d0f01fc] {\n                font-size: 1.1em;\n                padding: 0 0 0 75px;\n}\n}\n.expositions-container .item #timeline section.year section ul[data-v-7d0f01fc]:last-child {\n              margin-bottom: 0;\n}\n.expositions-container .item #timeline section.year section ul[data-v-7d0f01fc]:first-of-type:after {\n              content: '';\n              width: 10px;\n              height: 10px;\n              background: #C5C5C5;\n              border: 2px solid #3D3D3D;\n              -webkit-border-radius: 50%;\n              -moz-border-radius: 50%;\n              -ms-border-radius: 50%;\n              border-radius: 50%;\n              position: absolute;\n              left: 54px;\n              top: 3px;\n              z-index: 2;\n}\n.expositions-container .item #timeline section.year section ul li[data-v-7d0f01fc] {\n              margin-left: 6px;\n}\n.expositions-container .item #timeline section.year section ul li[data-v-7d0f01fc]:not(:first-child) {\n                margin-top: .4rem;\n}\n.expositions-container .item #timeline section.year section ul li span.en-cours[data-v-7d0f01fc] {\n                font-size: 0.8em;\n                font-style: italic;\n                color: #FB6C3F;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.accueil-expositions[data-v-7d0f01fc] {\n  padding-top: 50px;\n  align-items: center;\n}\n.accueil-expositions .entete[data-v-7d0f01fc] {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.accueil-expositions .entete h1[data-v-7d0f01fc], .accueil-expositions .entete p[data-v-7d0f01fc] {\n      text-align: center;\n      padding: 0 100px;\n}\n.accueil-expositions .entete a[data-v-7d0f01fc] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      transition: all .3s ease;\n}\n.accueil-expositions .entete a[data-v-7d0f01fc]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
 
 // exports
 
@@ -57320,25 +57269,8 @@ exports.push([module.i, "/* Variables */\n.accueil-expositions[data-v-7d0f01fc] 
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exposition_timeline_ExpositionTimeline_vue__ = __webpack_require__(845);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exposition_timeline_ExpositionTimeline_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__exposition_timeline_ExpositionTimeline_vue__);
 //
 //
 //
@@ -57359,45 +57291,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        Exposition: __WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue___default.a
+        ExpositionTimeline: __WEBPACK_IMPORTED_MODULE_0__exposition_timeline_ExpositionTimeline_vue___default.a
     },
     data: function data() {
-        return {
-            expositions: []
-        };
+        return {};
     },
-    computed: {
-        orderedExpositions: function orderedExpositions() {
-            return _.orderBy(this.expositions, 'date_debut').reverse();
-        },
-        anneesExpositions: function anneesExpositions() {
-            function getYear(date) {
-                return moment(date).year();
-            }
-            var anneesExpositions = [];
-            anneesExpositions = _.map(this.orderedExpositions, 'date_debut');
-            anneesExpositions = _.map(anneesExpositions, getYear);
-            anneesExpositions = _.uniq(anneesExpositions);
-            anneesExpositions = _.orderBy(anneesExpositions).reverse();
-            return anneesExpositions;
-        }
-    },
-    mounted: function mounted() {},
-    created: function created() {
-        var self = this;
-        axios.get('/api/expositions').then(function (response) {
-            self.expositions = response.data;
-        }).catch(function (error) {
-            console.log('Erreur axios (AccueilExpositions.vue) : ' + error);
-        });
-    },
-
-    methods: {
-        estExpositionDeAnnee: function estExpositionDeAnnee(annee, exposition) {
-            return annee == moment(exposition.date_debut).year();
-        }
-    },
-    filters: {}
+    created: function created() {},
+    mounted: function mounted() {}
 });
 
 /***/ }),
@@ -57411,68 +57311,25 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "accueil-expositions container",
+      staticClass: "accueil-expositions",
       attrs: { id: "accueil-expositions" }
     },
     [
-      _c("h1", [
-        _vm._v(
-          "\n        " +
-            _vm._s(_vm.$trans("accueil.expositions.titre-section")) +
-            "\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "accroche" }, [
-        _vm._v(
-          "\n        " +
-            _vm._s(_vm.$trans("accueil.expositions.accroche")) +
-            "\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "expositions-container" }, [
-        _c("div", { staticClass: "item" }, [
-          _c("div", { attrs: { id: "timeline" } }, [
-            _c(
-              "div",
-              [
-                _vm._l(_vm.anneesExpositions, function(annee) {
-                  return [
-                    _c(
-                      "section",
-                      { key: annee, staticClass: "year" },
-                      [
-                        _c("h3", [_vm._v(_vm._s(annee))]),
-                        _vm._v(" "),
-                        _vm._l(_vm.orderedExpositions, function(exposition) {
-                          return [
-                            _vm.estExpositionDeAnnee(annee, exposition)
-                              ? _c(
-                                  "section",
-                                  [
-                                    _c("exposition", {
-                                      attrs: { exposition: exposition }
-                                    })
-                                  ],
-                                  1
-                                )
-                              : _vm._e()
-                          ]
-                        })
-                      ],
-                      2
-                    )
-                  ]
-                })
-              ],
-              2
-            )
-          ])
+      _c("div", { staticClass: "entete" }, [
+        _c("h1", [
+          _vm._v(
+            " " + _vm._s(_vm.$trans("accueil.expositions.titre-section")) + " "
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(" " + _vm._s(_vm.$trans("accueil.expositions.accroche")) + " ")
         ])
       ]),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticClass: "contenu" }, [_c("exposition-timeline")], 1),
+      _vm._v(" "),
+      _c("div", { staticClass: "entete" }, [
         _c("a", { attrs: { href: "/web-expositions" } }, [
           _vm._v(_vm._s(_vm.$trans("accueil.expositions.lien")))
         ])
@@ -60199,6 +60056,933 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */,
+/* 431 */,
+/* 432 */,
+/* 433 */,
+/* 434 */,
+/* 435 */,
+/* 436 */,
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */,
+/* 452 */,
+/* 453 */,
+/* 454 */,
+/* 455 */,
+/* 456 */,
+/* 457 */,
+/* 458 */,
+/* 459 */,
+/* 460 */,
+/* 461 */,
+/* 462 */,
+/* 463 */,
+/* 464 */,
+/* 465 */,
+/* 466 */,
+/* 467 */,
+/* 468 */,
+/* 469 */,
+/* 470 */,
+/* 471 */,
+/* 472 */,
+/* 473 */,
+/* 474 */,
+/* 475 */,
+/* 476 */,
+/* 477 */,
+/* 478 */,
+/* 479 */,
+/* 480 */,
+/* 481 */,
+/* 482 */,
+/* 483 */,
+/* 484 */,
+/* 485 */,
+/* 486 */,
+/* 487 */,
+/* 488 */,
+/* 489 */,
+/* 490 */,
+/* 491 */,
+/* 492 */,
+/* 493 */,
+/* 494 */,
+/* 495 */,
+/* 496 */,
+/* 497 */,
+/* 498 */,
+/* 499 */,
+/* 500 */,
+/* 501 */,
+/* 502 */,
+/* 503 */,
+/* 504 */,
+/* 505 */,
+/* 506 */,
+/* 507 */,
+/* 508 */,
+/* 509 */,
+/* 510 */,
+/* 511 */,
+/* 512 */,
+/* 513 */,
+/* 514 */,
+/* 515 */,
+/* 516 */,
+/* 517 */,
+/* 518 */,
+/* 519 */,
+/* 520 */,
+/* 521 */,
+/* 522 */,
+/* 523 */,
+/* 524 */,
+/* 525 */,
+/* 526 */,
+/* 527 */,
+/* 528 */,
+/* 529 */,
+/* 530 */,
+/* 531 */,
+/* 532 */,
+/* 533 */,
+/* 534 */,
+/* 535 */,
+/* 536 */,
+/* 537 */,
+/* 538 */,
+/* 539 */,
+/* 540 */,
+/* 541 */,
+/* 542 */,
+/* 543 */,
+/* 544 */,
+/* 545 */,
+/* 546 */,
+/* 547 */,
+/* 548 */,
+/* 549 */,
+/* 550 */,
+/* 551 */,
+/* 552 */,
+/* 553 */,
+/* 554 */,
+/* 555 */,
+/* 556 */,
+/* 557 */,
+/* 558 */,
+/* 559 */,
+/* 560 */,
+/* 561 */,
+/* 562 */,
+/* 563 */,
+/* 564 */,
+/* 565 */,
+/* 566 */,
+/* 567 */,
+/* 568 */,
+/* 569 */,
+/* 570 */,
+/* 571 */,
+/* 572 */,
+/* 573 */,
+/* 574 */,
+/* 575 */,
+/* 576 */,
+/* 577 */,
+/* 578 */,
+/* 579 */,
+/* 580 */,
+/* 581 */,
+/* 582 */,
+/* 583 */,
+/* 584 */,
+/* 585 */,
+/* 586 */,
+/* 587 */,
+/* 588 */,
+/* 589 */,
+/* 590 */,
+/* 591 */,
+/* 592 */,
+/* 593 */,
+/* 594 */,
+/* 595 */,
+/* 596 */,
+/* 597 */,
+/* 598 */,
+/* 599 */,
+/* 600 */,
+/* 601 */,
+/* 602 */,
+/* 603 */,
+/* 604 */,
+/* 605 */,
+/* 606 */,
+/* 607 */,
+/* 608 */,
+/* 609 */,
+/* 610 */,
+/* 611 */,
+/* 612 */,
+/* 613 */,
+/* 614 */,
+/* 615 */,
+/* 616 */,
+/* 617 */,
+/* 618 */,
+/* 619 */,
+/* 620 */,
+/* 621 */,
+/* 622 */,
+/* 623 */,
+/* 624 */,
+/* 625 */,
+/* 626 */,
+/* 627 */,
+/* 628 */,
+/* 629 */,
+/* 630 */,
+/* 631 */,
+/* 632 */,
+/* 633 */,
+/* 634 */,
+/* 635 */,
+/* 636 */,
+/* 637 */,
+/* 638 */,
+/* 639 */,
+/* 640 */,
+/* 641 */,
+/* 642 */,
+/* 643 */,
+/* 644 */,
+/* 645 */,
+/* 646 */,
+/* 647 */,
+/* 648 */,
+/* 649 */,
+/* 650 */,
+/* 651 */,
+/* 652 */,
+/* 653 */,
+/* 654 */,
+/* 655 */,
+/* 656 */,
+/* 657 */,
+/* 658 */,
+/* 659 */,
+/* 660 */,
+/* 661 */,
+/* 662 */,
+/* 663 */,
+/* 664 */,
+/* 665 */,
+/* 666 */,
+/* 667 */,
+/* 668 */,
+/* 669 */,
+/* 670 */,
+/* 671 */,
+/* 672 */,
+/* 673 */,
+/* 674 */,
+/* 675 */,
+/* 676 */,
+/* 677 */,
+/* 678 */,
+/* 679 */,
+/* 680 */,
+/* 681 */,
+/* 682 */,
+/* 683 */,
+/* 684 */,
+/* 685 */,
+/* 686 */,
+/* 687 */,
+/* 688 */,
+/* 689 */,
+/* 690 */,
+/* 691 */,
+/* 692 */,
+/* 693 */,
+/* 694 */,
+/* 695 */,
+/* 696 */,
+/* 697 */,
+/* 698 */,
+/* 699 */,
+/* 700 */,
+/* 701 */,
+/* 702 */,
+/* 703 */,
+/* 704 */,
+/* 705 */,
+/* 706 */,
+/* 707 */,
+/* 708 */,
+/* 709 */,
+/* 710 */,
+/* 711 */,
+/* 712 */,
+/* 713 */,
+/* 714 */,
+/* 715 */,
+/* 716 */,
+/* 717 */,
+/* 718 */,
+/* 719 */,
+/* 720 */,
+/* 721 */,
+/* 722 */,
+/* 723 */,
+/* 724 */,
+/* 725 */,
+/* 726 */,
+/* 727 */,
+/* 728 */,
+/* 729 */,
+/* 730 */,
+/* 731 */,
+/* 732 */,
+/* 733 */,
+/* 734 */,
+/* 735 */,
+/* 736 */,
+/* 737 */,
+/* 738 */,
+/* 739 */,
+/* 740 */,
+/* 741 */,
+/* 742 */,
+/* 743 */,
+/* 744 */,
+/* 745 */,
+/* 746 */,
+/* 747 */,
+/* 748 */,
+/* 749 */,
+/* 750 */,
+/* 751 */,
+/* 752 */,
+/* 753 */,
+/* 754 */,
+/* 755 */,
+/* 756 */,
+/* 757 */,
+/* 758 */,
+/* 759 */,
+/* 760 */,
+/* 761 */,
+/* 762 */,
+/* 763 */,
+/* 764 */,
+/* 765 */,
+/* 766 */,
+/* 767 */,
+/* 768 */,
+/* 769 */,
+/* 770 */,
+/* 771 */,
+/* 772 */,
+/* 773 */,
+/* 774 */,
+/* 775 */,
+/* 776 */,
+/* 777 */,
+/* 778 */,
+/* 779 */,
+/* 780 */,
+/* 781 */,
+/* 782 */,
+/* 783 */,
+/* 784 */,
+/* 785 */,
+/* 786 */,
+/* 787 */,
+/* 788 */,
+/* 789 */,
+/* 790 */,
+/* 791 */,
+/* 792 */,
+/* 793 */,
+/* 794 */,
+/* 795 */,
+/* 796 */,
+/* 797 */,
+/* 798 */,
+/* 799 */,
+/* 800 */,
+/* 801 */,
+/* 802 */,
+/* 803 */,
+/* 804 */,
+/* 805 */,
+/* 806 */,
+/* 807 */,
+/* 808 */,
+/* 809 */,
+/* 810 */,
+/* 811 */,
+/* 812 */,
+/* 813 */,
+/* 814 */,
+/* 815 */,
+/* 816 */,
+/* 817 */,
+/* 818 */,
+/* 819 */,
+/* 820 */,
+/* 821 */,
+/* 822 */,
+/* 823 */,
+/* 824 */,
+/* 825 */,
+/* 826 */,
+/* 827 */,
+/* 828 */,
+/* 829 */,
+/* 830 */,
+/* 831 */,
+/* 832 */,
+/* 833 */,
+/* 834 */,
+/* 835 */,
+/* 836 */,
+/* 837 */,
+/* 838 */,
+/* 839 */,
+/* 840 */,
+/* 841 */,
+/* 842 */,
+/* 843 */,
+/* 844 */,
+/* 845 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(846)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(848)
+/* template */
+var __vue_template__ = __webpack_require__(849)
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-72ce5b3f"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/accueil/exposition-timeline/ExpositionTimeline.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] ExpositionTimeline.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-72ce5b3f", Component.options)
+  } else {
+    hotAPI.reload("data-v-72ce5b3f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 846 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(847);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("3787db12", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-72ce5b3f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ExpositionTimeline.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-72ce5b3f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ExpositionTimeline.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 847 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "/* Variables */\ndiv.expositions-container[data-v-72ce5b3f] {\n  display: flex;\n  flex: auto;\n  flex-direction: column;\n  max-height: 100%;\n}\ndiv.item[data-v-72ce5b3f] {\n  display: flex;\n  overflow-y: auto;\n  padding: 0rem 1rem 0rem 1rem;\n}\n#timeline[data-v-72ce5b3f] {\n  position: relative;\n  display: table;\n  height: 100%;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 5rem;\n}\n#timeline div[data-v-72ce5b3f]:after {\n    content: '';\n    width: 2px;\n    position: absolute;\n    top: .5rem;\n    bottom: 0rem;\n    left: 60px;\n    z-index: 1;\n    background: #C5C5C5;\n}\n#timeline h3[data-v-72ce5b3f] {\n    position: -webkit-sticky;\n    position: sticky;\n    top: 5rem;\n    color: #888;\n    margin: 0;\n    font-size: 1em;\n    font-weight: 400;\n}\n@media (min-width: 62em) {\n#timeline h3[data-v-72ce5b3f] {\n        font-size: 1.1em;\n}\n}\n#timeline section.year[data-v-72ce5b3f] {\n    position: relative;\n}\n#timeline section.year:first-child section[data-v-72ce5b3f] {\n      margin-top: -1.3em;\n      padding-bottom: 0px;\n}\n#timeline section.year section[data-v-72ce5b3f] {\n      position: relative;\n      padding-bottom: 1.25em;\n      margin-bottom: 2.2em;\n}\n#timeline section.year section[data-v-72ce5b3f]:last-child {\n        padding-bottom: 0.5em;\n        margin-bottom: 1.1em;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 848 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        Exposition: __WEBPACK_IMPORTED_MODULE_0__expositions_Exposition_vue___default.a
+    },
+    data: function data() {
+        return {
+            expositions: []
+        };
+    },
+    computed: {
+        orderedExpositions: function orderedExpositions() {
+            return _.orderBy(this.expositions, 'date_debut').reverse();
+        },
+        anneesExpositions: function anneesExpositions() {
+            function getYear(date) {
+                return moment(date).year();
+            }
+            var anneesExpositions = [];
+            anneesExpositions = _.map(this.orderedExpositions, 'date_debut');
+            anneesExpositions = _.map(anneesExpositions, getYear);
+            anneesExpositions = _.uniq(anneesExpositions);
+            anneesExpositions = _.orderBy(anneesExpositions).reverse();
+            return anneesExpositions;
+        }
+    },
+    created: function created() {
+        var self = this;
+        axios.get('/api/expositions').then(function (response) {
+            self.expositions = response.data;
+        }).catch(function (error) {
+            console.log('Erreur axios (AccueilExpositions.vue) : ' + error);
+        });
+    },
+    mounted: function mounted() {},
+
+    methods: {
+        estExpositionDeAnnee: function estExpositionDeAnnee(annee, exposition) {
+            return annee == moment(exposition.date_debut).year();
+        }
+    },
+    filters: {}
+});
+
+/***/ }),
+/* 849 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "expositions-container" }, [
+    _c("div", { staticClass: "item" }, [
+      _c("div", { attrs: { id: "timeline" } }, [
+        _c(
+          "div",
+          [
+            _vm._l(_vm.anneesExpositions, function(annee) {
+              return [
+                _c(
+                  "section",
+                  { key: annee, staticClass: "year" },
+                  [
+                    _c("h3", [_vm._v(_vm._s(annee))]),
+                    _vm._v(" "),
+                    _vm._l(_vm.orderedExpositions, function(exposition) {
+                      return [
+                        _vm.estExpositionDeAnnee(annee, exposition)
+                          ? _c(
+                              "section",
+                              [
+                                _c("exposition", {
+                                  attrs: { exposition: exposition }
+                                })
+                              ],
+                              1
+                            )
+                          : _vm._e()
+                      ]
+                    })
+                  ],
+                  2
+                )
+              ]
+            })
+          ],
+          2
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-72ce5b3f", module.exports)
+  }
+}
+
+/***/ }),
+/* 850 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(851);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("48e0ecba", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e24076ca\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./GaleriePolaroid.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e24076ca\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./GaleriePolaroid.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 851 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "/* Variables */\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 852 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "gallery-wrapper" }, [
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "section",
+        { staticClass: "photostack", attrs: { id: "photostack" } },
+        [
+          _c(
+            "div",
+            _vm._l(_vm.oeuvres, function(oeuvre) {
+              return _c("polaroid", {
+                key: oeuvre.id,
+                attrs: { oeuvre: oeuvre }
+              })
+            })
+          )
+        ]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-e24076ca", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

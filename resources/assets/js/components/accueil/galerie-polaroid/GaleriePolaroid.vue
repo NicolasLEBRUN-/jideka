@@ -23,17 +23,20 @@
             }
         },
         created() {
+        },
+        mounted() {
             let self = this;
             axios.get('/api/oeuvres')
                     .then(function (response) {
                         self.oeuvres = response.data;
-                        self.createPhotostack();
+                        self.$nextTick(function () {
+                            self.createPhotostack();
+                        })
                     })
                     .catch(function (error) {
                         console.log('Erreur axios : ' + error);
                     });
         },
-        mounted() {},
         methods: {
             createPhotostack: function() {
                 new Photostack( document.getElementById( 'photostack' ), {
@@ -47,12 +50,9 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
     /* Variables */
     @import "../../../../sass/variables";
-    /* Photostack */
-    @import "../../../../sass/demo";
-    @import "../../../../sass/component";
 
 </style>

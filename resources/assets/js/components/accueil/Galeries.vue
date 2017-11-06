@@ -19,21 +19,10 @@
             GaleriePolaroid
         },
         data: function() {
-            return {
-                galeries: []
-            }
+            return {}
         },
-        mounted() {},
-        created() {
-            let self = this;
-            axios.get('/api/galeries')
-                .then(function (response) {
-                    self.galeries = response.data;
-                })
-                .catch(function (error) {
-                    console.log('Erreur axios : ' + error);
-                });
-        }
+        created() {},
+        mounted() {}
     }
 </script>
 
