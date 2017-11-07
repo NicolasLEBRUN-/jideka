@@ -12,11 +12,32 @@
             <div class="edition">
                 <form action="" method="" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="nom">Nom de l'oeuvre</label>
+                        <form-label for="nom">Nom de l'oeuvre</form-label>
                         <br />
-                        <select name="nom" v-model="oeuvre">
+                        <multiselect 
+                                v-model="oeuvre" 
+                                name="oeuvre" 
+                                placeholder="Sélectionner une oeuvre" 
+                                label="nom" 
+                                track-by="nom" 
+                                :options="oeuvres" 
+                                :option-height="104" 
+                                :custom-label="customLabelforOeuvre" 
+                                :show-labels="false">
+                            <template slot="option" scope="props">
+                                <img class="option__image" :src="props.option.chemin_image" alt="Oeuvre" style="height: 80px; display:inline-block; vertical-align:-120%;">
+                                <div style="display:inline-block">
+                                    <span class="option__title"><strong>{{ props.option.nom }}</strong></span>
+                                    <br />
+                                    <span class="option__small">{{ props.option.annee }}</span>
+                                    <br />
+                                    <span class="option__small">Galerie "{{ props.option.galerie_nom }}"</span>
+                                </div>
+                            </template>
+                        </multiselect>
+                        <!-- <select name="nom" v-model="oeuvre">
                             <option v-for="oeuvre in oeuvres" :value="oeuvre.id">{{ oeuvre.nom }}</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="form-group danger" v-if="errors.length > 0">
                         Erreurs : 
@@ -29,7 +50,7 @@
                             <li>{{ success }}</li>
                         </ul>
                     </div>
-                    <button v-on:click.prevent="supprimerOeuvre" class="btn">Supprimer</button>
+                    <form-button v-on:click.prevent="supprimerOeuvre" class="btn">Supprimer</form-button>
                 </form>
             </div>
         </div>
@@ -37,12 +58,17 @@
 </template>
 
 <script>
+    import FormLabel from '../common/FormLabel.vue';
+    import FormInput from '../common/FormInput.vue';
+    import FormTextarea from '../common/FormTextarea.vue';
+    import FormButton from '../common/FormButton.vue';
+    import Multiselect from 'vue-multiselect'
+
     const French = require("flatpickr/dist/l10n/fr.js").fr;
     const Today = new Date();
 
     export default {
         name: 'administration-oeuvres-suppression',
-        components: {},
         data() {
             return {
                 oeuvres: [],
@@ -54,19 +80,37 @@
         mounted() {},
         created() {
             let self = this;
+            // Récupération des toutes les galeries
+            axios.get('/api/galeries')
+                    .then(function (response) {
+                        self.galeries = response.data;
+                    })
+                    .catch(function (error) {
+                        console.log('Erreur axios : ' + error);
+                    });
+            // Récupération des toutes les oeuvres
             axios.get('/api/oeuvres')
-                .then(function (response) {
-                    self.oeuvres = response.data;
-                })
-                .catch(function (error) {
-                    console.log('Erreur axios : ' + error);
-                });
+                    .then(function (response) {
+                        self.oeuvres = response.data;
+                        self.oeuvres.forEach( function (oeuvre) {
+                            var galerie = self.galeries.find( function (galerie) {
+                                return oeuvre.galerie_id == galerie.id
+                            });
+                            oeuvre.galerie_nom = galerie.nom;
+                        });
+                    })
+                    .catch(function (error) {
+                        console.log('Erreur axios : ' + error);
+                    });
         },
         methods: {
+            customLabelforOeuvre: function ({ nom, annee, galerie_nom }) {
+                return `${nom} (${annee}), galerie "${galerie_nom}"`
+            },
             supprimerOeuvre: function(event) {
                 let self = this;
                 axios.post('/api/delete/oeuvres', {
-                        oeuvre: self.oeuvre,
+                        oeuvre: self.oeuvre.id,
                     })
                     .then(function (response) {
                         self.success = response.data;
@@ -80,6 +124,13 @@
                         self.success = '';
                     });
             }
+        },
+        components: {
+            FormLabel,
+            FormInput,
+            FormTextarea,
+            FormButton,
+            Multiselect
         }
     }
 </script>

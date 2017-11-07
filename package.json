@@ -28,6 +28,7 @@
     "moment": "github:moment/moment",
     "style-loader": "^0.18.2",
     "vue-flatpickr-component": "^3.0.0",
-    "vue-loader": "^13.0.4"
+    "vue-loader": "^13.0.4",
+    "vue-multiselect": "^2.0.6"
   }
 }

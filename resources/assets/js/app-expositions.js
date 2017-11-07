@@ -20,10 +20,6 @@ Vue.prototype.$trans = function(string) {
 	return _.get(window.i18n, string);
 }
 
-// Vue.filter('i18n', function(value) {
-// 	return _.get(window.i18n, value);
-// });
-
 const appExpositions = new Vue({
     el: '#app-expositions',
 	render: h => h(AppExpositions)

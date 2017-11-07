@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
 	<title>Nouveau message</title>
 </head>

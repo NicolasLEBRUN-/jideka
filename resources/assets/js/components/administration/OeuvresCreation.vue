@@ -12,64 +12,65 @@
             <div class="edition">
                 <form action="" method="" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="nom">Nom de l'oeuvre</label>
+                        <form-label for="nom">Nom de l'oeuvre</form-label>
                         <br />
-                        <input type="text" class="form-control" name="nom" v-model="nom" cols="50" placeholder="Nom" />
+                        <form-input type="text" class="form-control" name="nom" v-model="nom" placeholder="Nom"></form-input>
                     </div>
                     <div class="form-group">
-                        <label for="description">Description de l'oeuvre</label>
+                        <form-label for="description">Description de l'oeuvre</form-label>
                         <br />
-                        <textarea class="form-control" name="description" v-model="description" rows="3" cols="40" placeholder="Description">
-                        </textarea> 
+                        <form-textarea class="form-control" name="description" v-model="description" placeholder="Description"></form-textarea> 
                     </div>
                     <div class="form-group">
-                        <label for="technique">Technique de l'oeuvre</label>
+                        <form-label for="technique">Technique de l'oeuvre</form-label>
                         <br />
-                        <input type="text" class="form-control" name="technique" v-model="technique" cols="50" placeholder="Technique" />
+                        <form-input type="text" class="form-control" name="technique" v-model="technique" placeholder="Technique"></form-input>
                     </div>
                     <div class="form-group">
-                        <label for="annee">Année de l'oeuvre</label>
+                        <form-label for="annee">Année de l'oeuvre</form-label>
                         <br />
-                        <input type="text" class="form-control" name="annee" v-model="annee" cols="50" placeholder="Année" />
+                        <form-input type="text" class="form-control" name="annee" v-model="annee" placeholder="Année"></form-input>
                     </div>
                     <div class="form-group">
-                        <label for="hauteur">Hauteur de l'oeuvre</label>
+                        <form-label for="hauteur">Hauteur de l'oeuvre</form-label>
                         <br />
-                        <input type="text" class="form-control" name="hauteur" v-model="hauteur" cols="50" placeholder="Hauteur" /> cm
+                        <form-input type="text" class="form-control" name="hauteur" v-model="hauteur" placeholder="Hauteur"></form-input> cm
                     </div>
                     <div class="form-group">
-                        <label for="largeur">Largeur de l'oeuvre</label>
+                        <form-label for="largeur">Largeur de l'oeuvre</form-label>
                         <br />
-                        <input type="text" class="form-control" name="largeur" v-model="largeur" cols="50" placeholder="Largeur" /> cm
+                        <form-input type="text" class="form-control" name="largeur" v-model="largeur" placeholder="Largeur"></form-input> cm
                     </div>
                     <div class="form-group">
-                        <label for="profondeur">Profondeur de l'oeuvre</label>
+                        <form-label for="profondeur">Profondeur de l'oeuvre</form-label>
                         <br />
-                        <input type="text" class="form-control" name="profondeur" v-model="profondeur" cols="50" placeholder="Profondeur" /> cm
+                        <form-input type="text" class="form-control" name="profondeur" v-model="profondeur" placeholder="Profondeur"></form-input> cm
                     </div>
                     <div class="form-group">
-                        <label for="prix">Prix de l'oeuvre</label>
+                        <form-label for="prix">Prix de l'oeuvre</form-label>
                         <br />
-                        <input type="text" class="form-control" name="prix" v-model="prix" cols="50" placeholder="Prix" /> €
+                        <form-input type="text" class="form-control" name="prix" v-model="prix" placeholder="Prix"></form-input> €
                     </div>
                     <div class="form-group">
-                        <label for="statutdisponibilite">Disponibilité de l'oeuvre</label>
+                        <form-label for="statutdisponibilite">Disponibilité de l'oeuvre</form-label>
                         <br />
-                        <select name="statutdisponibilite" v-model="statutdisponibilite">
+                        <multiselect v-model="statutdisponibilite" :options="statutsdisponibilite" :custom-label="customLabelForStatutDisponibilite" placeholder="Sélectionner une disponibilité" label="libelle" track-by="libelle"></multiselect>
+                        <!-- <select name="statutdisponibilite" v-model="statutdisponibilite">
                             <option v-for="statut in statusdisponibilite" :value="statut.id">{{ statut.libelle }}</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="form-group">
-                        <label for="nom">Nom de la galerie à laquelle l'oeuvre appartient</label>
+                        <form-label for="nom">Nom de la galerie à laquelle l'oeuvre appartient</form-label>
                         <br />
-                        <select name="nom" v-model="galerie">
+                        <multiselect v-model="galerie" :options="galeries" :custom-label="customLabelForGalerie" placeholder="Sélectionner une galerie" label="nom" track-by="nom"></multiselect>
+                        <!-- <select name="galerie" v-model="galerie">
                             <option v-for="galerie in galeries" :value="galerie.id">{{ galerie.nom }}</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="form-group">
-                        <label for="visuel">Image de l'oeuvre</label>
+                        <form-label for="visuel">Image de l'oeuvre</form-label>
                         <br />
-                        <input type="file" class="form-control" name="visuel" v-on:change="processFile" />
+                        <form-input type="file" class="form-control" name="visuel" v-on:change="processFile"></form-input>
                         <br />
                         <img :src="visuel" alt="Image" style="max-height: 60px">
                     </div>
@@ -85,7 +86,7 @@
                             <li>{{ success }}</li>
                         </ul>
                     </div>
-                    <button v-on:click.prevent="creerOeuvre" class="btn">Ajouter</button>
+                    <form-button v-on:click.prevent="creerOeuvre" class="btn">Ajouter</form-button>
                 </form>
             </div>
         </div>
@@ -93,17 +94,21 @@
 </template>
 
 <script>
+    import FormLabel from '../common/FormLabel.vue';
+    import FormInput from '../common/FormInput.vue';
+    import FormTextarea from '../common/FormTextarea.vue';
+    import FormButton from '../common/FormButton.vue';
+    import Multiselect from 'vue-multiselect'
+
     const French = require("flatpickr/dist/l10n/fr.js").fr;
     const Today = new Date();
 
     export default {
         name: 'administration-oeuvres-creation',
-        components: {},
         data() {
             return {
-                oeuvres: [],
                 galeries: [],
-                statusdisponibilite: [],
+                statutsdisponibilite: [],
                 nom: '',
                 description: '',
                 technique: '',
@@ -122,13 +127,6 @@
         mounted() {},
         created() {
             let self = this;
-            axios.get('/api/oeuvres')
-                .then(function (response) {
-                    self.oeuvres = response.data;
-                })
-                .catch(function (error) {
-                    console.log('Erreur axios : ' + error);
-                });
             axios.get('/api/galeries')
                 .then(function (response) {
                     self.galeries = response.data;
@@ -138,13 +136,19 @@
                 });
             axios.get('/api/statutsdisponibilite')
                 .then(function (response) {
-                    self.statusdisponibilite = response.data;
+                    self.statutsdisponibilite = response.data;
                 })
                 .catch(function (error) {
                     console.log('Erreur axios : ' + error);
                 });
         },
         methods: {
+            customLabelForStatutDisponibilite: function ({ libelle }) {
+                return `${libelle}`
+            },
+            customLabelForGalerie: function ({ nom, description }) {
+                return `${nom} - ${description}`
+            },
             creerOeuvre: function(event) {
                 let self = this;
                 axios.post('/api/create/oeuvres', {
@@ -185,6 +189,13 @@
                 };
                 reader.readAsDataURL(file);
             },
+        },
+        components: {
+            FormLabel,
+            FormInput,
+            FormTextarea,
+            FormButton,
+            Multiselect
         }
     }
 </script>

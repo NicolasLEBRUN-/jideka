@@ -27,7 +27,8 @@
         data() {
             return {}
         },
-        mounted() {},
+        mounted() {
+        },
         created() {
         },
         methods: {

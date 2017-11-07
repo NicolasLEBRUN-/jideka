@@ -16,30 +16,11 @@ require('./bootstrap');
 /* Accueil */
 import AppAccueil from './components/AppAccueil.vue';
 
-Vue.component(
-    'passport-clients',
-    require('./components/passport/Clients.vue')
-);
-
-Vue.component(
-    'passport-authorized-clients',
-    require('./components/passport/AuthorizedClients.vue')
-);
-
-Vue.component(
-    'passport-personal-access-tokens',
-    require('./components/passport/PersonalAccessTokens.vue')
-);
-
 Vue.prototype.moment = moment;
 
 Vue.prototype.$trans = function(string) {
 	return _.get(window.i18n, string);
 };
-
-// Vue.filter('i18n', function(value) {
-// 	return _.get(window.i18n, value);
-// });
 
 const appAccueil = new Vue({
     el: '#app-accueil',

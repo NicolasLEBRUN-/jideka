@@ -35,7 +35,10 @@
         },
         computed: {
             orderedExpositions: function () {
-                return _.orderBy(this.expositions, 'date_debut').reverse();
+                var expositions = _.orderBy(this.expositions, 'date_debut').reverse();
+                // Conservation des trois dernières expositions uniquement
+                expositions = expositions.slice(0, 3);
+                return expositions;
             },
             anneesExpositions: function () {
                 function getYear(date) {
@@ -101,7 +104,7 @@
         margin: {
             left: auto;
             right: auto;
-            top: 5rem;
+            top: 3rem;
         }
         div {
             &:after {

@@ -14,16 +14,18 @@
             <div class="edition">
                 <form>
                     <div class="form-group">
-                        <label for="biographieCorpsFr">Biographie française</label>
+                        <form-label for="biographieCorpsFr">Biographie française</form-label>
+                        <!-- <label for="biographieCorpsFr">Biographie française</label> -->
                         <br />
-                        <textarea class="form-control" name="biographieCorpsFr" v-model="biographieCorpsFr" rows="12" cols="100">
-                        </textarea> 
+                        <form-textarea class="form-control" name="biographieCorpsFr" v-model="biographieCorpsFr" value="biographieCorpsFr" placeholder="Biographie française" rows="12" cols="100"></form-textarea>
+                        <!-- <textarea class="form-control" name="biographieCorpsFr" v-model="biographieCorpsFr" rows="12" cols="100"></textarea>  -->
                     </div>
                     <div class="form-group">
-                        <label for="biographieCorpsEn">Biographie anglaise</label>
+                        <form-label for="biographieCorpsEn">Biographie anglaise</form-label>
+                        <!-- <label for="biographieCorpsEn">Biographie anglaise</label> -->
                         <br />
-                        <textarea class="form-control" name="biographieCorpsEn" v-model="biographieCorpsEn" rows="12" cols="100">
-                        </textarea> 
+                        <form-textarea class="form-control" name="biographieCorpsEn" v-model="biographieCorpsEn" value="biographieCorpsEn" placeholder="Biographie anglaise" rows="12" cols="100"></form-textarea>
+                        <!-- <textarea class="form-control" name="biographieCorpsEn" v-model="biographieCorpsEn" rows="12" cols="100"></textarea>  -->
                     </div>
                     <div class="form-group danger" v-if="errors.length > 0">
                         Erreurs : 
@@ -36,8 +38,8 @@
                             <li>{{ success }}</li>
                         </ul>
                     </div>
-                    <input type="hidden" name="biographieVersion" v-model="biographieVersion" >
-                    <button v-on:click.prevent="creerBiographie" class="btn">Modifier</button>
+                    <form-input type="hidden" name="biographieVersion" v-model="biographieVersion" placeholder="Version de la biographie"></form-input>
+                    <form-button v-on:click.prevent="creerBiographie" class="btn">Modifier</form-button>
                 </form>
             </div>
         </div>
@@ -45,6 +47,11 @@
 </template>
 
 <script>
+    import FormLabel from '../common/FormLabel.vue';
+    import FormInput from '../common/FormInput.vue';
+    import FormTextarea from '../common/FormTextarea.vue';
+    import FormButton from '../common/FormButton.vue';
+
     export default {
         props: [],
         data: function() {
@@ -89,6 +96,12 @@
                         self.success = '';
                     });
             }
+        },
+        components: {
+            FormLabel,
+            FormInput,
+            FormTextarea,
+            FormButton
         }
     }
 </script>

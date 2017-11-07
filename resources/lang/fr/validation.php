@@ -104,6 +104,9 @@ return [
             'required' => 'Le champ "Je ne suis pas un robot" est requis.',
             'googlerecaptcharesponsetoken' => 'Une erreur est survenue lors de la validation du champ "Je ne suis pas un robot". Veuillez réessayer en actualisant la page.',
         ],
+        'oeuvre' => [
+            'required_if' => "Le champ :attribute est obligatoire quand le champ :other est coché.",
+        ],
     ],
 
     /*

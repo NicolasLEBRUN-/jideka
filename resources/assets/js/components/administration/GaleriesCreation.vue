@@ -12,22 +12,27 @@
             <div class="edition">
                 <form action="" method="" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="nom">Nom de la galerie</label>
+                        <form-label for="nom">Nom de la galerie</form-label>
+                        <!-- <label for="nom">Nom de la galerie</label> -->
                         <br />
-                        <input type="text" class="form-control" name="nom" v-model="nom" cols="50" placeholder="Nom" />
+                        <form-input type="text" class="form-control" name="nom" v-model="nom" placeholder="Nom"></form-input>
+                        <!-- <input type="text" class="form-control" name="nom" v-model="nom" cols="50" placeholder="Nom" /> -->
                     </div>
                     <div class="form-group">
-                        <label for="description">Description de la galerie</label>
+                        <form-label for="description">Description de la galerie</form-label>
+                        <!-- <label for="description">Description de la galerie</label> -->
                         <br />
-                        <textarea class="form-control" name="description" v-model="description" rows="3" cols="40" placeholder="Description">
-                        </textarea> 
+                        <form-textarea class="form-control" name="description" v-model="description" value="" placeholder="Description"></form-textarea> 
+                        <!-- <textarea class="form-control" name="description" v-model="description" rows="3" cols="40" placeholder="Description"></textarea>  -->
                     </div>
                     <div class="form-group">
-                        <label for="visuel">Visuel de la galerie</label>
+                        <form-label for="visuel">Visuel de la galerie</form-label>
+                        <!-- <label for="visuel">Visuel de la galerie</label> -->
                         <br />
-                        <input type="file" class="form-control" name="visuel" v-on:change="processFile" />
+                        <form-input type="file" class="form-control" name="visuel" v-on:change="processFile" placeholder="Visuel"></form-input>
+                        <!-- <input type="file" class="form-control" name="visuel" v-on:change="processFile" /> -->
                         <br />
-                        <img :src="visuel" alt="Visuel" style="max-height: 60px">
+                        <img :src="visuel" alt="Visuel" style="max-height: 80px">
                     </div>
 
                     <div class="form-group danger" v-if="errors.length > 0">
@@ -41,7 +46,8 @@
                             <li>{{ success }}</li>
                         </ul>
                     </div>
-                    <button v-on:click.prevent="creerGalerie" class="btn">Ajouter</button>
+                    <form-button v-on:click.prevent="creerGalerie">Ajouter</form-button>
+                    <!-- <button v-on:click.prevent="creerGalerie" class="btn">Ajouter</button> -->
                 </form>
             </div>
         </div>
@@ -49,12 +55,16 @@
 </template>
 
 <script>
+    import FormLabel from '../common/FormLabel.vue';
+    import FormInput from '../common/FormInput.vue';
+    import FormTextarea from '../common/FormTextarea.vue';
+    import FormButton from '../common/FormButton.vue';
+
     const French = require("flatpickr/dist/l10n/fr.js").fr;
     const Today = new Date();
 
     export default {
         name: 'administration-galeries-creation',
-        components: {},
         data() {
             return {
                 galeries: [],
@@ -109,6 +119,12 @@
                 };
                 reader.readAsDataURL(file);
             },
+        },
+        components: {
+            FormLabel,
+            FormInput,
+            FormTextarea,
+            FormButton
         }
     }
 </script>

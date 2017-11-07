@@ -12,11 +12,13 @@
             <div class="edition">
                 <form action="" method="" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="nom">Nom de la galerie</label>
+                        <form-label for="nom">Nom de la galerie</form-label>
+                        <!-- <label for="nom">Nom de la galerie</label> -->
                         <br />
-                        <select name="nom" v-model="galerie">
+                        <multiselect v-model="galerie" :options="galeries" :custom-label="customLabelForGalerie" placeholder="Sélectionner une galerie" label="nom" track-by="nom" :show-labels="false"></multiselect>
+                        <!-- <select name="nom" v-model="galerie">
                             <option v-for="galerie in galeries" :value="galerie.id">{{ galerie.nom }}</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="form-group danger" v-if="errors.length > 0">
                         Erreurs : 
@@ -29,7 +31,7 @@
                             <li>{{ success }}</li>
                         </ul>
                     </div>
-                    <button v-on:click.prevent="supprimerGalerie" class="btn">Supprimer</button>
+                    <form-button v-on:click.prevent="supprimerGalerie">Supprimer</form-button>
                 </form>
             </div>
         </div>
@@ -37,12 +39,17 @@
 </template>
 
 <script>
+    import FormLabel from '../common/FormLabel.vue';
+    import FormInput from '../common/FormInput.vue';
+    import FormTextarea from '../common/FormTextarea.vue';
+    import FormButton from '../common/FormButton.vue';
+    import Multiselect from 'vue-multiselect'
+
     const French = require("flatpickr/dist/l10n/fr.js").fr;
     const Today = new Date();
 
     export default {
         name: 'administration-galeries-suppression',
-        components: {},
         data() {
             return {
                 galeries: [],
@@ -63,10 +70,13 @@
                 });
         },
         methods: {
+            customLabelForGalerie: function ({ nom, description }) {
+                return `${nom} - ${description}`
+            },
             supprimerGalerie: function(event) {
                 let self = this;
                 axios.post('/api/delete/galeries', {
-                        galerie: self.galerie,
+                        galerie: self.galerie.id,
                     })
                     .then(function (response) {
                         self.success = response.data;
@@ -80,10 +90,18 @@
                         self.success = '';
                     });
             }
+        },
+        components: {
+            FormLabel,
+            FormInput,
+            FormTextarea,
+            FormButton,
+            Multiselect
         }
     }
 </script>
 
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <style lang="scss" scoped>
 
     /* Variables */

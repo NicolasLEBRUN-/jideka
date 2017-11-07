@@ -16,7 +16,6 @@ class ContactController extends Controller
     		'nom'				  => 'required',
             'email'               => 'required|email',
             'prereservation'      => 'required',
-            'galerie'             => 'required_if:prereservation,true',
     		'oeuvre'              => 'required_if:prereservation,true',
     		'corps'               => 'required',
     		'grecaptcharesponse'  => 'required|googlerecaptcharesponsetoken'
@@ -30,10 +29,10 @@ class ContactController extends Controller
         $corps = $request->input('corps');
 
         $galerie = '';
-        $oeuvre = '';
         if (isset($galerie_id)) {
             $galerie = Galerie::find($galerie_id);
         }
+        $oeuvre = '';
         if (isset($oeuvre_id)) {
             $oeuvre = Oeuvre::find($oeuvre_id);
         }

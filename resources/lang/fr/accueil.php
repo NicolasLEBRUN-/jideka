@@ -48,6 +48,8 @@ return [
     'contact' => [
         'titre-section' => 'Contact',
         'accroche'      => ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum.',
+        'numerotelphone'    => '+33 6 00 00 00',
+        'adressecourriel'   => 'jideka21@free.fr',
         'form' => [
             'nom'       => 'Nom',
             'email'     => 'Adresse mail',
@@ -55,7 +57,7 @@ return [
             'galerie'   => 'Nom de la galerie',
             'oeuvre'    => 'Nom de l\'oeuvre',
             'message'   => 'Message',
-            'bouton'    => 'Envoyer le message',
+            'bouton'    => 'Envoyer',
         ]
     ],
 

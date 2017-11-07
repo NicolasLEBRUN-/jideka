@@ -32,7 +32,6 @@
 
     #expositions {
         margin-top: $menu-haut-height;
-        height: calc(100vh - #{$menu-haut-height});
     }
 
     .accueil-expositions {

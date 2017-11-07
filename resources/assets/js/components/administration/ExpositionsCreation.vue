@@ -12,25 +12,23 @@
             <div class="edition">
                 <form action="" method="" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="nom">Nom de l'exposition</label>
+                        <form-label for="nom">Nom de l'exposition</form-label>
                         <br />
-                        <input type="text" class="form-control" name="nom" v-model="nom" cols="50" placeholder="Nom" />
+                        <form-input type="text" class="form-control" name="nom" v-model="nom" placeholder="Nom"></form-input>
                     </div>
                     <div class="form-group">
-                        <label for="description">Description de l'exposition</label>
+                        <form-label for="description">Description de l'exposition</form-label>
                         <br />
-                        <textarea class="form-control" name="description" v-model="description" rows="3" cols="40" placeholder="Description">
-                        </textarea> 
+                        <form-textarea class="form-control" name="description" v-model="description" value="" placeholder="Description"></form-textarea> 
                     </div>
 
                     <div class="form-group">
-                        <label for="lieu">Lieu/adresse de l'exposition</label>
+                        <form-label for="lieu">Lieu/adresse de l'exposition</form-label>
                         <br />
-                        <textarea class="form-control" name="lieu" v-model="lieu" rows="4" cols="50" placeholder="Lieu/adresse">
-                        </textarea> 
+                        <form-textarea class="form-control" name="lieu" v-model="lieu" value="" placeholder="Lieu/adresse"></form-textarea> 
                     </div>
                     <div class="form-group">
-                        <label for="date-debut">Date de début de l'exposition</label>
+                        <form-label for="date-debut">Date de début de l'exposition</form-label>
                         <br />
                         <flat-pickr
                                 v-model="dateDebut"
@@ -41,7 +39,7 @@
                         </flat-pickr>
                     </div>
                     <div class="form-group">
-                        <label for="date-fin">Date de fin de l'exposition</label>
+                        <form-label for="date-fin">Date de fin de l'exposition</form-label>
                         <br />
                         <flat-pickr
                                 v-model="dateFin"
@@ -52,7 +50,7 @@
                         </flat-pickr>
                     </div>
                     <div class="form-group">
-                        <label for="date-vernissage">Date et heure de vernissage de l'exposition</label>
+                        <form-label for="date-vernissage">Date et heure de vernissage de l'exposition</form-label>
                         <br />
                         <flat-pickr
                                 v-model="dateVernissage"
@@ -63,9 +61,9 @@
                         </flat-pickr>
                     </div>
                     <div class="form-group">
-                        <label for="visuel">Visuel de l'exposition</label>
+                        <form-label for="visuel">Visuel de l'exposition</form-label>
                         <br />
-                        <input type="file" class="form-control" name="visuel" v-on:change="processFile" />
+                        <form-input type="file" class="form-control" name="visuel" v-on:change="processFile"></form-input>
                         <br />
                         <img :src="visuel" alt="Visuel" style="max-height: 60px">
                     </div>
@@ -89,12 +87,16 @@
 </template>
 
 <script>
+    import FormLabel from '../common/FormLabel.vue';
+    import FormInput from '../common/FormInput.vue';
+    import FormTextarea from '../common/FormTextarea.vue';
+    import FormButton from '../common/FormButton.vue';
+
     const French = require("flatpickr/dist/l10n/fr.js").fr;
     const Today = new Date();
 
     export default {
         name: 'administration-expositions-creation',
-        components: {},
         data() {
             return {
                 expositions: [],
@@ -181,6 +183,12 @@
                 };
                 reader.readAsDataURL(file);
             },
+        },
+        components: {
+            FormLabel,
+            FormInput,
+            FormTextarea,
+            FormButton
         }
     }
 </script>

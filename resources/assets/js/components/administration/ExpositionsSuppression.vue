@@ -12,11 +12,12 @@
             <div class="edition">
                 <form action="" method="" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="nom">Nom de l'exposition</label>
+                        <form-label for="nom">Nom de l'exposition</form-label>
                         <br />
-                        <select name="nom" v-model="exposition">
+                        <multiselect v-model="exposition" :options="expositions" :custom-label="customLabelForExposition" placeholder="Sélectionner une exposition" label="nom" track-by="nom" :show-labels="false"></multiselect>
+                        <!-- <select name="nom" v-model="exposition">
                             <option v-for="exposition in expositions" :value="exposition.id">{{ exposition.nom }}</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="form-group danger" v-if="errors.length > 0">
                         Erreurs : 
@@ -29,7 +30,7 @@
                             <li>{{ success }}</li>
                         </ul>
                     </div>
-                    <button v-on:click.prevent="supprimerExposition" class="btn">Supprimer</button>
+                    <form-button v-on:click.prevent="supprimerExposition">Supprimer</form-button>
                 </form>
             </div>
         </div>
@@ -37,12 +38,17 @@
 </template>
 
 <script>
+    import FormLabel from '../common/FormLabel.vue';
+    import FormInput from '../common/FormInput.vue';
+    import FormTextarea from '../common/FormTextarea.vue';
+    import FormButton from '../common/FormButton.vue';
+    import Multiselect from 'vue-multiselect'
+
     const French = require("flatpickr/dist/l10n/fr.js").fr;
     const Today = new Date();
 
     export default {
         name: 'administration-expositions-suppression',
-        components: {},
         data() {
             return {
                 expositions: [],
@@ -63,10 +69,13 @@
                 });
         },
         methods: {
+            customLabelForExposition: function ({ nom, description }) {
+                return `${nom} - ${description}`
+            },
             supprimerExposition: function(event) {
                 let self = this;
                 axios.post('/api/delete/expositions', {
-                        exposition: self.exposition,
+                        exposition: self.exposition.id,
                     })
                     .then(function (response) {
                         self.success = response.data;
@@ -80,6 +89,13 @@
                         self.success = '';
                     });
             }
+        },
+        components: {
+            FormLabel,
+            FormInput,
+            FormTextarea,
+            FormButton,
+            Multiselect
         }
     }
 </script>
