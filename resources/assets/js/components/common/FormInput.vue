@@ -30,5 +30,8 @@
         border: none;
         border-radius: 4px;
         background: #FFFFFF;
+        margin-bottom: 15px;
+        height: 30px;
+        outline: none;
     }
 </style>

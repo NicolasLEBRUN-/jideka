@@ -6,6 +6,7 @@
         <accueil-galeries></accueil-galeries>
         <accueil-expositions></accueil-expositions>
         <accueil-contact></accueil-contact>
+        <accueil-footer></accueil-footer>
     </div>
 </template>
 
@@ -16,6 +17,7 @@
     import AccueilGaleries from './accueil/Galeries.vue';
     import AccueilExpositions from './accueil/Expositions.vue';
     import AccueilContact from './accueil/Contact.vue';
+    import AccueilFooter from './accueil/Footer.vue';
     
     export default {
         name: 'app-accueil',
@@ -25,7 +27,8 @@
             AccueilBiographie,
             AccueilGaleries,
             AccueilExpositions,
-            AccueilContact
+            AccueilContact,
+            AccueilFooter
         },
         created() {
         }

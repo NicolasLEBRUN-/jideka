@@ -28,5 +28,8 @@
         border-radius: 4px;
         background: #FFFFFF;
         resize: none;
+        margin-bottom: 15px;
+        height: 200px;
+        outline: none;
     }
 </style>
