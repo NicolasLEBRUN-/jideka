@@ -6,9 +6,6 @@
             </h1>
         </div>
         <div class="contenu-section">
-            <p>
-                {{ $trans('accueil.contact.accroche') }}
-            </p>
             <hr>
             <p class="num">
                 {{ $trans('accueil.contact.numerotelphone') }}
@@ -165,6 +162,7 @@
 
     /* Variables */
     @import "../../../sass/variables";
+    @import "../../../sass/breakpoints";
 
     .accueil-contact {
         background: $background-secondary-color;
@@ -174,68 +172,71 @@
         align-items: center;
 
         .contenu-section {
-                padding: 0 100px;  
+            padding: 0 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+
+            p {
+                text-align: center; 
+            }
+
+            hr {
+                width: 100%;
+                min-width: 320px;
+                border-color: rgba(255, 255, 255, .5);
+                margin: 30px 0px;
+            }
+
+            .num {
+                margin: 0;
+                font-weight: bold;
+                font-size: 1.8em;
+            }
+
+            .mail {
+                margin: 0;
+                margin-top: 10px;
+                color: $main-color;
+                font-size: 1.5em;
+                letter-spacing: 3px;
+            }
+
+            form {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                width: 100%;
+                min-width: 320px;
+                width: 60%;
 
-                p {
-                    text-align: center; 
+                .prereservation-checkbox {
+                    margin-bottom: 15px;
                 }
 
-                hr {
-                    width: 100%;
-                    border-color: rgba(255, 255, 255, .5);
-                    margin: 30px 0px;
+                .oeuvre-picker {
+                    margin-bottom: 15px;
                 }
 
-                .num {
-                    margin: 0;
-                    font-weight: bold;
-                    font-size: 1.8em;
-                }
-
-                .mail {
-                    margin: 0;
-                    margin-top: 10px;
-                    color: $main-color;
-                    font-size: 1.5em;
-                    letter-spacing: 3px;
-                }
-
-                form {
+                .g-recaptcha {
                     display: flex;
-                    flex-direction: column;
-                    min-width: 320px;
+                    justify-content: center;
+                }
+
+                .send-button {
+                    align-self: center;
                     width: 60%;
+                    margin-top: 40px;
 
-                    .prereservation-checkbox {
-                        margin-bottom: 15px;
+                    &:hover {
+                        background: darken($main-color, 5%)
                     }
 
-                    .oeuvre-picker {
-                        margin-bottom: 15px;
-                    }
-
-                    .g-recaptcha {
-                        display: flex;
-                        justify-content: center;
-                    }
-
-                    .send-button {
-                        align-self: center;
-                        width: 60%;
-                        margin-top: 40px;
-
-                        &:hover {
-                            background: darken($main-color, 5%)
-                        }
-
-                        &:active {
-                            background: darken($main-color, 10%)
-                        }
+                    &:active {
+                        background: darken($main-color, 10%)
                     }
                 }
+            }
         }
     }
 

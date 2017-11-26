@@ -63,7 +63,6 @@
             list-style: none;
             margin: 0 50px 0 0;
             padding: 0;
-            overflow: hidden;
             height: 100%;
             
             li {
@@ -124,6 +123,7 @@
                     float: none;
                     display: block;
                     text-align: left;
+                    background: rgba(53, 53, 53, 0.9);
 
                     a {
                         float: none;

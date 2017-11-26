@@ -2,7 +2,6 @@
     <div id="accueil-galeries" class="accueil-galeries">
         <div class="entete">
             <h1> {{ $trans('accueil.galeries.titre-section') }} </h1>
-            <p> {{ $trans('accueil.galeries.accroche') }} </p>
             <a href="/web-galeries">{{ $trans('accueil.galeries.lien') }}</a>
         </div>
         <div class="contenu">

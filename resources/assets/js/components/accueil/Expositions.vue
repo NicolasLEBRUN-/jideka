@@ -2,7 +2,6 @@
     <div id="accueil-expositions" class="accueil-expositions">
         <div class="entete">
             <h1> {{ $trans('accueil.expositions.titre-section') }} </h1>
-            <p> {{ $trans('accueil.expositions.accroche') }} </p>
         </div>
         <div class="contenu">
             <exposition-timeline/>

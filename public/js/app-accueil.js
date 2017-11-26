@@ -56870,7 +56870,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-menu-haut[data-v-331f447c] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n  z-index: 999;\n}\n.accueil-menu-haut .navigation[data-v-331f447c] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    overflow: hidden;\n    height: 100%;\n}\n.accueil-menu-haut .navigation li[data-v-331f447c] {\n      display: inline;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFF;\n}\n.accueil-menu-haut .navigation li.burger[data-v-331f447c] {\n        display: none;\n}\n.accueil-menu-haut .navigation li.flag img[data-v-331f447c] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-331f447c] {\n    float: none !important;\n    background: rgba(53, 53, 53, 0.5);\n}\n.navigation li a[data-v-331f447c] {\n      float: left;\n}\n.navigation li[data-v-331f447c]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-331f447c] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-331f447c] {\n      position: relative;\n}\n.navigation.responsive li[data-v-331f447c] {\n        float: none;\n        display: block;\n        text-align: left;\n}\n.navigation.responsive li a[data-v-331f447c] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-331f447c] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-331f447c] {\n    margin: 0 !important;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.accueil-menu-haut[data-v-331f447c] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n  z-index: 999;\n}\n.accueil-menu-haut .navigation[data-v-331f447c] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    height: 100%;\n}\n.accueil-menu-haut .navigation li[data-v-331f447c] {\n      display: inline;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFF;\n}\n.accueil-menu-haut .navigation li.burger[data-v-331f447c] {\n        display: none;\n}\n.accueil-menu-haut .navigation li.flag img[data-v-331f447c] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-331f447c] {\n    float: none !important;\n    background: rgba(53, 53, 53, 0.5);\n}\n.navigation li a[data-v-331f447c] {\n      float: left;\n}\n.navigation li[data-v-331f447c]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-331f447c] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-331f447c] {\n      position: relative;\n}\n.navigation.responsive li[data-v-331f447c] {\n        float: none;\n        display: block;\n        text-align: left;\n        background: rgba(53, 53, 53, 0.9);\n}\n.navigation.responsive li a[data-v-331f447c] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-331f447c] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-331f447c] {\n    margin: 0 !important;\n}\n}\n", ""]);
 
 // exports
 
@@ -57142,7 +57142,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n#accueil-presentation[data-v-415d4f82] {\n  margin-top: 60px;\n  background: url(/img/pinceaux.png) right no-repeat;\n  background-size: contain;\n  height: calc(100vh - 60px);\n}\n#accueil-presentation .content[data-v-415d4f82] {\n    display: flex;\n    justify-content: space-between;\n    font-weight: lighter;\n}\n#accueil-presentation .content .text[data-v-415d4f82] {\n      display: flex;\n      flex-direction: column;\n      margin-left: 5%;\n}\n#accueil-presentation .content .text h1[data-v-415d4f82] {\n        color: #EB7041;\n}\n#accueil-presentation .content .text h1[data-v-415d4f82], #accueil-presentation .content .text h2[data-v-415d4f82] {\n        font-weight: lighter;\n}\n@media all and (max-width: 600px) {\n.image[data-v-415d4f82] {\n    display: none;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n#accueil-presentation[data-v-415d4f82] {\n  margin-top: 60px;\n  background-image: none;\n  height: 400px;\n}\n@media (min-width: 1000px) {\n#accueil-presentation[data-v-415d4f82] {\n      background: url(/img/pinceaux.png) right no-repeat;\n      background-size: contain;\n      height: calc(100vh - 60px);\n}\n}\n#accueil-presentation .content[data-v-415d4f82] {\n    display: flex;\n    justify-content: space-between;\n    font-weight: lighter;\n}\n#accueil-presentation .content .text[data-v-415d4f82] {\n      display: flex;\n      flex-direction: column;\n      margin-left: 5%;\n}\n#accueil-presentation .content .text h1[data-v-415d4f82] {\n        color: #EB7041;\n}\n#accueil-presentation .content .text h1[data-v-415d4f82], #accueil-presentation .content .text h2[data-v-415d4f82] {\n        font-weight: lighter;\n}\n", ""]);
 
 // exports
 
@@ -57492,7 +57492,6 @@ exports.push([module.i, "/* Variables */\n.accueil-galeries[data-v-1b505c1d] {\n
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__galerie_polaroid_GaleriePolaroid_vue__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__galerie_polaroid_GaleriePolaroid_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__galerie_polaroid_GaleriePolaroid_vue__);
-//
 //
 //
 //
@@ -57878,10 +57877,6 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("p", [
-          _vm._v(" " + _vm._s(_vm.$trans("accueil.galeries.accroche")) + " ")
-        ]),
-        _vm._v(" "),
         _c("a", { attrs: { href: "/web-galeries" } }, [
           _vm._v(_vm._s(_vm.$trans("accueil.galeries.lien")))
         ])
@@ -58013,7 +58008,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -58048,10 +58042,6 @@ var render = function() {
           _vm._v(
             " " + _vm._s(_vm.$trans("accueil.expositions.titre-section")) + " "
           )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(" " + _vm._s(_vm.$trans("accueil.expositions.accroche")) + " ")
         ])
       ]),
       _vm._v(" "),
@@ -58201,7 +58191,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-contact[data-v-cb9981ea] {\n  background: #3F3F3F;\n  padding-top: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.accueil-contact .contenu-section[data-v-cb9981ea] {\n    padding: 0 100px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.accueil-contact .contenu-section p[data-v-cb9981ea] {\n      text-align: center;\n}\n.accueil-contact .contenu-section hr[data-v-cb9981ea] {\n      width: 100%;\n      border-color: rgba(255, 255, 255, 0.5);\n      margin: 30px 0px;\n}\n.accueil-contact .contenu-section .num[data-v-cb9981ea] {\n      margin: 0;\n      font-weight: bold;\n      font-size: 1.8em;\n}\n.accueil-contact .contenu-section .mail[data-v-cb9981ea] {\n      margin: 0;\n      margin-top: 10px;\n      color: #EB7041;\n      font-size: 1.5em;\n      letter-spacing: 3px;\n}\n.accueil-contact .contenu-section form[data-v-cb9981ea] {\n      display: flex;\n      flex-direction: column;\n      min-width: 320px;\n      width: 60%;\n}\n.accueil-contact .contenu-section form .prereservation-checkbox[data-v-cb9981ea] {\n        margin-bottom: 15px;\n}\n.accueil-contact .contenu-section form .oeuvre-picker[data-v-cb9981ea] {\n        margin-bottom: 15px;\n}\n.accueil-contact .contenu-section form .g-recaptcha[data-v-cb9981ea] {\n        display: flex;\n        justify-content: center;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea] {\n        align-self: center;\n        width: 60%;\n        margin-top: 40px;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea]:hover {\n          background: #e95f2a;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea]:active {\n          background: #e14f18;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.accueil-contact[data-v-cb9981ea] {\n  background: #3F3F3F;\n  padding-top: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.accueil-contact .contenu-section[data-v-cb9981ea] {\n    padding: 0 100px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 50%;\n}\n.accueil-contact .contenu-section p[data-v-cb9981ea] {\n      text-align: center;\n}\n.accueil-contact .contenu-section hr[data-v-cb9981ea] {\n      width: 100%;\n      min-width: 320px;\n      border-color: rgba(255, 255, 255, 0.5);\n      margin: 30px 0px;\n}\n.accueil-contact .contenu-section .num[data-v-cb9981ea] {\n      margin: 0;\n      font-weight: bold;\n      font-size: 1.8em;\n}\n.accueil-contact .contenu-section .mail[data-v-cb9981ea] {\n      margin: 0;\n      margin-top: 10px;\n      color: #EB7041;\n      font-size: 1.5em;\n      letter-spacing: 3px;\n}\n.accueil-contact .contenu-section form[data-v-cb9981ea] {\n      display: flex;\n      flex-direction: column;\n      width: 100%;\n      min-width: 320px;\n      width: 60%;\n}\n.accueil-contact .contenu-section form .prereservation-checkbox[data-v-cb9981ea] {\n        margin-bottom: 15px;\n}\n.accueil-contact .contenu-section form .oeuvre-picker[data-v-cb9981ea] {\n        margin-bottom: 15px;\n}\n.accueil-contact .contenu-section form .g-recaptcha[data-v-cb9981ea] {\n        display: flex;\n        justify-content: center;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea] {\n        align-self: center;\n        width: 60%;\n        margin-top: 40px;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea]:hover {\n          background: #e95f2a;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea]:active {\n          background: #e14f18;\n}\n", ""]);
 
 // exports
 
@@ -58220,9 +58210,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_FormButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__common_FormButton_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_multiselect__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_multiselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vue_multiselect__);
-//
-//
-//
 //
 //
 //
@@ -58406,14 +58393,6 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "contenu-section" }, [
-        _c("p", [
-          _vm._v(
-            "\n            " +
-              _vm._s(_vm.$trans("accueil.contact.accroche")) +
-              "\n        "
-          )
-        ]),
-        _vm._v(" "),
         _c("hr"),
         _vm._v(" "),
         _c("p", { staticClass: "num" }, [

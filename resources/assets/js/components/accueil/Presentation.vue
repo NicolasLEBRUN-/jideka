@@ -21,12 +21,18 @@
 
     /* Variables */
     @import "../../../sass/variables";
+    @import "../../../sass/breakpoints";
 
     #accueil-presentation {
         margin-top: $menu-haut-height;
-        background: url(/img/pinceaux.png) right no-repeat;
-        background-size: contain;
-        height: calc(100vh - #{$menu-haut-height});
+        background-image: none;
+        height: 400px;
+
+        @include breakpoint(desktop) {
+            background: url(/img/pinceaux.png) right no-repeat;
+            background-size: contain;
+            height: calc(100vh - #{$menu-haut-height});
+        }
 
         .content {
             display: flex;
@@ -38,6 +44,7 @@
                 flex-direction: column;
                 margin-left: 5%;
 
+
                 h1 {
                     color: $main-color;
                 }
@@ -47,12 +54,6 @@
                 }
             }
         }        
-    }
-
-    @media all and (max-width: 600px) {
-        .image {
-            display: none;
-        }
     }
 </style>
     
