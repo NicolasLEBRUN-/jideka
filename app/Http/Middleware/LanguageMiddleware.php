@@ -26,8 +26,7 @@ class LanguageMiddleware {
     {
         if (Session::has('applocale') && array_key_exists(Session::get('applocale'), Config::get('app.available_locales'))) {
             App::setLocale(Session::get('applocale'));
-        }
-        else {
+        } else {
             App::setLocale(Config::get('app.fallback_locale'));
         }
 

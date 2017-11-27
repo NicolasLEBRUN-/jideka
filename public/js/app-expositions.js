@@ -55854,6 +55854,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     computed: {
         orderedExpositions: function orderedExpositions() {
+            // Tri des expositions de la plus récente à la plus ancienne
             var expositions = _.orderBy(this.expositions, 'date_debut').reverse();
             // Conservation des trois dernières expositions uniquement
             expositions = expositions.slice(0, 3);
@@ -55876,7 +55877,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         axios.get('/api/expositions').then(function (response) {
             self.expositions = response.data;
         }).catch(function (error) {
-            console.log('Erreur axios (AccueilExpositions.vue) : ' + error);
+            console.log('Erreur axios (ExpositionsTimeline.vue) : ' + error);
         });
     },
     mounted: function mounted() {},

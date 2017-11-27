@@ -141,4 +141,3 @@ Route::middleware(['auth:api'])->group(function(){
     Route::post('/delete/expositions', 'AdministrationController@supprimerExposition');
 
 });
-

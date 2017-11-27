@@ -56006,6 +56006,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     computed: {
         orderedExpositions: function orderedExpositions() {
+            // Tri des expositions de la plus récente à la plus ancienne
             var expositions = _.orderBy(this.expositions, 'date_debut').reverse();
             // Conservation des trois dernières expositions uniquement
             expositions = expositions.slice(0, 3);
@@ -56028,7 +56029,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         axios.get('/api/expositions').then(function (response) {
             self.expositions = response.data;
         }).catch(function (error) {
-            console.log('Erreur axios (AccueilExpositions.vue) : ' + error);
+            console.log('Erreur axios (ExpositionsTimeline.vue) : ' + error);
         });
     },
     mounted: function mounted() {},
@@ -57297,7 +57298,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-biographie[data-v-72e29d72] {\n  padding: 50px 100px;\n  background: #3F3F3F;\n}\n.accueil-biographie .contenu-section[data-v-72e29d72] {\n    display: flex;\n    flex-direction: row wrap;\n    justify-content: space-around;\n}\n.accueil-biographie .contenu-section .image-container[data-v-72e29d72] {\n      display: flex;\n      justify-content: center;\n      background: url(\"/img/profil.jpg\") center;\n      background-size: cover;\n      height: 250px;\n      width: 250px;\n      border: 8px solid #353535;\n}\n.accueil-biographie .contenu-section .description[data-v-72e29d72] {\n      flex: 1;\n      padding-left: 50px;\n}\n.accueil-biographie .contenu-section .description .titre-section[data-v-72e29d72] {\n        margin-bottom: 20px;\n}\n.accueil-biographie .contenu-section .description .text[data-v-72e29d72] {\n        text-align: justify;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-72e29d72] {\n    flex-flow: column wrap;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.accueil-biographie[data-v-72e29d72] {\n  padding: 50px 100px;\n  background: #3F3F3F;\n}\n.accueil-biographie .contenu-section[data-v-72e29d72] {\n    display: flex;\n    flex-direction: row wrap;\n    justify-content: space-around;\n}\n.accueil-biographie .contenu-section .image-container[data-v-72e29d72] {\n      display: flex;\n      justify-content: center;\n      background: url(\"/img/profil.jpg\") center;\n      background-size: cover;\n      height: 250px;\n      width: 250px;\n      border: 8px solid #353535;\n}\n.accueil-biographie .contenu-section .description[data-v-72e29d72] {\n      flex: 1;\n      padding-left: 64px;\n}\n.accueil-biographie .contenu-section .description .titre-section[data-v-72e29d72] {\n        margin-bottom: 20px;\n}\n.accueil-biographie .contenu-section .description .text[data-v-72e29d72] {\n        text-align: justify;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-72e29d72] {\n    flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -57308,7 +57309,6 @@ exports.push([module.i, "/* Variables */\n.accueil-biographie[data-v-72e29d72] {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
 //
 //
 //
@@ -57339,7 +57339,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         axios.get('/api/biographies').then(function (response) {
             self.biographie = response.data[response.data.length - 1];
         }).catch(function (error) {
-            console.log('Erreur axios (AccueilBiographie.vue) : ' + error);
+            console.log('Erreur axios (Biographie.vue) : ' + error);
         });
     }
 });
@@ -57640,6 +57640,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             oeuvres: []
         };
     },
+    computed: {
+        shuffledOeuvres: function shuffledOeuvres() {
+            // Mélange des oeuvres
+            var oeuvres = _.shuffle(this.oeuvres);
+            // Conservation de 12 oeuvres au hasard uniquement
+            oeuvres = oeuvres.slice(0, 12);
+            return oeuvres;
+        }
+    },
     created: function created() {},
     mounted: function mounted() {
         var self = this;
@@ -57649,7 +57658,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 self.createPhotostack();
             });
         }).catch(function (error) {
-            console.log('Erreur axios : ' + error);
+            console.log('Erreur axios (GaleriePolaroid.vue) : ' + error);
         });
     },
 
@@ -57749,7 +57758,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.photostack-img img[data-v-56abb7a8] {\n  width: 240px;\n  height: 240px;\n}\n.photostack-back[data-v-56abb7a8] {\n  font-family: \"Open Sans\";\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.photostack-img img[data-v-56abb7a8] {\n  width: 240px;\n  height: 240px;\n}\n.photostack-back[data-v-56abb7a8] {\n  font-family: \"Open Sans\";\n  font-size: 16px;\n}\n", ""]);
 
 // exports
 
@@ -57774,6 +57783,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['oeuvre'],
@@ -57781,9 +57795,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {};
     },
     created: function created() {},
-    mounted: function mounted() {
-        console.log('Oeuvre (Polaroid.vue) : ' + JSON.stringify(this.oeuvre));
-    }
+    mounted: function mounted() {}
 });
 
 /***/ }),
@@ -57805,7 +57817,28 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "photostack-back" }, [
-        _c("p", [_vm._v("Technique : " + _vm._s(_vm.oeuvre.technique))])
+        _c(
+          "ul",
+          { staticStyle: { "list-style": "none", "padding-left": "0" } },
+          [
+            _c("li", [_c("strong", [_vm._v(_vm._s(_vm.oeuvre.nom))])]),
+            _vm._v(" "),
+            _c("li", [_vm._v(_vm._s(_vm.oeuvre.annee))]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                _vm._s(_vm.oeuvre.hauteur) +
+                  " cm x " +
+                  _vm._s(_vm.oeuvre.largeur) +
+                  " cm x " +
+                  _vm._s(_vm.oeuvre.profondeur) +
+                  " cm"
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [_vm._v(_vm._s(_vm.oeuvre.technique))])
+          ]
+        )
       ])
     ])
   ])
@@ -57836,7 +57869,7 @@ var render = function() {
         [
           _c(
             "div",
-            _vm._l(_vm.oeuvres, function(oeuvre) {
+            _vm._l(_vm.shuffledOeuvres, function(oeuvre) {
               return _c("polaroid", {
                 key: oeuvre.id,
                 attrs: { oeuvre: oeuvre }
