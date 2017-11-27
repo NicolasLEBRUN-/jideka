@@ -6,7 +6,12 @@
         <figcaption>
             <h2 class="photostack-title">{{ oeuvre.nom }}</h2>
             <div class="photostack-back">
-                <p>Technique : {{ oeuvre.technique }}</p>
+                <ul style="list-style:none; padding-left:0">
+                    <li><strong>{{ oeuvre.nom }}</strong></li>
+                    <li>{{ oeuvre.annee }}</li>
+                    <li>{{ oeuvre.hauteur }} cm x {{ oeuvre.largeur }} cm x {{ oeuvre.profondeur }} cm</li>
+                    <li>{{ oeuvre.technique }}</li>
+                </ul>
             </div>
         </figcaption>
     </figure>
@@ -21,7 +26,6 @@
         created() {
         },
         mounted() {
-            console.log('Oeuvre (Polaroid.vue) : ' + JSON.stringify(this.oeuvre));
         }
     }
 </script>
@@ -37,7 +41,8 @@
     }
 
     .photostack-back {
-        font-family: "Open Sans"
+        font-family: "Open Sans";
+        font-size: 16px;
     }    
 
 </style>

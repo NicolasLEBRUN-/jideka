@@ -73,7 +73,7 @@
             list-style: none;
             margin: 0 50px 0 0;
             padding: 0;
-            overflow: hidden;
+            // overflow: hidden;
             height: 100%;
             
             li {
@@ -134,6 +134,7 @@
                     float: none;
                     display: block;
                     text-align: left;
+                    background: $background-primary-color;
 
                     a {
                         float: none;

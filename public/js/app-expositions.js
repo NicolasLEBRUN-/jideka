@@ -55854,6 +55854,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     computed: {
         orderedExpositions: function orderedExpositions() {
+            // Tri des expositions de la plus récente à la plus ancienne
             var expositions = _.orderBy(this.expositions, 'date_debut').reverse();
             // Conservation des trois dernières expositions uniquement
             expositions = expositions.slice(0, 3);
@@ -55876,7 +55877,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         axios.get('/api/expositions').then(function (response) {
             self.expositions = response.data;
         }).catch(function (error) {
-            console.log('Erreur axios (AccueilExpositions.vue) : ' + error);
+            console.log('Erreur axios (ExpositionsTimeline.vue) : ' + error);
         });
     },
     mounted: function mounted() {},
@@ -56508,7 +56509,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.expositions-menu-haut[data-v-46a67a0e] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n}\n.expositions-menu-haut .navigation[data-v-46a67a0e] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    overflow: hidden;\n    height: 100%;\n}\n.expositions-menu-haut .navigation li[data-v-46a67a0e] {\n      display: inline;\n}\n.expositions-menu-haut .navigation li a[data-v-46a67a0e] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.expositions-menu-haut .navigation li a[data-v-46a67a0e]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFF;\n}\n.expositions-menu-haut .navigation li.burger[data-v-46a67a0e] {\n        display: none;\n}\n.expositions-menu-haut .navigation li.flag img[data-v-46a67a0e] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-46a67a0e] {\n    float: none !important;\n    background: #353535;\n}\n.navigation li a[data-v-46a67a0e] {\n      float: left;\n}\n.navigation li[data-v-46a67a0e]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-46a67a0e] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-46a67a0e] {\n      position: relative;\n}\n.navigation.responsive li[data-v-46a67a0e] {\n        float: none;\n        display: block;\n        text-align: left;\n}\n.navigation.responsive li a[data-v-46a67a0e] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-46a67a0e] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-46a67a0e] {\n    margin: 0 !important;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.expositions-menu-haut[data-v-46a67a0e] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n}\n.expositions-menu-haut .navigation[data-v-46a67a0e] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    height: 100%;\n}\n.expositions-menu-haut .navigation li[data-v-46a67a0e] {\n      display: inline;\n}\n.expositions-menu-haut .navigation li a[data-v-46a67a0e] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.expositions-menu-haut .navigation li a[data-v-46a67a0e]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFFFFF;\n}\n.expositions-menu-haut .navigation li.burger[data-v-46a67a0e] {\n        display: none;\n}\n.expositions-menu-haut .navigation li.flag img[data-v-46a67a0e] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-46a67a0e] {\n    float: none !important;\n    background: #353535;\n}\n.navigation li a[data-v-46a67a0e] {\n      float: left;\n}\n.navigation li[data-v-46a67a0e]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-46a67a0e] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-46a67a0e] {\n      position: relative;\n}\n.navigation.responsive li[data-v-46a67a0e] {\n        float: none;\n        display: block;\n        text-align: left;\n        background: #353535;\n}\n.navigation.responsive li a[data-v-46a67a0e] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-46a67a0e] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-46a67a0e] {\n    margin: 0 !important;\n}\n}\n", ""]);
 
 // exports
 
@@ -56728,7 +56729,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n#expositions[data-v-6b69d936] {\n  margin-top: 60px;\n}\n.accueil-expositions[data-v-6b69d936] {\n  padding-top: 50px;\n  align-items: center;\n}\n.accueil-expositions .entete[data-v-6b69d936] {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.accueil-expositions .entete h1[data-v-6b69d936], .accueil-expositions .entete p[data-v-6b69d936] {\n      text-align: center;\n      padding: 0 100px;\n}\n.accueil-expositions .entete a[data-v-6b69d936] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      transition: all .3s ease;\n}\n.accueil-expositions .entete a[data-v-6b69d936]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n#expositions[data-v-6b69d936] {\n  margin-top: 60px;\n}\n.titre-section[data-v-6b69d936] {\n  text-align: left;\n  padding: 0 64px;\n}\n.contenu-section[data-v-6b69d936] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 0 64px;\n}\n", ""]);
 
 // exports
 
@@ -56741,6 +56742,7 @@ exports.push([module.i, "/* Variables */\n#expositions[data-v-6b69d936] {\n  mar
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__accueil_exposition_timeline_ExpositionTimeline_vue__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__accueil_exposition_timeline_ExpositionTimeline_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__accueil_exposition_timeline_ExpositionTimeline_vue__);
+//
 //
 //
 //
@@ -56779,23 +56781,22 @@ var render = function() {
     "div",
     { staticClass: "expositions", attrs: { id: "expositions" } },
     [
-      _c("div", { staticClass: "entete" }, [
+      _c("div", { staticClass: "titre-section" }, [
         _c("h1", [
           _vm._v(
-            " " +
+            "\n            " +
               _vm._s(_vm.$trans("expositions.expositions.titre-section")) +
-              " "
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            " " + _vm._s(_vm.$trans("expositions.expositions.accroche")) + " "
+              "\n        "
           )
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "contenu" }, [_c("exposition-timeline")], 1)
+      _c(
+        "div",
+        { staticClass: "contenu-section" },
+        [_c("exposition-timeline")],
+        1
+      )
     ]
   )
 }

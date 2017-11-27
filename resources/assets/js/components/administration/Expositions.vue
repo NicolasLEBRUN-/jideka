@@ -6,10 +6,8 @@
             </h1>
         </div>
         <div class="contenu-section">
-            <ul>
-                <administration-expositions-creation></administration-expositions-creation>
-                <administration-expositions-suppression></administration-expositions-suppression>
-            </ul>
+            <administration-expositions-creation></administration-expositions-creation>
+            <administration-expositions-suppression></administration-expositions-suppression>
         </div>
     </div>
 </template>
@@ -41,5 +39,9 @@
     /* Variables */
     @import "../../../sass/variables";
 
+    #administration-expositions {
+        margin-top: $menu-haut-height;
+        padding: 0 $side-padding;
+    }
 </style>
     

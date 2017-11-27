@@ -3,7 +3,7 @@
         <div class="container">
             <section id="photostack" class="photostack">
                 <div>
-                    <polaroid v-for="oeuvre in oeuvres" :key="oeuvre.id" :oeuvre="oeuvre" />
+                    <polaroid v-for="oeuvre in shuffledOeuvres" :key="oeuvre.id" :oeuvre="oeuvre" />
                 </div>
             </section>
         </div>
@@ -22,6 +22,15 @@
                 oeuvres: []
             }
         },
+        computed: {
+            shuffledOeuvres: function () {
+                // Mélange des oeuvres
+                var oeuvres = _.shuffle(this.oeuvres);
+                // Conservation de 12 oeuvres au hasard uniquement
+                oeuvres = oeuvres.slice(0, 12);
+                return oeuvres;
+            }
+        },
         created() {
         },
         mounted() {
@@ -34,7 +43,7 @@
                         })
                     })
                     .catch(function (error) {
-                        console.log('Erreur axios : ' + error);
+                        console.log('Erreur axios (GaleriePolaroid.vue) : ' + error);
                     });
         },
         methods: {

@@ -15,9 +15,9 @@ class ContactController extends Controller
     	$this->validate($request, [
     		'nom'				  => 'required',
             'email'               => 'required|email',
+            'corps'               => 'required',
             'prereservation'      => 'required',
     		'oeuvre'              => 'required_if:prereservation,true',
-    		'corps'               => 'required',
     		'grecaptcharesponse'  => 'required|googlerecaptcharesponsetoken'
     	]);
 

@@ -7,11 +7,8 @@
         </div>
         <div class="contenu-section">
             <div>
-                {{ $trans('galeries.galeries.accroche') }}
-            </div>
-            <div>
-                <ul>
-                    <galerie v-for="galerie in galeries" :key="galerie.id" :galerie-id="galerie.id" :galerie-nom="galerie.nom"></galerie>
+                <ul class="galeries-galerie">
+                    <li is="galerie" v-for="galerie in galeries" :key="galerie.id" :galerie-id="galerie.id" :galerie-nom="galerie.nom" :statuts-disponibilite="statutsDisponibilite"></li>
                 </ul>
             </div>
         </div>
@@ -27,7 +24,8 @@
         },
         data: function() {
             return {
-                galeries: []
+                galeries: [],
+                statutsDisponibilite: []
             }
         },
         mounted() {},
@@ -36,6 +34,13 @@
             axios.get('/api/galeries')
                 .then(function (response) {
                     self.galeries = response.data;
+                })
+                .catch(function (error) {
+                    console.log('Erreur axios : ' + error);
+                });
+            axios.get('/api/statutsdisponibilite')
+                .then(function (response) {
+                    self.statutsDisponibilite = response.data;
                 })
                 .catch(function (error) {
                     console.log('Erreur axios : ' + error);
@@ -51,6 +56,24 @@
 
     #galeries {
         margin-top: $menu-haut-height;
+    }
+
+    .titre-section {
+        text-align: left;
+        padding: 0 $side-padding;
+    }
+
+    .contenu-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 $side-padding;
+    }
+
+    .galeries-galerie {
+        list-style: none;
+        padding-left: 0;
     }
 
 </style>

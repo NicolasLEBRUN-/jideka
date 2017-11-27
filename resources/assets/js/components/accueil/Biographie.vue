@@ -1,8 +1,7 @@
 <template>
     <div id="accueil-biographie" class="accueil-biographie">
         <div class="contenu-section">
-            <div class="image-container">
-            </div>
+            <div class="image-container"></div>
             <div class="description">
                 <div class="titre-section">
                     <h1>{{ $trans('accueil.biographie.titre-section') }}</h1>
@@ -31,7 +30,7 @@
                     self.biographie = response.data[response.data.length - 1];
                 })
                 .catch(function (error) {
-                    console.log('Erreur axios (AccueilBiographie.vue) : ' + error);
+                    console.log('Erreur axios (Biographie.vue) : ' + error);
                 });
         }
     }
@@ -63,7 +62,7 @@
             
             .description {
                 flex: 1;
-                padding-left: 50px;
+                padding-left: $side-padding;
 
                 .titre-section {
                     margin-bottom: 20px;

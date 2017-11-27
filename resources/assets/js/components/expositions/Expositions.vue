@@ -1,10 +1,11 @@
 <template>
     <div id="expositions" class="expositions">
-        <div class="entete">
-            <h1> {{ $trans('expositions.expositions.titre-section') }} </h1>
-            <p> {{ $trans('expositions.expositions.accroche') }} </p>
+        <div class="titre-section">
+            <h1>
+                {{ $trans('expositions.expositions.titre-section') }}
+            </h1>
         </div>
-        <div class="contenu">
+        <div class="contenu-section">
             <exposition-timeline/>
         </div>
     </div>
@@ -34,33 +35,17 @@
         margin-top: $menu-haut-height;
     }
 
-    .accueil-expositions {
-        padding-top: 50px;
-        align-items: center;
-
-        .entete {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            h1, p {
-                text-align: center;
-                padding: 0 100px;
-            }
-    
-            a {
-                text-transform: uppercase;
-                text-decoration: none;
-                color: $font-color;
-                padding: 12px 22px;
-                border: 4px solid white;
-                margin: 20px 0 40px 0;
-                transition: all .3s ease;
-
-                &:hover {
-                    background: darken(rgba($background-primary-color, .7), 5%);
-                }
-            }
-        }
+    .titre-section {
+        text-align: left;
+        padding: 0 $side-padding;
     }
+
+    .contenu-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // text-align: center;
+        padding: 0 $side-padding;
+    }
+
 </style>

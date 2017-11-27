@@ -1,7 +1,7 @@
 <template>
     <footer>
         <img src="/img/logo_jideka.svg" />
-        <p>© 2017 JOCELYNE DESCHAMPS-KUS  -  DESIGNED BY TIMOTHÉ CRESPY & NICOLAS LEBRUN</p>
+        <p>© 2017 JOCELYNE DESCHAMPS-KUS - DESIGNED BY TIMOTHÉ CRESPY & NICOLAS LEBRUN</p>
     </footer>
 </template>
 
@@ -23,7 +23,7 @@
     @import "../../../sass/variables";
 
     footer {
-        padding: 100px 0;
+        padding: 64px $side-padding;
         display: flex;
         flex-direction: column;
         align-items: center;

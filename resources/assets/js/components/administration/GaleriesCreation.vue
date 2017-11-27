@@ -1,7 +1,7 @@
 <template>
     <div id="administration-galeries-creation" class="administration-galeries-creation container">
         <div class="titre-section">
-            Création
+            <h2>Création</h2>
         </div>
         <div class="contenu-section">
             <div class="instructions">
@@ -14,25 +14,21 @@
                     <div class="form-group">
                         <form-label for="nom">Nom de la galerie</form-label>
                         <!-- <label for="nom">Nom de la galerie</label> -->
-                        <br />
                         <form-input type="text" class="form-control" name="nom" v-model="nom" placeholder="Nom"></form-input>
                         <!-- <input type="text" class="form-control" name="nom" v-model="nom" cols="50" placeholder="Nom" /> -->
                     </div>
                     <div class="form-group">
                         <form-label for="description">Description de la galerie</form-label>
                         <!-- <label for="description">Description de la galerie</label> -->
-                        <br />
                         <form-textarea class="form-control" name="description" v-model="description" value="" placeholder="Description"></form-textarea> 
                         <!-- <textarea class="form-control" name="description" v-model="description" rows="3" cols="40" placeholder="Description"></textarea>  -->
                     </div>
                     <div class="form-group">
                         <form-label for="visuel">Visuel de la galerie</form-label>
                         <!-- <label for="visuel">Visuel de la galerie</label> -->
-                        <br />
                         <form-input type="file" class="form-control" name="visuel" v-on:change="processFile" placeholder="Visuel"></form-input>
                         <!-- <input type="file" class="form-control" name="visuel" v-on:change="processFile" /> -->
-                        <br />
-                        <img :src="visuel" alt="Visuel" style="max-height: 80px">
+                        <img :src="visuel" alt="Visuel" style="max-height:80px; margin-bottom:16px;">
                     </div>
 
                     <div class="form-group danger" v-if="errors.length > 0">
@@ -70,7 +66,7 @@
                 galeries: [],
                 nom: '',
                 description: '',
-                visuel: '',
+                visuel: '/img/apercu.png',
                 errors: [],
                 success: ''
             }
@@ -133,6 +129,28 @@
 
     /* Variables */
     @import "../../../sass/variables";
+
+    .contenu-section {
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: space-around;
+    }
+
+    .instructions {
+        flex: 1 1 0;
+        margin-bottom: 16px;
+        margin-right: 16px;
+    }
+
+    .edition {
+        flex: 1 1 0;
+    }
+
+    @media all and (max-width: 600px) {
+        .contenu-section {
+            flex-flow: column wrap;
+        }
+    }
 
 </style>
     

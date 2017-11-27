@@ -63,7 +63,7 @@
             list-style: none;
             margin: 0 50px 0 0;
             padding: 0;
-            overflow: hidden;
+            // overflow: hidden;
             height: 100%;
             
             li {
@@ -109,7 +109,6 @@
                 &:not(:first-child) {
                     display: none;
 
-
                     &.burger {
                         display: block;
                         float: right;
@@ -124,6 +123,7 @@
                     float: none;
                     display: block;
                     text-align: left;
+                    background: $background-primary-color;
 
                     a {
                         float: none;

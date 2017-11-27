@@ -107,6 +107,9 @@ return [
         'oeuvre' => [
             'required_if' => "Le champ :attribute est obligatoire quand le champ :other est coché.",
         ],
+        'visuel' => [
+            'image64' => "Le champ image est incorrect. Seuls les fichiers de type jpeg, jpg, et png sont autorisés."
+        ] 
     ],
 
     /*
@@ -120,7 +123,7 @@ return [
     |
     */
 
-    'attributes'           => [
+    'attributes' => [
         'name'                  => 'nom',
         'username'              => "nom d'utilisateur",
         'email'                 => 'adresse courriel',
@@ -150,7 +153,7 @@ return [
         'time'                  => 'heure',
         'available'             => 'disponible',
         'size'                  => 'taille',
-        'statutdisponibilite' => 'statut de disponibilité',
+        'statutdisponibilite'   => 'statut de disponibilité',
     ],
 
 ];

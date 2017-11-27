@@ -1,7 +1,7 @@
 <template>
     <div id="administration-oeuvres-creation" class="administration-oeuvres-creation container">
         <div class="titre-section">
-            Création
+            <h2>Création</h2>
         </div>
         <div class="contenu-section">
             <div class="instructions">
@@ -13,66 +13,67 @@
                 <form action="" method="" enctype="multipart/form-data">
                     <div class="form-group">
                         <form-label for="nom">Nom de l'oeuvre</form-label>
-                        <br />
                         <form-input type="text" class="form-control" name="nom" v-model="nom" placeholder="Nom"></form-input>
                     </div>
                     <div class="form-group">
                         <form-label for="description">Description de l'oeuvre</form-label>
-                        <br />
                         <form-textarea class="form-control" name="description" v-model="description" placeholder="Description"></form-textarea> 
                     </div>
                     <div class="form-group">
                         <form-label for="technique">Technique de l'oeuvre</form-label>
-                        <br />
                         <form-input type="text" class="form-control" name="technique" v-model="technique" placeholder="Technique"></form-input>
                     </div>
                     <div class="form-group">
                         <form-label for="annee">Année de l'oeuvre</form-label>
-                        <br />
                         <form-input type="text" class="form-control" name="annee" v-model="annee" placeholder="Année"></form-input>
                     </div>
                     <div class="form-group">
-                        <form-label for="hauteur">Hauteur de l'oeuvre</form-label>
-                        <br />
-                        <form-input type="text" class="form-control" name="hauteur" v-model="hauteur" placeholder="Hauteur"></form-input> cm
+                        <form-label for="hauteur">Hauteur de l'oeuvre (en centimètres)</form-label>
+                        <form-input type="text" class="form-control" name="hauteur" v-model="hauteur" placeholder="Hauteur"></form-input>
                     </div>
                     <div class="form-group">
-                        <form-label for="largeur">Largeur de l'oeuvre</form-label>
-                        <br />
-                        <form-input type="text" class="form-control" name="largeur" v-model="largeur" placeholder="Largeur"></form-input> cm
+                        <form-label for="largeur">Largeur de l'oeuvre (en centimètres)</form-label>
+                        <form-input type="text" class="form-control" name="largeur" v-model="largeur" placeholder="Largeur"></form-input>
                     </div>
                     <div class="form-group">
-                        <form-label for="profondeur">Profondeur de l'oeuvre</form-label>
-                        <br />
-                        <form-input type="text" class="form-control" name="profondeur" v-model="profondeur" placeholder="Profondeur"></form-input> cm
+                        <form-label for="profondeur">Profondeur de l'oeuvre (en centimètres)</form-label>
+                        <form-input type="text" class="form-control" name="profondeur" v-model="profondeur" placeholder="Profondeur"></form-input>
                     </div>
                     <div class="form-group">
-                        <form-label for="prix">Prix de l'oeuvre</form-label>
-                        <br />
-                        <form-input type="text" class="form-control" name="prix" v-model="prix" placeholder="Prix"></form-input> €
+                        <form-label for="prix">Prix de l'oeuvre (en euros)</form-label>
+                        <form-input type="text" class="form-control" name="prix" v-model="prix" placeholder="Prix"></form-input>
                     </div>
                     <div class="form-group">
                         <form-label for="statutdisponibilite">Disponibilité de l'oeuvre</form-label>
-                        <br />
-                        <multiselect v-model="statutdisponibilite" :options="statutsdisponibilite" :custom-label="customLabelForStatutDisponibilite" placeholder="Sélectionner une disponibilité" label="libelle" track-by="libelle"></multiselect>
+                        <multiselect 
+                            v-model="statutdisponibilite" 
+                            :options="statutsdisponibilite" 
+                            :custom-label="customLabelForStatutDisponibilite" 
+                            placeholder="Sélectionner une disponibilité" 
+                            label="libelle" 
+                            track-by="libelle"
+                            :show-labels="false"></multiselect>
                         <!-- <select name="statutdisponibilite" v-model="statutdisponibilite">
                             <option v-for="statut in statusdisponibilite" :value="statut.id">{{ statut.libelle }}</option>
                         </select> -->
                     </div>
                     <div class="form-group">
                         <form-label for="nom">Nom de la galerie à laquelle l'oeuvre appartient</form-label>
-                        <br />
-                        <multiselect v-model="galerie" :options="galeries" :custom-label="customLabelForGalerie" placeholder="Sélectionner une galerie" label="nom" track-by="nom"></multiselect>
+                        <multiselect 
+                            v-model="galerie" 
+                            :options="galeries" 
+                            :custom-label="customLabelForGalerie" 
+                            placeholder="Sélectionner une galerie" 
+                            label="nom" 
+                            track-by="nom"></multiselect>
                         <!-- <select name="galerie" v-model="galerie">
                             <option v-for="galerie in galeries" :value="galerie.id">{{ galerie.nom }}</option>
                         </select> -->
                     </div>
                     <div class="form-group">
                         <form-label for="visuel">Image de l'oeuvre</form-label>
-                        <br />
                         <form-input type="file" class="form-control" name="visuel" v-on:change="processFile"></form-input>
-                        <br />
-                        <img :src="visuel" alt="Image" style="max-height: 60px">
+                        <img :src="visuel" alt="Visuel" style="max-height:80px; margin-bottom:16px;">
                     </div>
 
                     <div class="form-group danger" v-if="errors.length > 0">
@@ -119,7 +120,7 @@
                 prix: '',
                 statutdisponibilite: '',
                 galerie: '',
-                visuel: '',
+                visuel: '/img/apercu.png',
                 errors: [],
                 success: ''
             }
@@ -204,6 +205,32 @@
 
     /* Variables */
     @import "../../../sass/variables";
+
+    .contenu-section {
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: space-around;
+    }
+
+    .instructions {
+        flex: 1 1 0;
+        margin-bottom: 16px;
+        margin-right: 16px;
+    }
+
+    .edition {
+        flex: 1 1 0;
+    }
+
+    .multiselect {
+        margin-bottom: 15px;
+    }
+
+    @media all and (max-width: 600px) {
+        .contenu-section {
+            flex-flow: column wrap;
+        }
+    }
 
 </style>
     

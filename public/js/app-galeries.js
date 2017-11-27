@@ -56000,7 +56000,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.galeries-menu-haut[data-v-79f20694] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n}\n.galeries-menu-haut .navigation[data-v-79f20694] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    overflow: hidden;\n    height: 100%;\n}\n.galeries-menu-haut .navigation li[data-v-79f20694] {\n      display: inline;\n}\n.galeries-menu-haut .navigation li a[data-v-79f20694] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.galeries-menu-haut .navigation li a[data-v-79f20694]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFF;\n}\n.galeries-menu-haut .navigation li.burger[data-v-79f20694] {\n        display: none;\n}\n.galeries-menu-haut .navigation li.flag img[data-v-79f20694] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-79f20694] {\n    float: none !important;\n    background: #353535;\n}\n.navigation li a[data-v-79f20694] {\n      float: left;\n}\n.navigation li[data-v-79f20694]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-79f20694] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-79f20694] {\n      position: relative;\n}\n.navigation.responsive li[data-v-79f20694] {\n        float: none;\n        display: block;\n        text-align: left;\n}\n.navigation.responsive li a[data-v-79f20694] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-79f20694] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-79f20694] {\n    margin: 0 !important;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.galeries-menu-haut[data-v-79f20694] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n}\n.galeries-menu-haut .navigation[data-v-79f20694] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    height: 100%;\n}\n.galeries-menu-haut .navigation li[data-v-79f20694] {\n      display: inline;\n}\n.galeries-menu-haut .navigation li a[data-v-79f20694] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.galeries-menu-haut .navigation li a[data-v-79f20694]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFFFFF;\n}\n.galeries-menu-haut .navigation li.burger[data-v-79f20694] {\n        display: none;\n}\n.galeries-menu-haut .navigation li.flag img[data-v-79f20694] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-79f20694] {\n    float: none !important;\n    background: #353535;\n}\n.navigation li a[data-v-79f20694] {\n      float: left;\n}\n.navigation li[data-v-79f20694]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-79f20694] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-79f20694] {\n      position: relative;\n}\n.navigation.responsive li[data-v-79f20694] {\n        float: none;\n        display: block;\n        text-align: left;\n        background: #353535;\n}\n.navigation.responsive li a[data-v-79f20694] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-79f20694] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-79f20694] {\n    margin: 0 !important;\n}\n}\n", ""]);
 
 // exports
 
@@ -56220,7 +56220,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n#galeries[data-v-62231e35] {\n  margin-top: 60px;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n#galeries[data-v-62231e35] {\n  margin-top: 60px;\n}\n.titre-section[data-v-62231e35] {\n  text-align: left;\n  padding: 0 64px;\n}\n.contenu-section[data-v-62231e35] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  padding: 0 64px;\n}\n.galeries-galerie[data-v-62231e35] {\n  list-style: none;\n  padding-left: 0;\n}\n", ""]);
 
 // exports
 
@@ -56250,9 +56250,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 
 
@@ -56262,7 +56259,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data: function data() {
         return {
-            galeries: []
+            galeries: [],
+            statutsDisponibilite: []
         };
     },
     mounted: function mounted() {},
@@ -56270,6 +56268,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var self = this;
         axios.get('/api/galeries').then(function (response) {
             self.galeries = response.data;
+        }).catch(function (error) {
+            console.log('Erreur axios : ' + error);
+        });
+        axios.get('/api/statutsdisponibilite').then(function (response) {
+            self.statutsDisponibilite = response.data;
         }).catch(function (error) {
             console.log('Erreur axios : ' + error);
         });
@@ -56361,7 +56364,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\nul[data-v-7e08cea4] {\n  list-style: none;\n  padding-left: 0;\n  border-bottom: 1px solid #EB7041;\n}\n.galerie-oeuvres[data-v-7e08cea4] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-content: center;\n  margin: 0 -5px 64px -5px;\n  padding-bottom: 16px;\n}\n", ""]);
 
 // exports
 
@@ -56399,7 +56402,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     components: {
         Oeuvre: __WEBPACK_IMPORTED_MODULE_0__galeries_Oeuvre_vue___default.a
     },
-    props: ['galerieId', 'galerieNom'],
+    props: ['galerieId', 'galerieNom', 'statutsDisponibilite'],
     data: function data() {
         return {
             oeuvres: []
@@ -56507,7 +56510,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n.oeuvre[data-v-2bbd3267] {\n  width: 200px;\n  margin: 0 5px;\n  -webkit-transition: width 1s;\n  transition: width 1s;\n}\n.oeuvre-image[data-v-2bbd3267] {\n  height: 200px;\n  min-height: 200px;\n  width: 200px;\n  background-size: cover;\n  cursor: pointer;\n  -webkit-transition: height 1s, width 1s;\n  transition: height 1s, width 1s;\n}\n.big[data-v-2bbd3267] {\n  min-height: 200px;\n  width: 400px;\n  -webkit-transition: height 1s, width 1s;\n  transition: height 1s, width 1s;\n}\nstrong[data-v-2bbd3267] {\n  display: block;\n  padding: 12px;\n  text-align: center;\n}\n.oeuvre-info[data-v-2bbd3267] {\n  position: absolute;\n  visibility: hidden;\n  opacity: 0;\n  list-style: none;\n  padding-left: 0px;\n  padding-right: 12px;\n  padding-bottom: 12px;\n  margin-bottom: 20px;\n  border-right: 1px solid #FFFFFF;\n  border-bottom: 1px solid #FFFFFF;\n}\n.oeuvre-info.visible[data-v-2bbd3267] {\n  position: static;\n  visibility: visible;\n  opacity: 1;\n  transition: visibility 1s, opacity 1s linear;\n  -webkit-transition: visibility 1s, opacity 1s linear;\n}\n", ""]);
 
 // exports
 
@@ -56537,20 +56540,54 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['oeuvre'],
+    props: ['oeuvre', 'statutsDisponibilite'],
     data: function data() {
         return {
-            //
+            imageWidth: 0,
+            imageHeight: 0
         };
     },
-    mounted: function mounted() {
-        //
+
+    computed: {
+        imageRatio: function imageRatio() {
+            return this.imageWidth / this.imageHeight;
+        },
+        statutDisponibilite: function statutDisponibilite() {
+            return this.statutsDisponibilite[this.oeuvre.disponibilite_id - 1].libelle;
+        }
     },
     created: function created() {
         //
+    },
+    mounted: function mounted() {
+        var self = this;
+
+        // Détermination des dimensions de l'image
+        var img = new Image();
+        img.onload = function () {
+            self.imageWidth = this.width;
+            self.imageHeight = this.height;
+        };
+        img.src = this.oeuvre.chemin_image;
+
+        var oeuvreImage = document.getElementById(this.oeuvre.id);
+
+        oeuvreImage.addEventListener('click', function (e) {
+            // Modification de la largeur du container
+            this.parentElement.parentElement.classList.toggle("big");
+            // Modification de la hauteur de l'image avec le bon ratio
+            if (this.classList.contains("big")) {
+                this.style.height = '200px';
+            } else {
+                this.style.height = 400 / self.imageRatio + 'px';
+            }
+            // Modification de la largeur du container
+            this.classList.toggle("big");
+            // Affichage des informations de l'oeuvre
+            this.nextElementSibling.nextElementSibling.classList.toggle("visible");
+        });
     }
 });
 
@@ -56562,56 +56599,69 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "oeuvre container" }, [
-    _c("div", { staticClass: "titre-section" }, [
-      _vm._v("\n        " + _vm._s(_vm.oeuvre.nom) + "\n    ")
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "contenu-section" }, [
-      _c("div", [
-        _vm._v(
-          "\n            " +
-            _vm._s(_vm.$trans("galeries.oeuvres.presentation")) +
-            "\n            "
-        ),
-        _c("ul", [
-          _c("li", [
-            _vm._v(
-              _vm._s(_vm.$trans("galeries.oeuvre.description")) +
-                " : " +
-                _vm._s(_vm.oeuvre.description)
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _vm._v(
-              _vm._s(_vm.$trans("galeries.oeuvre.annee")) +
-                " : " +
-                _vm._s(_vm.oeuvre.annee)
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _vm._v(
+  return _c("div", { staticClass: "oeuvre" }, [
+    _c("div", [
+      _c("div", {
+        staticClass: "oeuvre-image",
+        style: {
+          "background-image": "url(" + _vm.oeuvre.chemin_image + ")",
+          "background-position": "center"
+        },
+        attrs: { id: _vm.oeuvre.id }
+      }),
+      _vm._v(" "),
+      _c("strong", [_vm._v(_vm._s(_vm.oeuvre.nom))]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "oeuvre-info" }, [
+        _c("li", [
+          _vm._v(
+            _vm._s(_vm.$trans("galeries.oeuvre.description")) +
+              " : " +
+              _vm._s(_vm.oeuvre.description)
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            _vm._s(_vm.$trans("galeries.oeuvre.annee")) +
+              " : " +
+              _vm._s(_vm.oeuvre.annee)
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            _vm._s(_vm.$trans("galeries.oeuvre.dimensions")) +
+              " (" +
               _vm._s(_vm.$trans("galeries.oeuvre.hauteur")) +
-                " x " +
-                _vm._s(_vm.$trans("galeries.oeuvre.largeur")) +
-                " x " +
-                _vm._s(_vm.$trans("galeries.oeuvre.profondeur")) +
-                " (cm) : \n                " +
-                _vm._s(_vm.oeuvre.hauteur) +
-                " x " +
-                _vm._s(_vm.oeuvre.largeur) +
-                " x " +
-                _vm._s(_vm.oeuvre.profondeur)
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              attrs: { src: _vm.oeuvre.chemin_image, width: "100px" }
-            })
-          ])
+              " x " +
+              _vm._s(_vm.$trans("galeries.oeuvre.largeur")) +
+              " x " +
+              _vm._s(_vm.$trans("galeries.oeuvre.profondeur")) +
+              ") : \n            " +
+              _vm._s(_vm.oeuvre.hauteur) +
+              " cm x " +
+              _vm._s(_vm.oeuvre.largeur) +
+              " cm x " +
+              _vm._s(_vm.oeuvre.profondeur) +
+              " cm"
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            _vm._s(_vm.$trans("galeries.oeuvre.technique")) +
+              " : " +
+              _vm._s(_vm.oeuvre.technique)
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            _vm._s(_vm.$trans("galeries.oeuvre.disponibilite")) +
+              " : " +
+              _vm._s(_vm.statutDisponibilite)
+          )
         ])
       ])
     ])
@@ -56635,26 +56685,28 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "galerie container" }, [
+  return _c("div", { staticClass: "galerie" }, [
     _c("div", { staticClass: "titre-section" }, [
-      _c("h1", [
+      _c("h2", [
         _vm._v("\n            " + _vm._s(_vm.galerieNom) + "\n        ")
       ])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "contenu-section" }, [
-      _c("div", [
-        _vm._v(
-          "\n            " +
-            _vm._s(_vm.$trans("galeries.galerie.presentation")) +
-            "\n        "
-        )
-      ]),
+      _c("div"),
       _vm._v(" "),
       _c(
-        "div",
+        "ul",
+        { staticClass: "galerie-oeuvres" },
         _vm._l(_vm.oeuvres, function(oeuvre) {
-          return _c("oeuvre", { key: oeuvre.id, attrs: { oeuvre: oeuvre } })
+          return _c("oeuvre", {
+            key: oeuvre.id,
+            tag: "li",
+            attrs: {
+              oeuvre: oeuvre,
+              "statuts-disponibilite": _vm.statutsDisponibilite
+            }
+          })
         })
       )
     ])
@@ -56691,20 +56743,18 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "contenu-section" }, [
       _c("div", [
-        _vm._v(
-          "\n            " +
-            _vm._s(_vm.$trans("galeries.galeries.accroche")) +
-            "\n        "
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", [
         _c(
           "ul",
+          { staticClass: "galeries-galerie" },
           _vm._l(_vm.galeries, function(galerie) {
             return _c("galerie", {
               key: galerie.id,
-              attrs: { "galerie-id": galerie.id, "galerie-nom": galerie.nom }
+              tag: "li",
+              attrs: {
+                "galerie-id": galerie.id,
+                "galerie-nom": galerie.nom,
+                "statuts-disponibilite": _vm.statutsDisponibilite
+              }
             })
           })
         )
