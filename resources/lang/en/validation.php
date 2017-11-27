@@ -107,6 +107,9 @@ return [
         'oeuvre' => [
             'required_if' => "The :attribute field is required when :other is checked.",
         ],
+        'visuel' => [
+            'image64' => "The image field is invalid. Only files with either jpeg, jpg, or png are authorized."
+        ]
     ],
 
     /*

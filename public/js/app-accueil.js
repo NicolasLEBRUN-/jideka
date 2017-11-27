@@ -56399,7 +56399,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\ninput[data-v-b48349a8] {\n  padding: 5px 10px;\n  margin: 0;\n  border: none;\n  border-radius: 4px;\n  background: #FFFFFF;\n  margin-bottom: 15px;\n  height: 30px;\n  outline: none;\n}\n", ""]);
+exports.push([module.i, "\ninput[data-v-b48349a8] {\n  padding: 5px 10px;\n  margin: 0;\n  border: none;\n  border-radius: 4px;\n  background: #FFFFFF;\n  margin-bottom: 16px;\n  height: 30px;\n  width: 100%;\n  outline: none;\n}\n", ""]);
 
 // exports
 
@@ -56490,7 +56490,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\ntextarea[data-v-22d0aac8] {\n  padding: 5px 10px;\n  margin: 0;\n  border: none;\n  border-radius: 4px;\n  background: #FFFFFF;\n  resize: none;\n  margin-bottom: 15px;\n  height: 200px;\n  outline: none;\n}\n", ""]);
+exports.push([module.i, "\ntextarea[data-v-22d0aac8] {\n  padding: 5px 10px;\n  margin: 0;\n  border: none;\n  border-radius: 4px;\n  background: #FFFFFF;\n  resize: none;\n  margin-bottom: 15px;\n  height: 120px;\n  width: 100%;\n  outline: none;\n}\n", ""]);
 
 // exports
 
@@ -56579,7 +56579,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\nbutton[data-v-51353780] {\n  height: 50px;\n  padding: 12px 80px;\n  margin: 0;\n  text-align: middle;\n  border-radius: 25px;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  font-size: 16px;\n  border: none;\n  background: #EB7041;\n  color: #FFF;\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\nbutton[data-v-51353780] {\n  height: 50px;\n  padding: 12px 80px;\n  margin: 0;\n  text-align: middle;\n  border-radius: 25px;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  font-size: 16px;\n  border: none;\n  background: #EB7041;\n  color: #FFFFFF;\n  cursor: pointer;\n}\n", ""]);
 
 // exports
 
@@ -56870,7 +56870,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-menu-haut[data-v-331f447c] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n  z-index: 999;\n}\n.accueil-menu-haut .navigation[data-v-331f447c] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    overflow: hidden;\n    height: 100%;\n}\n.accueil-menu-haut .navigation li[data-v-331f447c] {\n      display: inline;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFF;\n}\n.accueil-menu-haut .navigation li.burger[data-v-331f447c] {\n        display: none;\n}\n.accueil-menu-haut .navigation li.flag img[data-v-331f447c] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-331f447c] {\n    float: none !important;\n    background: rgba(53, 53, 53, 0.5);\n}\n.navigation li a[data-v-331f447c] {\n      float: left;\n}\n.navigation li[data-v-331f447c]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-331f447c] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-331f447c] {\n      position: relative;\n}\n.navigation.responsive li[data-v-331f447c] {\n        float: none;\n        display: block;\n        text-align: left;\n}\n.navigation.responsive li a[data-v-331f447c] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-331f447c] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-331f447c] {\n    margin: 0 !important;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.accueil-menu-haut[data-v-331f447c] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n  z-index: 999;\n}\n.accueil-menu-haut .navigation[data-v-331f447c] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    height: 100%;\n}\n.accueil-menu-haut .navigation li[data-v-331f447c] {\n      display: inline;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.accueil-menu-haut .navigation li a[data-v-331f447c]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFFFFF;\n}\n.accueil-menu-haut .navigation li.burger[data-v-331f447c] {\n        display: none;\n}\n.accueil-menu-haut .navigation li.flag img[data-v-331f447c] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-331f447c] {\n    float: none !important;\n    background: rgba(53, 53, 53, 0.5);\n}\n.navigation li a[data-v-331f447c] {\n      float: left;\n}\n.navigation li[data-v-331f447c]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-331f447c] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-331f447c] {\n      position: relative;\n}\n.navigation.responsive li[data-v-331f447c] {\n        float: none;\n        display: block;\n        text-align: left;\n        background: #353535;\n}\n.navigation.responsive li a[data-v-331f447c] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-331f447c] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-331f447c] {\n    margin: 0 !important;\n}\n}\n", ""]);
 
 // exports
 
@@ -57479,7 +57479,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-galeries[data-v-1b505c1d] {\n  padding-top: 50px;\n  align-items: center;\n}\n.accueil-galeries .entete[data-v-1b505c1d] {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.accueil-galeries .entete h1[data-v-1b505c1d], .accueil-galeries .entete p[data-v-1b505c1d] {\n      text-align: center;\n      padding: 0 100px;\n}\n.accueil-galeries .entete a[data-v-1b505c1d] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      transition: all .3s ease;\n}\n.accueil-galeries .entete a[data-v-1b505c1d]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.accueil-galeries[data-v-1b505c1d] {\n  padding-top: 50px;\n  align-items: center;\n}\n.accueil-galeries .accroche[data-v-1b505c1d] {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.accueil-galeries .accroche h1[data-v-1b505c1d], .accueil-galeries .accroche p[data-v-1b505c1d] {\n      text-align: center;\n      padding: 0 64px;\n}\n.accueil-galeries .accroche a[data-v-1b505c1d] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFFFFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      transition: all .3s ease;\n}\n.accueil-galeries .accroche a[data-v-1b505c1d]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
 
 // exports
 
@@ -57492,7 +57492,6 @@ exports.push([module.i, "/* Variables */\n.accueil-galeries[data-v-1b505c1d] {\n
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__galerie_polaroid_GaleriePolaroid_vue__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__galerie_polaroid_GaleriePolaroid_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__galerie_polaroid_GaleriePolaroid_vue__);
-//
 //
 //
 //
@@ -57871,15 +57870,11 @@ var render = function() {
     "div",
     { staticClass: "accueil-galeries", attrs: { id: "accueil-galeries" } },
     [
-      _c("div", { staticClass: "entete" }, [
+      _c("div", { staticClass: "accroche" }, [
         _c("h1", [
           _vm._v(
             " " + _vm._s(_vm.$trans("accueil.galeries.titre-section")) + " "
           )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(" " + _vm._s(_vm.$trans("accueil.galeries.accroche")) + " ")
         ]),
         _vm._v(" "),
         _c("a", { attrs: { href: "/web-galeries" } }, [
@@ -57986,7 +57981,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-expositions[data-v-7d0f01fc] {\n  padding-top: 50px;\n  align-items: center;\n}\n.accueil-expositions .entete[data-v-7d0f01fc] {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.accueil-expositions .entete h1[data-v-7d0f01fc], .accueil-expositions .entete p[data-v-7d0f01fc] {\n      text-align: center;\n      padding: 0 100px;\n}\n.accueil-expositions .entete a[data-v-7d0f01fc] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      transition: all .3s ease;\n}\n.accueil-expositions .entete a[data-v-7d0f01fc]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.accueil-expositions[data-v-7d0f01fc] {\n  padding-top: 50px;\n  align-items: center;\n}\n.accueil-expositions .accroche[data-v-7d0f01fc] {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.accueil-expositions .accroche h1[data-v-7d0f01fc], .accueil-expositions .accroche p[data-v-7d0f01fc] {\n      text-align: center;\n      padding: 0 64px;\n}\n.accueil-expositions .accroche a[data-v-7d0f01fc] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFFFFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      transition: all .3s ease;\n}\n.accueil-expositions .accroche a[data-v-7d0f01fc]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
 
 // exports
 
@@ -57999,7 +57994,6 @@ exports.push([module.i, "/* Variables */\n.accueil-expositions[data-v-7d0f01fc] 
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exposition_timeline_ExpositionTimeline_vue__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exposition_timeline_ExpositionTimeline_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__exposition_timeline_ExpositionTimeline_vue__);
-//
 //
 //
 //
@@ -58043,21 +58037,17 @@ var render = function() {
       attrs: { id: "accueil-expositions" }
     },
     [
-      _c("div", { staticClass: "entete" }, [
+      _c("div", { staticClass: "accroche" }, [
         _c("h1", [
           _vm._v(
             " " + _vm._s(_vm.$trans("accueil.expositions.titre-section")) + " "
           )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(" " + _vm._s(_vm.$trans("accueil.expositions.accroche")) + " ")
         ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "contenu" }, [_c("exposition-timeline")], 1),
       _vm._v(" "),
-      _c("div", { staticClass: "entete" }, [
+      _c("div", { staticClass: "accroche" }, [
         _c("a", { attrs: { href: "/web-expositions" } }, [
           _vm._v(_vm._s(_vm.$trans("accueil.expositions.lien")))
         ])
@@ -58201,7 +58191,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-contact[data-v-cb9981ea] {\n  background: #3F3F3F;\n  padding-top: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.accueil-contact .contenu-section[data-v-cb9981ea] {\n    padding: 0 100px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.accueil-contact .contenu-section p[data-v-cb9981ea] {\n      text-align: center;\n}\n.accueil-contact .contenu-section hr[data-v-cb9981ea] {\n      width: 100%;\n      border-color: rgba(255, 255, 255, 0.5);\n      margin: 30px 0px;\n}\n.accueil-contact .contenu-section .num[data-v-cb9981ea] {\n      margin: 0;\n      font-weight: bold;\n      font-size: 1.8em;\n}\n.accueil-contact .contenu-section .mail[data-v-cb9981ea] {\n      margin: 0;\n      margin-top: 10px;\n      color: #EB7041;\n      font-size: 1.5em;\n      letter-spacing: 3px;\n}\n.accueil-contact .contenu-section form[data-v-cb9981ea] {\n      display: flex;\n      flex-direction: column;\n      min-width: 320px;\n      width: 60%;\n}\n.accueil-contact .contenu-section form .prereservation-checkbox[data-v-cb9981ea] {\n        margin-bottom: 15px;\n}\n.accueil-contact .contenu-section form .oeuvre-picker[data-v-cb9981ea] {\n        margin-bottom: 15px;\n}\n.accueil-contact .contenu-section form .g-recaptcha[data-v-cb9981ea] {\n        display: flex;\n        justify-content: center;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea] {\n        align-self: center;\n        width: 60%;\n        margin-top: 40px;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea]:hover {\n          background: #e95f2a;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea]:active {\n          background: #e14f18;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.accueil-contact[data-v-cb9981ea] {\n  background: #3F3F3F;\n  padding-top: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.accueil-contact .contenu-section[data-v-cb9981ea] {\n    padding: 0 100px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.accueil-contact .contenu-section p[data-v-cb9981ea] {\n      text-align: center;\n}\n.accueil-contact .contenu-section hr[data-v-cb9981ea] {\n      width: 100%;\n      border-color: rgba(255, 255, 255, 0.5);\n      margin: 30px 0px;\n}\n.accueil-contact .contenu-section .num[data-v-cb9981ea] {\n      margin: 0;\n      font-weight: bold;\n      font-size: 1.8em;\n}\n.accueil-contact .contenu-section .mail[data-v-cb9981ea] {\n      margin: 0;\n      margin-top: 10px;\n      color: #EB7041;\n      font-size: 1.5em;\n      letter-spacing: 3px;\n}\n.accueil-contact .contenu-section form[data-v-cb9981ea] {\n      display: flex;\n      flex-direction: column;\n      min-width: 320px;\n      width: 60%;\n}\n.accueil-contact .contenu-section form .prereservation-checkbox[data-v-cb9981ea] {\n        margin-bottom: 15px;\n}\n.accueil-contact .contenu-section form .multiselect[data-v-cb9981ea] {\n        margin-bottom: 15px;\n}\n.accueil-contact .contenu-section form .g-recaptcha[data-v-cb9981ea] {\n        display: flex;\n        justify-content: center;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea] {\n        align-self: center;\n        width: 60%;\n        margin-top: 40px;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea]:hover {\n          background: #e95f2a;\n}\n.accueil-contact .contenu-section form .send-button[data-v-cb9981ea]:active {\n          background: #e14f18;\n}\n", ""]);
 
 // exports
 
@@ -58220,10 +58210,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_FormButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__common_FormButton_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_multiselect__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_multiselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vue_multiselect__);
-//
-//
-//
-//
 //
 //
 //
@@ -58321,7 +58307,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         axios.get('/api/galeries').then(function (response) {
             self.galeries = response.data;
         }).catch(function (error) {
-            console.log('Erreur axios : ' + error);
+            console.log('Erreur axios (Contact.vue) : ' + error);
         });
         // Récupération des toutes les oeuvres
         axios.get('/api/oeuvres').then(function (response) {
@@ -58333,7 +58319,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 oeuvre.galerie_nom = galerie.nom;
             });
         }).catch(function (error) {
-            console.log('Erreur axios : ' + error);
+            console.log('Erreur axios (Contact.vue) : ' + error);
         });
     },
     mounted: function mounted() {
@@ -58346,7 +58332,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 annee = _ref.annee,
                 galerie_nom = _ref.galerie_nom;
 
-            return nom + ' (' + annee + '), galerie "' + galerie_nom + '"';
+            return nom + ' (' + annee + '), galerie \xAB ' + galerie_nom + ' \xBB';
         },
         sendMessage: function sendMessage(event) {
             this.errors = [];
@@ -58406,14 +58392,6 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "contenu-section" }, [
-        _c("p", [
-          _vm._v(
-            "\n            " +
-              _vm._s(_vm.$trans("accueil.contact.accroche")) +
-              "\n        "
-          )
-        ]),
-        _vm._v(" "),
         _c("hr"),
         _vm._v(" "),
         _c("p", { staticClass: "num" }, [
@@ -58531,10 +58509,11 @@ var render = function() {
             _vm._v(" "),
             _vm.prereservation
               ? _c("multiselect", {
-                  staticClass: "oeuvre-picker",
                   attrs: {
                     name: "oeuvre",
-                    placeholder: "Sélectionner une oeuvre",
+                    placeholder: _vm.$trans(
+                      "accueil.contact.form.prereservation-select"
+                    ),
                     label: "nom",
                     "track-by": "nom",
                     options: _vm.oeuvres,
@@ -58603,7 +58582,7 @@ var render = function() {
               staticClass: "g-recaptcha",
               attrs: {
                 "data-sitekey": _vm.googleRecaptchaDataSitekey,
-                "data-theme": "dark"
+                "data-theme": "light"
               }
             }),
             _vm._v(" "),
@@ -58740,7 +58719,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\nfooter[data-v-48fcd400] {\n  padding: 100px 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: #3F3F3F;\n  color: rgba(255, 255, 255, 0.5);\n  font-size: .8em;\n  letter-spacing: 3px;\n}\nfooter img[data-v-48fcd400] {\n    width: 178px;\n    height: 120px;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\nfooter[data-v-48fcd400] {\n  padding: 64px 64px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: #3F3F3F;\n  color: rgba(255, 255, 255, 0.5);\n  font-size: .8em;\n  letter-spacing: 3px;\n}\nfooter img[data-v-48fcd400] {\n    width: 178px;\n    height: 120px;\n}\n", ""]);
 
 // exports
 
@@ -58788,7 +58767,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "© 2017 JOCELYNE DESCHAMPS-KUS  -  DESIGNED BY TIMOTHÉ CRESPY & NICOLAS LEBRUN"
+          "© 2017 JOCELYNE DESCHAMPS-KUS - DESIGNED BY TIMOTHÉ CRESPY & NICOLAS LEBRUN"
         )
       ])
     ])

@@ -21,9 +21,9 @@
 
 <style lang="scss" scoped>
     label {
-        padding: 5px 10px;
+        display: block;
+        padding: 4px 0px;
         margin: 0;
-        border: 1px solid #FFFFFF;
-        border-radius: 4px;
+        color: #CCCCCC;
     }
 </style>

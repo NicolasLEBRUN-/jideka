@@ -1,8 +1,7 @@
 <template>
     <div id="accueil-galeries" class="accueil-galeries">
-        <div class="entete">
+        <div class="accroche">
             <h1> {{ $trans('accueil.galeries.titre-section') }} </h1>
-            <p> {{ $trans('accueil.galeries.accroche') }} </p>
             <a href="/web-galeries">{{ $trans('accueil.galeries.lien') }}</a>
         </div>
         <div class="contenu">
@@ -35,14 +34,14 @@
         padding-top: 50px;
         align-items: center;
 
-        .entete {
+        .accroche {
             display: flex;
             flex-direction: column;
             align-items: center;
 
             h1, p {
                 text-align: center;
-                padding: 0 100px;
+                padding: 0 $side-padding;
             }
     
             a {

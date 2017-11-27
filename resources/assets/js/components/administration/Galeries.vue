@@ -6,10 +6,8 @@
             </h1>
         </div>
         <div class="contenu-section">
-            <ul>
-                <administration-galeries-creation></administration-galeries-creation>
-                <administration-galeries-suppression></administration-galeries-suppression>
-            </ul>
+            <administration-galeries-creation></administration-galeries-creation>
+            <administration-galeries-suppression></administration-galeries-suppression>
         </div>
     </div>
 </template>
@@ -41,6 +39,11 @@
 
     /* Variables */
     @import "../../../sass/variables";
+
+    #administration-galeries {
+        margin-top: $menu-haut-height;
+        padding: 0 $side-padding;
+    }
 
 </style>
     

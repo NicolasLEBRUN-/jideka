@@ -1,7 +1,7 @@
 <template>
     <div id="administration-expositions-suppression" class="administration-expositions-suppression container">
         <div class="titre-section">
-            Suppression
+            <h2>Suppression</h2>
         </div>
         <div class="contenu-section">
             <div class="instructions">
@@ -13,7 +13,6 @@
                 <form action="" method="" enctype="multipart/form-data">
                     <div class="form-group">
                         <form-label for="nom">Nom de l'exposition</form-label>
-                        <br />
                         <multiselect v-model="exposition" :options="expositions" :custom-label="customLabelForExposition" placeholder="Sélectionner une exposition" label="nom" track-by="nom" :show-labels="false"></multiselect>
                         <!-- <select name="nom" v-model="exposition">
                             <option v-for="exposition in expositions" :value="exposition.id">{{ exposition.nom }}</option>
@@ -105,5 +104,31 @@
     /* Variables */
     @import "../../../sass/variables";
 
+    .contenu-section {
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: space-around;
+    }
+
+    .instructions {
+        flex: 1 1 0;
+        margin-bottom: 16px;
+        margin-right: 16px;
+    }
+
+    .edition {
+        flex: 1 1 0;
+    }
+
+    .multiselect {
+        margin-bottom: 15px;
+    }
+
+    @media all and (max-width: 600px) {
+        .contenu-section {
+            flex-flow: column wrap;
+        }
+    }
+    
 </style>
     

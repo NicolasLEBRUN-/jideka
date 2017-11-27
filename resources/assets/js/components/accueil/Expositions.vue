@@ -1,13 +1,12 @@
 <template>
     <div id="accueil-expositions" class="accueil-expositions">
-        <div class="entete">
+        <div class="accroche">
             <h1> {{ $trans('accueil.expositions.titre-section') }} </h1>
-            <p> {{ $trans('accueil.expositions.accroche') }} </p>
         </div>
         <div class="contenu">
             <exposition-timeline/>
         </div>
-        <div class="entete">
+        <div class="accroche">
             <a href="/web-expositions">{{ $trans('accueil.expositions.lien') }}</a>
         </div>
     </div>
@@ -37,14 +36,14 @@
         padding-top: 50px;
         align-items: center;
 
-        .entete {
+        .accroche {
             display: flex;
             flex-direction: column;
             align-items: center;
 
             h1, p {
                 text-align: center;
-                padding: 0 100px;
+                padding: 0 $side-padding;
             }
     
             a {

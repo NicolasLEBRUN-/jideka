@@ -3698,7 +3698,7 @@
 }
 
 .flag-icon-fr {
-  background-image: url(/fonts/vendor/flag-icon-css/flags/4x3/fr.svg?24841de9d5ad4cebb1be5c4dc19fc89f);
+  background-image: url(/fonts/vendor/flag-icon-css/flags/4x3/fr.svg?ea43c7d63cf135b0fa1a8e50f379accf);
 }
 
 .flag-icon-fr.flag-icon-squared {
@@ -3714,7 +3714,7 @@
 }
 
 .flag-icon-gb {
-  background-image: url(/fonts/vendor/flag-icon-css/flags/4x3/gb.svg?fd72d9b5184b47afb2f7b4db0c8a35de);
+  background-image: url(/fonts/vendor/flag-icon-css/flags/4x3/gb.svg?110bb7a2d2d8f2fbec61913f9d942cbd);
 }
 
 .flag-icon-gb.flag-icon-squared {
@@ -6891,9 +6891,7 @@ figure.photostack-current::after {
   transform: scale(0.61);
 }
 
-body,
-h1,
-h2 {
+body {
   margin: 0;
   font-family: "open_sans";
   font-weight: lighter;
@@ -6914,8 +6912,10 @@ h2 {
   color: #FFFFFF;
 }
 
-h1 {
+h1,
+h2 {
   color: #FB6C3F;
+  font-weight: lighter;
 }
 
 button:focus {

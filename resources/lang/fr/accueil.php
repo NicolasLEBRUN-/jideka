@@ -33,27 +33,28 @@ return [
     /* Galeries */
     'galeries' => [
         'titre-section' => 'Galeries',
-        'accroche'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum.',
+        'accroche'      => '',
         'lien'          => 'Découvrir l\'ensemble des oeuvres',
     ],
 
     /* Expositions */
     'expositions' => [
         'titre-section' => 'Expositions',
-        'accroche'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum.',
+        'accroche'      => '',
         'lien'          => 'Découvrir l\'ensemble des expositions',
     ],
 
     /* Contact */
     'contact' => [
         'titre-section' => 'Contact',
-        'accroche'      => ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum.',
-        'numerotelphone'    => '+33 6 00 00 00',
+        'accroche'      => '',
+        'numerotelphone'    => '06 24 36 27 02',
         'adressecourriel'   => 'jideka21@free.fr',
         'form' => [
             'nom'       => 'Nom',
             'email'     => 'Adresse mail',
-            'prereservation'     => 'Je souhaite pré-réserver une oeuvre',
+            'prereservation'        => 'Je souhaite pré-réserver une oeuvre',
+            'prereservation-select' => 'Sélectionner une oeuvre',
             'galerie'   => 'Nom de la galerie',
             'oeuvre'    => 'Nom de l\'oeuvre',
             'message'   => 'Message',

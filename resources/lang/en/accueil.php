@@ -33,27 +33,28 @@ return [
     /* Galeries */
     'galeries' => [
         'titre-section' => 'Galleries',
-        'accroche'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum.',
+        'accroche'      => '',
         'lien'          => 'Discover all the paintings',
     ],
 
     /* Expositions */
     'expositions' => [
         'titre-section' => 'Exhibitions',
-        'accroche'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum.',
+        'accroche'      => '',
         'lien'          => 'Discover all the exhibitions',
     ],
 
     /* Contact */
     'contact' => [
         'titre-section' => 'Contact',
-        'accroche'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum.',
-        'numerotelphone'    => '+33 6 00 00 00',
+        'accroche'      => '',
+        'numerotelphone'    => '+33 6 24 36 27 02',
         'adressecourriel'   => 'jideka21@free.fr',
         'form' => [
             'nom'       => 'Name',
             'email'     => 'Email adress',
-            'prereservation'     => 'I would like to pre-reserve a painting',
+            'prereservation'        => 'I would like to pre-reserve a painting',
+            'prereservation-select' => 'Select a painting',
             'galerie'   => 'Gallery name',
             'oeuvre'    => 'Painting name',
             'message'   => 'Message',

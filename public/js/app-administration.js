@@ -55996,7 +55996,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\ninput[data-v-b48349a8] {\n  padding: 5px 10px;\n  margin: 0;\n  border: none;\n  border-radius: 4px;\n  background: #FFFFFF;\n  margin-bottom: 15px;\n  height: 30px;\n  outline: none;\n}\n", ""]);
+exports.push([module.i, "\ninput[data-v-b48349a8] {\n  padding: 5px 10px;\n  margin: 0;\n  border: none;\n  border-radius: 4px;\n  background: #FFFFFF;\n  margin-bottom: 16px;\n  height: 30px;\n  width: 100%;\n  outline: none;\n}\n", ""]);
 
 // exports
 
@@ -56087,7 +56087,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\ntextarea[data-v-22d0aac8] {\n  padding: 5px 10px;\n  margin: 0;\n  border: none;\n  border-radius: 4px;\n  background: #FFFFFF;\n  resize: none;\n  margin-bottom: 15px;\n  height: 200px;\n  outline: none;\n}\n", ""]);
+exports.push([module.i, "\ntextarea[data-v-22d0aac8] {\n  padding: 5px 10px;\n  margin: 0;\n  border: none;\n  border-radius: 4px;\n  background: #FFFFFF;\n  resize: none;\n  margin-bottom: 15px;\n  height: 120px;\n  width: 100%;\n  outline: none;\n}\n", ""]);
 
 // exports
 
@@ -56176,7 +56176,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\nbutton[data-v-51353780] {\n  height: 50px;\n  padding: 12px 80px;\n  margin: 0;\n  text-align: middle;\n  border-radius: 25px;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  font-size: 16px;\n  border: none;\n  background: #EB7041;\n  color: #FFF;\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\nbutton[data-v-51353780] {\n  height: 50px;\n  padding: 12px 80px;\n  margin: 0;\n  text-align: middle;\n  border-radius: 25px;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  font-size: 16px;\n  border: none;\n  background: #EB7041;\n  color: #FFFFFF;\n  cursor: pointer;\n}\n", ""]);
 
 // exports
 
@@ -57012,7 +57012,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.administration-menu-haut[data-v-2fa22624] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n}\n.administration-menu-haut .navigation[data-v-2fa22624] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    overflow: hidden;\n    height: 100%;\n}\n.administration-menu-haut .navigation li[data-v-2fa22624] {\n      display: inline;\n}\n.administration-menu-haut .navigation li a[data-v-2fa22624] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.administration-menu-haut .navigation li a[data-v-2fa22624]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFF;\n}\n.administration-menu-haut .navigation li.burger[data-v-2fa22624] {\n        display: none;\n}\n.administration-menu-haut .navigation li.flag img[data-v-2fa22624] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-2fa22624] {\n    float: none !important;\n    background: #353535;\n}\n.navigation li a[data-v-2fa22624] {\n      float: left;\n}\n.navigation li[data-v-2fa22624]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-2fa22624] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-2fa22624] {\n      position: relative;\n}\n.navigation.responsive li[data-v-2fa22624] {\n        float: none;\n        display: block;\n        text-align: left;\n}\n.navigation.responsive li a[data-v-2fa22624] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-2fa22624] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-2fa22624] {\n    margin: 0 !important;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.administration-menu-haut[data-v-2fa22624] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n}\n.administration-menu-haut .navigation[data-v-2fa22624] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    height: 100%;\n}\n.administration-menu-haut .navigation li[data-v-2fa22624] {\n      display: inline;\n}\n.administration-menu-haut .navigation li a[data-v-2fa22624] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        transition: all .3s ease;\n        height: 100%;\n}\n.administration-menu-haut .navigation li a[data-v-2fa22624]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFFFFF;\n}\n.administration-menu-haut .navigation li.burger[data-v-2fa22624] {\n        display: none;\n}\n.administration-menu-haut .navigation li.flag img[data-v-2fa22624] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-2fa22624] {\n    float: none !important;\n    background: #353535;\n}\n.navigation li a[data-v-2fa22624] {\n      float: left;\n}\n.navigation li[data-v-2fa22624]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-2fa22624] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-2fa22624] {\n      position: relative;\n}\n.navigation.responsive li[data-v-2fa22624] {\n        float: none;\n        display: block;\n        text-align: left;\n        background: #353535;\n}\n.navigation.responsive li a[data-v-2fa22624] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-2fa22624] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-2fa22624] {\n    margin: 0 !important;\n}\n}\n", ""]);
 
 // exports
 
@@ -57303,7 +57303,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n#administration-biographie[data-v-76560539] {\n  margin-top: 60px;\n}\n.contenu-section[data-v-76560539] {\n  display: flex;\n  background: #3F3F3F;\n  flex-direction: row wrap;\n  justify-content: space-around;\n  padding: 12px;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n#administration-biographie[data-v-76560539] {\n  margin-top: 60px;\n  padding: 0 64px;\n}\n.contenu-section[data-v-76560539] {\n  display: flex;\n  flex-direction: row wrap;\n  justify-content: space-between;\n}\n.instructions[data-v-76560539] {\n  flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-76560539] {\n  flex: 1 1 0;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-76560539] {\n    flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -57322,8 +57322,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_FormTextarea_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__common_FormTextarea_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue__);
-//
-//
 //
 //
 //
@@ -57461,7 +57459,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\nlabel[data-v-1bc6dd56] {\n  padding: 5px 10px;\n  margin: 0;\n  border: 1px solid #FFFFFF;\n  border-radius: 4px;\n}\n", ""]);
+exports.push([module.i, "\nlabel[data-v-1bc6dd56] {\n  display: block;\n  padding: 4px 0px;\n  margin: 0;\n  color: #CCCCCC;\n}\n", ""]);
 
 // exports
 
@@ -57541,16 +57539,12 @@ var render = function() {
                     _vm._v("Biographie française")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("form-textarea", {
                     staticClass: "form-control",
                     attrs: {
                       name: "biographieCorpsFr",
                       value: "biographieCorpsFr",
-                      placeholder: "Biographie française",
-                      rows: "12",
-                      cols: "100"
+                      placeholder: "Biographie française"
                     },
                     model: {
                       value: _vm.biographieCorpsFr,
@@ -57572,16 +57566,12 @@ var render = function() {
                     _vm._v("Biographie anglaise")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("form-textarea", {
                     staticClass: "form-control",
                     attrs: {
                       name: "biographieCorpsEn",
                       value: "biographieCorpsEn",
-                      placeholder: "Biographie anglaise",
-                      rows: "12",
-                      cols: "100"
+                      placeholder: "Biographie anglaise"
                     },
                     model: {
                       value: _vm.biographieCorpsEn,
@@ -57665,10 +57655,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "instructions" }, [
-      _vm._v("\n            Modifiez ici votre biographie.\n            "),
+      _vm._v(
+        "\n            Modifiez ici vos biographie dans les différentes langues.\n            "
+      ),
       _c("br"),
       _vm._v(
-        "\n            Information : La biographie modifiée sera immédiatement visible sur le site.\n        "
+        "\n            Information : Une biographie modifiée sera immédiatement visible sur le site.\n        "
       )
     ])
   }
@@ -57767,7 +57759,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n#administration-galeries[data-v-5f3ff6e2] {\n  margin-top: 60px;\n  padding: 0 64px;\n}\n", ""]);
 
 // exports
 
@@ -57782,8 +57774,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__administration_GaleriesCreation_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__administration_GaleriesCreation_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__administration_GaleriesSuppression_vue__ = __webpack_require__(304);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__administration_GaleriesSuppression_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__administration_GaleriesSuppression_vue__);
-//
-//
 //
 //
 //
@@ -57904,7 +57894,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n.contenu-section[data-v-d69b4de4] {\n  display: flex;\n  flex-direction: row wrap;\n  justify-content: space-around;\n}\n.instructions[data-v-d69b4de4] {\n  flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-d69b4de4] {\n  flex: 1 1 0;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-d69b4de4] {\n    flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -57975,10 +57965,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -57995,7 +57981,7 @@ var Today = new Date();
             galeries: [],
             nom: '',
             description: '',
-            visuel: '',
+            visuel: '/img/apercu.png',
             errors: [],
             success: ''
         };
@@ -58065,12 +58051,10 @@ var render = function() {
       attrs: { id: "administration-galeries-creation" }
     },
     [
-      _c("div", { staticClass: "titre-section" }, [
-        _vm._v("\n        Création\n    ")
-      ]),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "contenu-section" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c("div", { staticClass: "edition" }, [
           _c(
@@ -58086,8 +58070,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "nom" } }, [
                     _vm._v("Nom de la galerie")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
@@ -58111,8 +58093,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "description" } }, [
                     _vm._v("Description de la galerie")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-textarea", {
                     staticClass: "form-control",
@@ -58141,8 +58121,6 @@ var render = function() {
                     _vm._v("Visuel de la galerie")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
                     attrs: {
@@ -58153,10 +58131,11 @@ var render = function() {
                     on: { change: _vm.processFile }
                   }),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("img", {
-                    staticStyle: { "max-height": "80px" },
+                    staticStyle: {
+                      "max-height": "80px",
+                      "margin-bottom": "16px"
+                    },
                     attrs: { src: _vm.visuel, alt: "Visuel" }
                   })
                 ],
@@ -58204,6 +58183,14 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "titre-section" }, [
+      _c("h2", [_vm._v("Création")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -58352,7 +58339,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n.contenu-section[data-v-770fafd4] {\n  display: flex;\n  flex-direction: row wrap;\n  justify-content: space-around;\n}\n.instructions[data-v-770fafd4] {\n  flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-770fafd4] {\n  flex: 1 1 0;\n}\n.multiselect[data-v-770fafd4] {\n  margin-bottom: 15px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-770fafd4] {\n    flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -58373,7 +58360,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_multiselect__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_multiselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vue_multiselect__);
-//
 //
 //
 //
@@ -58490,12 +58476,10 @@ var render = function() {
       attrs: { id: "administration-galeries-suppression" }
     },
     [
-      _c("div", { staticClass: "titre-section" }, [
-        _vm._v("\n        Suppression\n    ")
-      ]),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "contenu-section" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c("div", { staticClass: "edition" }, [
           _c(
@@ -58511,8 +58495,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "nom" } }, [
                     _vm._v("Nom de la galerie")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("multiselect", {
                     attrs: {
@@ -58580,6 +58562,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "titre-section" }, [
+      _c("h2", [_vm._v("Suppression")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "instructions" }, [
       _vm._v("\n            Supprimez ici une ou des galeries.\n            "),
       _c("br"),
@@ -58615,17 +58605,16 @@ var render = function() {
     [
       _vm._m(0),
       _vm._v(" "),
-      _c("div", { staticClass: "contenu-section" }, [
-        _c(
-          "ul",
-          [
-            _c("administration-galeries-creation"),
-            _vm._v(" "),
-            _c("administration-galeries-suppression")
-          ],
-          1
-        )
-      ])
+      _c(
+        "div",
+        { staticClass: "contenu-section" },
+        [
+          _c("administration-galeries-creation"),
+          _vm._v(" "),
+          _c("administration-galeries-suppression")
+        ],
+        1
+      )
     ]
   )
 }
@@ -58733,7 +58722,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n#administration-oeuvres[data-v-1954a202] {\n  margin-top: 60px;\n  padding: 0 64px;\n}\n", ""]);
 
 // exports
 
@@ -58748,8 +58737,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__administration_OeuvresCreation_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__administration_OeuvresCreation_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__administration_OeuvresSuppression_vue__ = __webpack_require__(321);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__administration_OeuvresSuppression_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__administration_OeuvresSuppression_vue__);
-//
-//
 //
 //
 //
@@ -58875,7 +58862,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n.contenu-section[data-v-3c77d381] {\n  display: flex;\n  flex-direction: row wrap;\n  justify-content: space-around;\n}\n.instructions[data-v-3c77d381] {\n  flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-3c77d381] {\n  flex: 1 1 0;\n}\n.multiselect[data-v-3c77d381] {\n  margin-bottom: 15px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-3c77d381] {\n    flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -58896,6 +58883,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_multiselect__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_multiselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vue_multiselect__);
+//
 //
 //
 //
@@ -59017,7 +59005,7 @@ var Today = new Date();
             prix: '',
             statutdisponibilite: '',
             galerie: '',
-            visuel: '',
+            visuel: '/img/apercu.png',
             errors: [],
             success: ''
         };
@@ -59112,12 +59100,10 @@ var render = function() {
       attrs: { id: "administration-oeuvres-creation" }
     },
     [
-      _c("div", { staticClass: "titre-section" }, [
-        _vm._v("\n        Création\n    ")
-      ]),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "contenu-section" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c("div", { staticClass: "edition" }, [
           _c(
@@ -59133,8 +59119,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "nom" } }, [
                     _vm._v("Nom de l'oeuvre")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
@@ -59159,8 +59143,6 @@ var render = function() {
                     _vm._v("Description de l'oeuvre")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("form-textarea", {
                     staticClass: "form-control",
                     attrs: { name: "description", placeholder: "Description" },
@@ -59183,8 +59165,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "technique" } }, [
                     _vm._v("Technique de l'oeuvre")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
@@ -59213,8 +59193,6 @@ var render = function() {
                     _vm._v("Année de l'oeuvre")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
                     attrs: {
@@ -59239,10 +59217,8 @@ var render = function() {
                 { staticClass: "form-group" },
                 [
                   _c("form-label", { attrs: { for: "hauteur" } }, [
-                    _vm._v("Hauteur de l'oeuvre")
+                    _vm._v("Hauteur de l'oeuvre (en centimètres)")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
@@ -59258,8 +59234,7 @@ var render = function() {
                       },
                       expression: "hauteur"
                     }
-                  }),
-                  _vm._v(" cm\n                ")
+                  })
                 ],
                 1
               ),
@@ -59269,10 +59244,8 @@ var render = function() {
                 { staticClass: "form-group" },
                 [
                   _c("form-label", { attrs: { for: "largeur" } }, [
-                    _vm._v("Largeur de l'oeuvre")
+                    _vm._v("Largeur de l'oeuvre (en centimètres)")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
@@ -59288,8 +59261,7 @@ var render = function() {
                       },
                       expression: "largeur"
                     }
-                  }),
-                  _vm._v(" cm\n                ")
+                  })
                 ],
                 1
               ),
@@ -59299,10 +59271,8 @@ var render = function() {
                 { staticClass: "form-group" },
                 [
                   _c("form-label", { attrs: { for: "profondeur" } }, [
-                    _vm._v("Profondeur de l'oeuvre")
+                    _vm._v("Profondeur de l'oeuvre (en centimètres)")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
@@ -59318,8 +59288,7 @@ var render = function() {
                       },
                       expression: "profondeur"
                     }
-                  }),
-                  _vm._v(" cm\n                ")
+                  })
                 ],
                 1
               ),
@@ -59329,10 +59298,8 @@ var render = function() {
                 { staticClass: "form-group" },
                 [
                   _c("form-label", { attrs: { for: "prix" } }, [
-                    _vm._v("Prix de l'oeuvre")
+                    _vm._v("Prix de l'oeuvre (en euros)")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
@@ -59344,8 +59311,7 @@ var render = function() {
                       },
                       expression: "prix"
                     }
-                  }),
-                  _vm._v(" €\n                ")
+                  })
                 ],
                 1
               ),
@@ -59358,15 +59324,14 @@ var render = function() {
                     _vm._v("Disponibilité de l'oeuvre")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("multiselect", {
                     attrs: {
                       options: _vm.statutsdisponibilite,
                       "custom-label": _vm.customLabelForStatutDisponibilite,
                       placeholder: "Sélectionner une disponibilité",
                       label: "libelle",
-                      "track-by": "libelle"
+                      "track-by": "libelle",
+                      "show-labels": false
                     },
                     model: {
                       value: _vm.statutdisponibilite,
@@ -59387,8 +59352,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "nom" } }, [
                     _vm._v("Nom de la galerie à laquelle l'oeuvre appartient")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("multiselect", {
                     attrs: {
@@ -59418,19 +59381,18 @@ var render = function() {
                     _vm._v("Image de l'oeuvre")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
                     attrs: { type: "file", name: "visuel" },
                     on: { change: _vm.processFile }
                   }),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("img", {
-                    staticStyle: { "max-height": "60px" },
-                    attrs: { src: _vm.visuel, alt: "Image" }
+                    staticStyle: {
+                      "max-height": "80px",
+                      "margin-bottom": "16px"
+                    },
+                    attrs: { src: _vm.visuel, alt: "Visuel" }
                   })
                 ],
                 1
@@ -59478,6 +59440,14 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "titre-section" }, [
+      _c("h2", [_vm._v("Création")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -59585,7 +59555,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n.contenu-section[data-v-34d43c81] {\n  display: flex;\n  flex-direction: row wrap;\n  justify-content: space-around;\n}\n.instructions[data-v-34d43c81] {\n  flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-34d43c81] {\n  flex: 1 1 0;\n}\n.multiselect[data-v-34d43c81] {\n  margin-bottom: 15px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-34d43c81] {\n    flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -59606,7 +59576,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_multiselect__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_multiselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vue_multiselect__);
-//
 //
 //
 //
@@ -59756,12 +59725,10 @@ var render = function() {
       attrs: { id: "administration-oeuvres-suppression" }
     },
     [
-      _c("div", { staticClass: "titre-section" }, [
-        _vm._v("\n        Suppression\n    ")
-      ]),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "contenu-section" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c("div", { staticClass: "edition" }, [
           _c(
@@ -59777,8 +59744,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "nom" } }, [
                     _vm._v("Nom de l'oeuvre")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("multiselect", {
                     attrs: {
@@ -59898,6 +59863,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "titre-section" }, [
+      _c("h2", [_vm._v("Suppression")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "instructions" }, [
       _vm._v("\n            Supprimez ici une ou des oeuvres.\n            "),
       _c("br"),
@@ -59933,17 +59906,16 @@ var render = function() {
     [
       _vm._m(0),
       _vm._v(" "),
-      _c("div", { staticClass: "contenu-section" }, [
-        _c(
-          "ul",
-          [
-            _c("administration-oeuvres-creation"),
-            _vm._v(" "),
-            _c("administration-oeuvres-suppression")
-          ],
-          1
-        )
-      ])
+      _c(
+        "div",
+        { staticClass: "contenu-section" },
+        [
+          _c("administration-oeuvres-creation"),
+          _vm._v(" "),
+          _c("administration-oeuvres-suppression")
+        ],
+        1
+      )
     ]
   )
 }
@@ -60051,7 +60023,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n#administration-expositions[data-v-0a9ba950] {\n  margin-top: 60px;\n  padding: 0 64px;\n}\n", ""]);
 
 // exports
 
@@ -60066,8 +60038,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__administration_ExpositionsCreation_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__administration_ExpositionsCreation_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__administration_ExpositionsSuppression_vue__ = __webpack_require__(336);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__administration_ExpositionsSuppression_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__administration_ExpositionsSuppression_vue__);
-//
-//
 //
 //
 //
@@ -60186,7 +60156,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n.contenu-section[data-v-02a1accf] {\n  display: flex;\n  flex-direction: row wrap;\n  justify-content: space-around;\n}\n.instructions[data-v-02a1accf] {\n  flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-02a1accf] {\n  flex: 1 1 0;\n}\ninput.form-control.input.flatpickr-input[data-v-02a1accf] {\n  padding: 5px 10px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-02a1accf] {\n    flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -60205,14 +60175,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_FormTextarea_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__common_FormTextarea_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue__);
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -60337,7 +60299,7 @@ var Today = new Date();
                 dateFormat: "Y-m-d H:i:ss",
                 locale: French
             },
-            visuel: '',
+            visuel: '/img/apercu.png',
             errors: [],
             success: ''
         };
@@ -60411,12 +60373,10 @@ var render = function() {
       attrs: { id: "administration-expositions-creation" }
     },
     [
-      _c("div", { staticClass: "titre-section" }, [
-        _vm._v("\n        Création\n    ")
-      ]),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "contenu-section" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c("div", { staticClass: "edition" }, [
           _c(
@@ -60432,8 +60392,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "nom" } }, [
                     _vm._v("Nom de l'exposition")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
@@ -60457,8 +60415,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "description" } }, [
                     _vm._v("Description de l'exposition")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("form-textarea", {
                     staticClass: "form-control",
@@ -60487,8 +60443,6 @@ var render = function() {
                     _vm._v("Lieu/adresse de l'exposition")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("form-textarea", {
                     staticClass: "form-control",
                     attrs: {
@@ -60515,8 +60469,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "date-debut" } }, [
                     _vm._v("Date de début de l'exposition")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("flat-pickr", {
                     staticClass: "form-control",
@@ -60545,8 +60497,6 @@ var render = function() {
                     _vm._v("Date de fin de l'exposition")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("flat-pickr", {
                     staticClass: "form-control",
                     attrs: {
@@ -60573,8 +60523,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "date-vernissage" } }, [
                     _vm._v("Date et heure de vernissage de l'exposition")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("flat-pickr", {
                     staticClass: "form-control",
@@ -60603,18 +60551,17 @@ var render = function() {
                     _vm._v("Visuel de l'exposition")
                   ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("form-input", {
                     staticClass: "form-control",
                     attrs: { type: "file", name: "visuel" },
                     on: { change: _vm.processFile }
                   }),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
                   _c("img", {
-                    staticStyle: { "max-height": "60px" },
+                    staticStyle: {
+                      "max-height": "80px",
+                      "margin-bottom": "16px"
+                    },
                     attrs: { src: _vm.visuel, alt: "Visuel" }
                   })
                 ],
@@ -60662,6 +60609,14 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "titre-section" }, [
+      _c("h2", [_vm._v("Création")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -60769,7 +60724,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n", ""]);
+exports.push([module.i, "/* Variables */\n.contenu-section[data-v-96598f1a] {\n  display: flex;\n  flex-direction: row wrap;\n  justify-content: space-around;\n}\n.instructions[data-v-96598f1a] {\n  flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-96598f1a] {\n  flex: 1 1 0;\n}\n.multiselect[data-v-96598f1a] {\n  margin-bottom: 15px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-96598f1a] {\n    flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -60790,7 +60745,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__common_FormButton_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_multiselect__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_multiselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vue_multiselect__);
-//
 //
 //
 //
@@ -60906,12 +60860,10 @@ var render = function() {
       attrs: { id: "administration-expositions-suppression" }
     },
     [
-      _c("div", { staticClass: "titre-section" }, [
-        _vm._v("\n        Suppression\n    ")
-      ]),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "contenu-section" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c("div", { staticClass: "edition" }, [
           _c(
@@ -60927,8 +60879,6 @@ var render = function() {
                   _c("form-label", { attrs: { for: "nom" } }, [
                     _vm._v("Nom de l'exposition")
                   ]),
-                  _vm._v(" "),
-                  _c("br"),
                   _vm._v(" "),
                   _c("multiselect", {
                     attrs: {
@@ -60996,6 +60946,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "titre-section" }, [
+      _c("h2", [_vm._v("Suppression")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "instructions" }, [
       _vm._v(
         "\n            Supprimez ici une ou des expositions.\n            "
@@ -61033,17 +60991,16 @@ var render = function() {
     [
       _vm._m(0),
       _vm._v(" "),
-      _c("div", { staticClass: "contenu-section" }, [
-        _c(
-          "ul",
-          [
-            _c("administration-expositions-creation"),
-            _vm._v(" "),
-            _c("administration-expositions-suppression")
-          ],
-          1
-        )
-      ])
+      _c(
+        "div",
+        { staticClass: "contenu-section" },
+        [
+          _c("administration-expositions-creation"),
+          _vm._v(" "),
+          _c("administration-expositions-suppression")
+        ],
+        1
+      )
     ]
   )
 }
@@ -61105,7 +61062,7 @@ if (false) {
 /* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
-!function(e,t){ true?module.exports=t(__webpack_require__(344)):"function"==typeof define&&define.amd?define("VueFlatpickr",["flatpickr"],t):"object"==typeof exports?exports.VueFlatpickr=t(require("flatpickr")):e.VueFlatpickr=t(e.flatpickr)}(this,function(e){return function(e){function t(r){if(n[r])return n[r].exports;var i=n[r]={i:r,l:!1,exports:{}};return e[r].call(i.exports,i,i.exports,t),i.l=!0,i.exports}var n={};return t.m=e,t.c=n,t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=0)}([function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),n.d(t,"flatPickrPlugin",function(){return i});var r=n(1);n.d(t,"component",function(){return r.a});var i={install:function(e,t){var n="flat-pickr";"string"==typeof t&&(n=t),e.component(n,r.a)}};r.a.install=i.install,t.default=r.a},function(e,t,n){"use strict";var r=n(3),i=n(5),o=n(2),a=o(r.a,i.a,null,null,null);t.a=a.exports},function(e,t){e.exports=function(e,t,n,r,i){var o,a=e=e||{},u=typeof e.default;"object"!==u&&"function"!==u||(o=e,a=e.default);var s="function"==typeof a?a.options:a;t&&(s.render=t.render,s.staticRenderFns=t.staticRenderFns),r&&(s._scopeId=r);var f;if(i?(f=function(e){e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,e||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),n&&n.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(i)},s._ssrRegister=f):n&&(f=n),f){var l=s.functional,c=l?s.render:s.beforeCreate;l?s.render=function(e,t){return f.call(t),c(e,t)}:s.beforeCreate=c?[].concat(c,f):[f]}return{esModule:o,exports:a,options:s}}},function(e,t,n){"use strict";var r=n(4),i=n.n(r);t.a={props:{value:{default:null,required:!0,validate:function(e){return null===e||e instanceof Date||"string"==typeof e||e instanceof String||e instanceof Array}},config:{type:Object,default:function(){return{wrap:!1}}},placeholder:{type:String,default:""},inputClass:{type:[String,Object],default:"form-control input"},name:{type:String,default:"date-time"},required:{type:Boolean,default:!1},id:{type:String}},data:function(){return{mutableValue:this.value,fp:null}},mounted:function(){if(!this.fp){var e=this.config.wrap?this.$el.parentNode:this.$el;this.fp=new i.a(e,this.config)}},beforeDestroy:function(){this.fp&&(this.fp.destroy(),this.fp=null)},watch:{config:function(e){this.fp.config=Object.assign(this.fp.config,e),this.fp.redraw(),this.fp.setDate(this.value,!0)},mutableValue:function(e){this.$emit("input",e)},value:function(e){this.fp&&this.fp.setDate(e,!0)}}}},function(t,n){t.exports=e},function(e,t,n){"use strict";var r=function(){var e=this,t=e.$createElement;return(e._self._c||t)("input",{directives:[{name:"model",rawName:"v-model",value:e.mutableValue,expression:"mutableValue"}],class:e.inputClass,attrs:{type:"text",id:e.id,name:e.name,placeholder:e.placeholder,required:e.required,"data-input":""},domProps:{value:e.mutableValue},on:{input:function(t){t.target.composing||(e.mutableValue=t.target.value)}}})},i=[],o={render:r,staticRenderFns:i};t.a=o}])});
+!function(t,e){ true?module.exports=e(__webpack_require__(344)):"function"==typeof define&&define.amd?define("VueFlatpickr",["flatpickr"],e):"object"==typeof exports?exports.VueFlatpickr=e(require("flatpickr")):t.VueFlatpickr=e(t.flatpickr)}(this,function(t){return function(t){function e(r){if(n[r])return n[r].exports;var i=n[r]={i:r,l:!1,exports:{}};return t[r].call(i.exports,i,i.exports,e),i.l=!0,i.exports}var n={};return e.m=t,e.c=n,e.d=function(t,n,r){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:r})},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="",e(e.s=0)}([function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),n.d(e,"flatPickrPlugin",function(){return i});var r=n(1);n.d(e,"component",function(){return r.a});var i={install:function(t,e){var n="flat-pickr";"string"==typeof e&&(n=e),t.component(n,r.a)}};r.a.install=i.install,e.default=r.a},function(t,e,n){"use strict";var r=n(3),i=n(5),o=n(2),a=o(r.a,i.a,null,null,null);e.a=a.exports},function(t,e){t.exports=function(t,e,n,r,i){var o,a=t=t||{},u=typeof t.default;"object"!==u&&"function"!==u||(o=t,a=t.default);var s="function"==typeof a?a.options:a;e&&(s.render=e.render,s.staticRenderFns=e.staticRenderFns),r&&(s._scopeId=r);var l;if(i?(l=function(t){t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,t||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),n&&n.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(i)},s._ssrRegister=l):n&&(l=n),l){var f=s.functional,c=f?s.render:s.beforeCreate;f?s.render=function(t,e){return l.call(e),c(t,e)}:s.beforeCreate=c?[].concat(c,l):[l]}return{esModule:o,exports:a,options:s}}},function(t,e,n){"use strict";function r(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}var i=n(4),o=n.n(i);e.a={props:{value:{default:null,required:!0,validate:function(t){return null===t||t instanceof Date||"string"==typeof t||t instanceof String||t instanceof Array}},config:{type:Object,default:function(){return{wrap:!1}}},placeholder:{type:String,default:""},inputClass:{type:[String,Object],default:"form-control input"},name:{type:String,default:"date-time"},required:{type:Boolean,default:!1},id:{type:String}},data:function(){return{mutableValue:this.value,fp:null,oldOnChange:null}},mounted:function(){if(!this.fp){this.oldOnChange=this.config.onChange,this.config.onChange=this.onChange;var t=this.config.wrap?this.$el.parentNode:this.$el;this.fp=new o.a(t,this.config)}},beforeDestroy:function(){this.fp&&(this.fp.destroy(),this.fp=null)},methods:{onChange:function(){for(var t=arguments.length,e=Array(t),n=0;n<t;n++)e[n]=arguments[n];"function"==typeof this.oldOnChange&&this.oldOnChange.apply(this,r(e)),this.$emit.apply(this,["onChange"].concat(r(e)))}},watch:{config:function(t){this.fp.config=Object.assign(this.fp.config,t),this.fp.redraw(),this.fp.setDate(this.value,!0)},mutableValue:function(t){this.$emit("input",t)},value:function(t){this.fp&&this.fp.setDate(t,!0)}}}},function(e,n){e.exports=t},function(t,e,n){"use strict";var r=function(){var t=this,e=t.$createElement;return(t._self._c||e)("input",{directives:[{name:"model",rawName:"v-model",value:t.mutableValue,expression:"mutableValue"}],class:t.inputClass,attrs:{type:"text",id:t.id,name:t.name,placeholder:t.placeholder,required:t.required,"data-input":""},domProps:{value:t.mutableValue},on:{input:function(e){e.target.composing||(t.mutableValue=e.target.value)}}})},i=[],o={render:r,staticRenderFns:i};e.a=o}])});
 
 /***/ }),
 /* 344 */
