@@ -16,17 +16,17 @@ return [
     /* Galeries */
     'galeries' => [
         'titre-section' => 'Galleries',
-        'accroche'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum.',
+        'accroche'      => '',
     ],
 
     /* Galerie */
     'galerie' => [
-        'presentation'      => 'Here are the paintings from this gallery:',
+        'accroche'      => '',
     ],
 
     /* Oeuvres */
     'oeuvres' => [
-        'presentation'      => 'Here are the informations from this painting:',
+        'accroche'      => '',
     ],
 
     /* Oeuvre */
@@ -35,9 +35,10 @@ return [
         'description'   => 'Details',
         'technique'     => 'Method',
         'annee'         => 'Year',
-        'hauteur'       => 'Height',
-        'largeur'       => 'Width',
-        'profondeur'    => 'Depth',
+        'dimensions'    => 'Dimensions',
+        'hauteur'       => 'h',
+        'largeur'       => 'w',
+        'profondeur'    => 'd',
         'prix'          => 'Price',
         'disponibilite' => 'Availability',
     ],

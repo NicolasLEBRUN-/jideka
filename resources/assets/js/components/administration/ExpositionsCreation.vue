@@ -1,7 +1,7 @@
 <template>
     <div id="administration-expositions-creation" class="administration-expositions-creation container">
         <div class="titre-section">
-            Création
+            <h2>Création</h2>
         </div>
         <div class="contenu-section">
             <div class="instructions">
@@ -13,23 +13,19 @@
                 <form action="" method="" enctype="multipart/form-data">
                     <div class="form-group">
                         <form-label for="nom">Nom de l'exposition</form-label>
-                        <br />
                         <form-input type="text" class="form-control" name="nom" v-model="nom" placeholder="Nom"></form-input>
                     </div>
                     <div class="form-group">
                         <form-label for="description">Description de l'exposition</form-label>
-                        <br />
                         <form-textarea class="form-control" name="description" v-model="description" value="" placeholder="Description"></form-textarea> 
                     </div>
 
                     <div class="form-group">
                         <form-label for="lieu">Lieu/adresse de l'exposition</form-label>
-                        <br />
                         <form-textarea class="form-control" name="lieu" v-model="lieu" value="" placeholder="Lieu/adresse"></form-textarea> 
                     </div>
                     <div class="form-group">
                         <form-label for="date-debut">Date de début de l'exposition</form-label>
-                        <br />
                         <flat-pickr
                                 v-model="dateDebut"
                                 :config="configDateDebut"
@@ -40,7 +36,6 @@
                     </div>
                     <div class="form-group">
                         <form-label for="date-fin">Date de fin de l'exposition</form-label>
-                        <br />
                         <flat-pickr
                                 v-model="dateFin"
                                 :config="configDateFin"
@@ -51,7 +46,6 @@
                     </div>
                     <div class="form-group">
                         <form-label for="date-vernissage">Date et heure de vernissage de l'exposition</form-label>
-                        <br />
                         <flat-pickr
                                 v-model="dateVernissage"
                                 :config="configDateVernissage"
@@ -62,10 +56,8 @@
                     </div>
                     <div class="form-group">
                         <form-label for="visuel">Visuel de l'exposition</form-label>
-                        <br />
                         <form-input type="file" class="form-control" name="visuel" v-on:change="processFile"></form-input>
-                        <br />
-                        <img :src="visuel" alt="Visuel" style="max-height: 60px">
+                        <img :src="visuel" alt="Visuel" style="max-height:80px; margin-bottom:16px;">
                     </div>
 
                     <div class="form-group danger" v-if="errors.length > 0">
@@ -130,7 +122,7 @@
                     dateFormat: "Y-m-d H:i:ss",
                     locale: French,   
                 },
-                visuel: '',
+                visuel: '/img/apercu.png',
                 errors: [],
                 success: ''
             }
@@ -198,5 +190,30 @@
     /* Variables */
     @import "../../../sass/variables";
 
+    .contenu-section {
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: space-around;
+    }
+
+    .instructions {
+        flex: 1 1 0;
+        margin-bottom: 16px;
+        margin-right: 16px;
+    }
+
+    .edition {
+        flex: 1 1 0;
+    }
+
+    input.form-control.input.flatpickr-input {
+        padding: 5px 10px;
+    }
+
+    @media all and (max-width: 600px) {
+        .contenu-section {
+            flex-flow: column wrap;
+        }
+    }
 </style>
     

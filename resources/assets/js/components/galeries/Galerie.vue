@@ -1,17 +1,17 @@
 <template>
-    <div class="galerie container">
+    <div class="galerie">
         <div class="titre-section">
-            <h1>
+            <h2>
                 {{ galerieNom }}
-            </h1>
+            </h2>
         </div>
         <div class="contenu-section">
             <div>
-                {{ $trans('galeries.galerie.presentation') }}
+                <!-- {{ $trans('galeries.galerie.presentation') }} -->
             </div>
-            <div>
-                <oeuvre v-for="oeuvre in oeuvres" :key="oeuvre.id" :oeuvre="oeuvre"></oeuvre>
-            </div>
+            <ul class="galerie-oeuvres">
+                <li is="oeuvre" v-for="oeuvre in oeuvres" :key="oeuvre.id" :oeuvre="oeuvre" :statuts-disponibilite="statutsDisponibilite"></li>
+            </ul>
         </div>
     </div>
 </template>
@@ -23,7 +23,7 @@
         components: {
             Oeuvre
         },
-        props: ['galerieId', 'galerieNom'],
+        props: ['galerieId', 'galerieNom', 'statutsDisponibilite'],
         data: function() {
             return {
                 oeuvres: []
@@ -55,5 +55,19 @@
     /* Variables */
     @import "../../../sass/variables";
 
+    ul {
+        list-style: none;
+        padding-left: 0;
+        border-bottom: 1px solid $main-color;
+    }
+
+    .galerie-oeuvres {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0 -5px 64px -5px;
+        padding-bottom: 16px;
+    }
+
 </style>
-    

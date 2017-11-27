@@ -53,23 +53,24 @@ $fa-font-path: '../../../node_modules/font-awesome/fonts' !default;
 /* Photostack */
 @import "./photostack.scss";
 
-body, h1, h2 {
-	margin: 0;
-	font-family: "open_sans";
-	font-weight: lighter;
+body {
+    margin: 0;
+    font-family: "open_sans";
+    font-weight: lighter;
 }
 
 #app-accueil, #app-galeries, #app-expositions, #app-administration {
-	display: flex;
-	flex-direction: column;
-	background-color: #353535;
-	color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    color: #FFFFFF;
 }
 
-h1 {
+h1, h2 {
 	color: #FB6C3F;
+    font-weight: lighter;
 }
 
 button:focus {
-	outline: none;
+    outline: none;
 }

@@ -133,7 +133,7 @@
                     float: none;
                     display: block;
                     text-align: left;
-                    background: rgba(53, 53, 53, 0.9);
+                    background: $background-primary-color;
 
                     a {
                         float: none;

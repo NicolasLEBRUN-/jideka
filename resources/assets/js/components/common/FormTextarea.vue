@@ -29,7 +29,8 @@
         background: #FFFFFF;
         resize: none;
         margin-bottom: 15px;
-        height: 200px;
+        height: 120px;
+        width: 100%;
         outline: none;
     }
 </style>

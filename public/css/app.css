@@ -6891,9 +6891,7 @@ figure.photostack-current::after {
   transform: scale(0.61);
 }
 
-body,
-h1,
-h2 {
+body {
   margin: 0;
   font-family: "open_sans";
   font-weight: lighter;
@@ -6914,8 +6912,10 @@ h2 {
   color: #FFFFFF;
 }
 
-h1 {
+h1,
+h2 {
   color: #FB6C3F;
+  font-weight: lighter;
 }
 
 button:focus {

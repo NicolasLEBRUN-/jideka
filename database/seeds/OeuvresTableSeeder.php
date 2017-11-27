@@ -11,6 +11,9 @@ class OeuvresTableSeeder extends Seeder
      */
     public function run()
     {
+        /* Galerie
+         * Compositions diverses
+         */
         $galerie_id = App\Galerie::where('nom', 'LIKE', 'Compositions diverses')->first()->id;
 
         $nextId = DB::table('oeuvres')->max('id') + 1;
@@ -67,6 +70,99 @@ class OeuvresTableSeeder extends Seeder
             'updated_at' => new DateTime()
         ]);
 
+        $nextId = DB::table('oeuvres')->max('id') + 1;
+        DB::table('oeuvres')->insert([
+            'nom' => 'Réchauffement climatique n°4',
+            'description' => 'Réchauffement climatique n°4',
+            'technique' => 'Acrylique sur toile, avec encadrement noir',
+            'annee' => 2017,
+            'hauteur' => 20,
+            'largeur' => 20,
+            'profondeur' => 2,
+            'prix' => 100,
+            'disponibilite_id' => 1,
+            'galerie_id' => $galerie_id,
+            'chemin_image' => '/img/galeries/' . $galerie_id . '/' . $nextId . '.png',
+            'actif' => 1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+
+        $nextId = DB::table('oeuvres')->max('id') + 1;
+        DB::table('oeuvres')->insert([
+            'nom' => 'Réchauffement climatique n°5',
+            'description' => 'Réchauffement climatique n°5',
+            'technique' => 'Acrylique sur toile',
+            'annee' => 2017,
+            'hauteur' => 30,
+            'largeur' => 30,
+            'profondeur' => 2,
+            'prix' => 100,
+            'disponibilite_id' => 1,
+            'galerie_id' => $galerie_id,
+            'chemin_image' => '/img/galeries/' . $galerie_id . '/' . $nextId . '.png',
+            'actif' => 1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+
+        $nextId = DB::table('oeuvres')->max('id') + 1;
+        DB::table('oeuvres')->insert([
+            'nom' => 'Où court-on ?',
+            'description' => 'Où court-on ?',
+            'technique' => 'Acrylique sur toile',
+            'annee' => 2017,
+            'hauteur' => 40,
+            'largeur' => 100,
+            'profondeur' => 5,
+            'prix' => 100,
+            'disponibilite_id' => 1,
+            'galerie_id' => $galerie_id,
+            'chemin_image' => '/img/galeries/' . $galerie_id . '/' . $nextId . '.png',
+            'actif' => 1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+
+        $nextId = DB::table('oeuvres')->max('id') + 1;
+        DB::table('oeuvres')->insert([
+            'nom' => 'Réchauffement climatique n°9',
+            'description' => 'Réchauffement climatique n°9',
+            'technique' => 'Acrylique sur toile',
+            'annee' => 2017,
+            'hauteur' => 30,
+            'largeur' => 30,
+            'profondeur' => 2,
+            'prix' => 100,
+            'disponibilite_id' => 1,
+            'galerie_id' => $galerie_id,
+            'chemin_image' => '/img/galeries/' . $galerie_id . '/' . $nextId . '.png',
+            'actif' => 1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+
+        $nextId = DB::table('oeuvres')->max('id') + 1;
+        DB::table('oeuvres')->insert([
+            'nom' => 'Réchauffement climatique n°3',
+            'description' => 'Réchauffement climatique n°3',
+            'technique' => 'Acrylique sur toile',
+            'annee' => 2017,
+            'hauteur' => 20,
+            'largeur' => 20,
+            'profondeur' => 2,
+            'prix' => 100,
+            'disponibilite_id' => 1,
+            'galerie_id' => $galerie_id,
+            'chemin_image' => '/img/galeries/' . $galerie_id . '/' . $nextId . '.png',
+            'actif' => 1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+
+        /* Galerie
+         * Les Roses
+         */
         $galerie_id = App\Galerie::where('nom', 'LIKE', 'Les Roses')->first()->id;
 
         $nextId = DB::table('oeuvres')->max('id') + 1;
@@ -123,6 +219,9 @@ class OeuvresTableSeeder extends Seeder
             'updated_at' => new DateTime()
         ]);
 
+        /* Galerie
+         * Symphonie en bleu
+         */
         $galerie_id = App\Galerie::where('nom', 'LIKE', 'Symphonie en bleu')->first()->id;
 
         $nextId = DB::table('oeuvres')->max('id') + 1;
@@ -201,15 +300,15 @@ class OeuvresTableSeeder extends Seeder
 
         $nextId = DB::table('oeuvres')->max('id') + 1;
         DB::table('oeuvres')->insert([
-            'nom' => "L'Epicurienne - The Epicurean",
-            'description' => "L'Epicurienne - The Epicurean",
+            'nom' => 'Jeunes Mariés - Just married !',
+            'description' => 'Jeunes Mariés - Just married !',
             'technique' => 'Acrylique sur toile',
-            'annee' => 1900,
+            'annee' => 2013,
             'hauteur' => 40,
             'largeur' => 40,
             'profondeur' => 2,
             'prix' => 100,
-            'disponibilite_id' => 2,
+            'disponibilite_id' => 3,
             'galerie_id' => $galerie_id,
             'chemin_image' => '/img/galeries/' . $galerie_id . '/' . $nextId . '.png',
             'actif' => 1,
@@ -219,15 +318,15 @@ class OeuvresTableSeeder extends Seeder
 
         $nextId = DB::table('oeuvres')->max('id') + 1;
         DB::table('oeuvres')->insert([
-            'nom' => 'Aïe, mon arthrose !',
-            'description' => 'Aïe, mon arthrose !',
-            'technique' => 'Acrylique et gel médieum sur toile',
-            'annee' => 2013,
-            'hauteur' => 50,
-            'largeur' => 50,
+            'nom' => "L'Epicurienne - The Epicurean",
+            'description' => "L'Epicurienne - The Epicurean",
+            'technique' => 'Acrylique sur toile',
+            'annee' => 1900,
+            'hauteur' => 40,
+            'largeur' => 40,
             'profondeur' => 2,
             'prix' => 100,
-            'disponibilite_id' => 1,
+            'disponibilite_id' => 2,
             'galerie_id' => $galerie_id,
             'chemin_image' => '/img/galeries/' . $galerie_id . '/' . $nextId . '.png',
             'actif' => 1,

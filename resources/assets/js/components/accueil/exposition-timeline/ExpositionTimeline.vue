@@ -35,6 +35,7 @@
         },
         computed: {
             orderedExpositions: function () {
+                // Tri des expositions de la plus récente à la plus ancienne
                 var expositions = _.orderBy(this.expositions, 'date_debut').reverse();
                 // Conservation des trois dernières expositions uniquement
                 expositions = expositions.slice(0, 3);
@@ -59,7 +60,7 @@
                     self.expositions = response.data;
                 })
                 .catch(function (error) {
-                    console.log('Erreur axios (AccueilExpositions.vue) : ' + error);
+                    console.log('Erreur axios (ExpositionsTimeline.vue) : ' + error);
                 });
         },
         mounted() {},

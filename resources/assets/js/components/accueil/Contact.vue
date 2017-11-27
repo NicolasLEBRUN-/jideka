@@ -23,11 +23,10 @@
                     <label for="prereservation">{{ $trans('accueil.contact.form.prereservation') }}</label>
                 </div>
                 <multiselect 
-                        class="oeuvre-picker"
                         v-model="oeuvre" 
                         v-if="prereservation"
                         name="oeuvre" 
-                        placeholder="Sélectionner une oeuvre" 
+                        :placeholder="$trans('accueil.contact.form.prereservation-select')" 
                         label="nom" 
                         track-by="nom" 
                         :options="oeuvres" 
@@ -45,7 +44,7 @@
                         </div>
                     </template>
                 </multiselect>
-                <div class="g-recaptcha" :data-sitekey="googleRecaptchaDataSitekey" data-theme="dark"></div>
+                <div class="g-recaptcha" :data-sitekey="googleRecaptchaDataSitekey" data-theme="light"></div>
                 <div class="form-group danger" v-if="errors.length > 0">
                     Erreurs : 
                     <ul>
@@ -98,7 +97,7 @@
                         self.galeries = response.data;
                     })
                     .catch(function (error) {
-                        console.log('Erreur axios : ' + error);
+                        console.log('Erreur axios (Contact.vue) : ' + error);
                     });
             // Récupération des toutes les oeuvres
             axios.get('/api/oeuvres')
@@ -112,7 +111,7 @@
                         });
                     })
                     .catch(function (error) {
-                        console.log('Erreur axios : ' + error);
+                        console.log('Erreur axios (Contact.vue) : ' + error);
                     });
         },
         mounted() {
@@ -120,7 +119,7 @@
         },
         methods: {
             customLabelforOeuvre: function ({ nom, annee, galerie_nom }) {
-                return `${nom} (${annee}), galerie "${galerie_nom}"`
+                return `${nom} (${annee}), galerie « ${galerie_nom} »`
             },
             sendMessage: function(event) {
                 this.errors = [];
@@ -223,6 +222,10 @@
                     justify-content: center;
                 }
 
+                .multiselect {
+                    margin-bottom: 15px;
+                }
+
                 .send-button {
                     align-self: center;
                     width: 60%;
@@ -231,6 +234,7 @@
                     &:hover {
                         background: darken($main-color, 5%)
                     }
+
 
                     &:active {
                         background: darken($main-color, 10%)

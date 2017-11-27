@@ -16,7 +16,7 @@ return [
     /* Expositions */
     'expositions' => [
         'titre-section' => 'Exhibitions',
-        'accroche'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sem nulla, interdum in velit ut, consequat tincidunt nulla. Proin sed placerat felis. Nullam vitae orci a nibh maximus rutrum sed a ante. Proin hendrerit augue ac ultricies elementum.',
+        'accroche'      => '',
     ],
 
     /* Exposition */

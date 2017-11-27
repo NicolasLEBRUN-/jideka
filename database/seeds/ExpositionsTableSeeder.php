@@ -56,6 +56,58 @@ class ExpositionsTableSeeder extends Seeder
             'updated_at' => new DateTime()
         ]);
 
+        DB::table('expositions')->insert([
+            'nom' => 'Club des Ateliers d\'Artistes',
+            'description' => 'Exposition collective. Concept Store Gallery.',
+            'date_debut' => DateTime::createFromFormat('d/m/Y H:i:s', '23/06/2016 00:00:00'),
+            'date_fin' => DateTime::createFromFormat('d/m/Y H:i:s', '29/06/2016 00:00:00'),
+            'date_vernissage' => NULL,
+            'lieu' => '184 rue Saint Martin, 75003 Paris',
+            'chemin_visuel' => '/img/expositions/4.png',
+            'actif' => 1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+
+        DB::table('expositions')->insert([
+            'nom' => 'Salon SMART Aix en Provence',
+            'description' => 'Salon Méditerranéen d\'art contemporain',
+            'date_debut' => DateTime::createFromFormat('d/m/Y H:i:s', '12/05/2016 00:00:00'),
+            'date_fin' => DateTime::createFromFormat('d/m/Y H:i:s', '16/05/2016 00:00:00'),
+            'date_vernissage' => NULL,
+            'lieu' => 'Parc Jourdan, 13080 Aix en Provence',
+            'chemin_visuel' => '/img/expositions/5.png',
+            'actif' => 1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+
+        DB::table('expositions')->insert([
+            'nom' => 'Salon des Indépendants de Lyon',
+            'description' => 'Sous chapiteau',
+            'date_debut' => DateTime::createFromFormat('d/m/Y H:i:s', '08/10/2015 00:00:00'),
+            'date_fin' => DateTime::createFromFormat('d/m/Y H:i:s', '18/10/2015 00:00:00'),
+            'date_vernissage' => DateTime::createFromFormat('d/m/Y H:i:s', '08/10/2015 00:00:00'),
+            'lieu' => 'Place Antonin Poncet, 69002 Lyon',
+            'chemin_visuel' => '/img/expositions/6.png',
+            'actif' => 1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+
+        DB::table('expositions')->insert([
+            'nom' => 'Galerie Art\'s et Miss - Paris',
+            'description' => 'Exposition collective « Petits Formats »',
+            'date_debut' => DateTime::createFromFormat('d/m/Y H:i:s', '03/12/2011 00:00:00'),
+            'date_fin' => DateTime::createFromFormat('d/m/Y H:i:s', '23/12/2011 00:00:00'),
+            'date_vernissage' => NULL,
+            'lieu' => '14 rue Sainte Anastase, 75003 Paris',
+            'chemin_visuel' => '/img/expositions/7.png',
+            'actif' => 1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+
         factory(App\Exposition::class, 0)->create();
     }
 }

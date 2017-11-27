@@ -7,24 +7,22 @@
         </div>
         <div class="contenu-section">
             <div class="instructions">
-                Modifiez ici votre biographie.
+                Modifiez ici vos biographie dans les différentes langues.
                 <br />
-                Information : La biographie modifiée sera immédiatement visible sur le site.
+                Information : Une biographie modifiée sera immédiatement visible sur le site.
             </div>
             <div class="edition">
                 <form>
                     <div class="form-group">
                         <form-label for="biographieCorpsFr">Biographie française</form-label>
                         <!-- <label for="biographieCorpsFr">Biographie française</label> -->
-                        <br />
-                        <form-textarea class="form-control" name="biographieCorpsFr" v-model="biographieCorpsFr" value="biographieCorpsFr" placeholder="Biographie française" rows="12" cols="100"></form-textarea>
+                        <form-textarea class="form-control" name="biographieCorpsFr" v-model="biographieCorpsFr" value="biographieCorpsFr" placeholder="Biographie française"></form-textarea>
                         <!-- <textarea class="form-control" name="biographieCorpsFr" v-model="biographieCorpsFr" rows="12" cols="100"></textarea>  -->
                     </div>
                     <div class="form-group">
                         <form-label for="biographieCorpsEn">Biographie anglaise</form-label>
                         <!-- <label for="biographieCorpsEn">Biographie anglaise</label> -->
-                        <br />
-                        <form-textarea class="form-control" name="biographieCorpsEn" v-model="biographieCorpsEn" value="biographieCorpsEn" placeholder="Biographie anglaise" rows="12" cols="100"></form-textarea>
+                        <form-textarea class="form-control" name="biographieCorpsEn" v-model="biographieCorpsEn" value="biographieCorpsEn" placeholder="Biographie anglaise"></form-textarea>
                         <!-- <textarea class="form-control" name="biographieCorpsEn" v-model="biographieCorpsEn" rows="12" cols="100"></textarea>  -->
                     </div>
                     <div class="form-group danger" v-if="errors.length > 0">
@@ -113,14 +111,29 @@
 
     #administration-biographie {
         margin-top: $menu-haut-height;
+        padding: 0 $side-padding;
     }
 
     .contenu-section {
         display: flex;
-        background: $background-secondary-color;
         flex-direction: row wrap;
-        justify-content: space-around;
-        padding: 12px;
+        justify-content: space-between;
+    }
+
+    .instructions {
+        flex: 1 1 0;
+        margin-bottom: 16px;
+        margin-right: 16px;
+    }
+
+    .edition {
+        flex: 1 1 0;
+    }
+
+    @media all and (max-width: 600px) {
+        .contenu-section {
+            flex-flow: column wrap;
+        }
     }
 </style>
     
