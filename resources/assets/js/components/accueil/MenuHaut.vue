@@ -36,14 +36,14 @@
         methods: {
             showMenu: function(event) {
                 let navbar = document.getElementById("navbar");
-                navbar.classList.toggle("responsive");
+                navbar.classList.toggle("is-visible");
                 let hamburger = document.getElementById("hamburger");
                 hamburger.classList.toggle("is-active");
             },
             hideMenu: function(event) {
                 let navbar = document.getElementById("navbar");
-                if (navbar.classList.contains("responsive")) {
-                    navbar.classList.toggle("responsive");
+                if (navbar.classList.contains("is-visible")) {
+                    navbar.classList.toggle("is-is-visible");
                 }
                 let hamburger = document.getElementById("hamburger");
                 if (hamburger.classList.contains("is-active")) {
@@ -70,84 +70,116 @@
         height: $menu-haut-height;
         z-index: 999;
 
-        @include breakpoint(tablet) {
-            .navigation {
-                float: right;
-                list-style: none;
-                margin: 0 50px 0 0;
-                padding: 0;
-                height: 100%;
+        // @include breakpoint(tablet) {
+        //     .navigation {
+        //         float: right;
+        //         list-style: none;
+        //         margin: 0 50px 0 0;
+        //         padding: 0;
+        //         height: 100%;
                 
-                li {
+        //         li {
+        //             display: inline;
+
+        //             a {
+        //                 text-decoration: none;
+        //                 display: inline-block;
+        //                 padding: 18px;
+        //                 color: rgba($font-color, .7);
+        //                 transition: all .3s ease;
+        //                 height: 100%;
+
+        //                 &:hover {
+        //                     background: darken(rgba($background-primary-color, .7), 5%);
+        //                     color: $font-color;
+        //                 }
+        //             }
+
+        //             &.burger {
+        //                 display: none;
+        //             }
+
+        //             &.flag {
+        //                 img {
+        //                     height: 19px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+
+        .navigation {
+            float: none;
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            background: rgba($background-primary-color, .5);
+
+            @include breakpoint(tablet) {
+                margin: 0 50px 0 0;
+                float: right;
+            } 
+            
+            li {
+
+                @include breakpoint(tablet) {
                     display: inline;
-
-                    a {
-                        text-decoration: none;
-                        display: inline-block;
-                        padding: 18px;
-                        color: rgba($font-color, .7);
-                        transition: all .3s ease;
-                        height: 100%;
-
-                        &:hover {
-                            background: darken(rgba($background-primary-color, .7), 5%);
-                            color: $font-color;
-                        }
-                    }
 
                     &.burger {
                         display: none;
                     }
+                }
 
-                    &.flag {
-                        img {
-                            height: 19px;
-                        }
+                a {
+                    color: rgba($font-color, .7);
+                    height: 100%;
+                    transition: all .3s ease;
+                    padding: 18px;
+                    text-decoration: none;
+                    float: left;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background: darken(rgba($background-primary-color, .7), 5%);
+                        color: $font-color;
+                    }
+
+                    @include breakpoint(tablet) {
+                        display: inline-block;
+                    }
+                }
+
+                @include breakpoint(mobile) {
+                    &:not(:first-child) {
+                        display: none;
+                    }
+
+                    &.burger {
+                        display: block;
+                        float: right;
                     }
                 }
             }
-        }
 
-        @include breakpoint(mobile) {
-            .navigation {
-                float: none !important;
-                background: rgba($background-primary-color, .5);
-                
+            &.is-visible {
+                position: relative;
+
                 li {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                    background: $background-primary-color;
+
                     a {
-                        float: left;
-                    }
-
-                    &:not(:first-child) {
-                        display: none;
-
-                        &.burger {
-                            display: block;
-                            float: right;
-                        }
-                    }
-                }
-
-                &.responsive {
-                    position: relative;
-
-                    li {
                         float: none;
                         display: block;
                         text-align: left;
-                        background: $background-primary-color;
+                    }
 
-                        a {
-                            float: none;
-                            display: block;
-                            text-align: left;
-                        }
-
-                        &.burger {
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-                        }
+                    &.burger {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
                     }
                 }
             }
