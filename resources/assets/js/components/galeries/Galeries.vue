@@ -8,7 +8,7 @@
         <div class="contenu-section">
             <div>
                 <ul class="galeries-galerie">
-                    <li is="galerie" v-for="galerie in galeries" :key="galerie.id" :galerie-id="galerie.id" :galerie-nom="galerie.nom" :statuts-disponibilite="statutsDisponibilite"></li>
+                    <li is="galerie" v-for="galerie in galeries" :key="galerie.id" :galerie-id="galerie.id" :galerie-nom="galerie.nom" :galerie-description="galerie.description" :statuts-disponibilite="statutsDisponibilite"></li>
                 </ul>
             </div>
         </div>

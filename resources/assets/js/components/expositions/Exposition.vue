@@ -74,7 +74,7 @@
     .exposition {
 
         .dates-exposition, .vernissage-exposition, .lieu-exposition {
-            opacity: .5;
+            opacity: .6;
         }
 
         .nom-exposition {
@@ -92,19 +92,20 @@
         }
 
         .visuel-exposition {
-            height: 120px;
-            width: 120px;
+            height: 140px;
+            width: 140px;
             border: 2px solid white;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
             padding: 4px;
+            margin-top: 8px;
 
             img {
                 border: 4px solid $background-secondary-color;
-                height: 114px;
-                width: 114px;
+                height: 134px;
+                width: 134px;
             }
         }
     }

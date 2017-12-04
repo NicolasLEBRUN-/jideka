@@ -161,8 +161,8 @@
                         largeur: self.largeur,
                         profondeur: self.profondeur,
                         prix: self.prix,
-                        statutdisponibilite: self.statutdisponibilite,
-                        galerie: self.galerie,
+                        statutdisponibilite: self.statutdisponibilite.id,
+                        galerie: self.galerie.id,
                         visuel: self.visuel,
                     })
                     .then(function (response) {
@@ -205,6 +205,8 @@
 
     /* Variables */
     @import "../../../sass/variables";
+    /* Breakpoints */
+    @import "../../../sass/breakpoints";
 
     .contenu-section {
         display: flex;
@@ -226,7 +228,7 @@
         margin-bottom: 15px;
     }
 
-    @media all and (max-width: 600px) {
+    @include breakpoint(mobile) {
         .contenu-section {
             flex-flow: column wrap;
         }

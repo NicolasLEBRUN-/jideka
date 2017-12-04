@@ -40,6 +40,14 @@
 
     /* Variables */
     @import "../../../sass/variables";
+    /* Breakpoints */
+    @import "../../../sass/breakpoints";
+
+    @include breakpoint(mobile) {
+        .contenu-section {
+            flex-flow: column wrap;
+        }
+    }
 
     .accueil-biographie {
         padding: 50px 100px;
@@ -55,14 +63,15 @@
                 justify-content: center;
                 background: url('/img/profil.jpg') center;
                 background-size: cover;
-                height: 250px;
-                width: 250px;
+                height: 300px;
+                width: 300px;
                 border: 8px solid $background-primary-color;
+                margin-top: 22px;
+                margin-right: $side-padding;
             }
             
             .description {
                 flex: 1;
-                padding-left: $side-padding;
 
                 .titre-section {
                     margin-bottom: 20px;
@@ -72,12 +81,6 @@
                     text-align: justify;
                 }
             }
-        }
-    }
-
-    @media all and (max-width: 600px) {
-        .contenu-section {
-            flex-flow: column wrap;
         }
     }
 </style>

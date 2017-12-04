@@ -1,7 +1,9 @@
 <template>
     <footer>
         <img src="/img/logo_jideka.svg" />
-        <p>© 2017 JOCELYNE DESCHAMPS-KUS - DESIGNED BY TIMOTHÉ CRESPY & NICOLAS LEBRUN</p>
+        <p>© 2017 Jocelyne Deschamps-Kus
+        <br />
+        Designed by Timothé Crespy et Nicolas Lebrun</p>
     </footer>
 </template>
 
@@ -31,6 +33,8 @@
         color: rgba($font-color, .5);
         font-size: .8em;
         letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
 
         img {
             width: 178px;

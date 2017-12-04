@@ -33,7 +33,7 @@
                         :option-height="104" 
                         :custom-label="customLabelforOeuvre" 
                         :show-labels="false">
-                    <template slot="option" scope="props">
+                    <template slot="option" slot-scope="props">
                         <img class="option__image" :src="props.option.chemin_image" alt="Oeuvre" style="height: 80px; display:inline-block; vertical-align:-120%;">
                         <div style="display:inline-block">
                             <span class="option__title"><strong>{{ props.option.nom }}</strong></span>

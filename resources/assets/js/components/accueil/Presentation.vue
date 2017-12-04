@@ -21,8 +21,9 @@
 
     /* Variables */
     @import "../../../sass/variables";
+    /* Breakpoints */
     @import "../../../sass/breakpoints";
-
+    
     #accueil-presentation {
         margin-top: $menu-haut-height;
         background-image: none;

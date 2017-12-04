@@ -7,7 +7,7 @@
         </div>
         <div class="contenu-section">
             <div>
-                <!-- {{ $trans('galeries.galerie.presentation') }} -->
+                {{ galerieDescription }}
             </div>
             <ul class="galerie-oeuvres">
                 <li is="oeuvre" v-for="oeuvre in oeuvres" :key="oeuvre.id" :oeuvre="oeuvre" :statuts-disponibilite="statutsDisponibilite"></li>
@@ -23,7 +23,7 @@
         components: {
             Oeuvre
         },
-        props: ['galerieId', 'galerieNom', 'statutsDisponibilite'],
+        props: ['galerieId', 'galerieNom', 'galerieDescription', 'statutsDisponibilite'],
         data: function() {
             return {
                 oeuvres: []
@@ -66,7 +66,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: center;
-        margin: 0 -5px 64px -5px;
+        margin: 32px -5px 64px -5px;
         padding-bottom: 16px;
     }
 

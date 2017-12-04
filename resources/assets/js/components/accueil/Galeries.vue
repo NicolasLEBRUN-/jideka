@@ -30,7 +30,7 @@
     /* Variables */
     @import "../../../sass/variables";
 
-    .accueil-galeries {
+    #accueil-galeries {
         padding-top: 50px;
         align-items: center;
 

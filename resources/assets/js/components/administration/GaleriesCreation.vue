@@ -129,6 +129,8 @@
 
     /* Variables */
     @import "../../../sass/variables";
+    /* Breakpoints */
+    @import "../../../sass/breakpoints";
 
     .contenu-section {
         display: flex;
@@ -146,7 +148,7 @@
         flex: 1 1 0;
     }
 
-    @media all and (max-width: 600px) {
+    @include breakpoint(mobile) {
         .contenu-section {
             flex-flow: column wrap;
         }

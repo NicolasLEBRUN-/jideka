@@ -41,6 +41,7 @@
 
     #administration-expositions {
         margin-top: $menu-haut-height;
+        margin-bottom: 64px;
         padding: 0 $side-padding;
     }
 </style>

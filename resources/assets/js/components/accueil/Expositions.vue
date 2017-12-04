@@ -32,7 +32,7 @@
     /* Variables */
     @import "../../../sass/variables";
 
-    .accueil-expositions {
+    #accueil-expositions {
         padding-top: 50px;
         align-items: center;
 

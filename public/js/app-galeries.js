@@ -57183,7 +57183,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.galeries-menu-haut[data-v-4e7af427] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n}\n.galeries-menu-haut .navigation[data-v-4e7af427] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    height: 100%;\n}\n.galeries-menu-haut .navigation li[data-v-4e7af427] {\n      display: inline;\n}\n.galeries-menu-haut .navigation li a[data-v-4e7af427] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        -webkit-transition: all .3s ease;\n        transition: all .3s ease;\n        height: 100%;\n}\n.galeries-menu-haut .navigation li a[data-v-4e7af427]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFFFFF;\n}\n.galeries-menu-haut .navigation li.burger[data-v-4e7af427] {\n        display: none;\n}\n.galeries-menu-haut .navigation li.flag img[data-v-4e7af427] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-4e7af427] {\n    float: none !important;\n    background: #353535;\n}\n.navigation li a[data-v-4e7af427] {\n      float: left;\n}\n.navigation li[data-v-4e7af427]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-4e7af427] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-4e7af427] {\n      position: relative;\n}\n.navigation.responsive li[data-v-4e7af427] {\n        float: none;\n        display: block;\n        text-align: left;\n        background: #353535;\n}\n.navigation.responsive li a[data-v-4e7af427] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-4e7af427] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-4e7af427] {\n    margin: 0 !important;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n#galeries-menu-haut[data-v-4e7af427] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n  z-index: 999;\n}\n@media (min-width: 768px) {\n#galeries-menu-haut .navigation[data-v-4e7af427] {\n      float: right;\n      list-style: none;\n      margin: 0 50px 0 0;\n      padding: 0;\n      height: 100%;\n}\n#galeries-menu-haut .navigation li[data-v-4e7af427] {\n        display: inline;\n}\n#galeries-menu-haut .navigation li a[data-v-4e7af427] {\n          text-decoration: none;\n          display: inline-block;\n          padding: 18px;\n          color: rgba(255, 255, 255, 0.7);\n          -webkit-transition: all .3s ease;\n          transition: all .3s ease;\n          height: 100%;\n}\n#galeries-menu-haut .navigation li a[data-v-4e7af427]:hover {\n            background: rgba(40, 40, 40, 0.7);\n            color: #FFFFFF;\n}\n#galeries-menu-haut .navigation li.burger[data-v-4e7af427] {\n          display: none;\n}\n#galeries-menu-haut .navigation li.flag img[data-v-4e7af427] {\n          height: 19px;\n}\n}\n@media (max-width: 767px) {\n#galeries-menu-haut .navigation[data-v-4e7af427] {\n      float: none !important;\n      background: rgba(53, 53, 53, 0.5);\n}\n#galeries-menu-haut .navigation li a[data-v-4e7af427] {\n        float: left;\n}\n#galeries-menu-haut .navigation li[data-v-4e7af427]:not(:first-child) {\n        display: none;\n}\n#galeries-menu-haut .navigation li:not(:first-child).burger[data-v-4e7af427] {\n          display: block;\n          float: right;\n}\n#galeries-menu-haut .navigation.responsive[data-v-4e7af427] {\n        position: relative;\n}\n#galeries-menu-haut .navigation.responsive li[data-v-4e7af427] {\n          float: none;\n          display: block;\n          text-align: left;\n          background: #353535;\n}\n#galeries-menu-haut .navigation.responsive li a[data-v-4e7af427] {\n            float: none;\n            display: block;\n            text-align: left;\n}\n#galeries-menu-haut .navigation.responsive li.burger[data-v-4e7af427] {\n            position: absolute;\n            right: 0;\n            top: 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -57249,46 +57249,50 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "galeries-menu-haut" }, [
-    _c("ul", { staticClass: "navigation", attrs: { id: "navbar" } }, [
-      _c("li", [
-        _c("a", { attrs: { href: "/" }, on: { click: _vm.hideMenu } }, [
-          _vm._v(_vm._s(_vm.$trans("galeries.menuhaut.retour-accueil")))
+  return _c(
+    "div",
+    { staticClass: "galeries-menu-haut", attrs: { id: "galeries-menu-haut" } },
+    [
+      _c("ul", { staticClass: "navigation", attrs: { id: "navbar" } }, [
+        _c("li", [
+          _c("a", { attrs: { href: "/" }, on: { click: _vm.hideMenu } }, [
+            _vm._v(_vm._s(_vm.$trans("galeries.menuhaut.retour-accueil")))
+          ])
+        ]),
+        _vm._v(" "),
+        _vm.$trans("locale") != "fr"
+          ? _c("li", { staticClass: "flag" }, [
+              _c(
+                "a",
+                { attrs: { href: "/lang/fr" }, on: { click: _vm.hideMenu } },
+                [_c("span", { staticClass: "flag-icon flag-icon-fr" })]
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.$trans("locale") != "en"
+          ? _c("li", { staticClass: "flag" }, [
+              _c(
+                "a",
+                { attrs: { href: "/lang/en" }, on: { click: _vm.hideMenu } },
+                [_c("span", { staticClass: "flag-icon flag-icon-gb" })]
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("li", { staticClass: "burger" }, [
+          _c(
+            "a",
+            {
+              attrs: { href: "javascript:void(0);" },
+              on: { click: _vm.showMenu }
+            },
+            [_vm._m(0, false, false)]
+          )
         ])
-      ]),
-      _vm._v(" "),
-      _vm.$trans("locale") != "fr"
-        ? _c("li", { staticClass: "flag" }, [
-            _c(
-              "a",
-              { attrs: { href: "/lang/fr" }, on: { click: _vm.hideMenu } },
-              [_c("span", { staticClass: "flag-icon flag-icon-fr" })]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.$trans("locale") != "en"
-        ? _c("li", { staticClass: "flag" }, [
-            _c(
-              "a",
-              { attrs: { href: "/lang/en" }, on: { click: _vm.hideMenu } },
-              [_c("span", { staticClass: "flag-icon flag-icon-gb" })]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("li", { staticClass: "burger" }, [
-        _c(
-          "a",
-          {
-            attrs: { href: "javascript:void(0);" },
-            on: { click: _vm.showMenu }
-          },
-          [_vm._m(0, false, false)]
-        )
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
@@ -57551,7 +57555,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\nul[data-v-01a52cbb] {\n  list-style: none;\n  padding-left: 0;\n  border-bottom: 1px solid #EB7041;\n}\n.galerie-oeuvres[data-v-01a52cbb] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  margin: 0 -5px 64px -5px;\n  padding-bottom: 16px;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\nul[data-v-01a52cbb] {\n  list-style: none;\n  padding-left: 0;\n  border-bottom: 1px solid #EB7041;\n}\n.galerie-oeuvres[data-v-01a52cbb] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  margin: 32px -5px 64px -5px;\n  padding-bottom: 16px;\n}\n", ""]);
 
 // exports
 
@@ -57589,7 +57593,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     components: {
         Oeuvre: __WEBPACK_IMPORTED_MODULE_0__galeries_Oeuvre_vue___default.a
     },
-    props: ['galerieId', 'galerieNom', 'statutsDisponibilite'],
+    props: ['galerieId', 'galerieNom', 'galerieDescription', 'statutsDisponibilite'],
     data: function data() {
         return {
             oeuvres: []
@@ -57882,7 +57886,9 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "contenu-section" }, [
-      _c("div"),
+      _c("div", [
+        _vm._v("\n            " + _vm._s(_vm.galerieDescription) + "\n        ")
+      ]),
       _vm._v(" "),
       _c(
         "ul",
@@ -57942,6 +57948,7 @@ var render = function() {
               attrs: {
                 "galerie-id": galerie.id,
                 "galerie-nom": galerie.nom,
+                "galerie-description": galerie.description,
                 "statuts-disponibilite": _vm.statutsDisponibilite
               }
             })

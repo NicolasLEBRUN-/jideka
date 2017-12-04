@@ -57158,7 +57158,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.exposition .dates-exposition[data-v-2e43d3cb], .exposition .vernissage-exposition[data-v-2e43d3cb], .exposition .lieu-exposition[data-v-2e43d3cb] {\n  opacity: .5;\n}\n.exposition .nom-exposition[data-v-2e43d3cb] {\n  font-size: 1.5rem;\n}\n.exposition .dates-exposition[data-v-2e43d3cb] {\n  margin-top: 0;\n}\n.exposition .details-exposition[data-v-2e43d3cb] {\n  padding: 5px 0 5px 10px;\n  border-left: 1px solid white;\n  margin: 10px 0 10px 6px;\n}\n.exposition .visuel-exposition[data-v-2e43d3cb] {\n  height: 120px;\n  width: 120px;\n  border: 2px solid white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  overflow: hidden;\n  padding: 4px;\n}\n.exposition .visuel-exposition img[data-v-2e43d3cb] {\n    border: 4px solid #3F3F3F;\n    height: 114px;\n    width: 114px;\n}\nul[data-v-2e43d3cb] {\n  list-style-type: none;\n  padding: 0 0 0 75px;\n  margin: -1.35rem 0 1em;\n  max-width: 32rem;\n  font-size: 1em;\n}\n@media (min-width: 62em) {\nul[data-v-2e43d3cb] {\n      font-size: 1.1em;\n      padding: 0 0 0 75px;\n}\n}\nul[data-v-2e43d3cb]:last-child {\n    margin-bottom: 0;\n}\nul[data-v-2e43d3cb]:first-of-type:after {\n    content: '';\n    width: 16px;\n    height: 16px;\n    background: #C5C5C5;\n    border: 3px solid #353535;\n    border-radius: 50%;\n    position: absolute;\n    left: 53px;\n    top: 3px;\n    z-index: 2;\n}\nul li[data-v-2e43d3cb] {\n    margin: 0;\n    margin-left: 6px;\n}\nul li[data-v-2e43d3cb]:not(:first-child) {\n      margin-top: .4rem;\n}\nul li span.en-cours[data-v-2e43d3cb] {\n      font-size: 0.85em;\n      font-style: italic;\n      color: #FB6C3F;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.exposition .dates-exposition[data-v-2e43d3cb], .exposition .vernissage-exposition[data-v-2e43d3cb], .exposition .lieu-exposition[data-v-2e43d3cb] {\n  opacity: .6;\n}\n.exposition .nom-exposition[data-v-2e43d3cb] {\n  font-size: 1.5rem;\n}\n.exposition .dates-exposition[data-v-2e43d3cb] {\n  margin-top: 0;\n}\n.exposition .details-exposition[data-v-2e43d3cb] {\n  padding: 5px 0 5px 10px;\n  border-left: 1px solid white;\n  margin: 10px 0 10px 6px;\n}\n.exposition .visuel-exposition[data-v-2e43d3cb] {\n  height: 140px;\n  width: 140px;\n  border: 2px solid white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  overflow: hidden;\n  padding: 4px;\n  margin-top: 8px;\n}\n.exposition .visuel-exposition img[data-v-2e43d3cb] {\n    border: 4px solid #3F3F3F;\n    height: 134px;\n    width: 134px;\n}\nul[data-v-2e43d3cb] {\n  list-style-type: none;\n  padding: 0 0 0 75px;\n  margin: -1.35rem 0 1em;\n  max-width: 32rem;\n  font-size: 1em;\n}\n@media (min-width: 62em) {\nul[data-v-2e43d3cb] {\n      font-size: 1.1em;\n      padding: 0 0 0 75px;\n}\n}\nul[data-v-2e43d3cb]:last-child {\n    margin-bottom: 0;\n}\nul[data-v-2e43d3cb]:first-of-type:after {\n    content: '';\n    width: 16px;\n    height: 16px;\n    background: #C5C5C5;\n    border: 3px solid #353535;\n    border-radius: 50%;\n    position: absolute;\n    left: 53px;\n    top: 3px;\n    z-index: 2;\n}\nul li[data-v-2e43d3cb] {\n    margin: 0;\n    margin-left: 6px;\n}\nul li[data-v-2e43d3cb]:not(:first-child) {\n      margin-top: .4rem;\n}\nul li span.en-cours[data-v-2e43d3cb] {\n      font-size: 0.85em;\n      font-style: italic;\n      color: #FB6C3F;\n}\n", ""]);
 
 // exports
 
@@ -57696,7 +57696,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.expositions-menu-haut[data-v-71b8eef4] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n}\n.expositions-menu-haut .navigation[data-v-71b8eef4] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    height: 100%;\n}\n.expositions-menu-haut .navigation li[data-v-71b8eef4] {\n      display: inline;\n}\n.expositions-menu-haut .navigation li a[data-v-71b8eef4] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        -webkit-transition: all .3s ease;\n        transition: all .3s ease;\n        height: 100%;\n}\n.expositions-menu-haut .navigation li a[data-v-71b8eef4]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFFFFF;\n}\n.expositions-menu-haut .navigation li.burger[data-v-71b8eef4] {\n        display: none;\n}\n.expositions-menu-haut .navigation li.flag img[data-v-71b8eef4] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-71b8eef4] {\n    float: none !important;\n    background: #353535;\n}\n.navigation li a[data-v-71b8eef4] {\n      float: left;\n}\n.navigation li[data-v-71b8eef4]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-71b8eef4] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-71b8eef4] {\n      position: relative;\n}\n.navigation.responsive li[data-v-71b8eef4] {\n        float: none;\n        display: block;\n        text-align: left;\n        background: #353535;\n}\n.navigation.responsive li a[data-v-71b8eef4] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-71b8eef4] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-71b8eef4] {\n    margin: 0 !important;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n#expositions-menu-haut[data-v-71b8eef4] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n  z-index: 999;\n}\n@media (min-width: 768px) {\n#expositions-menu-haut .navigation[data-v-71b8eef4] {\n      float: right;\n      list-style: none;\n      margin: 0 50px 0 0;\n      padding: 0;\n      height: 100%;\n}\n#expositions-menu-haut .navigation li[data-v-71b8eef4] {\n        display: inline;\n}\n#expositions-menu-haut .navigation li a[data-v-71b8eef4] {\n          text-decoration: none;\n          display: inline-block;\n          padding: 18px;\n          color: rgba(255, 255, 255, 0.7);\n          -webkit-transition: all .3s ease;\n          transition: all .3s ease;\n          height: 100%;\n}\n#expositions-menu-haut .navigation li a[data-v-71b8eef4]:hover {\n            background: rgba(40, 40, 40, 0.7);\n            color: #FFFFFF;\n}\n#expositions-menu-haut .navigation li.burger[data-v-71b8eef4] {\n          display: none;\n}\n#expositions-menu-haut .navigation li.flag img[data-v-71b8eef4] {\n          height: 19px;\n}\n}\n@media (max-width: 767px) {\n#expositions-menu-haut .navigation[data-v-71b8eef4] {\n      float: none !important;\n      background: rgba(53, 53, 53, 0.5);\n}\n#expositions-menu-haut .navigation li a[data-v-71b8eef4] {\n        float: left;\n}\n#expositions-menu-haut .navigation li[data-v-71b8eef4]:not(:first-child) {\n        display: none;\n}\n#expositions-menu-haut .navigation li:not(:first-child).burger[data-v-71b8eef4] {\n          display: block;\n          float: right;\n}\n#expositions-menu-haut .navigation.responsive[data-v-71b8eef4] {\n        position: relative;\n}\n#expositions-menu-haut .navigation.responsive li[data-v-71b8eef4] {\n          float: none;\n          display: block;\n          text-align: left;\n          background: #353535;\n}\n#expositions-menu-haut .navigation.responsive li a[data-v-71b8eef4] {\n            float: none;\n            display: block;\n            text-align: left;\n}\n#expositions-menu-haut .navigation.responsive li.burger[data-v-71b8eef4] {\n            position: absolute;\n            right: 0;\n            top: 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -57762,46 +57762,53 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "expositions-menu-haut" }, [
-    _c("ul", { staticClass: "navigation", attrs: { id: "navbar" } }, [
-      _c("li", [
-        _c("a", { attrs: { href: "/" }, on: { click: _vm.hideMenu } }, [
-          _vm._v(_vm._s(_vm.$trans("expositions.menuhaut.retour-accueil")))
+  return _c(
+    "div",
+    {
+      staticClass: "expositions-menu-haut",
+      attrs: { id: "expositions-menu-haut" }
+    },
+    [
+      _c("ul", { staticClass: "navigation", attrs: { id: "navbar" } }, [
+        _c("li", [
+          _c("a", { attrs: { href: "/" }, on: { click: _vm.hideMenu } }, [
+            _vm._v(_vm._s(_vm.$trans("expositions.menuhaut.retour-accueil")))
+          ])
+        ]),
+        _vm._v(" "),
+        _vm.$trans("locale") != "fr"
+          ? _c("li", { staticClass: "flag" }, [
+              _c(
+                "a",
+                { attrs: { href: "/lang/fr" }, on: { click: _vm.hideMenu } },
+                [_c("span", { staticClass: "flag-icon flag-icon-fr" })]
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.$trans("locale") != "en"
+          ? _c("li", { staticClass: "flag" }, [
+              _c(
+                "a",
+                { attrs: { href: "/lang/en" }, on: { click: _vm.hideMenu } },
+                [_c("span", { staticClass: "flag-icon flag-icon-gb" })]
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("li", { staticClass: "burger" }, [
+          _c(
+            "a",
+            {
+              attrs: { href: "javascript:void(0);" },
+              on: { click: _vm.showMenu }
+            },
+            [_vm._m(0, false, false)]
+          )
         ])
-      ]),
-      _vm._v(" "),
-      _vm.$trans("locale") != "fr"
-        ? _c("li", { staticClass: "flag" }, [
-            _c(
-              "a",
-              { attrs: { href: "/lang/fr" }, on: { click: _vm.hideMenu } },
-              [_c("span", { staticClass: "flag-icon flag-icon-fr" })]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.$trans("locale") != "en"
-        ? _c("li", { staticClass: "flag" }, [
-            _c(
-              "a",
-              { attrs: { href: "/lang/en" }, on: { click: _vm.hideMenu } },
-              [_c("span", { staticClass: "flag-icon flag-icon-gb" })]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("li", { staticClass: "burger" }, [
-        _c(
-          "a",
-          {
-            attrs: { href: "javascript:void(0);" },
-            on: { click: _vm.showMenu }
-          },
-          [_vm._m(0, false, false)]
-        )
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {

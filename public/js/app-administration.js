@@ -58241,7 +58241,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.administration-menu-haut[data-v-8873bf7e] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n}\n.administration-menu-haut .navigation[data-v-8873bf7e] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    height: 100%;\n}\n.administration-menu-haut .navigation li[data-v-8873bf7e] {\n      display: inline;\n}\n.administration-menu-haut .navigation li a[data-v-8873bf7e] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        -webkit-transition: all .3s ease;\n        transition: all .3s ease;\n        height: 100%;\n}\n.administration-menu-haut .navigation li a[data-v-8873bf7e]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFFFFF;\n}\n.administration-menu-haut .navigation li.burger[data-v-8873bf7e] {\n        display: none;\n}\n.administration-menu-haut .navigation li.flag img[data-v-8873bf7e] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-8873bf7e] {\n    float: none !important;\n    background: #353535;\n}\n.navigation li a[data-v-8873bf7e] {\n      float: left;\n}\n.navigation li[data-v-8873bf7e]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-8873bf7e] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-8873bf7e] {\n      position: relative;\n}\n.navigation.responsive li[data-v-8873bf7e] {\n        float: none;\n        display: block;\n        text-align: left;\n        background: #353535;\n}\n.navigation.responsive li a[data-v-8873bf7e] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-8873bf7e] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-8873bf7e] {\n    margin: 0 !important;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n#administration-menu-haut[data-v-8873bf7e] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n  z-index: 999;\n}\n@media (min-width: 768px) {\n#administration-menu-haut .navigation[data-v-8873bf7e] {\n      float: right;\n      list-style: none;\n      margin: 0 50px 0 0;\n      padding: 0;\n      height: 100%;\n}\n#administration-menu-haut .navigation li[data-v-8873bf7e] {\n        display: inline;\n}\n#administration-menu-haut .navigation li a[data-v-8873bf7e] {\n          text-decoration: none;\n          display: inline-block;\n          padding: 18px;\n          color: rgba(255, 255, 255, 0.7);\n          -webkit-transition: all .3s ease;\n          transition: all .3s ease;\n          height: 100%;\n}\n#administration-menu-haut .navigation li a[data-v-8873bf7e]:hover {\n            background: rgba(40, 40, 40, 0.7);\n            color: #FFFFFF;\n}\n#administration-menu-haut .navigation li.burger[data-v-8873bf7e] {\n          display: none;\n}\n#administration-menu-haut .navigation li.flag img[data-v-8873bf7e] {\n          height: 19px;\n}\n}\n@media (max-width: 767px) {\n#administration-menu-haut .navigation[data-v-8873bf7e] {\n      float: none !important;\n      background: rgba(53, 53, 53, 0.5);\n}\n#administration-menu-haut .navigation li a[data-v-8873bf7e] {\n        float: left;\n}\n#administration-menu-haut .navigation li[data-v-8873bf7e]:not(:first-child) {\n        display: none;\n}\n#administration-menu-haut .navigation li:not(:first-child).burger[data-v-8873bf7e] {\n          display: block;\n          float: right;\n}\n#administration-menu-haut .navigation.responsive[data-v-8873bf7e] {\n        position: relative;\n}\n#administration-menu-haut .navigation.responsive li[data-v-8873bf7e] {\n          float: none;\n          display: block;\n          text-align: left;\n          background: #353535;\n}\n#administration-menu-haut .navigation.responsive li a[data-v-8873bf7e] {\n            float: none;\n            display: block;\n            text-align: left;\n}\n#administration-menu-haut .navigation.responsive li.burger[data-v-8873bf7e] {\n            position: absolute;\n            right: 0;\n            top: 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -58324,100 +58324,107 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "administration-menu-haut" }, [
-    _c("ul", { staticClass: "navigation", attrs: { id: "navbar" } }, [
-      _c("li", [
-        _c("a", { attrs: { href: "/" }, on: { click: _vm.hideMenu } }, [
-          _vm._v("Retour à la version publique du site")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            attrs: { href: "#administration-biographie" },
-            on: { click: _vm.hideMenu }
-          },
-          [_vm._v("Biographie")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            attrs: { href: "#administration-galeries" },
-            on: { click: _vm.hideMenu }
-          },
-          [_vm._v("Galeries")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            attrs: { href: "#administration-oeuvres" },
-            on: { click: _vm.hideMenu }
-          },
-          [_vm._v("Oeuvres")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            attrs: { href: "#administration-expositions" },
-            on: { click: _vm.hideMenu }
-          },
-          [_vm._v("Expositions")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            attrs: { href: "/logout" },
-            on: {
-              click: function($event) {
-                $event.preventDefault()
-                _vm.deconnecter($event)
-              }
-            }
-          },
-          [_vm._v("\n                Déconnexion\n            ")]
-        ),
+  return _c(
+    "div",
+    {
+      staticClass: "administration-menu-haut",
+      attrs: { id: "administration-menu-haut" }
+    },
+    [
+      _c("ul", { staticClass: "navigation", attrs: { id: "navbar" } }, [
+        _c("li", [
+          _c("a", { attrs: { href: "/" }, on: { click: _vm.hideMenu } }, [
+            _vm._v("Retour à la version publique du site")
+          ])
+        ]),
         _vm._v(" "),
-        _c(
-          "form",
-          {
-            staticStyle: { display: "none" },
-            attrs: { id: "logout-form", action: "/logout", method: "POST" }
-          },
-          [
-            _c("input", {
-              attrs: { type: "hidden", name: "_token" },
-              domProps: { value: _vm.csrf }
-            })
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", { staticClass: "burger" }, [
-        _c(
-          "a",
-          {
-            attrs: { href: "javascript:void(0);" },
-            on: { click: _vm.showMenu }
-          },
-          [_vm._m(0, false, false)]
-        )
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "#administration-biographie" },
+              on: { click: _vm.hideMenu }
+            },
+            [_vm._v("Biographie")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "#administration-galeries" },
+              on: { click: _vm.hideMenu }
+            },
+            [_vm._v("Galeries")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "#administration-oeuvres" },
+              on: { click: _vm.hideMenu }
+            },
+            [_vm._v("Oeuvres")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "#administration-expositions" },
+              on: { click: _vm.hideMenu }
+            },
+            [_vm._v("Expositions")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "/logout" },
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.deconnecter($event)
+                }
+              }
+            },
+            [_vm._v("\n                Déconnexion\n            ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "form",
+            {
+              staticStyle: { display: "none" },
+              attrs: { id: "logout-form", action: "/logout", method: "POST" }
+            },
+            [
+              _c("input", {
+                attrs: { type: "hidden", name: "_token" },
+                domProps: { value: _vm.csrf }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "burger" }, [
+          _c(
+            "a",
+            {
+              attrs: { href: "javascript:void(0);" },
+              on: { click: _vm.showMenu }
+            },
+            [_vm._m(0, false, false)]
+          )
+        ])
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
@@ -58534,7 +58541,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n#administration-biographie[data-v-7e24a068] {\n  margin-top: 60px;\n  padding: 0 64px;\n}\n.contenu-section[data-v-7e24a068] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.instructions[data-v-7e24a068] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-7e24a068] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-7e24a068] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n#administration-biographie[data-v-7e24a068] {\n  margin-top: 60px;\n  padding: 0 64px;\n}\n.contenu-section[data-v-7e24a068] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.instructions[data-v-7e24a068] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-7e24a068] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n@media (max-width: 767px) {\n.contenu-section[data-v-7e24a068] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -59129,7 +59136,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.contenu-section[data-v-d4d2ed3e] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-d4d2ed3e] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-d4d2ed3e] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-d4d2ed3e] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n.contenu-section[data-v-d4d2ed3e] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-d4d2ed3e] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-d4d2ed3e] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n@media (max-width: 767px) {\n.contenu-section[data-v-d4d2ed3e] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -59576,7 +59583,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.contenu-section[data-v-31a33aa1] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-31a33aa1] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-31a33aa1] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n.multiselect[data-v-31a33aa1] {\n  margin-bottom: 15px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-31a33aa1] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n.contenu-section[data-v-31a33aa1] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-31a33aa1] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-31a33aa1] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n.multiselect[data-v-31a33aa1] {\n  margin-bottom: 15px;\n}\n@media (max-width: 767px) {\n.contenu-section[data-v-31a33aa1] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -60103,7 +60110,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.contenu-section[data-v-0af2ccce] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-0af2ccce] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-0af2ccce] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n.multiselect[data-v-0af2ccce] {\n  margin-bottom: 15px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-0af2ccce] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n.contenu-section[data-v-0af2ccce] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-0af2ccce] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-0af2ccce] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n.multiselect[data-v-0af2ccce] {\n  margin-bottom: 15px;\n}\n@media (max-width: 767px) {\n.contenu-section[data-v-0af2ccce] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -60289,8 +60296,8 @@ var Today = new Date();
                 largeur: self.largeur,
                 profondeur: self.profondeur,
                 prix: self.prix,
-                statutdisponibilite: self.statutdisponibilite,
-                galerie: self.galerie,
+                statutdisponibilite: self.statutdisponibilite.id,
+                galerie: self.galerie.id,
                 visuel: self.visuel
             }).then(function (response) {
                 self.success = response.data;
@@ -60798,7 +60805,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.contenu-section[data-v-e524b7d8] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-e524b7d8] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-e524b7d8] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n.multiselect[data-v-e524b7d8] {\n  margin-bottom: 15px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-e524b7d8] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n.contenu-section[data-v-e524b7d8] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-e524b7d8] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-e524b7d8] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n.multiselect[data-v-e524b7d8] {\n  margin-bottom: 15px;\n}\n@media (max-width: 767px) {\n.contenu-section[data-v-e524b7d8] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -61268,7 +61275,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n#administration-expositions[data-v-12f9511d] {\n  margin-top: 60px;\n  padding: 0 64px;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n#administration-expositions[data-v-12f9511d] {\n  margin-top: 60px;\n  margin-bottom: 64px;\n  padding: 0 64px;\n}\n", ""]);
 
 // exports
 
@@ -61403,7 +61410,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.contenu-section[data-v-859590c8] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-859590c8] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-859590c8] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\ninput.form-control.input.flatpickr-input[data-v-859590c8] {\n  padding: 5px 10px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-859590c8] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n.contenu-section[data-v-859590c8] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-859590c8] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-859590c8] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\ninput.form-control.input.flatpickr-input[data-v-859590c8] {\n  padding: 5px 10px;\n}\n@media (max-width: 767px) {\n.contenu-section[data-v-859590c8] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 
@@ -61973,7 +61980,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.contenu-section[data-v-670ec2f4] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-670ec2f4] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-670ec2f4] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n.multiselect[data-v-670ec2f4] {\n  margin-bottom: 15px;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-670ec2f4] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n.contenu-section[data-v-670ec2f4] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row wrap;\n          flex-direction: row wrap;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n}\n.instructions[data-v-670ec2f4] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n  margin-bottom: 16px;\n  margin-right: 16px;\n}\n.edition[data-v-670ec2f4] {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 0px;\n          flex: 1 1 0;\n}\n.multiselect[data-v-670ec2f4] {\n  margin-bottom: 15px;\n}\n@media (max-width: 767px) {\n.contenu-section[data-v-670ec2f4] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
 
 // exports
 

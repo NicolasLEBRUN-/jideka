@@ -57316,7 +57316,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.exposition .dates-exposition[data-v-2e43d3cb], .exposition .vernissage-exposition[data-v-2e43d3cb], .exposition .lieu-exposition[data-v-2e43d3cb] {\n  opacity: .5;\n}\n.exposition .nom-exposition[data-v-2e43d3cb] {\n  font-size: 1.5rem;\n}\n.exposition .dates-exposition[data-v-2e43d3cb] {\n  margin-top: 0;\n}\n.exposition .details-exposition[data-v-2e43d3cb] {\n  padding: 5px 0 5px 10px;\n  border-left: 1px solid white;\n  margin: 10px 0 10px 6px;\n}\n.exposition .visuel-exposition[data-v-2e43d3cb] {\n  height: 120px;\n  width: 120px;\n  border: 2px solid white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  overflow: hidden;\n  padding: 4px;\n}\n.exposition .visuel-exposition img[data-v-2e43d3cb] {\n    border: 4px solid #3F3F3F;\n    height: 114px;\n    width: 114px;\n}\nul[data-v-2e43d3cb] {\n  list-style-type: none;\n  padding: 0 0 0 75px;\n  margin: -1.35rem 0 1em;\n  max-width: 32rem;\n  font-size: 1em;\n}\n@media (min-width: 62em) {\nul[data-v-2e43d3cb] {\n      font-size: 1.1em;\n      padding: 0 0 0 75px;\n}\n}\nul[data-v-2e43d3cb]:last-child {\n    margin-bottom: 0;\n}\nul[data-v-2e43d3cb]:first-of-type:after {\n    content: '';\n    width: 16px;\n    height: 16px;\n    background: #C5C5C5;\n    border: 3px solid #353535;\n    border-radius: 50%;\n    position: absolute;\n    left: 53px;\n    top: 3px;\n    z-index: 2;\n}\nul li[data-v-2e43d3cb] {\n    margin: 0;\n    margin-left: 6px;\n}\nul li[data-v-2e43d3cb]:not(:first-child) {\n      margin-top: .4rem;\n}\nul li span.en-cours[data-v-2e43d3cb] {\n      font-size: 0.85em;\n      font-style: italic;\n      color: #FB6C3F;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n.exposition .dates-exposition[data-v-2e43d3cb], .exposition .vernissage-exposition[data-v-2e43d3cb], .exposition .lieu-exposition[data-v-2e43d3cb] {\n  opacity: .6;\n}\n.exposition .nom-exposition[data-v-2e43d3cb] {\n  font-size: 1.5rem;\n}\n.exposition .dates-exposition[data-v-2e43d3cb] {\n  margin-top: 0;\n}\n.exposition .details-exposition[data-v-2e43d3cb] {\n  padding: 5px 0 5px 10px;\n  border-left: 1px solid white;\n  margin: 10px 0 10px 6px;\n}\n.exposition .visuel-exposition[data-v-2e43d3cb] {\n  height: 140px;\n  width: 140px;\n  border: 2px solid white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  overflow: hidden;\n  padding: 4px;\n  margin-top: 8px;\n}\n.exposition .visuel-exposition img[data-v-2e43d3cb] {\n    border: 4px solid #3F3F3F;\n    height: 134px;\n    width: 134px;\n}\nul[data-v-2e43d3cb] {\n  list-style-type: none;\n  padding: 0 0 0 75px;\n  margin: -1.35rem 0 1em;\n  max-width: 32rem;\n  font-size: 1em;\n}\n@media (min-width: 62em) {\nul[data-v-2e43d3cb] {\n      font-size: 1.1em;\n      padding: 0 0 0 75px;\n}\n}\nul[data-v-2e43d3cb]:last-child {\n    margin-bottom: 0;\n}\nul[data-v-2e43d3cb]:first-of-type:after {\n    content: '';\n    width: 16px;\n    height: 16px;\n    background: #C5C5C5;\n    border: 3px solid #353535;\n    border-radius: 50%;\n    position: absolute;\n    left: 53px;\n    top: 3px;\n    z-index: 2;\n}\nul li[data-v-2e43d3cb] {\n    margin: 0;\n    margin-left: 6px;\n}\nul li[data-v-2e43d3cb]:not(:first-child) {\n      margin-top: .4rem;\n}\nul li span.en-cours[data-v-2e43d3cb] {\n      font-size: 0.85em;\n      font-style: italic;\n      color: #FB6C3F;\n}\n", ""]);
 
 // exports
 
@@ -58064,7 +58064,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-menu-haut[data-v-73c8d889] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n  z-index: 999;\n}\n.accueil-menu-haut .navigation[data-v-73c8d889] {\n    float: right;\n    list-style: none;\n    margin: 0 50px 0 0;\n    padding: 0;\n    height: 100%;\n}\n.accueil-menu-haut .navigation li[data-v-73c8d889] {\n      display: inline;\n}\n.accueil-menu-haut .navigation li a[data-v-73c8d889] {\n        text-decoration: none;\n        display: inline-block;\n        padding: 18px;\n        color: rgba(255, 255, 255, 0.7);\n        -webkit-transition: all .3s ease;\n        transition: all .3s ease;\n        height: 100%;\n}\n.accueil-menu-haut .navigation li a[data-v-73c8d889]:hover {\n          background: rgba(40, 40, 40, 0.7);\n          color: #FFFFFF;\n}\n.accueil-menu-haut .navigation li.burger[data-v-73c8d889] {\n        display: none;\n}\n.accueil-menu-haut .navigation li.flag img[data-v-73c8d889] {\n        height: 19px;\n}\n@media all and (max-width: 600px) {\n.navigation[data-v-73c8d889] {\n    float: none !important;\n    background: rgba(53, 53, 53, 0.5);\n}\n.navigation li a[data-v-73c8d889] {\n      float: left;\n}\n.navigation li[data-v-73c8d889]:not(:first-child) {\n      display: none;\n}\n.navigation li:not(:first-child).burger[data-v-73c8d889] {\n        display: block;\n        float: right;\n}\n.navigation.responsive[data-v-73c8d889] {\n      position: relative;\n}\n.navigation.responsive li[data-v-73c8d889] {\n        float: none;\n        display: block;\n        text-align: left;\n        background: #353535;\n}\n.navigation.responsive li a[data-v-73c8d889] {\n          float: none;\n          display: block;\n          text-align: left;\n}\n.navigation.responsive li.burger[data-v-73c8d889] {\n          position: absolute;\n          right: 0;\n          top: 0;\n}\n}\n@media all and (max-width: 700px) {\n.navigation[data-v-73c8d889] {\n    margin: 0 !important;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n#accueil-menu-haut[data-v-73c8d889] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  background: rgba(53, 53, 53, 0.7);\n  font-weight: lighter;\n  height: 60px;\n  z-index: 999;\n}\n@media (min-width: 768px) {\n#accueil-menu-haut .navigation[data-v-73c8d889] {\n      float: right;\n      list-style: none;\n      margin: 0 50px 0 0;\n      padding: 0;\n      height: 100%;\n}\n#accueil-menu-haut .navigation li[data-v-73c8d889] {\n        display: inline;\n}\n#accueil-menu-haut .navigation li a[data-v-73c8d889] {\n          text-decoration: none;\n          display: inline-block;\n          padding: 18px;\n          color: rgba(255, 255, 255, 0.7);\n          -webkit-transition: all .3s ease;\n          transition: all .3s ease;\n          height: 100%;\n}\n#accueil-menu-haut .navigation li a[data-v-73c8d889]:hover {\n            background: rgba(40, 40, 40, 0.7);\n            color: #FFFFFF;\n}\n#accueil-menu-haut .navigation li.burger[data-v-73c8d889] {\n          display: none;\n}\n#accueil-menu-haut .navigation li.flag img[data-v-73c8d889] {\n          height: 19px;\n}\n}\n@media (max-width: 767px) {\n#accueil-menu-haut .navigation[data-v-73c8d889] {\n      float: none !important;\n      background: rgba(53, 53, 53, 0.5);\n}\n#accueil-menu-haut .navigation li a[data-v-73c8d889] {\n        float: left;\n}\n#accueil-menu-haut .navigation li[data-v-73c8d889]:not(:first-child) {\n        display: none;\n}\n#accueil-menu-haut .navigation li:not(:first-child).burger[data-v-73c8d889] {\n          display: block;\n          float: right;\n}\n#accueil-menu-haut .navigation.responsive[data-v-73c8d889] {\n        position: relative;\n}\n#accueil-menu-haut .navigation.responsive li[data-v-73c8d889] {\n          float: none;\n          display: block;\n          text-align: left;\n          background: #353535;\n}\n#accueil-menu-haut .navigation.responsive li a[data-v-73c8d889] {\n            float: none;\n            display: block;\n            text-align: left;\n}\n#accueil-menu-haut .navigation.responsive li.burger[data-v-73c8d889] {\n            position: absolute;\n            right: 0;\n            top: 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -58139,89 +58139,109 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "accueil-menu-haut" }, [
-    _c("ul", { staticClass: "navigation", attrs: { id: "navbar" } }, [
-      _c("li", [
-        _c(
-          "a",
-          {
-            attrs: { href: "#accueil-presentation" },
-            on: { click: _vm.hideMenu }
-          },
-          [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.accueil")))]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            attrs: { href: "#accueil-biographie" },
-            on: { click: _vm.hideMenu }
-          },
-          [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.biographie")))]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          { attrs: { href: "#accueil-galeries" }, on: { click: _vm.hideMenu } },
-          [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.galeries")))]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            attrs: { href: "#accueil-expositions" },
-            on: { click: _vm.hideMenu }
-          },
-          [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.expositions")))]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          { attrs: { href: "#accueil-contact" }, on: { click: _vm.hideMenu } },
-          [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.contact")))]
-        )
-      ]),
-      _vm._v(" "),
-      _vm.$trans("locale") != "fr"
-        ? _c("li", { staticClass: "flag" }, [
-            _c(
-              "a",
-              { attrs: { href: "/lang/fr" }, on: { click: _vm.hideMenu } },
-              [_c("span", { staticClass: "flag-icon flag-icon-fr" })]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.$trans("locale") != "en"
-        ? _c("li", { staticClass: "flag" }, [
-            _c(
-              "a",
-              { attrs: { href: "/lang/en" }, on: { click: _vm.hideMenu } },
-              [_c("span", { staticClass: "flag-icon flag-icon-gb" })]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("li", { staticClass: "burger" }, [
-        _c(
-          "a",
-          {
-            attrs: { href: "javascript:void(0);" },
-            on: { click: _vm.showMenu }
-          },
-          [_vm._m(0, false, false)]
-        )
+  return _c(
+    "div",
+    { staticClass: "accueil-menu-haut", attrs: { id: "accueil-menu-haut" } },
+    [
+      _c("ul", { staticClass: "navigation", attrs: { id: "navbar" } }, [
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "#accueil-presentation" },
+              on: { click: _vm.hideMenu }
+            },
+            [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.accueil")))]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "#accueil-biographie" },
+              on: { click: _vm.hideMenu }
+            },
+            [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.biographie")))]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "#accueil-galeries" },
+              on: { click: _vm.hideMenu }
+            },
+            [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.galeries")))]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "#accueil-expositions" },
+              on: { click: _vm.hideMenu }
+            },
+            [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.expositions")))]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: { href: "#accueil-contact" },
+              on: { click: _vm.hideMenu }
+            },
+            [_vm._v(_vm._s(_vm.$trans("accueil.menuhaut.contact")))]
+          )
+        ]),
+        _vm._v(" "),
+        _vm.$trans("locale") != "fr"
+          ? _c("li", { staticClass: "flag" }, [
+              _c(
+                "a",
+                { attrs: { href: "/lang/fr" }, on: { click: _vm.hideMenu } },
+                [
+                  _c("img", {
+                    staticStyle: { height: "16px", width: "21px" },
+                    attrs: { src: "/img/flags/fr.svg" }
+                  })
+                ]
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.$trans("locale") != "en"
+          ? _c("li", { staticClass: "flag" }, [
+              _c(
+                "a",
+                { attrs: { href: "/lang/en" }, on: { click: _vm.hideMenu } },
+                [
+                  _c("img", {
+                    staticStyle: { height: "16px", width: "21px" },
+                    attrs: { src: "/img/flags/en.svg" }
+                  })
+                ]
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("li", { staticClass: "burger" }, [
+          _c(
+            "a",
+            {
+              attrs: { href: "javascript:void(0);" },
+              on: { click: _vm.showMenu }
+            },
+            [_vm._m(0, false, false)]
+          )
+        ])
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
@@ -58338,7 +58358,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n#accueil-presentation[data-v-6c6fc468] {\n  margin-top: 60px;\n  background-image: none;\n  height: 400px;\n}\n@media (min-width: 1000px) {\n#accueil-presentation[data-v-6c6fc468] {\n      background: url(/img/pinceaux.png) right no-repeat;\n      background-size: contain;\n      height: calc(100vh - 60px);\n}\n}\n#accueil-presentation .content[data-v-6c6fc468] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    font-weight: lighter;\n}\n#accueil-presentation .content .text[data-v-6c6fc468] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      margin-left: 5%;\n}\n#accueil-presentation .content .text h1[data-v-6c6fc468] {\n        color: #EB7041;\n}\n#accueil-presentation .content .text h1[data-v-6c6fc468], #accueil-presentation .content .text h2[data-v-6c6fc468] {\n        font-weight: lighter;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n#accueil-presentation[data-v-6c6fc468] {\n  margin-top: 60px;\n  background-image: none;\n  height: 400px;\n}\n@media (min-width: 1224px) {\n#accueil-presentation[data-v-6c6fc468] {\n      background: url(/img/pinceaux.png) right no-repeat;\n      background-size: contain;\n      height: calc(100vh - 60px);\n}\n}\n#accueil-presentation .content[data-v-6c6fc468] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    font-weight: lighter;\n}\n#accueil-presentation .content .text[data-v-6c6fc468] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      margin-left: 5%;\n}\n#accueil-presentation .content .text h1[data-v-6c6fc468] {\n        color: #EB7041;\n}\n#accueil-presentation .content .text h1[data-v-6c6fc468], #accueil-presentation .content .text h2[data-v-6c6fc468] {\n        font-weight: lighter;\n}\n", ""]);
 
 // exports
 
@@ -58495,7 +58515,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-biographie[data-v-f9b913d8] {\n  padding: 50px 100px;\n  background: #3F3F3F;\n}\n.accueil-biographie .contenu-section[data-v-f9b913d8] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row wrap;\n            flex-direction: row wrap;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n}\n.accueil-biographie .contenu-section .image-container[data-v-f9b913d8] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      background: url(\"/img/profil.jpg\") center;\n      background-size: cover;\n      height: 250px;\n      width: 250px;\n      border: 8px solid #353535;\n}\n.accueil-biographie .contenu-section .description[data-v-f9b913d8] {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1;\n      padding-left: 64px;\n}\n.accueil-biographie .contenu-section .description .titre-section[data-v-f9b913d8] {\n        margin-bottom: 20px;\n}\n.accueil-biographie .contenu-section .description .text[data-v-f9b913d8] {\n        text-align: justify;\n}\n@media all and (max-width: 600px) {\n.contenu-section[data-v-f9b913d8] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n/* Breakpoints */\n@media (max-width: 767px) {\n.contenu-section[data-v-f9b913d8] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column wrap;\n            flex-flow: column wrap;\n}\n}\n.accueil-biographie[data-v-f9b913d8] {\n  padding: 50px 100px;\n  background: #3F3F3F;\n}\n.accueil-biographie .contenu-section[data-v-f9b913d8] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row wrap;\n            flex-direction: row wrap;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n}\n.accueil-biographie .contenu-section .image-container[data-v-f9b913d8] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      background: url(\"/img/profil.jpg\") center;\n      background-size: cover;\n      height: 300px;\n      width: 300px;\n      border: 8px solid #353535;\n      margin-top: 22px;\n      margin-right: 64px;\n}\n.accueil-biographie .contenu-section .description[data-v-f9b913d8] {\n      -webkit-box-flex: 1;\n          -ms-flex: 1;\n              flex: 1;\n}\n.accueil-biographie .contenu-section .description .titre-section[data-v-f9b913d8] {\n        margin-bottom: 20px;\n}\n.accueil-biographie .contenu-section .description .text[data-v-f9b913d8] {\n        text-align: justify;\n}\n", ""]);
 
 // exports
 
@@ -58678,7 +58698,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-galeries[data-v-5bf9f02a] {\n  padding-top: 50px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.accueil-galeries .accroche[data-v-5bf9f02a] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.accueil-galeries .accroche h1[data-v-5bf9f02a], .accueil-galeries .accroche p[data-v-5bf9f02a] {\n      text-align: center;\n      padding: 0 64px;\n}\n.accueil-galeries .accroche a[data-v-5bf9f02a] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFFFFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      -webkit-transition: all .3s ease;\n      transition: all .3s ease;\n}\n.accueil-galeries .accroche a[data-v-5bf9f02a]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n#accueil-galeries[data-v-5bf9f02a] {\n  padding-top: 50px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#accueil-galeries .accroche[data-v-5bf9f02a] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n#accueil-galeries .accroche h1[data-v-5bf9f02a], #accueil-galeries .accroche p[data-v-5bf9f02a] {\n      text-align: center;\n      padding: 0 64px;\n}\n#accueil-galeries .accroche a[data-v-5bf9f02a] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFFFFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      -webkit-transition: all .3s ease;\n      transition: all .3s ease;\n}\n#accueil-galeries .accroche a[data-v-5bf9f02a]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
 
 // exports
 
@@ -59219,7 +59239,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\n.accueil-expositions[data-v-d1075856] {\n  padding-top: 50px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.accueil-expositions .accroche[data-v-d1075856] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.accueil-expositions .accroche h1[data-v-d1075856], .accueil-expositions .accroche p[data-v-d1075856] {\n      text-align: center;\n      padding: 0 64px;\n}\n.accueil-expositions .accroche a[data-v-d1075856] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFFFFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      -webkit-transition: all .3s ease;\n      transition: all .3s ease;\n}\n.accueil-expositions .accroche a[data-v-d1075856]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
+exports.push([module.i, "/* Variables */\n#accueil-expositions[data-v-d1075856] {\n  padding-top: 50px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#accueil-expositions .accroche[data-v-d1075856] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n#accueil-expositions .accroche h1[data-v-d1075856], #accueil-expositions .accroche p[data-v-d1075856] {\n      text-align: center;\n      padding: 0 64px;\n}\n#accueil-expositions .accroche a[data-v-d1075856] {\n      text-transform: uppercase;\n      text-decoration: none;\n      color: #FFFFFF;\n      padding: 12px 22px;\n      border: 4px solid white;\n      margin: 20px 0 40px 0;\n      -webkit-transition: all .3s ease;\n      transition: all .3s ease;\n}\n#accueil-expositions .accroche a[data-v-d1075856]:hover {\n        background: rgba(40, 40, 40, 0.7);\n}\n", ""]);
 
 // exports
 
@@ -59961,7 +59981,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/* Variables */\nfooter[data-v-6f26074d] {\n  padding: 64px 64px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: #3F3F3F;\n  color: rgba(255, 255, 255, 0.5);\n  font-size: .8em;\n  letter-spacing: 3px;\n}\nfooter img[data-v-6f26074d] {\n    width: 178px;\n    height: 120px;\n}\n", ""]);
+exports.push([module.i, "/* Variables */\nfooter[data-v-6f26074d] {\n  padding: 64px 64px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: #3F3F3F;\n  color: rgba(255, 255, 255, 0.5);\n  font-size: .8em;\n  letter-spacing: 3px;\n  text-align: center;\n  text-transform: uppercase;\n}\nfooter img[data-v-6f26074d] {\n    width: 178px;\n    height: 120px;\n}\n", ""]);
 
 // exports
 
@@ -59972,6 +59992,8 @@ exports.push([module.i, "/* Variables */\nfooter[data-v-6f26074d] {\n  padding: 
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -60008,9 +60030,9 @@ var staticRenderFns = [
       _c("img", { attrs: { src: "/img/logo_jideka.svg" } }),
       _vm._v(" "),
       _c("p", [
-        _vm._v(
-          "© 2017 JOCELYNE DESCHAMPS-KUS - DESIGNED BY TIMOTHÉ CRESPY & NICOLAS LEBRUN"
-        )
+        _vm._v("© 2017 Jocelyne Deschamps-Kus\n    "),
+        _c("br"),
+        _vm._v("\n    Designed by Timothé Crespy et Nicolas Lebrun")
       ])
     ])
   }

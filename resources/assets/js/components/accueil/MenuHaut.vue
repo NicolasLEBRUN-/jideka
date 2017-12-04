@@ -1,5 +1,5 @@
 <template>
-    <div class="accueil-menu-haut">
+    <div id="accueil-menu-haut" class="accueil-menu-haut">
         <ul id="navbar" class="navigation">
             <li><a href="#accueil-presentation" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.accueil') }}</a></li>
             <li><a href="#accueil-biographie" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.biographie') }}</a></li>
@@ -8,12 +8,12 @@
             <li><a href="#accueil-contact" v-on:click="hideMenu">{{ $trans('accueil.menuhaut.contact') }}</a></li>
             <li class="flag" v-if="$trans('locale') != 'fr'">
                 <a href="/lang/fr" v-on:click="hideMenu">
-                    <span class="flag-icon flag-icon-fr"></span>
+                    <img src="/img/flags/fr.svg" style="height: 16px; width: 21px;" />
                 </a>
             </li>
             <li class="flag" v-if="$trans('locale') != 'en'">
                 <a href="/lang/en" v-on:click="hideMenu">
-                    <span class="flag-icon flag-icon-gb"></span>
+                    <img src="/img/flags/en.svg" style="height: 16px; width: 21px;" />
                 </a>
             </li>
             <li class="burger">
@@ -58,8 +58,10 @@
 
     /* Variables */
     @import "../../../sass/variables";
+    /* Breakpoints */
+    @import "../../../sass/breakpoints";
 
-    .accueil-menu-haut {
+    #accueil-menu-haut {
         display: block;
         position: fixed;
         width: 100%;
@@ -68,93 +70,87 @@
         height: $menu-haut-height;
         z-index: 999;
 
-        .navigation {
-            float: right;
-            list-style: none;
-            margin: 0 50px 0 0;
-            padding: 0;
-            height: 100%;
-            
-            li {
-                display: inline;
+        @include breakpoint(tablet) {
+            .navigation {
+                float: right;
+                list-style: none;
+                margin: 0 50px 0 0;
+                padding: 0;
+                height: 100%;
+                
+                li {
+                    display: inline;
 
-                a {
-                    text-decoration: none;
-                    display: inline-block;
-                    padding: 18px;
-                    color: rgba($font-color, .7);
-                    transition: all .3s ease;
-                    height: 100%;
+                    a {
+                        text-decoration: none;
+                        display: inline-block;
+                        padding: 18px;
+                        color: rgba($font-color, .7);
+                        transition: all .3s ease;
+                        height: 100%;
 
-                    &:hover {
-                        background: darken(rgba($background-primary-color, .7), 5%);
-                        color: $font-color;
+                        &:hover {
+                            background: darken(rgba($background-primary-color, .7), 5%);
+                            color: $font-color;
+                        }
                     }
-                }
 
-                &.burger {
-                    display: none;
-                }
+                    &.burger {
+                        display: none;
+                    }
 
-                &.flag {
-                    img {
-                        height: 19px;
+                    &.flag {
+                        img {
+                            height: 19px;
+                        }
                     }
                 }
             }
         }
-    }
-    
-    @media all and (max-width: 600px) {
-        .navigation {
-            float: none !important;
-            background: rgba($background-primary-color, .5);
-            
-            li {
-                a {
-                    float: left;
-                }
 
-                &:not(:first-child) {
-                    display: none;
+        @include breakpoint(mobile) {
+            .navigation {
+                float: none !important;
+                background: rgba($background-primary-color, .5);
+                
+                li {
+                    a {
+                        float: left;
+                    }
 
+                    &:not(:first-child) {
+                        display: none;
 
-                    &.burger {
-                        display: block;
-                        float: right;
+                        &.burger {
+                            display: block;
+                            float: right;
+                        }
                     }
                 }
-            }
 
-            &.responsive {
-                position: relative;
+                &.responsive {
+                    position: relative;
 
-                li {
-                    float: none;
-                    display: block;
-                    text-align: left;
-                    background: $background-primary-color;
-
-                    a {
+                    li {
                         float: none;
                         display: block;
                         text-align: left;
-                    }
+                        background: $background-primary-color;
 
-                    &.burger {
-                        position: absolute;
-                        right: 0;
-                        top: 0;
+                        a {
+                            float: none;
+                            display: block;
+                            text-align: left;
+                        }
+
+                        &.burger {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
                     }
                 }
             }
         }
     }
-
-    @media all and (max-width: 700px) {
-        .navigation {
-            margin: 0 !important;
-        }
-    }
 </style>
-    
